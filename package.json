@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "dev": "slidev --open",
+    "dev": "nodemon -w '../../packages/slidev/dist/*.mjs' --exec \"slidev ./slides.md --open=false --log=info --inspect\"",
     "export": "slidev export"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "vue": "^3.4.27"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.66"
+    "@iconify-json/mdi": "^1.1.66",
+    "nodemon": "^3.1.0"
   }
 }
