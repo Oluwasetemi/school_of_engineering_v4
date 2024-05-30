@@ -3,7 +3,7 @@
 import GitHub from '~icons/mdi/github';
 </script>
 <template>
-  <footer class="abs-tr p-2 mb-9 mr-9 hover:underline hover:underline-offset-8 focus:ring active:text-red-500">
+  <footer class="select-none abs-tr p-2 mb-9 mr-9 hover:underline hover:underline-offset-8 focus:ring active:text-red-500">
     <a
       href="https://github.com/users/Oluwasetemi"
       target="_blank"

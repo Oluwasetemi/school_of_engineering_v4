@@ -168,12 +168,263 @@ Example: A flowchart for logging into a website might start with a "Start" symbo
 
 ---
 
+# Programming Paradigms
+
+- Procedural Programming
+- Object-Oriented Programming (OOP)
+- Functional Programming
+- Logic Programming
+- Declarative Programming
+- Concurrent Programming
+- Event-Driven Programming
+
+<v-click>
+  Each paradigm brings its own way of thinking and problem-solving, making some paradigms more suitable for certain types of tasks than others. Modern programming often involves a combination of these paradigms to leverage their respective strengths.
+</v-click>
+
+---
+
 # Programming Concepts
+
+<div class="grid grid-cols-2 gap-x-4">
+
+  <v-click :every='1' depth="2">
+
+<ul>
+  <li> Variables</li>
+  <li> Data Types</li>
+  <li> Control Structures</li>
+  <li> Functions (or Methods)</li>
+  <li> Data Structures</li>
+  <li> Algorithms</li>
+  <li>
+    Object-Oriented Concepts
+    <!-- <v-click> -->
+      <ul>
+      <li>Encapsulation</li>
+      <li>Polymorphism</li>
+      <li>Inheritance</li>
+    </ul>
+    <!-- </v-click> -->
+  </li>
+
+</ul>
+
+  </v-click>
+
+  <v-click :every="1">
+    <ul>
+     <li> Recursion</li>
+      <li> Error Handling</li>
+      <li> Memory Management</li>
+      <li> Concurrency</li>
+      <li> File I/O</li>
+    </ul>
+
+  </v-click>
+
+</div>
+<v-click>
+    <p>
+      Understanding these concepts is fundamental to mastering programming and can significantly improve your ability to develop complex and efficient software solutions.
+    </p>
+</v-click>
+
+---
+
+# Variables
+
+Storage locations in memory with a name,
+used to hold data.
+
+```js {monaco-run} {autorun: false}
+let name = 'AltSchool'
+let age = 99
+
+console.log({name, age})
+```
+
+```py
+name = 'AltSchool'
+age = 99
+
+print(name, age)
+```
+
+---
+
+# Data Types
+
+Classification of data items, defining the operations that can be performed on them.
+
+Primitive types: int, char, float, boolean, number, bigint, symbol, string, undefined, null,
+
+Composite types: arrays, structs, classes.
+
+Abstract data types: List, Stack, Queue, etc.
+
+```js {monaco-run} {autorun: false}
+let name = 'AltSchool'
+let age = 99
+let isStudent = true
+
+const arrayOfScore = [99, 40, 50]
+const person = { name: name, age: age, isStudent: isStudent }
+
+console.log(arrayOfScore)
+console.log(person)
+```
+
+---
+
+# Control Structures
+
+Direct the order of execution of statements in a program.
+
+Conditional statements: if, else, switch.
+
+Loops: for, while, do-while.
+
+Branching: break, continue, return
+
+````md magic-move
+```js {*}
+let name = 'AltSchool'
+let age = 99
+
+if (condition) {
+  // do something
+} else if (condition) {
+  // do something else if
+} else {
+  // finally do something
+}
+```
+
+```js
+switch (key) {
+  case value:
+    // code
+    break;
+
+  default:
+    break;
+}
+```
+
+```js
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+}
+
+while (condition) {
+  // code block to be executed
+}
+
+```
+
+
+````
+
+---
+
+# Functions (or Methods)
+
+Blocks of code designed to perform a particular task, reusable throughout the program.
+
+## Key Points
+
+- Definition and calling.
+- Parameters and return values.
+- Scope and lifetime of variables.
 
 ---
 
 # Data Structures
 
+# Ways of organizing and storing data to enable efficient access and modification
+
+Key Points:
+Linear: Arrays, Linked Lists.
+Non-linear: Trees, Graphs.
+Abstract: Stack, Queue, Map, Set
+---
+
+# [Data Structures More (Trees)](https://www.youtube.com/watch?v=oSWTXtMglKE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=8)
+
+Binary Search Tree, AVL Tree, Red-Black Tree
+Segment Tree
+Fenwick Tree (Binary Indexed Tree)
+
+![Tree](https://raw.githubusercontent.com/trekhleb/javascript-algorithms/master/src/data-structures/tree/images/tree.jpeg)
+
+---
+
+# Algorithms
+
+Step-by-step procedures or formulas for solving problems.
+
+## Key Points
+
+Sorting: Bubble sort, Quick sort, Merge sort.
+Searching: Linear search, Binary search.
+Complexity: Big O notation for time and space.
+
+---
+
+# Object-Oriented Concepts
+
+Principles used in OOP to create objects that model real-world entities
+
+## Key Points
+
+Classes and Objects.
+Encapsulation, Inheritance, Polymorphism, Abstraction.
+Constructors and destructors
+
+### Encapsulation - Hiding the internal state and requiring all interaction to be performed through an object's methods
+
+### Polymorphism - The ability of different classes to be treated as instances of the same class through a common interface
+
+### Inheritance - is a mechanism that allows a class to inherit properties and behaviors from another class
+
+---
+
+# Recursion
+
+A function calling itself to solve a smaller instance of the same problem.
+
+## Notable Key Points
+
+- Base case and recursive case.
+- Stack overflow and efficiency considerations.
+- Examples: Factorial, Fibonacci sequence
+
+---
+
+# Error Handling
+
+Mechanisms to handle runtime errors or exceptional conditions.
+
+## Key Points
+
+- Try, catch, finally blocks.
+- Throwing exceptions.
+- Custom exception classes
+
+---
+
+# Memory Management
+
+Techniques to control the allocation, use, and deallocation of memory
+
+# Concurrency and Asynchronous Operations
+
+Running multiple computations simultaneously
+
+# File I/O
+
+Reading from and writing to files. File streams, Opening, reading, writing, and closing files, Binary vs text files
 ---
 
 # HTML
