@@ -538,6 +538,11 @@ In summary, this stresses the significance of using semantic HTML for improved a
    represents the main content area of the page, unique to that specific page. There should only be one &lt;main&gt; per page.
 - #### &lt;article&gt;
    is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
+
+---
+
+# Contd(Heading & Sections )
+  
 - ####  &lt;section&gt;
    is used to group related content together, like chapters or sections of a guide or tutorial.
 - #### &lt;aside&gt;
@@ -548,10 +553,74 @@ In summary, this stresses the significance of using semantic HTML for improved a
 ---
 
 # Attributes
-- The type attribute on &lt;script&gt; and &lt;style&gt; elements specifies the type of content, like type="module" for ES6 modules or type="text/css" for CSS.
-- The alt attribute on &lt;img&gt; elements provides alternative text for accessibility when the image can't be displayed. It's crucial for screen readers and other assistive technologies.
-- aria-* attributes, like aria-label, aria-live, aria-hidden, etc., provide additional semantic information for screen readers and assistive technologies to help users better understand the content and its purpose.
+-  #### Boolean attributes
+ If a boolean attribute is present, it is always true. Boolean attributes include autofocus, inert, checked, disabled, required, reversed, allowfullscreen, default, loop, autoplay, controls, muted, readonly, multiple, and selected. If one (or more) of these attributes is present, the element is disabled, required, readonly, etc. If not present, it isn't.
 
+```html
+<input required>
+<input required="">
+<input required="required">
+```
+
+-  #### Enumerated attributes
+   are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include &lt;style contenteditable&gt;, it defaults to &lt;style contenteditable="true"&gt;.
+ -  #### Global attributes
+    are attributes that can be set on any HTML element, including elements in the &lt;head&gt;. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a &lt;meta&gt; as meta content is not displayed.
+- #### id
+   The global attribute id is used to define a unique identifier for an element. It serves many purposes, including: - The target of a link's fragment identifier. - Identifying an element for scripting. - Associating a form element with its label. - Providing a label or description for assistive technologies. - Targeting styles with (high specificity or as attribute selectors) in CSS.
+- #### class
+    The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
+ - #### Style
+    The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
+
+
+---
+
+# Contd(Attribute)
+
+- #### tabIndex
+   The tabindex attribute can be added to any element to enable it to receive focus. The tabindex value defines whether it gets added to the tab order, and, optionally, into a non-default tabbing order.
+The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
+
+- #### role
+  The role attribute can be used to provide semantic meaning to content, enabling screen readers to inform site users of an object's expected user interaction
+
+```html
+<share-action authors="@estellevw" data-action="click" data-category="web.dev" data-icon="share" data-label="share, twitter" role="button" tabindex="0">
+  <svg aria-label="share" role="img" xmlns="http://www.w3.org/2000/svg">
+    <use href="#shareIcon" />
+  </svg>
+  <span>Share</span>
+</share-action>
+```
+---
+
+# Contd-2
+- #### contenteditable
+An element with the contenteditable attribute set to true is editable, is focusable, and is added to the tab order as if tabindex="0" were set. Contenteditable is an enumerated attribute supporting the values true and false, with a default value of inherit if the attribute is not present or has an invalid value.
+
+These three opening tags are equivalent:
+```html
+<style contenteditable>
+<style contenteditable="">
+<style contenteditable="true">
+```
+  If you include &lt;style contenteditable="false"&gt;, the element is not editable (unless it's by default editable, like a &lt;textarea&gt;). If the value is invalid, such as &lt;style contenteditable="😀"&gt; or &lt;style contenteditable="contenteditable"&gt;, the value defaults to inherit.
+  
+---
+
+# Contd-3 
+- #### custom attribute
+You can create any custom attribute you want by adding the data- prefix. You can name your attribute anything that starts with data- followed by any lowercase series of characters that don't start with xml and don't contain a colon (:).
+
+```html
+<blockquote data-machine-learning="workshop"
+  data-first-name="Blendan" data-last-name="Smooth"
+  data-formerly="Margarita Maker" data-aspiring="Load Balancer"
+  data-year-graduated="2022">
+  HAL and EVE could teach a fan to blow hot air.
+</blockquote>
+```
 ---
 
 # Text Basics
@@ -626,6 +695,7 @@ This is the team you want teaching you!
 ---
 
 # Navigation
+
 - &lt;nav&gt; is used to wrap major navigation blocks like menus, as mentioned earlier.
 - &lt;ul&gt; is used for unordered lists, which are typically displayed with bullet points.
 &lt;ol&gt; is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
