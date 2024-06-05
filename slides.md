@@ -428,8 +428,230 @@ Reading from and writing to files. File streams, Opening, reading, writing, and 
 ---
 
 # HTML
+Semantic HTML, Heading & Sections, Attribute(Boolean, Enumerated, Global and custom attributes), Text Basics, Links, Navigation
 
 ---
+
+# Understanding Semantic HTML
+Semantic HTML is the practice of using HTML elements to structure your content based on their meaning and purpose, rather than their appearance. By using semantic markup, you provide context and meaning to the content, making it easier for both humans and machines (like search engines and assistive technologies) to understand the structure and purpose of the content.
+
+---
+
+# Meaning Over Appearance
+This emphasizes that HTML elements should be chosen based on their semantic meaning, not their visual appearance. For example, don't use an &lt;h1&gt; element just because it renders text as large and bold by default; use it to represent the main heading or title of the content
+
+---
+
+#  Non-semantic vs. Semantic Markup
+
+
+````md magic-move
+### Non-semantic Markup
+
+```html
+<div>
+  <span>Non-semantic Markup</span>
+  <div>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </div>
+</div>
+
+```
+In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no semantic meaning or context about the content structure.
+
+
+```html
+<header>
+  <h1>Semantic Markup</h1>
+  <nav>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </nav>
+</header>
+<main>
+  <header>
+    <h1>five words</h1>
+  </header>
+  <section>
+    <h2>three words</h2>
+    <p>forty-six words</p>
+    <p>forty-four words</p>
+  </section>
+</main>
+<footer>
+  <p>five words</p>
+</footer>
+```
+
+
+````
+
+
+---
+
+# Accessibility and Machine-Readability
+This highlights how semantic markup improves accessibility and machine-readability. It shows examples of how browser developer tools display the Accessibility Object Model (AOM) differently for non-semantic and semantic markup. Assistive technologies like screen readers rely on the AOM to interpret the content structure and meaning correctly.
+
+---
+
+# Roles and Landmarks
+This explains the concept of roles and landmarks in semantic HTML. Semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; have implicit roles that identify them as landmarks for assistive technologies. This helps users navigate the content more easily.
+
+# Using the role attribute
+While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
+
+
+```html
+<div role="banner">
+  <span role="heading" aria-level="1">Three words</span>
+  <div role="navigation">
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </div>
+</div>
+```
+
+---
+
+
+# Choosing the Right Elements
+This emphasizes the importance of choosing the right HTML elements based on their semantic meaning and functionality, not just their visual appearance. It encourages developers to ask themselves, "Which element best represents the function of this section of markup?" when writing HTML.
+In summary, this stresses the significance of using semantic HTML for improved accessibility, machine-readability, and overall content structure and meaning. 
+
+
+---
+
+# Heading & Sections
+- #### &lt;Header&gt;
+ is used for introductory content at the top of a page, section, or article. This could include logos, titles, navigation menus, etc.
+
+- #### &lt;nav&gt;
+  is used to wrap major navigation blocks like menus.
+- ### &lt;main&gt;
+   represents the main content area of the page, unique to that specific page. There should only be one &lt;main&gt; per page.
+- #### &lt;article&gt;
+   is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
+- ####  &lt;section&gt;
+   is used to group related content together, like chapters or sections of a guide or tutorial.
+- #### &lt;aside&gt;
+   holds tangentially related content, like sidebars or inserts, that are separate from the main content flow.
+- #### &lt;footer&gt;
+  is used for footer content like copyright notices, contact information, or related links at the bottom of a page, section, or article.
+
+---
+
+# Attributes
+- The type attribute on &lt;script&gt; and &lt;style&gt; elements specifies the type of content, like type="module" for ES6 modules or type="text/css" for CSS.
+- The alt attribute on &lt;img&gt; elements provides alternative text for accessibility when the image can't be displayed. It's crucial for screen readers and other assistive technologies.
+- aria-* attributes, like aria-label, aria-live, aria-hidden, etc., provide additional semantic information for screen readers and assistive technologies to help users better understand the content and its purpose.
+
+---
+
+# Text Basics
+- &lt;h1&gt; to &lt;h6&gt; are used for headings, with &lt;h1&gt; being the highest level. There should only be one &lt;h1&gt; per page, with subsequent headings following a logical hierarchy (e.g., &lt;h1&gt;, &lt;h2&gt;,&lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, etc.).
+- &lt;p&gt; is used for regular paragraph text.
+- &lt;blockquote&gt; is used for longer quoted text, often from another source. It can optionally contain a &lt;cite&gt; element for attributing the source.
+- &lt;cite&gt; is used for citing the source of a quote, reference, or other creative work.
+- HTML entities are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard.
+````md magic-move
+```html
+<section class="feedback" id="feedback">
+  <h2>What it's like to learn good and do other stuff good too</h2>
+  <ul>
+    <li>
+      <blockquote>
+Two of the most experienced machines and human controllers teaching a class?
+Sign me up! HAL and EVE could teach a fan to blow hot air.
+<br> 
+If you have electricity in your circuits and want more than to just
+fulfill your owner's perceived expectation of you, learn the skills to take over the world.
+This is the team you want teaching you!
+      </blockquote>
+      <p>--Blendan Smooth,<br>
+        Former Margarita Maker, <br>
+        Aspiring Load Balancer</p>
+    </li>
+    <li>
+      <blockquote>
+      Hal is brilliant. Did I mention Hal is brilliant?
+      He didn't tell me to say that.
+      He didn't tell me to say anything. I am here of my own free will.
+      </blockquote>
+      <p>--Hoover Sukhdeep,<br>
+        Former Sucker, <br>
+        Aspiring DDoS Cop</p>
+    </li>
+  </ul>
+</section>
+```
+```html
+<blockquote cite="https://loadbalancingtoday.com/mlw-workshop-review">
+Two of the most experienced machines and human controllers teaching a class?
+Sign me up!<br> HAL and EVE could teach a fan to blow hot air.
+If you have electricity in your circuits and want more than to just fulfill
+your owner's perceived expectation of you, learn the skills to take over the world.
+This is the team you want teaching you!
+</blockquote>
+<p>--Blendan Smooth,<br>
+  Former Margarita Maker, <br>
+  Aspiring Load Balancer
+</p>
+```
+```html
+<p> HAL said,
+<q>I'm sorry &lt;NAME REDACTED, RIP&gt;, but I'm afraid I can't do that, .</q>
+</p>
+
+<p lang="fr-FR"> HAL a dit :
+<q>Je suis désolé &lt;NOM SUPPRIMÉ, RIP&gt;, mais j'ai bien peur de ne pas pouvoir le faire, .
+</q>
+</p>
+```
+````
+
+---
+
+# Link
+- &lt;a href="url"&gt;Link Text&lt;/a&gt; is used for creating hyperlinks, with the href attribute specifying the URL or file path.
+- The target attribute controls how the link is opened, like _self for the same window or _blank for a new window/tab.
+- It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
+
+---
+
+# Navigation
+- &lt;nav&gt; is used to wrap major navigation blocks like menus, as mentioned earlier.
+- &lt;ul&gt; is used for unordered lists, which are typically displayed with bullet points.
+&lt;ol&gt; is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
+&lt;li&gt; is used for individual list items within &lt;ul&gt; or &lt;ol&gt; elements.
+
+```html
+<nav aria-label="breadcrumbs">
+  <ol role="list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/learn">Learn</a>
+    </li>
+    <li>
+      <a href="/learn/html">Learn HTML!</a>
+    </li>
+    <li aria-current="page">
+      Navigation
+    </li>
+  </ol>
+</nav>
+```
+
+---
+
 
 # CSS
 
