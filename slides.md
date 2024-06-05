@@ -577,7 +577,84 @@ initial-scale=1.0: This sets the initial zoom level when the page is first loade
 
 ---
 
-# Let's put all the tags in usage
+# Body
+The <kbd>&lt;body&gt;</kbd> tag defines the document's body.
+
+The <kbd>&lt;body&gt;</kbd>  element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+
+Note: There can only be one <kbd>&lt;body&gt;</kbd> element in an HTML document.
+
+Inside the <kbd>&lt;body&gt;</kbd> tags of an HTML document, you can find a wide variety of elements that are used to structure and present the content of a webpage. Here are some common HTML tags that are typically found inside the <kbd>&lt;body&gt;</kbd> tag:
+
+```
+<body>
+
+1. Headings:
+<h1> to <h6>
+
+2. Paragraph:
+<p>
+
+3. Links:
+<a>
+
+```
+
+---
+
+# Contd.
+
+```
+4. Lists:
+Ordered List: <ol>, <li>
+Unordered List: <ul>, <li>
+Description List: <dl>, <dt>, <dd>
+
+5. Tables:
+<table>, <tr>, <th>, <td>, <thead>, <tbody>, <tfoot>
+
+6. Forms:
+<form>, <input>, <textarea>, <button>, <select>, <option>, <label>, <fieldset>, <legend>
+
+7. Images:
+<img>
+
+8. Media:
+<audio>, <video>, <source>
+
+9. Embedded Content:
+<iframe>, <embed>, <object>, <param>
+
+10. Sections and Grouping Content:
+<div>, <span>, <header>, <footer>, <main>, <section>, <article>, <nav>, <aside>
+
+```
+
+---
+
+# Contd.
+
+```
+
+11. Text Formatting:
+<b>, <i>, <strong>, <em>, <small>, <mark>, <del>, <ins>, <sub>, <sup>
+
+12. Interactive Elements:
+<button>, <details>, <summary>
+
+13. Semantic Elements:
+<figure>, <figcaption>, <time>, <progress>, <meter>
+
+14. Script and Styles:
+<script>, <noscript>, <style>
+
+</body>
+
+```
+
+---
+
+# Let's put some of the tags in usage
 
 ```
 <!DOCTYPE html>
@@ -633,3 +710,7 @@ The &lt;h1&gt; tag defines a top-level heading on the page. This is often the ma
 
 &lt;p&gt;This page looks good on both desktop and mobile devices.&lt;/p&gt;
 The &lt;p&gt; tag defines a paragraph of text. It contains the main body text and ensures the content is properly formatted and readable.
+
+---
+
+#
