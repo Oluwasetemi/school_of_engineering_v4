@@ -523,7 +523,7 @@ While semantic elements have implicit roles, the content mentions that the role 
 
 # Choosing the Right Elements
 This emphasizes the importance of choosing the right HTML elements based on their semantic meaning and functionality, not just their visual appearance. It encourages developers to ask themselves, "Which element best represents the function of this section of markup?" when writing HTML.
-In summary, this stresses the significance of using semantic HTML for improved accessibility, machine-readability, and overall content structure and meaning. 
+In summary, this stresses the significance of using semantic HTML for improved accessibility, machine-readability, and overall content structure and meaning.
 
 
 ---
@@ -542,7 +542,7 @@ In summary, this stresses the significance of using semantic HTML for improved a
 ---
 
 # Contd(Heading & Sections )
-  
+
 - ####  &lt;section&gt;
    is used to group related content together, like chapters or sections of a guide or tutorial.
 - #### &lt;aside&gt;
@@ -606,10 +606,10 @@ These three opening tags are equivalent:
 <style contenteditable="true">
 ```
   If you include &lt;style contenteditable="false"&gt;, the element is not editable (unless it's by default editable, like a &lt;textarea&gt;). If the value is invalid, such as &lt;style contenteditable="😀"&gt; or &lt;style contenteditable="contenteditable"&gt;, the value defaults to inherit.
-  
+
 ---
 
-# Contd-3 
+# Contd-3
 - #### custom attribute
 You can create any custom attribute you want by adding the data- prefix. You can name your attribute anything that starts with data- followed by any lowercase series of characters that don't start with xml and don't contain a colon (:).
 
@@ -638,7 +638,7 @@ You can create any custom attribute you want by adding the data- prefix. You can
       <blockquote>
 Two of the most experienced machines and human controllers teaching a class?
 Sign me up! HAL and EVE could teach a fan to blow hot air.
-<br> 
+<br>
 If you have electricity in your circuits and want more than to just
 fulfill your owner's perceived expectation of you, learn the skills to take over the world.
 This is the team you want teaching you!
@@ -723,7 +723,7 @@ This is the team you want teaching you!
 ---
 
 # HTML Tables: Structuring Tabular Data
-HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced. 
+HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced.
 
 ---
 
@@ -861,7 +861,7 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - Checkboxes with the same name in a group are submitted together, allowing multiple selections.
 - If no value attribute is provided for a checkbox, the value defaults to "on", which may not be helpful.
 - To make a checkbox required, add the "required" attribute to that specific checkbox.
-  
+
 ---
 
 # Form(Label & fieldsets)
@@ -869,7 +869,7 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - Labels provide accessible names for form controls and increase the clickable area for better usability.
 - Groups of related form controls, like radio buttons or checkboxes, should be grouped within a &lt;fieldset&gt; element, with a &lt;legend&gt; providing the label for the group.
 - &lt;fieldset&gt; elements can be nested to create hierarchical groupings.
-- 
+-
 ```html
 <label for="full_name">Your name</label>
 <input type="text" id="full_name" name="name">
@@ -921,7 +921,7 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
     </li>
   </ul>
 
- 
+
 
 ```html
 <dialog open aria-labelledby="dialogid">
@@ -930,12 +930,12 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
     <h2 id="dialogid">Application</h2>
     <p>All fields are required</p>
     <p>
-       <label>Name: 
+       <label>Name:
          <input type="text" name="name" required />
       </label>
     </p>
     <p>
-      <label>Warranty: 
+      <label>Warranty:
         <input type="number" min="0" max="10" name="warranty" required />
        </label>
     </p>
