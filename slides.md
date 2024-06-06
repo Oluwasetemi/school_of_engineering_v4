@@ -722,6 +722,243 @@ This is the team you want teaching you!
 
 ---
 
+# HTML Tables: Structuring Tabular Data
+HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced. 
+
+---
+
+# Table Structure
+A table is defined using the &lt;table&gt; element, which wraps all the table content. Inside the &lt;table&gt;, you can have the following elements:
+
+&lt;caption&gt;: Provides a descriptive title for the table.
+&lt;thead&gt;: Contains the table header rows.
+&lt;tbody&gt;: Contains the table body rows.
+&lt;tfoot&gt;: Contains the table footer rows (optional).
+
+Within these sections, you'll use &lt;tr&gt; for table rows and &lt;th&gt; for table header cells or &lt;td&gt; for table data cells
+```html
+<table>
+  <caption>Student Grades</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>John</th>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>Emily</th>
+      <td>92</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+---
+
+# Accessibility and Semantics
+Using proper table structure and semantic elements is crucial for accessibility. Screen readers and assistive technologies rely on this structure to understand the tabular data and its relationships.
+
+&lt;th&gt; cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
+The scope attribute can be set to col, row, colgroup, or rowgroup to explicitly define the header's scope.
+The headers attribute can be used to associate data cells with their corresponding header cells in complex tables.
+
+---
+
+# Merging cells
+Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple cells into a single cell. This is done with HTML! The colspan attribute is used to merge two or more adjacent cells within a single row. The rowspan attribute is used to merge cells across rows, being placed on the cell in the top row.
+
+```html
+<table>
+  <caption>Alt Alumni</caption>
+  <thead>
+    <tr>
+      <th rowspan="2" id="name" scope="col">Name</th>
+      <th colspan="2" id="path">Career path</th>
+      <th rowspan="2" id="year">Year</th>
+    </tr>
+    <tr>
+      <th id="past" scope="col">Past</th>
+      <th id="future" scope="col">Destiny</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="hal" scope="row">Hal Gibrah</th>
+      <td headers="hal path past">Calculator</td>
+      <td headers="hal path future">Mars rover</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th id="cathy" scope="row">James Bond</th>
+      <td headers="cathy path past">Waste disposal</td>
+      <td headers="cathy path future">Automated teller</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th id="lou" scope="row">Lou Minious</th>
+      <td headers="lou path past">Lightbulb</td>
+      <td headers="lou path future">Smart bulb</td>
+      <td>1956</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+---
+
+# Styling and Responsiveness
+Tables can be styled using CSS, but it's recommended to avoid using deprecated attributes like cellpadding, cellspacing, or align. Instead, use modern CSS properties like border-collapse, border-spacing, and caption-side.
+
+---
+
+# Form
+The HTML &lt;form&gt; element identifies a document landmark containing interactive controls for submitting information. Nested in a &lt;form&gt; you'll find all the interactive (and non-interactive) form controls that make up that form.
+
+- Forms are created using the &lt;form&gt; element, which contains interactive controls for submitting information.
+The &lt;form&gt; element has attributes like action (URL for processing the form data) and method (HTTP method for submission, e.g., GET or POST).
+- Form controls, such as input fields, radio buttons, checkboxes, and submit buttons, are nested within the &lt;form&gt; element.
+- HTML attributes can enforce required fields, define validation criteria, and prevent form submission until the data matches the required criteria.
+- Submitting a form is typically done by activating a submit button, which sends the form data as name/value pairs to the specified URL.
+---
+
+# Form(Radio-Button)
+
+- Radio buttons in a group share the same name attribute, which ensures that only one can be selected at a time.
+- Each radio button should have a unique value attribute to identify the selected option.
+- To pre-select a radio button, include the checked attribute.
+- To make a selection from a group of radio buttons required, add the required attribute to at least one radio button in the group.
+
+```html {monaco}
+<fieldset>
+  <legend>Who is your favorite student?</legend>
+  <ul>
+    <li>
+      <label>
+        <input type="radio" value="blendan" name="machine"> Blendan Smooth
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="toasty"  name="machine"> Toasty McToastface
+      </label>
+    </li>
+  </ul>
+</fieldset>
+```
+---
+
+# form(Checkboxes)
+- Checkboxes with the same name in a group are submitted together, allowing multiple selections.
+- If no value attribute is provided for a checkbox, the value defaults to "on", which may not be helpful.
+- To make a checkbox required, add the "required" attribute to that specific checkbox.
+  
+---
+
+# Form(Label & fieldsets)
+- Every form control should have an associated &lt;label&gt; element, either explicitly using the for attribute or implicitly by nesting the control within the &lt;label&gt; tags.
+- Labels provide accessible names for form controls and increase the clickable area for better usability.
+- Groups of related form controls, like radio buttons or checkboxes, should be grouped within a &lt;fieldset&gt; element, with a &lt;legend&gt; providing the label for the group.
+- &lt;fieldset&gt; elements can be nested to create hierarchical groupings.
+- 
+```html
+<label for="full_name">Your name</label>
+<input type="text" id="full_name" name="name">
+```
+
+---
+
+# Input types & dynamic Keyboards
+- There are 22 different input types in HTML, each optimized for a specific kind of data entry (e.g., text, email, url, tel, number, date, etc.).
+- On devices with dynamic keyboards (e.g., smartphones), the input type determines the type of keyboard displayed, making data entry more efficient and accurate.
+
+
+---
+
+# Accessing the Microphone and Camera
+- The &lt;input type="file"&gt; element allows users to upload files of specific types, defined by the accept attribute.
+- The capture attribute, when set to "user" or "environment", allows users to directly capture media from their device's camera or microphone.
+- This feature enables creating new media files within a form, without requiring a separate file upload.
+---
+
+# Built-in Validation
+- HTML attributes like required, pattern, min, max, minlength, and maxlength enable defining validation criteria for form controls.
+- When a user attempts to submit a form, client-side constraint validation checks if the entered values meet the defined criteria.
+- If any values are invalid, form submission is blocked, and the browser displays an error message in the first incorrect form control, giving it focus.
+- CSS pseudo-classes like :valid, :invalid, :in-range, and :out-of-range can be used to style form controls based on their validation state.
+- JavaScript can be used to provide custom error messages during constraint validation or enhance the user experience with dynamic updates.
+
+
+---
+
+#  Example
+
+<div class="grid grid-cols-2 gap-x-4">
+  <ul>
+    <li>
+      This example includes a nested &lt;form&gt; with input fields (text and number), a &lt;select&gt; dropdown, and two submit buttons.
+    </li>
+    <li>
+      One submit button closes the dialog without submitting data (using formmethod="dialog" and formnovalidate).
+    </li>
+    <li>
+  The other submit button submits the form data via POST to a specified URL (thankyou.php), after client-side validation.
+    </li>
+    <li>
+    The input fields have the required attribute, and the number input has a defined step value.
+    </li>
+    <li>
+    This example showcases implicit labels, instructions for form controls, and the potential for customizing error messages using JavaScript.
+    </li>
+  </ul>
+
+ 
+
+```html
+<dialog open aria-labelledby="dialogid">
+  <form action="thankyou.php">
+    <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+    <h2 id="dialogid">Application</h2>
+    <p>All fields are required</p>
+    <p>
+       <label>Name: 
+         <input type="text" name="name" required />
+      </label>
+    </p>
+    <p>
+      <label>Warranty: 
+        <input type="number" min="0" max="10" name="warranty" required />
+       </label>
+    </p>
+    <p>
+      <label>Power source:
+        <select name="powersoure">
+          <option>AC/DC</option>
+          <option>Battery</option>
+          <option>Solar</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <button type="submit" formmethod="post">Submit</button>
+    </p>
+  </form>
+</dialog>
+```
+</div>
+
+
+---
+
 
 # CSS
 
