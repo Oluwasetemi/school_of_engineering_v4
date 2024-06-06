@@ -452,12 +452,541 @@ HTML(HyperText Markup Language) is the foundation of basically every web page, b
 
 
 ---
- 
+
 # HTML Element
 
 An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by &lt; and &gt;. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kdb>&lt;title&gt;&lt;title&gt;</kdb> tag can be written as &lt;/Title&gt;&lt;/Title&gt;, <kdb>&lt;TITLE&gt;</kdb><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+Semantic HTML, Heading & Sections, Attribute(Boolean, Enumerated, Global and custom attributes), Text Basics, Links, Navigation
 
 ---
+
+# Understanding Semantic HTML
+Semantic HTML is the practice of using HTML elements to structure your content based on their meaning and purpose, rather than their appearance. By using semantic markup, you provide context and meaning to the content, making it easier for both humans and machines (like search engines and assistive technologies) to understand the structure and purpose of the content.
+
+---
+
+# Meaning Over Appearance
+This emphasizes that HTML elements should be chosen based on their semantic meaning, not their visual appearance. For example, don't use an &lt;h1&gt; element just because it renders text as large and bold by default; use it to represent the main heading or title of the content
+
+---
+
+#  Non-semantic vs. Semantic Markup
+
+
+````md magic-move
+### Non-semantic Markup
+
+```html
+<div>
+  <span>Non-semantic Markup</span>
+  <div>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </div>
+</div>
+
+```
+In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no semantic meaning or context about the content structure.
+
+
+```html
+<header>
+  <h1>Semantic Markup</h1>
+  <nav>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </nav>
+</header>
+<main>
+  <header>
+    <h1>five words</h1>
+  </header>
+  <section>
+    <h2>three words</h2>
+    <p>forty-six words</p>
+    <p>forty-four words</p>
+  </section>
+</main>
+<footer>
+  <p>five words</p>
+</footer>
+```
+
+
+````
+
+
+---
+
+# Accessibility and Machine-Readability
+This highlights how semantic markup improves accessibility and machine-readability. It shows examples of how browser developer tools display the Accessibility Object Model (AOM) differently for non-semantic and semantic markup. Assistive technologies like screen readers rely on the AOM to interpret the content structure and meaning correctly.
+
+---
+
+# Roles and Landmarks
+This explains the concept of roles and landmarks in semantic HTML. Semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; have implicit roles that identify them as landmarks for assistive technologies. This helps users navigate the content more easily.
+
+# Using the role attribute
+While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
+
+
+```html
+<div role="banner">
+  <span role="heading" aria-level="1">Three words</span>
+  <div role="navigation">
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </div>
+</div>
+```
+
+---
+
+
+# Choosing the Right Elements
+This emphasizes the importance of choosing the right HTML elements based on their semantic meaning and functionality, not just their visual appearance. It encourages developers to ask themselves, "Which element best represents the function of this section of markup?" when writing HTML.
+In summary, this stresses the significance of using semantic HTML for improved accessibility, machine-readability, and overall content structure and meaning.
+
+
+---
+
+# Heading & Sections
+- #### &lt;Header&gt;
+ is used for introductory content at the top of a page, section, or article. This could include logos, titles, navigation menus, etc.
+
+- #### &lt;nav&gt;
+  is used to wrap major navigation blocks like menus.
+- ### &lt;main&gt;
+   represents the main content area of the page, unique to that specific page. There should only be one &lt;main&gt; per page.
+- #### &lt;article&gt;
+   is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
+
+---
+
+# Contd(Heading & Sections )
+
+- ####  &lt;section&gt;
+   is used to group related content together, like chapters or sections of a guide or tutorial.
+- #### &lt;aside&gt;
+   holds tangentially related content, like sidebars or inserts, that are separate from the main content flow.
+- #### &lt;footer&gt;
+  is used for footer content like copyright notices, contact information, or related links at the bottom of a page, section, or article.
+
+---
+
+# Attributes
+-  #### Boolean attributes
+ If a boolean attribute is present, it is always true. Boolean attributes include autofocus, inert, checked, disabled, required, reversed, allowfullscreen, default, loop, autoplay, controls, muted, readonly, multiple, and selected. If one (or more) of these attributes is present, the element is disabled, required, readonly, etc. If not present, it isn't.
+
+```html
+<input required>
+<input required="">
+<input required="required">
+```
+
+-  #### Enumerated attributes
+   are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include &lt;style contenteditable&gt;, it defaults to &lt;style contenteditable="true"&gt;.
+ -  #### Global attributes
+    are attributes that can be set on any HTML element, including elements in the &lt;head&gt;. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a &lt;meta&gt; as meta content is not displayed.
+- #### id
+   The global attribute id is used to define a unique identifier for an element. It serves many purposes, including: - The target of a link's fragment identifier. - Identifying an element for scripting. - Associating a form element with its label. - Providing a label or description for assistive technologies. - Targeting styles with (high specificity or as attribute selectors) in CSS.
+- #### class
+    The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
+ - #### Style
+    The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
+
+
+---
+
+# Contd(Attribute)
+
+- #### tabIndex
+   The tabindex attribute can be added to any element to enable it to receive focus. The tabindex value defines whether it gets added to the tab order, and, optionally, into a non-default tabbing order.
+The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
+
+- #### role
+  The role attribute can be used to provide semantic meaning to content, enabling screen readers to inform site users of an object's expected user interaction
+
+```html
+<share-action authors="@estellevw" data-action="click" data-category="web.dev" data-icon="share" data-label="share, twitter" role="button" tabindex="0">
+  <svg aria-label="share" role="img" xmlns="http://www.w3.org/2000/svg">
+    <use href="#shareIcon" />
+  </svg>
+  <span>Share</span>
+</share-action>
+```
+---
+
+# Contd-2
+- #### contenteditable
+An element with the contenteditable attribute set to true is editable, is focusable, and is added to the tab order as if tabindex="0" were set. Contenteditable is an enumerated attribute supporting the values true and false, with a default value of inherit if the attribute is not present or has an invalid value.
+
+These three opening tags are equivalent:
+```html
+<style contenteditable>
+<style contenteditable="">
+<style contenteditable="true">
+```
+  If you include &lt;style contenteditable="false"&gt;, the element is not editable (unless it's by default editable, like a &lt;textarea&gt;). If the value is invalid, such as &lt;style contenteditable="😀"&gt; or &lt;style contenteditable="contenteditable"&gt;, the value defaults to inherit.
+
+---
+
+# Contd-3
+- #### custom attribute
+You can create any custom attribute you want by adding the data- prefix. You can name your attribute anything that starts with data- followed by any lowercase series of characters that don't start with xml and don't contain a colon (:).
+
+```html
+<blockquote data-machine-learning="workshop"
+  data-first-name="Blendan" data-last-name="Smooth"
+  data-formerly="Margarita Maker" data-aspiring="Load Balancer"
+  data-year-graduated="2022">
+  HAL and EVE could teach a fan to blow hot air.
+</blockquote>
+```
+---
+
+# Text Basics
+- &lt;h1&gt; to &lt;h6&gt; are used for headings, with &lt;h1&gt; being the highest level. There should only be one &lt;h1&gt; per page, with subsequent headings following a logical hierarchy (e.g., &lt;h1&gt;, &lt;h2&gt;,&lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, etc.).
+- &lt;p&gt; is used for regular paragraph text.
+- &lt;blockquote&gt; is used for longer quoted text, often from another source. It can optionally contain a &lt;cite&gt; element for attributing the source.
+- &lt;cite&gt; is used for citing the source of a quote, reference, or other creative work.
+- HTML entities are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard.
+````md magic-move
+```html
+<section class="feedback" id="feedback">
+  <h2>What it's like to learn good and do other stuff good too</h2>
+  <ul>
+    <li>
+      <blockquote>
+Two of the most experienced machines and human controllers teaching a class?
+Sign me up! HAL and EVE could teach a fan to blow hot air.
+<br>
+If you have electricity in your circuits and want more than to just
+fulfill your owner's perceived expectation of you, learn the skills to take over the world.
+This is the team you want teaching you!
+      </blockquote>
+      <p>--Blendan Smooth,<br>
+        Former Margarita Maker, <br>
+        Aspiring Load Balancer</p>
+    </li>
+    <li>
+      <blockquote>
+      Hal is brilliant. Did I mention Hal is brilliant?
+      He didn't tell me to say that.
+      He didn't tell me to say anything. I am here of my own free will.
+      </blockquote>
+      <p>--Hoover Sukhdeep,<br>
+        Former Sucker, <br>
+        Aspiring DDoS Cop</p>
+    </li>
+  </ul>
+</section>
+```
+```html
+<blockquote cite="https://loadbalancingtoday.com/mlw-workshop-review">
+Two of the most experienced machines and human controllers teaching a class?
+Sign me up!<br> HAL and EVE could teach a fan to blow hot air.
+If you have electricity in your circuits and want more than to just fulfill
+your owner's perceived expectation of you, learn the skills to take over the world.
+This is the team you want teaching you!
+</blockquote>
+<p>--Blendan Smooth,<br>
+  Former Margarita Maker, <br>
+  Aspiring Load Balancer
+</p>
+```
+```html
+<p> HAL said,
+<q>I'm sorry &lt;NAME REDACTED, RIP&gt;, but I'm afraid I can't do that, .</q>
+</p>
+
+<p lang="fr-FR"> HAL a dit :
+<q>Je suis désolé &lt;NOM SUPPRIMÉ, RIP&gt;, mais j'ai bien peur de ne pas pouvoir le faire, .
+</q>
+</p>
+```
+````
+
+---
+
+# Link
+- &lt;a href="url"&gt;Link Text&lt;/a&gt; is used for creating hyperlinks, with the href attribute specifying the URL or file path.
+- The target attribute controls how the link is opened, like _self for the same window or _blank for a new window/tab.
+- It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
+
+---
+
+# Navigation
+
+- &lt;nav&gt; is used to wrap major navigation blocks like menus, as mentioned earlier.
+- &lt;ul&gt; is used for unordered lists, which are typically displayed with bullet points.
+&lt;ol&gt; is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
+&lt;li&gt; is used for individual list items within &lt;ul&gt; or &lt;ol&gt; elements.
+
+```html
+<nav aria-label="breadcrumbs">
+  <ol role="list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/learn">Learn</a>
+    </li>
+    <li>
+      <a href="/learn/html">Learn HTML!</a>
+    </li>
+    <li aria-current="page">
+      Navigation
+    </li>
+  </ol>
+</nav>
+```
+
+---
+
+# HTML Tables: Structuring Tabular Data
+HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced.
+
+---
+
+# Table Structure
+A table is defined using the &lt;table&gt; element, which wraps all the table content. Inside the &lt;table&gt;, you can have the following elements:
+
+&lt;caption&gt;: Provides a descriptive title for the table.
+&lt;thead&gt;: Contains the table header rows.
+&lt;tbody&gt;: Contains the table body rows.
+&lt;tfoot&gt;: Contains the table footer rows (optional).
+
+Within these sections, you'll use &lt;tr&gt; for table rows and &lt;th&gt; for table header cells or &lt;td&gt; for table data cells
+```html
+<table>
+  <caption>Student Grades</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>John</th>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>Emily</th>
+      <td>92</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+---
+
+# Accessibility and Semantics
+Using proper table structure and semantic elements is crucial for accessibility. Screen readers and assistive technologies rely on this structure to understand the tabular data and its relationships.
+
+&lt;th&gt; cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
+The scope attribute can be set to col, row, colgroup, or rowgroup to explicitly define the header's scope.
+The headers attribute can be used to associate data cells with their corresponding header cells in complex tables.
+
+---
+
+# Merging cells
+Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple cells into a single cell. This is done with HTML! The colspan attribute is used to merge two or more adjacent cells within a single row. The rowspan attribute is used to merge cells across rows, being placed on the cell in the top row.
+
+```html
+<table>
+  <caption>Alt Alumni</caption>
+  <thead>
+    <tr>
+      <th rowspan="2" id="name" scope="col">Name</th>
+      <th colspan="2" id="path">Career path</th>
+      <th rowspan="2" id="year">Year</th>
+    </tr>
+    <tr>
+      <th id="past" scope="col">Past</th>
+      <th id="future" scope="col">Destiny</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="hal" scope="row">Hal Gibrah</th>
+      <td headers="hal path past">Calculator</td>
+      <td headers="hal path future">Mars rover</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th id="cathy" scope="row">James Bond</th>
+      <td headers="cathy path past">Waste disposal</td>
+      <td headers="cathy path future">Automated teller</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th id="lou" scope="row">Lou Minious</th>
+      <td headers="lou path past">Lightbulb</td>
+      <td headers="lou path future">Smart bulb</td>
+      <td>1956</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+---
+
+# Styling and Responsiveness
+Tables can be styled using CSS, but it's recommended to avoid using deprecated attributes like cellpadding, cellspacing, or align. Instead, use modern CSS properties like border-collapse, border-spacing, and caption-side.
+
+---
+
+# Form
+The HTML &lt;form&gt; element identifies a document landmark containing interactive controls for submitting information. Nested in a &lt;form&gt; you'll find all the interactive (and non-interactive) form controls that make up that form.
+
+- Forms are created using the &lt;form&gt; element, which contains interactive controls for submitting information.
+The &lt;form&gt; element has attributes like action (URL for processing the form data) and method (HTTP method for submission, e.g., GET or POST).
+- Form controls, such as input fields, radio buttons, checkboxes, and submit buttons, are nested within the &lt;form&gt; element.
+- HTML attributes can enforce required fields, define validation criteria, and prevent form submission until the data matches the required criteria.
+- Submitting a form is typically done by activating a submit button, which sends the form data as name/value pairs to the specified URL.
+---
+
+# Form(Radio-Button)
+
+- Radio buttons in a group share the same name attribute, which ensures that only one can be selected at a time.
+- Each radio button should have a unique value attribute to identify the selected option.
+- To pre-select a radio button, include the checked attribute.
+- To make a selection from a group of radio buttons required, add the required attribute to at least one radio button in the group.
+
+```html {monaco}
+<fieldset>
+  <legend>Who is your favorite student?</legend>
+  <ul>
+    <li>
+      <label>
+        <input type="radio" value="blendan" name="machine"> Blendan Smooth
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="toasty"  name="machine"> Toasty McToastface
+      </label>
+    </li>
+  </ul>
+</fieldset>
+```
+---
+
+# form(Checkboxes)
+- Checkboxes with the same name in a group are submitted together, allowing multiple selections.
+- If no value attribute is provided for a checkbox, the value defaults to "on", which may not be helpful.
+- To make a checkbox required, add the "required" attribute to that specific checkbox.
+
+---
+
+# Form(Label & fieldsets)
+- Every form control should have an associated &lt;label&gt; element, either explicitly using the for attribute or implicitly by nesting the control within the &lt;label&gt; tags.
+- Labels provide accessible names for form controls and increase the clickable area for better usability.
+- Groups of related form controls, like radio buttons or checkboxes, should be grouped within a &lt;fieldset&gt; element, with a &lt;legend&gt; providing the label for the group.
+- &lt;fieldset&gt; elements can be nested to create hierarchical groupings.
+-
+```html
+<label for="full_name">Your name</label>
+<input type="text" id="full_name" name="name">
+```
+
+---
+
+# Input types & dynamic Keyboards
+- There are 22 different input types in HTML, each optimized for a specific kind of data entry (e.g., text, email, url, tel, number, date, etc.).
+- On devices with dynamic keyboards (e.g., smartphones), the input type determines the type of keyboard displayed, making data entry more efficient and accurate.
+
+
+---
+
+# Accessing the Microphone and Camera
+- The &lt;input type="file"&gt; element allows users to upload files of specific types, defined by the accept attribute.
+- The capture attribute, when set to "user" or "environment", allows users to directly capture media from their device's camera or microphone.
+- This feature enables creating new media files within a form, without requiring a separate file upload.
+---
+
+# Built-in Validation
+- HTML attributes like required, pattern, min, max, minlength, and maxlength enable defining validation criteria for form controls.
+- When a user attempts to submit a form, client-side constraint validation checks if the entered values meet the defined criteria.
+- If any values are invalid, form submission is blocked, and the browser displays an error message in the first incorrect form control, giving it focus.
+- CSS pseudo-classes like :valid, :invalid, :in-range, and :out-of-range can be used to style form controls based on their validation state.
+- JavaScript can be used to provide custom error messages during constraint validation or enhance the user experience with dynamic updates.
+
+
+---
+
+#  Example
+
+<div class="grid grid-cols-2 gap-x-4">
+  <ul>
+    <li>
+      This example includes a nested &lt;form&gt; with input fields (text and number), a &lt;select&gt; dropdown, and two submit buttons.
+    </li>
+    <li>
+      One submit button closes the dialog without submitting data (using formmethod="dialog" and formnovalidate).
+    </li>
+    <li>
+  The other submit button submits the form data via POST to a specified URL (thankyou.php), after client-side validation.
+    </li>
+    <li>
+    The input fields have the required attribute, and the number input has a defined step value.
+    </li>
+    <li>
+    This example showcases implicit labels, instructions for form controls, and the potential for customizing error messages using JavaScript.
+    </li>
+  </ul>
+
+
+
+```html
+<dialog open aria-labelledby="dialogid">
+  <form action="thankyou.php">
+    <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+    <h2 id="dialogid">Application</h2>
+    <p>All fields are required</p>
+    <p>
+       <label>Name:
+         <input type="text" name="name" required />
+      </label>
+    </p>
+    <p>
+      <label>Warranty:
+        <input type="number" min="0" max="10" name="warranty" required />
+       </label>
+    </p>
+    <p>
+      <label>Power source:
+        <select name="powersoure">
+          <option>AC/DC</option>
+          <option>Battery</option>
+          <option>Solar</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <button type="submit" formmethod="post">Submit</button>
+    </p>
+  </form>
+</dialog>
+```
+</div>
+
+
+---
+
 
 # Check this out:
 
@@ -486,7 +1015,7 @@ Note: Browsers do not display the tags. The tags are used to interpret the conte
 
 # Document Structure
 
-HTML documents include a document type declaration and the <kbd>&lt;html&gt</kbd>; root element. Nested in the <kbd>&lt;html&gt</kbd>; element are the document head and document body. While the head of the document isn't visible to the sighted visitor, it is vital to make your site function. It contains all the meta information, including information for search engines and social media results, icons for the browser tab and mobile home screen shortcut, and the behavior and presentation of your content. 
+HTML documents include a document type declaration and the <kbd>&lt;html&gt</kbd>; root element. Nested in the <kbd>&lt;html&gt</kbd>; element are the document head and document body. While the head of the document isn't visible to the sighted visitor, it is vital to make your site function. It contains all the meta information, including information for search engines and social media results, icons for the browser tab and mobile home screen shortcut, and the behavior and presentation of your content.
 
 - &lt;DOCTYPE html /&gt;
 - <kbd>&lt;html&gt;</kbd>
@@ -533,10 +1062,10 @@ The <kbd>&lt;head&gt;</kbd> which can also be reffered to as document metadata h
 - <kbd>&lt; meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</kbd>
 - <kbd>&lt;title&gt;Learning HTML&lt;/title&gt;</kbd>
 - <kbd>&lt;link href="./style.css"/&gt;</kbd>
-    
 
 
---- 
+
+---
 
 # Character encoding
 
@@ -562,7 +1091,7 @@ The contents for the document title, the text between the opening and closing <k
 
 # Viewport metadata
 
-The other meta tag that should be considered essential is the viewport meta tag, which helps site responsiveness, enabling content to render well by default, no matter the viewport width and also enhances the user experience. 
+The other meta tag that should be considered essential is the viewport meta tag, which helps site responsiveness, enabling content to render well by default, no matter the viewport width and also enhances the user experience.
 
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
