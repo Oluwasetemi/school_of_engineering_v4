@@ -1495,3 +1495,186 @@ preload: Specifies that the video should be preloaded.
 crossorigin: Specifies how the element handles cross-origin requests.
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
+
+
+---
+
+# What are Web Components?
+
+Web components are a set of web standards that allow developers to create reusable, self-contained UI elements. These components can be seamlessly integrated into existing applications, just like regular HTML elements. The Web Component standard comprises three main parts:
+- HTML Templates: The <Kbd>&lt;template&gt;</kbd> element allows developers to declare fragments of HTML that can be cloned and inserted into the DOM using JavaScript. The contents of the <Kbd>&lt;template&gt;</kbd> element are not rendered by default.
+- Custom Elements: Custom Elements allow developers to define their own HTML elements with custom functionality. These elements can be created by extending the HTMLElement class using JavaScript.
+- Shadow DOM: The Shadow DOM is an encapsulated DOM tree that is attached to a custom element. It provides a way to scope CSS styles and DOM structures to a specific component, isolating it from the rest of the document. This prevents naming conflicts and style clashes with the rest of the application.
+---
+
+# The &lt;template&gt; Element
+This section introduces the &lt;template&gt; element and demonstrates how to create a template for a star rating component. It also explains the concept of unnamed and named slots using the &lt;slot&gt; element.
+- The &lt;template&gt; element is used to declare HTML fragments that can be cloned and inserted into the DOM using JavaScript. The contents of the <Kbd>&lt;template&gt;</kbd> element are not rendered by default. In the given example, a template is created for a star rating component with a <Kbd>&lt;form&gt;</kbd> element containing radio inputs and buttons.
+
+---
+
+# Contd(template)
+  
+```html
+<template id="star-rating-template">
+  <form>
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <rating>
+        <input
+          type="radio"
+          name="rating"
+          value="1"
+          aria-label="1 star"
+          required
+        />
+        <input type="radio" name="rating" value="2" aria-label="2 stars" />
+        <input type="radio" name="rating" value="3" aria-label="3 stars" />
+        <input type="radio" name="rating" value="4" aria-label="4 stars" />
+        <input type="radio" name="rating" value="5" aria-label="5 stars" />
+      </rating>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+```
+
+---
+
+
+# Slot
+The &lt;slot&gt; element is used within the &lt;template&gt; to create placeholders for custom content. If a name attribute is provided, it creates a "named slot" that can be used to insert custom content within the web component. In the example, a named slot is created for the legend of the star rating component.
+````md magic-move
+```html
+<template id="star-rating-template">
+  <form>
+    <fieldset>
+      <slot name="star-rating-legend">
+        <legend>Rate your experience:</legend>
+      </slot>
+    </fieldset>
+  </form>
+  </template>
+```
+```html
+<star-rating>
+  <legend slot="star-rating-legend">Blendan Smooth</legend>
+</star-rating>
+<star-rating>
+  <legend slot="star-rating-legend">Hoover Sukhdeep</legend>
+</star-rating>
+<star-rating>
+  <legend slot="star-rating-legend">Toasty McToastface</legend>
+  <p>Is this text visible?</p>
+</star-rating>
+```
+````
+
+---
+
+# Undefined Elements and Custom Elements
+This explains how browsers handle undefined (unrecognized) elements and demonstrates how to define a custom element using JavaScript and the customElements.define() method.
+- Browsers do not fail when encountering unrecognized HTML elements. Instead, they treat these elements as anonymous inline elements, similar to &lt;span&gt;>. In the given example, the &lt;star-rating&gt; element is initially treated as an unrecognized element, and its contents are displayed as if they were inside a &lt;span&gt; element.
+- To define a custom element, JavaScript is required. The customElements.define() method is used to register a custom element by extending the HTMLElement class.
+
+---
+
+# Contd (Undefined Elements and Custom Elements)
+
+-  In the example, the star-rating custom element is defined, and a shadow DOM is attached to it using the attachShadow() method. The contents of the &lt;template&gt; element are cloned and appended to the shadow DOM, effectively encapsulating the star rating component.
+
+```js
+customElements.define('star-rating',
+class extends HTMLElement {
+  constructor() {
+    super(); // Always call super first in constructor
+    const starRating = document.getElementById('star-rating-template').content;
+    const shadowRoot = this.attachShadow({
+      mode: 'open'
+    });
+    shadowRoot.appendChild(starRating.cloneNode(true));
+  }
+});
+```
+
+---
+
+# Shadow DOM and Styling
+This  discusses the Shadow DOM and how it encapsulates CSS styles within a web component. It demonstrates how to apply styles to the shadow DOM and explains the usage of the :host and ::slotted() pseudo-classes.
+- The Shadow DOM provides a way to scope CSS styles to a specific web component, isolating it from the rest of the document. This means that external CSS does not apply to the component, and component styles have no effect on the rest of the document, unless intentionally directed.
+
+---
+
+# Contd
+
+<div class="grid grid-cols-2 gap-x-4">
+  <ul>
+    <li>
+      In the given example, a &lt;style&gt; element is included within the &lt;template&gt; to apply styles to the star rating component. These styles are encapsulated within the shadow DOM and do not affect the rest of the document.
+    </li>
+    <li>
+     The :host pseudo-class is used to select the shadow host element (the custom element to which the shadow DOM is attached). The ::slotted() pseudo-element is used to select slotted elements (elements inserted into named slots) from within the shadow DOM.
+    </li>
+    <li>
+      The document also mentions the ::part() pseudo-element, which allows styling elements within a shadow DOM from the global CSS scope. By adding a part attribute to elements in the &lt;template&gt;, those elements can be targeted using the ::part() pseudo-element in the global CSS.
+    </li>
+  </ul>
+
+
+````md magic-move
+```html
+<!-- Template for a custom card component -->
+<template id="card-template">
+  <style>
+    /* Styles within the shadow DOM */
+    :host {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f5f5f5;
+    }
+
+    /* Styling slotted content */
+    ::slotted(h2) {
+      margin-top: 0;
+    }
+
+    ::slotted(p) {
+      color: #666;
+    }
+  </style>
+
+  <div class="card">
+    <slot name="card-header"></slot>
+    <slot name="card-content"></slot>
+  </div>
+</template>
+
+<script>
+  // Define the custom element
+  customElements.define('custom-card', class extends HTMLElement {
+    constructor() {
+      super();
+      const template = document.getElementById('card-template').content;
+      const shadowRoot = this.attachShadow({ mode: 'open' });
+      shadowRoot.appendChild(template.cloneNode(true));
+    }
+  });
+</script>
+```
+```html
+<custom-card>
+  <h2 slot="card-header">Card Title</h2>
+  <p slot="card-content">This is the content of the card.</p>
+</custom-card>
+```
+````
+</div>
+
+
+---
