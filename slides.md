@@ -1495,3 +1495,99 @@ preload: Specifies that the video should be preloaded.
 crossorigin: Specifies how the element handles cross-origin requests.
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
+
+---
+
+# Advanced HTML API
+
+#### Have you heard the word API somewhere? 
+It means Application Programming Interface which make it easier for different software systems to communicate with each other. Let's say API is like a waiter at a restaurant, taking requests and bringing back what you need, allowing different software systems to talk to each other easily and efficiently.
+
+---
+
+# Now let's breeze into Advanced HTML API
+
+### For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
+The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
+
+The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use <kbd>HTMLImageElement.alt</kbd> get the alt attributes of all the images:
+
+```
+let allImages = document.querySelectorAll('img');
+allImages.forEach((imageInstance) => {
+  console.log(imageInstance.alt);
+});
+
+```
+---
+
+# Contd
+
+The HTML interface APIs is not limited to accessing attribute values. 
+The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with <kbd>HTMLMediaElement.duration</kbd>, <kbd>HTMLMediaElement.currentTime</kbd>, and <kbd>HTMLMediaElement.ended</kbd> respectively.
+
+---
+
+# Focusing 
+
+To improve user-accessibily in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
+
+Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are inert, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements inert and to make inert elements interactive.
+
+
+
+---
+
+# Focus
+
+By default, the navigation focus order in a webpage follows the visual and source code order. Although HTML attributes and CSS properties can change this order, doing so can negatively impact user experience. Modifying the tabbing order or visual rendering order can lead to confusion and a poor user experience. Therefore, it's recommended not to alter the perceived and actual tabbing order with CSS and HTML, as demonstrated by examples showing the negative effects of such changes.
+
+# Example 1
+
+<p>Click in any input, then hit the tab key.</p>
+  <ol class="grid grid-cols-4 gap-4">
+    <li><input tabindex="3" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="6" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="2" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="-1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="8" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="5" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="7" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="4" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  </ol>
+
+---
+
+# Example 2
+
+
+  In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
+  <div class="p-4">
+    <p class="mb-2"><label class="text-base">Put your cursor in the text box, then hit your tab key several times:</label></p>
+  <input tabindex="0" class="px-3 py-2 border         border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+  </div>
+
+  <div class="inline-flex flex-row-reverse gap-2">
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">flexbox.</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">CSS</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">with</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">styled</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">then</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600 order-3">This</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">order</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">reverse</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">in</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">written</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">was</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">sentenced</span>
+  </div>
+
+The flex-flow: row-reverse; declaration has reversed the visual order. In addition, the CSS order property was applied to the sixth word, "This", which visually moved that one word. The tabbing sequence is the order of the code, which no longer matches the visual order, creating a disconnect for keyboard users.
+
+Note:
+The <kbd>contenteditable</kbd> and <kbd>tabindex</kbd> attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with element.focus().
+A <kbd>tabindex</kbd>  attribute with a negative value makes the element focusable but not tabbable.
