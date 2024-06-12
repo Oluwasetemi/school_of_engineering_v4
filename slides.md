@@ -657,6 +657,7 @@ Description List: <dl>, <dt>, <dd>
 
 ```
 
+
 ---
 
 # Let's put some of the tags in usage
@@ -715,6 +716,7 @@ The &lt;h1&gt; tag defines a top-level heading on the page. This is often the ma
 
 &lt;p&gt;This page looks good on both desktop and mobile devices.&lt;/p&gt;
 The &lt;p&gt; tag defines a paragraph of text. It contains the main body text and ensures the content is properly formatted and readable.
+
 
 ---
 
@@ -1245,4 +1247,251 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 
 ---
 
-#
+# How to embed Images in our HTML
+
+## HTML &lt;img/&gt; Tag
+We have been talking about tags in our previous teachings but this time you'll be seeing another form of tag that's called self closing tags under which the popular image tag fall under.
+
+Self-closing tags, also known as void elements, are a feature in HTML and XML where the tag does not require a separate closing tag. Instead, the tag is closed within itself. This is useful for elements that do not have any content between an opening and a closing tag. Here are some examples and details about self-closing tags:
+
+&lt;img /&gt;: Defines an image.
+
+&lt;br /&gt;: Inserts a line break.
+
+&lt;hr /&gt;: Creates a horizontal rule (a line).
+
+&lt;input /&gt;: Defines an input field.
+
+&lt;meta /&gt;: Provides metadata about the HTML document.
+
+&lt;link /&gt;: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets).
+
+---
+
+# Syntax:
+
+In HTML, self-closing tags can be written in two ways:
+
+#### HTML5 Syntax:
+
+- &lt;img src="image.jpg" alt="Description"&gt;
+
+- &lt;br&gt;
+
+This syntax is valid in HTML5 and does not require a closing slash (/).
+
+#### XHTML Syntax:
+
+- &lt;img src="image.jpg" alt="Description" /&gt;
+
+- &lt;br /&gt;
+
+This syntax is required in XHTML, which is a stricter form of HTML based on XML.
+
+---
+
+# Usage Notes:
+
+### HTML5: 
+In HTML5, the closing slash is optional, and self-closing tags can be written without it. However, for compatibility with XML parsers, it is sometimes included.
+- XHTML: XHTML requires the self-closing tags to include the closing slash to comply with XML standards.
+
+### Why Use Self-Closing Tags?
+
+- Simplicity: 
+They simplify the markup by reducing the number of tags.
+- Consistency: 
+They make the code easier to read and maintain, especially when dealing with elements that don’t require content.
+
+
+---
+
+# Code Example on Self-Closing Tags
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Closing Tags Example</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>Self-Closing Tags Example</h1>
+    <img src="image.jpg" alt="A beautiful view" />
+    <br />
+    <input type="text" name="username" placeholder="Enter your username" />
+    <hr />
+</body>
+</html>
+```
+
+---
+
+# HTML Images Syntax
+
+Images can improve the design and the appearance of a web page.
+
+The HTML &lt;img&gt; tag is used to embed an image in a web page.
+
+Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt;  tag creates a holding space for the referenced image.
+
+The &lt;img&gt;  tag is empty, it contains attributes only, and does not have a closing tag.
+
+The &lt;img&gt;  tag has two required attributes:
+
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image
+
+```
+<img src="url" alt="alternatetext">
+
+```
+
+---
+
+# The src Attribute
+
+#### The required src attribute specifies the path (URL) to the image.
+
+Note: When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page. Therefore, make sure that the image actually stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.
+
+Example:
+```
+<img src="img_chania.jpg" alt="Flowers in Chania">
+```
+
+---
+
+# The alt Attribute
+
+#### The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
+
+The value of the alt attribute should describe the image:
+```
+<img src="wrongimagelink.gif" alt="Flowers in Chania">
+```
+If a browser cannot find an image, it will display the value of the alt attribute:
+
+
+Note:
+You can use the width and height attributes in the image tag to define the width and heigh of the image in pixels.
+
+Example:
+```
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+```
+---
+
+# Image as a Link
+
+#### To use an image as a link, put the &lt;img&gt;  tag inside the &lt;a&gt;  tag:
+
+Example:
+```
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+```
+
+---
+
+# HTML &lt;audio&gt; Tag
+
+The &lt;audio&gt; tag is used to embed sound content in a document, such as music or other audio streams.
+
+The &lt;audio&gt; tag contains one or more &lt;source&gt; tags with different audio sources. The browser will choose the first source it supports.
+
+The text between the &lt;audio&gt; and &lt;/audio&gt; tags will only be displayed in browsers that do not support the &lt;audio&gt; element.
+
+Note: There are three supported audio formats in HTML: MP3, WAV, and OGG.
+
+Example:
+
+```
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+```
+
+---
+
+# Audio Tag Attributes
+
+Code Example: 
+```
+<body>
+    <h1>Audio Tag with Various Attributes</h1>
+    <audio controls autoplay loop muted preload="auto" crossorigin="anonymous">
+        <source src="audiofile.mp3" type="audio/mpeg">
+        <source src="audiofile.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+```
+
+&lt;audio&gt; : The audio element that includes multiple attributes:
+- controls: Adds playback controls.
+- autoplay: The audio will play automatically when ready.
+- loop: The audio will loop continuously.
+- muted: The audio will be muted initially.
+- preload: Specifies that the audio should be preloaded.
+
+---
+
+# Contd.
+
+
+- crossorigin: Specifies how the element handles cross-origin requests.
+- &lt;source&gt;  Defines multiple sources for the audio file in different formats (MP3 and OGG) for better compatibility.
+
+Note: In HTML, attributes provide additional information about an element and modify its behavior or appearance.
+
+---
+
+# HTML &lt;video&gt; Tag
+
+&lt;video&gt;: The Video Embed element
+The &lt;video&gt; HTML element embeds a media player which supports video playback into the document. You can use &lt;video&gt; for audio content as well, but the &lt;audio&gt; element may provide a more appropriate user experience.
+
+# Video Tag Attributes
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tag Example</title>
+</head>
+<body>
+    <h1>Video Tag with Various Attributes</h1>
+    <video controls autoplay loop muted preload="auto" crossorigin="anonymous">
+        <source src="videofile.mp4" type="video/mp4">
+        <source src="videofile.webm" type="video/webm">
+        Your browser does not support the video element.
+    </video>
+</body>
+</html>
+```
+---
+
+# Code Explanation:
+- &lt;!DOCTYPE html&gt;: Declares the document type and version of HTML.
+- &lt;html lang="en"&gt;: Sets the language of the document to English.
+- &lt;head&gt;: Contains meta-information about the document, including character set and viewport settings.
+- &lt;title&gt;: Sets the title of the document, which appears in the browser tab.
+- &lt;body&gt;: Contains the content of the document.
+- &lt;h1&gt;: A heading element for the title of the page.
+- &lt;video&gt;: The video element that includes multiple attributes:
+controls: Adds playback controls.
+autoplay: The video will play automatically when ready.
+loop: The video will loop continuously.
+muted: The video will be muted initially.
+preload: Specifies that the video should be preloaded.
+crossorigin: Specifies how the element handles cross-origin requests.
+- &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
+- Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
