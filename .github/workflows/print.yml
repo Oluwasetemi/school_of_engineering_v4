@@ -1,0 +1,55 @@
+name: Export
+
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Create Export Directory
+        run: mkdir -p ./_export
+
+      - name: Export
+        run: |
+          npm exec slidev export -- --per-slide --format pdf --output ./_export/slides.pdf
+          npm exec slidev export -- --per-slide --with-clicks false --format pptx --output ./_export/slides.pptx
+
+      - name: Generate Body
+        run: echo "### Please download PDF and PPTX files from the assets section below." > ./_export/body.txt
+
+      - name: Create Tag
+        uses: rickstaa/action-create-tag@v1.7.2
+        with:
+          tag: export-${{ github.sha }}
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Exports for ${{ github.sha }}
+          body_path: ./_export/body.txt
+          tag_name: export-${{ github.sha }}
+          make_latest: true
+          files: |
+            ./_export/slides.pdf
+            ./_export/slides.pptx
