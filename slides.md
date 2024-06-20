@@ -43,6 +43,10 @@ Class notes for the 1st Semester
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
+  <a href="https://github.com/Oluwasetemi/school_of_engineering_v4/releases" target="_blank" alt="DOwnload" title="Download PDF or PPTX version of the slide"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-download />
+  </a>
 </div>
 
 <!--
