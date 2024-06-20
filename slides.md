@@ -439,7 +439,7 @@ HTML(HyperText Markup Language) is the foundation of basically every web page, b
 
 # Let's break it down a bit
 
-- HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as <kbd>&lt;head&gt;</kbd>, <kdb>&lt;title&gt;</kdb>', &lt;body&gt;', &lt;header&gt;', &lt;footer&gt;', &lt;article&gt;', &lt;section&gt;', &lt;p&gt;', &lt;div&gt;', &lt;span&gt;', &lt;img&gt;', &lt;aside&gt;', &lt;audio&gt;', &lt;canvas&gt;', &lt;datalist&gt;', &lt;details&gt;', &lt;embed&gt;', &lt;nav&gt;', &lt;search&gt;', &lt;output&gt;', &lt;progress&gt;', &lt;video&gt;', &lt;ul&gt;', &lt;ol&gt;', &lt;li&gt;' and many others.
+- HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as <kbd>&lt;head&gt;</kbd>, <kbd>&lt;title&gt;</kbd>, <kbd>&lt;body&gt;</kbd>, <kbd>&lt;header&gt;</kbd>, <kbd>&lt;footer&gt;</kbd>, <kbd>&lt;article&gt;</kbd>, <kbd>&lt;section&gt;</kbd>, <kbd>&lt;p&gt;</kbd>, <kbd>&lt;div&gt;</kbd>, <kbd>&lt;span&gt;</kbd>, <kbd>&lt;img&gt;</kbd>, <kbd>&lt;aside&gt;</kbd>, <kbd>&lt;audio&gt;</kbd>, <kbd>&lt;canvas&gt;</kbd>, <kbd>&lt;datalist&gt;</kbd>, <kbd>&lt;details&gt;</kbd>, <kbd>&lt;embed&gt;</kbd>, <kbd>&lt;nav&gt;</kbd>, <kbd>&lt;search&gt;</kbd>, <kbd>&lt;output&gt;</kbd>, <kbd>&lt;progress&gt;</kbd>, <kbd>&lt;video&gt;</kbd>, <kbd>&lt;ul&gt;</kbd>, <kbd>&lt;ol&gt;</kbd>, <kbd>&lt;li&gt;</kbd> and many others.
 
 - “HyperText” is text on a web page that contains references to another web page. You probably know these as hyperlinks. We use hyperlinks to jump to another section of the same page, a different page on the current website, or a completely new website. Hyperlinks can also open a PDF, email, or multimedia, like a video or audio file.
 
@@ -507,32 +507,61 @@ HTML documents include a document type declaration and the <kbd>&lt;html&gt</kbd
 
 # DOCTYPE
 
+<div></div>
+
 <kbd>&lt;!DOCTYPE html&gt;</kbd>
 The first thing in any HTML document is the preamble. To start an HTML document you need to type <kbd>&lt;!DOCTYPE html&gt;</kbd> at the top of the document, though this may look like an HTML element because it's wrapped in tags but it isn't. It's a special kind of node called "doctype" which tells the browser to use standards mode. If this <kbd>&lt;!DOCTYPE html&gt;</kbd> is omitted, browser wil use a different rendering mode known as quirks mode.
 
----
+<v-click>
 
-# HTML
+## HTML
 
-The <kbd>&lt;html&gt;</kbd> element is the root element for an HTML document. It is the parent of the <kbd>&lt;head&gt;</kbd>and <kbd>&lt;body&gt;,</kbd> containing everything in the HTML document other than the doctype. If omitted it will be implied, but it is important to include it, as this is the element on which the language of the content of the document is declared.
+The <kbd>&lt;html&gt;</kbd> element is the root element for an HTML document. It is the parent of the <kbd>&lt;head&gt;</kbd>and <kbd>&lt;body&gt;</kbd> containing everything in the HTML document other than the doctype. If omitted it will be implied, but it is important to include it, as this is the element on which the language of the content of the document is declared.
+
+</v-click>
+
+<v-click>
 
 Note: The lang language attribute added to the html tag to give this <kbd>&lt;html lang="en"&gt;</kbd> tag defines the main language of the document. The value of the lang attribute is a two- or three-letter ISO language code followed by the region. The region is optional, but recommended, as a language can vary greatly between regions.
+
+
+</v-click>
+
+
 
 ---
 
 # head
 
+<div></div>
+
 Nested between the opening and closing <kbd>&lt;html&gt;</kbd> tags, we find the two children: <kbd>&lt;head&gt;</kbd> and <kbd>&lt;body&gt;</kbd>:
 
-- &lt;DOCTYPE html /&gt;
+<div grid="~ cols-2 gap-4">
+
+<div>
+
+- <kbd>&lt;DOCTYPE html /&gt;</kbd>
 - <kbd>&lt;html lang="en"&gt;</kbd>
 - <kbd>&lt;head&gt;</kbd>
 - <kbd>&lt;head/&gt;</kbd>
+
+</div>
+
+<div>
+
 - <kbd>&lt;body&gt;</kbd>
 - <kbd>&lt;body/&gt;</kbd>
 - <kbd>&lt;html/&gt;</kbd>
 
-The <kbd>&lt;head&gt;</kbd> which can also be reffered to as document metadata header, contains all the metadata for a site or application and some of these meta tags are:
+
+</div>
+
+
+</div>
+
+
+The <kbd>&lt;head&gt;</kbd> which can also be referred to as document metadata header, contains all the metadata for a site or application and some of these meta tags are:
 
 - <kbd>&lt;meta charset="UTF-8"/&gt;</kbd>
 - <kbd>&lt; meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</kbd>
@@ -545,33 +574,30 @@ The <kbd>&lt;head&gt;</kbd> which can also be reffered to as document metadata h
 
 # Character encoding
 
-```
+```html
 <meta charset="UTF-8"/>;
-
 ```
 
 By declaring UTF-8 (case-insensitive), you can even include emojis in your title (but please don't).
 
 The character encoding is inherited into everything in the document, even <kbd>&lt;style&gt;</kbd> and <kbd>&lt;scipt&gt;</kbd> This little declaration means you can include emojis in class names and the selectorAPI (again, please don't). If you do use emojis, make sure to use them in a way that enhances usability without harming accessibility.
 
-
----
-
-# Document title
+## Document title
 
 The <kbd>&lt;title&gt;</kbd> element is metadata that represents the title of the overall HTML document (not the document's content.)
 
 The contents for the document title, the text between the opening and closing <kbd>&lt;title&gt;</kbd>  tags, are displayed in the browser tab, the list of open windows, the history, search results, and, unless redefined with <kbd>&lt;meta&gt;</kbd>  tags, in social media cards.
 
+
 ---
 
 # Viewport metadata
 
+<div></div>
 The other meta tag that should be considered essential is the viewport meta tag, which helps site responsiveness, enabling content to render well by default, no matter the viewport width and also enhances the user experience.
 
-```
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 ```
 name="viewport": This specifies that the meta tag is providing information about the viewport. The viewport is the user's visible area of a web page, which varies with the device used to view the site (desktop, tablet, mobile phone).
 
@@ -583,6 +609,7 @@ initial-scale=1.0: This sets the initial zoom level when the page is first loade
 ---
 
 # Body
+<div></div>
 The <kbd>&lt;body&gt;</kbd> tag defines the document's body.
 
 The <kbd>&lt;body&gt;</kbd>  element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
@@ -591,7 +618,7 @@ Note: There can only be one <kbd>&lt;body&gt;</kbd> element in an HTML document.
 
 Inside the <kbd>&lt;body&gt;</kbd> tags of an HTML document, you can find a wide variety of elements that are used to structure and present the content of a webpage. Here are some common HTML tags that are typically found inside the <kbd>&lt;body&gt;</kbd> tag:
 
-```
+```html
 <body>
 
 1. Headings:
@@ -602,14 +629,13 @@ Inside the <kbd>&lt;body&gt;</kbd> tags of an HTML document, you can find a wide
 
 3. Links:
 <a>
-
 ```
 
 ---
 
 # Contd.
 
-```
+```html
 4. Lists:
 Ordered List: <ol>, <li>
 Unordered List: <ul>, <li>
@@ -632,14 +658,13 @@ Description List: <dl>, <dt>, <dd>
 
 10. Sections and Grouping Content:
 <div>, <span>, <header>, <footer>, <main>, <section>, <article>, <nav>, <aside>
-
 ```
 
 ---
 
 # Contd.
 
-```
+```html
 
 11. Text Formatting:
 <b>, <i>, <strong>, <em>, <small>, <mark>, <del>, <ins>, <sub>, <sup>
@@ -654,7 +679,6 @@ Description List: <dl>, <dt>, <dd>
 <script>, <noscript>, <style>
 
 </body>
-
 ```
 
 
@@ -662,7 +686,7 @@ Description List: <dl>, <dt>, <dd>
 
 # Let's put some of the tags in usage
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -675,7 +699,6 @@ Description List: <dl>, <dt>, <dd>
     <p>This page looks good on both desktop and mobile devices.</p>
 </body>
 </html>
-
 ```
 ---
 
@@ -723,10 +746,12 @@ The &lt;p&gt; tag defines a paragraph of text. It contains the main body text an
 # Understanding Semantic HTML
 Semantic HTML is the practice of using HTML elements to structure your content based on their meaning and purpose, rather than their appearance. By using semantic markup, you provide context and meaning to the content, making it easier for both humans and machines (like search engines and assistive technologies) to understand the structure and purpose of the content.
 
----
+<v-click>
 
-# Meaning Over Appearance
+## Meaning Over Appearance
 This emphasizes that HTML elements should be chosen based on their semantic meaning, not their visual appearance. For example, don't use an &lt;h1&gt; element just because it renders text as large and bold by default; use it to represent the main heading or title of the content
+
+</v-click>
 
 ---
 
@@ -746,9 +771,8 @@ This emphasizes that HTML elements should be chosen based on their semantic mean
     <a>one word</a>
   </div>
 </div>
-
+<!-- In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no semantic meaning or context about the content structure. -->
 ```
-In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no semantic meaning or context about the content structure.
 
 
 ```html
@@ -775,8 +799,6 @@ In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no se
   <p>five words</p>
 </footer>
 ```
-
-
 ````
 
 
@@ -785,10 +807,9 @@ In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no se
 # Accessibility and Machine-Readability
 This highlights how semantic markup improves accessibility and machine-readability. It shows examples of how browser developer tools display the Accessibility Object Model (AOM) differently for non-semantic and semantic markup. Assistive technologies like screen readers rely on the AOM to interpret the content structure and meaning correctly.
 
----
-
 # Roles and Landmarks
 This explains the concept of roles and landmarks in semantic HTML. Semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; have implicit roles that identify them as landmarks for assistive technologies. This helps users navigate the content more easily.
+---
 
 # Using the role attribute
 While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
@@ -806,12 +827,12 @@ While semantic elements have implicit roles, the content mentions that the role 
 </div>
 ```
 
----
-
-
 # Choosing the Right Elements
 This emphasizes the importance of choosing the right HTML elements based on their semantic meaning and functionality, not just their visual appearance. It encourages developers to ask themselves, "Which element best represents the function of this section of markup?" when writing HTML.
 In summary, this stresses the significance of using semantic HTML for improved accessibility, machine-readability, and overall content structure and meaning.
+
+
+
 
 
 ---
@@ -851,30 +872,38 @@ In summary, this stresses the significance of using semantic HTML for improved a
 ```
 
 -  #### Enumerated attributes
-   are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include &lt;style contenteditable&gt;, it defaults to &lt;style contenteditable="true"&gt;.
- -  #### Global attributes
+   are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include <kbd>&lt;style contenteditable&gt;</kbd>, it defaults to
+
+  <kbd>&lt;style contenteditable="true"&gt;</kbd>.
+
+---
+
+-  #### Global attributes
     are attributes that can be set on any HTML element, including elements in the &lt;head&gt;. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a &lt;meta&gt; as meta content is not displayed.
 - #### id
    The global attribute id is used to define a unique identifier for an element. It serves many purposes, including: - The target of a link's fragment identifier. - Identifying an element for scripting. - Associating a form element with its label. - Providing a label or description for assistive technologies. - Targeting styles with (high specificity or as attribute selectors) in CSS.
 - #### class
     The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
- - #### Style
-    The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
-
-
 ---
 
-# Contd(Attribute)
+ - #### Style
+    The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
 
 - #### tabIndex
    The tabindex attribute can be added to any element to enable it to receive focus. The tabindex value defines whether it gets added to the tab order, and, optionally, into a non-default tabbing order.
 The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
 
+---
+
+# Contd(Attribute)
+
+
 - #### role
   The role attribute can be used to provide semantic meaning to content, enabling screen readers to inform site users of an object's expected user interaction
 
 ```html
-<share-action authors="@estellevw" data-action="click" data-category="web.dev" data-icon="share" data-label="share, twitter" role="button" tabindex="0">
+<share-action authors="@estellevw" data-action="click" data-category="web.dev"
+data-icon="share" data-label="share, twitter" role="button" tabindex="0">
   <svg aria-label="share" role="img" xmlns="http://www.w3.org/2000/svg">
     <use href="#shareIcon" />
   </svg>
@@ -893,7 +922,7 @@ These three opening tags are equivalent:
 <style contenteditable="">
 <style contenteditable="true">
 ```
-  If you include &lt;style contenteditable="false"&gt;, the element is not editable (unless it's by default editable, like a &lt;textarea&gt;). If the value is invalid, such as &lt;style contenteditable="😀"&gt; or &lt;style contenteditable="contenteditable"&gt;, the value defaults to inherit.
+  If you include <kbd>&lt;style contenteditable="false"&gt;</kbd>, the element is not editable (unless it's by default editable, like a <kbd>&lt;textarea&gt;</kbd>). If the value is invalid, such as <kbd>&lt;style contenteditable="😀"&gt;</kbd> or <br/><kbd>&lt;style contenteditable="contenteditable"&gt;</kbd>, the value defaults to inherit.
 
 ---
 
@@ -917,23 +946,24 @@ You can create any custom attribute you want by adding the data- prefix. You can
 - &lt;blockquote&gt; is used for longer quoted text, often from another source. It can optionally contain a &lt;cite&gt; element for attributing the source.
 - &lt;cite&gt; is used for citing the source of a quote, reference, or other creative work.
 - HTML entities are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard.
-````md magic-move
+
+---
+
+````md magic-move {maxHeight:'500px'}
 ```html
 <section class="feedback" id="feedback">
   <h2>What it's like to learn good and do other stuff good too</h2>
   <ul>
     <li>
       <blockquote>
-Two of the most experienced machines and human controllers teaching a class?
-Sign me up! HAL and EVE could teach a fan to blow hot air.
-<br>
-If you have electricity in your circuits and want more than to just
-fulfill your owner's perceived expectation of you, learn the skills to take over the world.
-This is the team you want teaching you!
+        Two of the most experienced machines and human controllers teaching a class?
+        Sign me up! HAL and EVE could teach a fan to blow hot air.
+        <br>
+        If you have electricity in your circuits and want more than to just
+        fulfill your owner's perceived expectation of you, learn the skills to take over the world.
+        This is the team you want teaching you!
       </blockquote>
-      <p>--Blendan Smooth,<br>
-        Former Margarita Maker, <br>
-        Aspiring Load Balancer</p>
+      <p>--Blendan Smooth,<br> Former Margarita Maker, <br> Aspiring Load Balancer</p>
     </li>
     <li>
       <blockquote>
@@ -963,11 +993,11 @@ This is the team you want teaching you!
 ```
 ```html
 <p> HAL said,
-<q>I'm sorry &lt;NAME REDACTED, RIP&gt;, but I'm afraid I can't do that, .</q>
+<q>I'm sorry <NAME REDACTED, RIP>, but I'm afraid I can't do that, .</q>
 </p>
 
 <p lang="fr-FR"> HAL a dit :
-<q>Je suis désolé &lt;NOM SUPPRIMÉ, RIP&gt;, mais j'ai bien peur de ne pas pouvoir le faire, .
+<q>Je suis désolé <NOM SUPPRIMÉ, RIP>, mais j'ai bien peur de ne pas pouvoir le faire, .
 </q>
 </p>
 ```
@@ -976,18 +1006,18 @@ This is the team you want teaching you!
 ---
 
 # Link
-- &lt;a href="url"&gt;Link Text&lt;/a&gt; is used for creating hyperlinks, with the href attribute specifying the URL or file path.
-- The target attribute controls how the link is opened, like _self for the same window or _blank for a new window/tab.
+- <kbd>&lt;a href="url"&gt;Link Text&lt;/a&gt;</kbd> is used for creating hyperlinks, with the `href` attribute specifying the URL or file path.
+- The `target` attribute controls how the link is opened, like `_self` for the same window or `_blank` for a new window/tab.
 - It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
 
 ---
 
 # Navigation
 
-- &lt;nav&gt; is used to wrap major navigation blocks like menus, as mentioned earlier.
-- &lt;ul&gt; is used for unordered lists, which are typically displayed with bullet points.
-&lt;ol&gt; is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
-&lt;li&gt; is used for individual list items within &lt;ul&gt; or &lt;ol&gt; elements.
+- <kbd>&lt;nav&gt;</kbd> is used to wrap major navigation blocks like menus, as mentioned earlier.
+- <kbd>&lt;ul&gt;</kbd> is used for unordered lists, which are typically displayed with bullet points.
+<kbd>&lt;ol&gt;</kbd> is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
+<kbd>&lt;li&gt;</kbd> is used for individual list items within <kbd>&lt;ul&gt;</kbd> or <kbd>&lt;ol&gt;</kbd> elements.
 
 ```html
 <nav aria-label="breadcrumbs">
@@ -1011,20 +1041,24 @@ This is the team you want teaching you!
 ---
 
 # HTML Tables: Structuring Tabular Data
+<div></div>
 HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced.
+
+
+# Table Structure
+<div></div>
+A table is defined using the &lt;table&gt; element, which wraps all the table content. Inside the &lt;table&gt;, you can have the following elements:
+
+- <kbd>&lt;caption&gt;</kbd>: Provides a descriptive title for the table.
+- <kbd>&lt;thead&gt;</kbd>: Contains the table header rows.
+- <kbd>&lt;tbody&gt;</kbd>: Contains the table body rows.
+- <kbd>&lt;tfoot&gt;</kbd>: Contains the table footer rows (optional).
+
+Within these sections, you'll use <kbd>&lt;tr&gt;</kbd> for table rows and <kbd>&lt;th&gt;</kbd> for table header cells or <kbd>&lt;td&gt;</kbd> for table data cells
 
 ---
 
-# Table Structure
-A table is defined using the &lt;table&gt; element, which wraps all the table content. Inside the &lt;table&gt;, you can have the following elements:
-
-&lt;caption&gt;: Provides a descriptive title for the table.
-&lt;thead&gt;: Contains the table header rows.
-&lt;tbody&gt;: Contains the table body rows.
-&lt;tfoot&gt;: Contains the table footer rows (optional).
-
-Within these sections, you'll use &lt;tr&gt; for table rows and &lt;th&gt; for table header cells or &lt;td&gt; for table data cells
-```html
+```html {monaco}
 <table>
   <caption>Student Grades</caption>
   <thead>
@@ -1049,18 +1083,25 @@ Within these sections, you'll use &lt;tr&gt; for table rows and &lt;th&gt; for t
 ---
 
 # Accessibility and Semantics
+<div></div>
 Using proper table structure and semantic elements is crucial for accessibility. Screen readers and assistive technologies rely on this structure to understand the tabular data and its relationships.
 
-&lt;th&gt; cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
+<kbd>&lt;th&gt;</kbd> cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
 The scope attribute can be set to col, row, colgroup, or rowgroup to explicitly define the header's scope.
 The headers attribute can be used to associate data cells with their corresponding header cells in complex tables.
 
----
 
 # Merging cells
+<div></div>
 Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple cells into a single cell. This is done with HTML! The colspan attribute is used to merge two or more adjacent cells within a single row. The rowspan attribute is used to merge cells across rows, being placed on the cell in the top row.
 
-```html
+# Styling and Responsiveness
+<div></div>
+Tables can be styled using CSS, but it's recommended to avoid using deprecated attributes like cellpadding, cellspacing, or align. Instead, use modern CSS properties like border-collapse, border-spacing, and caption-side.
+
+---
+
+```html {*|1|*}{maxHeight:'440px'}
 <table>
   <caption>Alt Alumni</caption>
   <thead>
@@ -1097,10 +1138,13 @@ Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple
 </table>
 ```
 
----
+<style>
+  .slidev-code-wrapper {
+    @apply border border-main rounded
+  }
+</style>
 
-# Styling and Responsiveness
-Tables can be styled using CSS, but it's recommended to avoid using deprecated attributes like cellpadding, cellspacing, or align. Instead, use modern CSS properties like border-collapse, border-spacing, and caption-side.
+
 
 ---
 
@@ -1120,6 +1164,7 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - Each radio button should have a unique value attribute to identify the selected option.
 - To pre-select a radio button, include the checked attribute.
 - To make a selection from a group of radio buttons required, add the required attribute to at least one radio button in the group.
+---
 
 ```html {monaco}
 <fieldset>
@@ -1150,14 +1195,14 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - If no value attribute is provided for a checkbox, the value defaults to "on", which may not be helpful.
 - To make a checkbox required, add the "required" attribute to that specific checkbox.
 
----
+
 
 # Form(Label & fieldsets)
 - Every form control should have an associated &lt;label&gt; element, either explicitly using the for attribute or implicitly by nesting the control within the &lt;label&gt; tags.
 - Labels provide accessible names for form controls and increase the clickable area for better usability.
 - Groups of related form controls, like radio buttons or checkboxes, should be grouped within a &lt;fieldset&gt; element, with a &lt;legend&gt; providing the label for the group.
 - &lt;fieldset&gt; elements can be nested to create hierarchical groupings.
--
+
 ```html
 <label for="full_name">Your name</label>
 <input type="text" id="full_name" name="name">
@@ -1173,7 +1218,7 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 ---
 
 # Accessing the Microphone and Camera
-- The &lt;input type="file"&gt; element allows users to upload files of specific types, defined by the accept attribute.
+- The <kbd>&lt;input type="file"&gt;</kbd> element allows users to upload files of specific types, defined by the accept attribute.
 - The capture attribute, when set to "user" or "environment", allows users to directly capture media from their device's camera or microphone.
 - This feature enables creating new media files within a form, without requiring a separate file upload.
 ---
@@ -1199,7 +1244,7 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
       One submit button closes the dialog without submitting data (using formmethod="dialog" and formnovalidate).
     </li>
     <li>
-  The other submit button submits the form data via POST to a specified URL (thankyou.php), after client-side validation.
+      The other submit button submits the form data via POST to a specified URL (thankyou.php), after client-side validation.
     </li>
     <li>
     The input fields have the required attribute, and the number input has a defined step value.
@@ -1211,10 +1256,11 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 
 
 
-```html
+```html {*|*}{maxHeight: '430px'}
 <dialog open aria-labelledby="dialogid">
   <form action="thankyou.php">
-    <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+    <button type="submit" aria-label="close"
+     formmethod="dialog" formnovalidate>X</button>
     <h2 id="dialogid">Application</h2>
     <p>All fields are required</p>
     <p>
@@ -1224,7 +1270,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
     </p>
     <p>
       <label>Warranty:
-        <input type="number" min="0" max="10" name="warranty" required />
+        <input type="number" min="0" max="10"
+         name="warranty" required />
        </label>
     </p>
     <p>
@@ -1237,7 +1284,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
       </label>
     </p>
     <p>
-      <button type="submit" formmethod="post">Submit</button>
+      <button type="submit"
+      formmethod="post">Submit</button>
     </p>
   </form>
 </dialog>
@@ -1249,22 +1297,17 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 
 # How to embed Images in our HTML
 
-## HTML &lt;img/&gt; Tag
+### HTML &lt;img/&gt; Tag
 We have been talking about tags in our previous teachings but this time you'll be seeing another form of tag that's called self closing tags under which the popular image tag fall under.
 
 Self-closing tags, also known as void elements, are a feature in HTML and XML where the tag does not require a separate closing tag. Instead, the tag is closed within itself. This is useful for elements that do not have any content between an opening and a closing tag. Here are some examples and details about self-closing tags:
 
-&lt;img /&gt;: Defines an image.
-
-&lt;br /&gt;: Inserts a line break.
-
-&lt;hr /&gt;: Creates a horizontal rule (a line).
-
-&lt;input /&gt;: Defines an input field.
-
-&lt;meta /&gt;: Provides metadata about the HTML document.
-
-&lt;link /&gt;: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets).
+- <kbd>&lt;img /&gt;</kbd>: Defines an image.
+- <kbd>&lt;br /&gt;</kbd>: Inserts a line break.
+- <kbd>&lt;hr /&gt;</kbd>: Creates a horizontal rule (a line).
+- <kbd>&lt;input /&gt;</kbd>: Defines an input field.
+- <kbd>&lt;meta /&gt;</kbd>: Provides metadata about the HTML document.
+- <kbd>&lt;link /&gt;</kbd>: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets).
 
 ---
 
@@ -1274,15 +1317,15 @@ In HTML, self-closing tags can be written in two ways:
 
 #### HTML5 Syntax:
 
-- &lt;img src="image.jpg" alt="Description"&gt;
+- <kbd>&lt;img src="image.jpg" alt="Description"&gt;</kbd>
 
-- &lt;br&gt;
+- <kbd>&lt;br&gt;</kbd>
 
 This syntax is valid in HTML5 and does not require a closing slash (/).
 
 #### XHTML Syntax:
 
-- &lt;img src="image.jpg" alt="Description" /&gt;
+- <kbd>&lt;img src="image.jpg" alt="Description" /&gt;</kbd>
 
 - &lt;br /&gt;
 
@@ -1292,15 +1335,15 @@ This syntax is required in XHTML, which is a stricter form of HTML based on XML.
 
 # Usage Notes:
 
-### HTML5: 
+### HTML5:
 In HTML5, the closing slash is optional, and self-closing tags can be written without it. However, for compatibility with XML parsers, it is sometimes included.
 - XHTML: XHTML requires the self-closing tags to include the closing slash to comply with XML standards.
 
 ### Why Use Self-Closing Tags?
 
-- Simplicity: 
+- Simplicity:
 They simplify the markup by reducing the number of tags.
-- Consistency: 
+- Consistency:
 They make the code easier to read and maintain, especially when dealing with elements that don’t require content.
 
 
@@ -1308,7 +1351,7 @@ They make the code easier to read and maintain, especially when dealing with ele
 
 # Code Example on Self-Closing Tags
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1333,18 +1376,18 @@ They make the code easier to read and maintain, especially when dealing with ele
 
 Images can improve the design and the appearance of a web page.
 
-The HTML &lt;img&gt; tag is used to embed an image in a web page.
+The HTML <kbd>&lt;img&gt;</kbd> tag is used to embed an image in a web page.
 
-Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt;  tag creates a holding space for the referenced image.
+Images are not technically inserted into a web page; images are linked to web pages. The <kbd>&lt;img&gt;</kbd>  tag creates a holding space for the referenced image.
 
-The &lt;img&gt;  tag is empty, it contains attributes only, and does not have a closing tag.
+The <kbd>&lt;img&gt;</kbd>  tag is empty, it contains attributes only, and does not have a closing tag.
 
-The &lt;img&gt;  tag has two required attributes:
+The <kbd>&lt;img&gt;</kbd>  tag has two required attributes:
 
-src - Specifies the path to the image
-alt - Specifies an alternate text for the image
+- src - Specifies the path to the image
+- alt - Specifies an alternate text for the image
 
-```
+```html
 <img src="url" alt="alternatetext">
 
 ```
@@ -1358,7 +1401,7 @@ alt - Specifies an alternate text for the image
 Note: When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page. Therefore, make sure that the image actually stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.
 
 Example:
-```
+```html
 <img src="img_chania.jpg" alt="Flowers in Chania">
 ```
 
@@ -1369,7 +1412,7 @@ Example:
 #### The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
 
 The value of the alt attribute should describe the image:
-```
+```html
 <img src="wrongimagelink.gif" alt="Flowers in Chania">
 ```
 If a browser cannot find an image, it will display the value of the alt attribute:
@@ -1379,17 +1422,17 @@ Note:
 You can use the width and height attributes in the image tag to define the width and heigh of the image in pixels.
 
 Example:
-```
+```html
 <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
 ```
 ---
 
 # Image as a Link
 
-#### To use an image as a link, put the &lt;img&gt;  tag inside the &lt;a&gt;  tag:
+#### To use an image as a link, put the <kbd>&lt;img&gt;</kbd>  tag inside the <kbd>&lt;a&gt;</kbd>  tag:
 
 Example:
-```
+```html
 <a href="default.asp">
   <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
 </a>
@@ -1397,19 +1440,19 @@ Example:
 
 ---
 
-# HTML &lt;audio&gt; Tag
+# HTML <kbd>&lt;audio&gt;</kbd> Tag
 
-The &lt;audio&gt; tag is used to embed sound content in a document, such as music or other audio streams.
+The <kbd>&lt;audio&gt;</kbd> tag is used to embed sound content in a document, such as music or other audio streams.
 
-The &lt;audio&gt; tag contains one or more &lt;source&gt; tags with different audio sources. The browser will choose the first source it supports.
+The <kbd>&lt;audio&gt;</kbd> tag contains one or more <kbd>&lt;source&gt;</kbd> tags with different audio sources. The browser will choose the first source it supports.
 
-The text between the &lt;audio&gt; and &lt;/audio&gt; tags will only be displayed in browsers that do not support the &lt;audio&gt; element.
+The text between the <kbd>&lt;audio&gt;</kbd> and <kbd>&lt;/audio&gt;</kbd> tags will only be displayed in browsers that do not support the <kbd>&lt;audio&gt;</kbd> element.
 
 Note: There are three supported audio formats in HTML: MP3, WAV, and OGG.
 
 Example:
 
-```
+```html
 <audio controls>
   <source src="horse.ogg" type="audio/ogg">
   <source src="horse.mp3" type="audio/mpeg">
@@ -1421,8 +1464,8 @@ Example:
 
 # Audio Tag Attributes
 
-Code Example: 
-```
+Code Example:
+```html
 <body>
     <h1>Audio Tag with Various Attributes</h1>
     <audio controls autoplay loop muted preload="auto" crossorigin="anonymous">
@@ -1433,7 +1476,7 @@ Code Example:
 </body>
 ```
 
-&lt;audio&gt; : The audio element that includes multiple attributes:
+<kbd>&lt;audio&gt;</kbd> : The audio element that includes multiple attributes:
 - controls: Adds playback controls.
 - autoplay: The audio will play automatically when ready.
 - loop: The audio will loop continuously.
@@ -1452,14 +1495,14 @@ Note: In HTML, attributes provide additional information about an element and mo
 
 ---
 
-# HTML &lt;video&gt; Tag
+# HTML <kbd>&lt;video&gt;</kbd> Tag
 
-&lt;video&gt;: The Video Embed element
-The &lt;video&gt; HTML element embeds a media player which supports video playback into the document. You can use &lt;video&gt; for audio content as well, but the &lt;audio&gt; element may provide a more appropriate user experience.
+<kbd>&lt;video&gt;</kbd>: The Video Embed element
+The <kbd>&lt;video&gt;</kbd> HTML element embeds a media player which supports video playback into the document. You can use <kbd>&lt;video&gt;</kbd> for audio content as well, but the <kbd>&lt;audio&gt;</kbd> element may provide a more appropriate user experience.
 
 # Video Tag Attributes
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1477,21 +1520,27 @@ The &lt;video&gt; HTML element embeds a media player which supports video playba
 </body>
 </html>
 ```
+
 ---
 
 # Code Explanation:
-- &lt;!DOCTYPE html&gt;: Declares the document type and version of HTML.
-- &lt;html lang="en"&gt;: Sets the language of the document to English.
-- &lt;head&gt;: Contains meta-information about the document, including character set and viewport settings.
-- &lt;title&gt;: Sets the title of the document, which appears in the browser tab.
-- &lt;body&gt;: Contains the content of the document.
-- &lt;h1&gt;: A heading element for the title of the page.
-- &lt;video&gt;: The video element that includes multiple attributes:
-controls: Adds playback controls.
-autoplay: The video will play automatically when ready.
-loop: The video will loop continuously.
-muted: The video will be muted initially.
-preload: Specifies that the video should be preloaded.
-crossorigin: Specifies how the element handles cross-origin requests.
+- <kbd>&lt;!DOCTYPE html&gt;</kbd>: Declares the document type and version of HTML.
+- <kbd>&lt;html lang="en"&gt;</kbd>: Sets the language of the document to English.
+- <kbd>&lt;head&gt;</kbd>: Contains meta-information about the document, including character set and viewport settings.
+- <kbd>&lt;title&gt;</kbd>: Sets the title of the document, which appears in the browser tab.
+- <kbd>&lt;body&gt;</kbd>: Contains the content of the document.
+- <kbd>&lt;h1&gt;</kbd>: A heading element for the title of the page.
+- <kbd>&lt;video&gt;</kbd>: The video element that includes multiple.
+  - **attributes**:
+  - `controls`: Adds playback controls.
+  - `autoplay`: The video will play automatically when ready.
+  - `loop`: The video will loop continuously.
+  - `muted`: The video will be muted initially.
+  - `preload`: Specifies that the video should be preloaded.
+  - `crossorigin`: Specifies how the element handles cross-origin requests.
+
+
+---
+
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
