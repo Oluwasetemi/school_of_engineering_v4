@@ -22,6 +22,7 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
+hideInToc: true
 ---
 
 # AltSchool School of Engineering
@@ -47,6 +48,13 @@ Class notes for the 1st Semester
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
+---
+hideInToc: true
+---
+
+# Table of contents
+
+<Toc columns="2" minDepth="1" maxDepth="2"></Toc>
 ---
 
 # What is Software Engineering?
@@ -78,6 +86,8 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
+---
+hideInToc: true
 ---
 
 # [Foundational Requirement](https://norvig.com/21-days.html)
@@ -155,13 +165,16 @@ Definition: An algorithm is a step-by-step procedure or a set of rules designed 
 Example: An algorithm for making a cup of tea might include steps like boiling water, adding a tea bag to a cup, pouring the hot water into the cup, letting it steep for a few minutes, and then removing the tea bag.
 
 ---
-
+hideInToc: true
+---
 # flowchart
 
 Definition: A flowchart is a visual representation of the steps in a process or system using symbols, arrows, and text. It depicts the sequence of operations or steps, making it easier to understand how a process flows from start to finish.
 
 Example: A flowchart for logging into a website might start with a "Start" symbol, followed by a decision symbol asking if the user has entered their username and password, arrows leading to "Enter username" and "Enter password" steps, and an end symbol once the login process is successful.
 
+---
+hideInToc: true
 ---
 
 # Problem Solving
@@ -182,6 +195,8 @@ Example: A flowchart for logging into a website might start with a "Start" symbo
   Each paradigm brings its own way of thinking and problem-solving, making some paradigms more suitable for certain types of tasks than others. Modern programming often involves a combination of these paradigms to leverage their respective strengths.
 </v-click>
 
+---
+hideInToc: true
 ---
 
 # Programming Concepts
@@ -231,6 +246,8 @@ Example: A flowchart for logging into a website might start with a "Start" symbo
 </v-click>
 
 ---
+hideInToc: true
+---
 
 # Variables
 
@@ -252,7 +269,8 @@ print(name, age)
 ```
 
 ---
-
+hideInToc: true
+---
 # Data Types
 
 Classification of data items, defining the operations that can be performed on them.
@@ -276,7 +294,8 @@ console.log(person)
 ```
 
 ---
-
+hideInToc: true
+---
 # Control Structures
 
 Direct the order of execution of statements in a program.
@@ -327,7 +346,8 @@ while (condition) {
 ````
 
 ---
-
+hideInToc: true
+---
 # Functions (or Methods)
 
 Blocks of code designed to perform a particular task, reusable throughout the program.
@@ -339,7 +359,8 @@ Blocks of code designed to perform a particular task, reusable throughout the pr
 - Scope and lifetime of variables.
 
 ---
-
+hideInToc: true
+---
 # Data Structures
 
 # Ways of organizing and storing data to enable efficient access and modification
@@ -349,7 +370,8 @@ Linear: Arrays, Linked Lists.
 Non-linear: Trees, Graphs.
 Abstract: Stack, Queue, Map, Set
 ---
-
+hideInToc: true
+---
 # [Data Structures More (Trees)](https://www.youtube.com/watch?v=oSWTXtMglKE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=8)
 
 Binary Search Tree, AVL Tree, Red-Black Tree
@@ -359,7 +381,8 @@ Fenwick Tree (Binary Indexed Tree)
 ![Tree](https://raw.githubusercontent.com/trekhleb/javascript-algorithms/master/src/data-structures/tree/images/tree.jpeg)
 
 ---
-
+hideInToc: true
+---
 # Algorithms
 
 Step-by-step procedures or formulas for solving problems.
@@ -370,6 +393,8 @@ Sorting: Bubble sort, Quick sort, Merge sort.
 Searching: Linear search, Binary search.
 Complexity: Big O notation for time and space.
 
+---
+hideInToc: true
 ---
 
 # Object-Oriented Concepts
@@ -389,6 +414,8 @@ Constructors and destructors
 ### Inheritance - is a mechanism that allows a class to inherit properties and behaviors from another class
 
 ---
+hideInToc: true
+---
 
 # Recursion
 
@@ -401,6 +428,8 @@ A function calling itself to solve a smaller instance of the same problem.
 - Examples: Factorial, Fibonacci sequence
 
 ---
+hideInToc: true
+---
 
 # Error Handling
 
@@ -412,6 +441,8 @@ Mechanisms to handle runtime errors or exceptional conditions.
 - Throwing exceptions.
 - Custom exception classes
 
+---
+hideInToc: true
 ---
 
 # Memory Management
@@ -436,7 +467,8 @@ Document Structure, Metadata (head tag and its related tags), Body (possible ele
 HTML(HyperText Markup Language) is the foundation of basically every web page, basically, it is the core language of the World Wide Web. It’s how we tell browsers to structure content into paragraphs, headings, images, links, lists, forms, tables, buttons, and more. If you’re interested in building a website, web development, or just coding in general, learning HTML is a great place to start.
 
 ---
-
+hideInToc: true
+---
 # Let's break it down a bit
 
 - HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as <kbd>&lt;head&gt;</kbd>, <kbd>&lt;title&gt;</kbd>, <kbd>&lt;body&gt;</kbd>, <kbd>&lt;header&gt;</kbd>, <kbd>&lt;footer&gt;</kbd>, <kbd>&lt;article&gt;</kbd>, <kbd>&lt;section&gt;</kbd>, <kbd>&lt;p&gt;</kbd>, <kbd>&lt;div&gt;</kbd>, <kbd>&lt;span&gt;</kbd>, <kbd>&lt;img&gt;</kbd>, <kbd>&lt;aside&gt;</kbd>, <kbd>&lt;audio&gt;</kbd>, <kbd>&lt;canvas&gt;</kbd>, <kbd>&lt;datalist&gt;</kbd>, <kbd>&lt;details&gt;</kbd>, <kbd>&lt;embed&gt;</kbd>, <kbd>&lt;nav&gt;</kbd>, <kbd>&lt;search&gt;</kbd>, <kbd>&lt;output&gt;</kbd>, <kbd>&lt;progress&gt;</kbd>, <kbd>&lt;video&gt;</kbd>, <kbd>&lt;ul&gt;</kbd>, <kbd>&lt;ol&gt;</kbd>, <kbd>&lt;li&gt;</kbd> and many others.
@@ -452,6 +484,8 @@ HTML(HyperText Markup Language) is the foundation of basically every web page, b
 
 
 ---
+hideInToc: true
+---
 
 # HTML Element
 
@@ -460,9 +494,8 @@ An HTML element is set off from other text in a document by "tags", which consis
 <!-- Semantic HTML, Heading & Sections, Attribute(Boolean, Enumerated, Global and custom attributes), Text Basics, Links, Navigation -->
 
 ---
-
-
-
+hideInToc: true
+---
 
 # Check this out:
 
@@ -477,6 +510,8 @@ sequenceDiagram
     B-->>U: Closing tag: </h1>
 ```
 
+---
+hideInToc: true
 ---
 
 # Explanation of the Diagram in the previous slide
@@ -504,6 +539,8 @@ HTML documents include a document type declaration and the <kbd>&lt;html&gt</kbd
 
 
 ---
+hideInToc: true
+---
 
 # DOCTYPE
 
@@ -529,6 +566,8 @@ Note: The lang language attribute added to the html tag to give this <kbd>&lt;ht
 
 
 
+---
+hideInToc: true
 ---
 
 # head
@@ -571,6 +610,8 @@ The <kbd>&lt;head&gt;</kbd> which can also be referred to as document metadata h
 
 
 ---
+hideInToc: true
+---
 
 # Character encoding
 
@@ -590,6 +631,8 @@ The contents for the document title, the text between the opening and closing <k
 
 
 ---
+hideInToc: true
+---
 
 # Viewport metadata
 
@@ -606,6 +649,8 @@ content="width=device-width, initial-scale=1.0": This attribute contains the set
 width=device-width: This sets the width of the viewport to be equal to the width of the device. It ensures that the webpage is not scaled down or up but instead uses the full width of the device's screen.
 initial-scale=1.0: This sets the initial zoom level when the page is first loaded. A scale of 1.0 means no zoom, i.e., the page content appears at 100% of its size.
 
+---
+hideInToc: true
 ---
 
 # Body
@@ -632,7 +677,8 @@ Inside the <kbd>&lt;body&gt;</kbd> tags of an HTML document, you can find a wide
 ```
 
 ---
-
+hideInToc: true
+---
 # Contd.
 
 ```html
@@ -661,7 +707,8 @@ Description List: <dl>, <dt>, <dd>
 ```
 
 ---
-
+hideInToc: true
+---
 # Contd.
 
 ```html
@@ -683,7 +730,8 @@ Description List: <dl>, <dt>, <dd>
 
 
 ---
-
+hideInToc: true
+---
 # Let's put some of the tags in usage
 
 ```html
@@ -701,7 +749,8 @@ Description List: <dl>, <dt>, <dd>
 </html>
 ```
 ---
-
+hideInToc: true
+---
 # Breakdown of the Code:
 
 1. &lt;DOCTYPE html &gt;
@@ -724,7 +773,8 @@ width=device-width sets the viewport to match the device's width.
 initial-scale=1.0 sets the initial zoom level to 100%.
 
 ---
-
+hideInToc: true
+---
 # Contd
 
 4. <kbd>&lt;title&gt;</kbd>Responsive Web Page<kbd>&lt;/title&gt;</kbd>
@@ -754,7 +804,8 @@ This emphasizes that HTML elements should be chosen based on their semantic mean
 </v-click>
 
 ---
-
+hideInToc: true
+---
 #  Non-semantic vs. Semantic Markup
 
 
@@ -803,14 +854,16 @@ This emphasizes that HTML elements should be chosen based on their semantic mean
 
 
 ---
-
+hideInToc: true
+---
 # Accessibility and Machine-Readability
 This highlights how semantic markup improves accessibility and machine-readability. It shows examples of how browser developer tools display the Accessibility Object Model (AOM) differently for non-semantic and semantic markup. Assistive technologies like screen readers rely on the AOM to interpret the content structure and meaning correctly.
 
 # Roles and Landmarks
 This explains the concept of roles and landmarks in semantic HTML. Semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; have implicit roles that identify them as landmarks for assistive technologies. This helps users navigate the content more easily.
 ---
-
+hideInToc: true
+---
 # Using the role attribute
 While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
 
@@ -849,7 +902,8 @@ In summary, this stresses the significance of using semantic HTML for improved a
    is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
 
 ---
-
+hideInToc: true
+---
 # Contd(Heading & Sections )
 
 - ####  &lt;section&gt;
@@ -877,7 +931,8 @@ In summary, this stresses the significance of using semantic HTML for improved a
   <kbd>&lt;style contenteditable="true"&gt;</kbd>.
 
 ---
-
+hideInToc: true
+---
 -  #### Global attributes
     are attributes that can be set on any HTML element, including elements in the &lt;head&gt;. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a &lt;meta&gt; as meta content is not displayed.
 - #### id
@@ -885,7 +940,8 @@ In summary, this stresses the significance of using semantic HTML for improved a
 - #### class
     The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
 ---
-
+hideInToc: true
+---
  - #### Style
     The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
 
@@ -894,7 +950,8 @@ In summary, this stresses the significance of using semantic HTML for improved a
 The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
 
 ---
-
+hideInToc: true
+---
 # Contd(Attribute)
 
 
@@ -911,7 +968,8 @@ data-icon="share" data-label="share, twitter" role="button" tabindex="0">
 </share-action>
 ```
 ---
-
+hideInToc: true
+---
 # Contd-2
 - #### contenteditable
 An element with the contenteditable attribute set to true is editable, is focusable, and is added to the tab order as if tabindex="0" were set. Contenteditable is an enumerated attribute supporting the values true and false, with a default value of inherit if the attribute is not present or has an invalid value.
@@ -925,7 +983,8 @@ These three opening tags are equivalent:
   If you include <kbd>&lt;style contenteditable="false"&gt;</kbd>, the element is not editable (unless it's by default editable, like a <kbd>&lt;textarea&gt;</kbd>). If the value is invalid, such as <kbd>&lt;style contenteditable="😀"&gt;</kbd> or <br/><kbd>&lt;style contenteditable="contenteditable"&gt;</kbd>, the value defaults to inherit.
 
 ---
-
+hideInToc: true
+---
 # Contd-3
 - #### custom attribute
 You can create any custom attribute you want by adding the data- prefix. You can name your attribute anything that starts with data- followed by any lowercase series of characters that don't start with xml and don't contain a colon (:).
@@ -948,7 +1007,8 @@ You can create any custom attribute you want by adding the data- prefix. You can
 - HTML entities are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard.
 
 ---
-
+hideInToc: true
+---
 ````md magic-move {maxHeight:'500px'}
 ```html
 <section class="feedback" id="feedback">
@@ -1057,7 +1117,8 @@ A table is defined using the &lt;table&gt; element, which wraps all the table co
 Within these sections, you'll use <kbd>&lt;tr&gt;</kbd> for table rows and <kbd>&lt;th&gt;</kbd> for table header cells or <kbd>&lt;td&gt;</kbd> for table data cells
 
 ---
-
+hideInToc: true
+---
 ```html {monaco}
 <table>
   <caption>Student Grades</caption>
@@ -1081,7 +1142,8 @@ Within these sections, you'll use <kbd>&lt;tr&gt;</kbd> for table rows and <kbd>
 ```
 
 ---
-
+hideInToc: true
+---
 # Accessibility and Semantics
 <div></div>
 Using proper table structure and semantic elements is crucial for accessibility. Screen readers and assistive technologies rely on this structure to understand the tabular data and its relationships.
@@ -1099,6 +1161,8 @@ Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple
 <div></div>
 Tables can be styled using CSS, but it's recommended to avoid using deprecated attributes like cellpadding, cellspacing, or align. Instead, use modern CSS properties like border-collapse, border-spacing, and caption-side.
 
+---
+hideInToc: true
 ---
 
 ```html {*|1|*}{maxHeight:'440px'}
@@ -1157,6 +1221,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - HTML attributes can enforce required fields, define validation criteria, and prevent form submission until the data matches the required criteria.
 - Submitting a form is typically done by activating a submit button, which sends the form data as name/value pairs to the specified URL.
 ---
+hideInToc: true
+---
 
 # Form(Radio-Button)
 
@@ -1165,7 +1231,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - To pre-select a radio button, include the checked attribute.
 - To make a selection from a group of radio buttons required, add the required attribute to at least one radio button in the group.
 ---
-
+hideInToc: true
+---
 ```html {monaco}
 <fieldset>
   <legend>Who is your favorite student?</legend>
@@ -1189,7 +1256,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 </fieldset>
 ```
 ---
-
+hideInToc: true
+---
 # form(Checkboxes)
 - Checkboxes with the same name in a group are submitted together, allowing multiple selections.
 - If no value attribute is provided for a checkbox, the value defaults to "on", which may not be helpful.
@@ -1209,6 +1277,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 ```
 
 ---
+hideInToc: true
+---
 
 # Input types & dynamic Keyboards
 - There are 22 different input types in HTML, each optimized for a specific kind of data entry (e.g., text, email, url, tel, number, date, etc.).
@@ -1216,11 +1286,14 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 
 
 ---
-
+hideInToc: true
+---
 # Accessing the Microphone and Camera
 - The <kbd>&lt;input type="file"&gt;</kbd> element allows users to upload files of specific types, defined by the accept attribute.
 - The capture attribute, when set to "user" or "environment", allows users to directly capture media from their device's camera or microphone.
 - This feature enables creating new media files within a form, without requiring a separate file upload.
+---
+hideInToc: true
 ---
 
 # Built-in Validation
@@ -1231,6 +1304,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - JavaScript can be used to provide custom error messages during constraint validation or enhance the user experience with dynamic updates.
 
 
+---
+hideInToc: true
 ---
 
 #  Example
@@ -1294,7 +1369,8 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 
 
 ---
-
+hideInToc: true
+---
 # How to embed Images in our HTML
 
 ### HTML &lt;img/&gt; Tag
@@ -1310,7 +1386,8 @@ Self-closing tags, also known as void elements, are a feature in HTML and XML wh
 - <kbd>&lt;link /&gt;</kbd>: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets).
 
 ---
-
+hideInToc: true
+---
 # Syntax:
 
 In HTML, self-closing tags can be written in two ways:
@@ -1332,7 +1409,8 @@ This syntax is valid in HTML5 and does not require a closing slash (/).
 This syntax is required in XHTML, which is a stricter form of HTML based on XML.
 
 ---
-
+hideInToc: true
+---
 # Usage Notes:
 
 ### HTML5:
@@ -1348,7 +1426,8 @@ They make the code easier to read and maintain, especially when dealing with ele
 
 
 ---
-
+hideInToc: true
+---
 # Code Example on Self-Closing Tags
 
 ```html
@@ -1371,7 +1450,8 @@ They make the code easier to read and maintain, especially when dealing with ele
 ```
 
 ---
-
+hideInToc: true
+---
 # HTML Images Syntax
 
 Images can improve the design and the appearance of a web page.
@@ -1393,7 +1473,8 @@ The <kbd>&lt;img&gt;</kbd>  tag has two required attributes:
 ```
 
 ---
-
+hideInToc: true
+---
 # The src Attribute
 
 #### The required src attribute specifies the path (URL) to the image.
@@ -1406,7 +1487,8 @@ Example:
 ```
 
 ---
-
+hideInToc: true
+---
 # The alt Attribute
 
 #### The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
@@ -1426,7 +1508,8 @@ Example:
 <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
 ```
 ---
-
+hideInToc: true
+---
 # Image as a Link
 
 #### To use an image as a link, put the <kbd>&lt;img&gt;</kbd>  tag inside the <kbd>&lt;a&gt;</kbd>  tag:
@@ -1439,7 +1522,8 @@ Example:
 ```
 
 ---
-
+hideInToc: true
+---
 # HTML <kbd>&lt;audio&gt;</kbd> Tag
 
 The <kbd>&lt;audio&gt;</kbd> tag is used to embed sound content in a document, such as music or other audio streams.
@@ -1461,7 +1545,8 @@ Example:
 ```
 
 ---
-
+hideInToc: true
+---
 # Audio Tag Attributes
 
 Code Example:
@@ -1484,7 +1569,8 @@ Code Example:
 - preload: Specifies that the audio should be preloaded.
 
 ---
-
+hideInToc: true
+---
 # Contd.
 
 
@@ -1494,7 +1580,8 @@ Code Example:
 Note: In HTML, attributes provide additional information about an element and modify its behavior or appearance.
 
 ---
-
+hideInToc: true
+---
 # HTML <kbd>&lt;video&gt;</kbd> Tag
 
 <kbd>&lt;video&gt;</kbd>: The Video Embed element
@@ -1522,7 +1609,8 @@ The <kbd>&lt;video&gt;</kbd> HTML element embeds a media player which supports v
 ```
 
 ---
-
+hideInToc: true
+---
 # Code Explanation:
 - <kbd>&lt;!DOCTYPE html&gt;</kbd>: Declares the document type and version of HTML.
 - <kbd>&lt;html lang="en"&gt;</kbd>: Sets the language of the document to English.
@@ -1541,6 +1629,7 @@ The <kbd>&lt;video&gt;</kbd> HTML element embeds a media player which supports v
 
 
 ---
-
+hideInToc: true
+---
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
