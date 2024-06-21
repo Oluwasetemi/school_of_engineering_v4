@@ -1640,11 +1640,8 @@ hideInToc: true
 
 ---
 
-<<<<<<< HEAD
-# Advanced HTML API
-=======
 # Advanced HTML API, Focusing, Details and Summary, Dialogs and Popovers
->>>>>>> html-tags
+
 
 #### Have you heard the word API somewhere? 
 It means Application Programming Interface which make it easier for different software systems to communicate with each other. Let's say API is like a waiter at a restaurant, taking requests and bringing back what you need, allowing different software systems to talk to each other easily and efficiently.
@@ -1653,7 +1650,7 @@ It means Application Programming Interface which make it easier for different so
 
 # Now let's breeze into Advanced HTML API
 
-### For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
+ For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
 The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
 
 The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use <kbd>HTMLImageElement.alt</kbd> get the alt attributes of all the images:
@@ -1742,14 +1739,14 @@ A <kbd>tabindex</kbd>  attribute with a negative value makes the element focusab
 
 # Details and Summary
 
-### Have you heard of a disclosure widget or come across it in a website before?
+ Have you heard of a disclosure widget or come across it in a website before?
 A disclosure widget, also known as an expandable or collapsible section, is a UI component that allows users to hide or show contents.
 
 Mostly, developers achieve this accordion trick using CSS or JavaScript but we can easily get this done with these tags: &lt;details&gt; and &lt;summary&gt;
 
  The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a &lt;summary&gt;, or releases the Enter key when the &lt;summary&gt; has focus, the contents of the parent &lt;details&gt; toggle to visible!
 
-## Creating an accordion with just HTML
+# Creating an accordion with just HTML
 <aside>
 <h3>Workshop reviews:</h3>
 <details>
@@ -1774,7 +1771,7 @@ Mostly, developers achieve this accordion trick using CSS or JavaScript but we c
 # Toggling visibility: the open attribute
 
 
-### The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
+ The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
 
 The open attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the &lt;details&gt; contents are shown to the user. If the open attribute is not present, only the contents of the &lt;summary&gt; are shown.
 
@@ -1784,7 +1781,7 @@ Because the open attribute is added and removed automatically as the user intera
 
 # Toggling the summary marker
 
-### If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
+ If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
 
 ```
 details summary::before {
