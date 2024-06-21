@@ -1797,4 +1797,4 @@ details[open] summary::before {
 ```
 
 Remember, &lt;details&gt;and &lt;summary&gt; can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
->>>>>>> html-tags
+
