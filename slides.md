@@ -1637,3 +1637,161 @@ hideInToc: true
 ---
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
+
+---
+
+# Advanced HTML API, Focusing, Details and Summary, Dialogs and Popovers
+
+
+#### Have you heard the word API somewhere? 
+It means Application Programming Interface which make it easier for different software systems to communicate with each other. Let's say API is like a waiter at a restaurant, taking requests and bringing back what you need, allowing different software systems to talk to each other easily and efficiently.
+
+---
+
+# Now let's breeze into Advanced HTML API
+
+ For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
+The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
+
+The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use <kbd>HTMLImageElement.alt</kbd> get the alt attributes of all the images:
+
+```
+let allImages = document.querySelectorAll('img');
+allImages.forEach((imageInstance) => {
+  console.log(imageInstance.alt);
+});
+
+```
+---
+
+# Contd
+
+The HTML interface APIs is not limited to accessing attribute values. 
+The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with <kbd>HTMLMediaElement.duration</kbd>, <kbd>HTMLMediaElement.currentTime</kbd>, and <kbd>HTMLMediaElement.ended</kbd> respectively.
+
+---
+
+# Focusing 
+
+To improve user-accessibily in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
+
+Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are inert, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements inert and to make inert elements interactive.
+
+
+
+---
+
+# Focus
+
+By default, the navigation focus order in a webpage follows the visual and source code order. Although HTML attributes and CSS properties can change this order, doing so can negatively impact user experience. Modifying the tabbing order or visual rendering order can lead to confusion and a poor user experience. Therefore, it's recommended not to alter the perceived and actual tabbing order with CSS and HTML, as demonstrated by examples showing the negative effects of such changes.
+
+# Example 1
+
+<p>Click in any input, then hit the tab key.</p>
+  <ol class="grid grid-cols-4 gap-4">
+    <li><input tabindex="3" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="6" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="2" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="-1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="8" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="5" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="7" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="4" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  </ol>
+
+---
+
+# Example 2
+
+
+  In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
+  <div class="p-4">
+    <p class="mb-2"><label class="text-base">Put your cursor in the text box, then hit your tab key several times:</label></p>
+  <input tabindex="0" class="px-3 py-2 border         border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+  </div>
+
+  <div class="inline-flex flex-row-reverse gap-2">
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">flexbox.</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">CSS</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">with</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">styled</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">then</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600 order-3">This</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">order</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">reverse</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">in</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">written</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">was</span>
+    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">sentenced</span>
+  </div>
+
+The flex-flow: row-reverse; declaration has reversed the visual order. In addition, the CSS order property was applied to the sixth word, "This", which visually moved that one word. The tabbing sequence is the order of the code, which no longer matches the visual order, creating a disconnect for keyboard users.
+
+Note:
+The <kbd>contenteditable</kbd> and <kbd>tabindex</kbd> attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with element.focus().
+A <kbd>tabindex</kbd>  attribute with a negative value makes the element focusable but not tabbable.
+
+---
+
+# Details and Summary
+
+ Have you heard of a disclosure widget or come across it in a website before?
+A disclosure widget, also known as an expandable or collapsible section, is a UI component that allows users to hide or show contents.
+
+Mostly, developers achieve this accordion trick using CSS or JavaScript but we can easily get this done with these tags: &lt;details&gt; and &lt;summary&gt;
+
+ The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a &lt;summary&gt;, or releases the Enter key when the &lt;summary&gt; has focus, the contents of the parent &lt;details&gt; toggle to visible!
+
+# Creating an accordion with just HTML
+<aside>
+<h3>Workshop reviews:</h3>
+<details>
+  <summary>Blendan Smooth</summary>
+  <p>Two of the most experienced machines and human controllers teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
+</details>
+<details>
+  <summary>Hoover Sukhdeep</summary>
+  <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
+</details>
+<details>
+<summary>AltSchool offers these courses</summary>
+<ul>
+<li>Frontend development</li>
+<li>Backend development</li>
+</ul>
+</details>
+</aside>
+
+---
+
+# Toggling visibility: the open attribute
+
+
+ The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
+
+The open attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the &lt;details&gt; contents are shown to the user. If the open attribute is not present, only the contents of the &lt;summary&gt; are shown.
+
+Because the open attribute is added and removed automatically as the user interacts with the control, it can be used in CSS to style the element differently based on its state.
+
+---
+
+# Toggling the summary marker
+
+ If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
+
+```
+details summary::before {
+  /* all the styles */
+}
+details[open] summary::before {
+  /* changes applied when open only */
+}
+
+```
+
+Remember, &lt;details&gt;and &lt;summary&gt; can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
+
