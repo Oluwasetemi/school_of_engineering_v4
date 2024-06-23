@@ -139,7 +139,9 @@ hideInToc: true
 
 ---
 
-# Some Account You Expected to (Create || Have)
+# Accounts
+
+Some Account You Expected to (Create || Have)
 
 - [GitHub](https://github.com/Oluwasetemi) and any other equivalent in GitLab or BitBucket
 - [LinkedIn](https://www.linkedin.com/in/setemiojo)
@@ -1073,6 +1075,7 @@ This is the team you want teaching you!
 - <kbd>&lt;a href="url"&gt;Link Text&lt;/a&gt;</kbd> is used for creating hyperlinks, with the `href` attribute specifying the URL or file path.
 - The `target` attribute controls how the link is opened, like `_self` for the same window or `_blank` for a new window/tab.
 - It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
+- Fragment Identifiers
 
 ---
 
@@ -1104,7 +1107,7 @@ This is the team you want teaching you!
 
 ---
 
-# HTML Tables: Structuring Tabular Data
+# HTML Tables
 <div></div>
 HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced.
 
@@ -1635,116 +1638,120 @@ hideInToc: true
 ---
 hideInToc: true
 ---
+# Cont'd Code Explanation
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
 
 ---
 
-# Advanced HTML API, Focusing, Details and Summary, Dialogs and Popovers
+# HTML API
 
-
-#### Have you heard the word API somewhere? 
-It means Application Programming Interface which make it easier for different software systems to communicate with each other. Let's say API is like a waiter at a restaurant, taking requests and bringing back what you need, allowing different software systems to talk to each other easily and efficiently.
-
----
-
-# Now let's breeze into Advanced HTML API
-
- For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
+For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
 The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
 
 The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use <kbd>HTMLImageElement.alt</kbd> get the alt attributes of all the images:
 
-```
+```js
 let allImages = document.querySelectorAll('img');
 allImages.forEach((imageInstance) => {
   console.log(imageInstance.alt);
 });
-
 ```
----
 
-# Contd
-
-The HTML interface APIs is not limited to accessing attribute values. 
+The HTML interface APIs is not limited to accessing attribute values.
 The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with <kbd>HTMLMediaElement.duration</kbd>, <kbd>HTMLMediaElement.currentTime</kbd>, and <kbd>HTMLMediaElement.ended</kbd> respectively.
 
+
 ---
 
-# Focusing 
+# Focusing
 
-To improve user-accessibily in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
+To improve user-accessibility in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
 
 Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are inert, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements inert and to make inert elements interactive.
-
-
-
----
 
 # Focus
 
 By default, the navigation focus order in a webpage follows the visual and source code order. Although HTML attributes and CSS properties can change this order, doing so can negatively impact user experience. Modifying the tabbing order or visual rendering order can lead to confusion and a poor user experience. Therefore, it's recommended not to alter the perceived and actual tabbing order with CSS and HTML, as demonstrated by examples showing the negative effects of such changes.
 
+
+---
+hideInToc: true
+---
+
+
 # Example 1
+<div></div>
 
 <p>Click in any input, then hit the tab key.</p>
   <ol class="grid grid-cols-4 gap-4">
-    <li><input tabindex="3" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="6" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="2" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="-1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="8" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="5" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="7" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="4" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="3" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="6" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="2" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="-1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="8" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="5" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="7" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="4" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
   </ol>
 
 ---
+hideInToc: true
+---
 
 # Example 2
+<div></div>
 
+In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
 
-  In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
-  <div class="p-4">
-    <p class="mb-2"><label class="text-base">Put your cursor in the text box, then hit your tab key several times:</label></p>
-  <input tabindex="0" class="px-3 py-2 border         border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
-  </div>
+<div class="p-4">
+  <p class="mb-2"><label class="text-base">Put your cursor in the text box, then hit your tab key several times:</label></p>
+  <input tabindex="0" class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+</div>
 
-  <div class="inline-flex flex-row-reverse gap-2">
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">flexbox.</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">CSS</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">with</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">styled</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">then</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600 order-3">This</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">order</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">reverse</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">in</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">written</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">was</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">sentenced</span>
-  </div>
+<div class="inline-flex flex-row-reverse gap-2">
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">flexbox.</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">CSS</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">with</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">styled</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">then</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600 order-3">This</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">order</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">reverse</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">in</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">written</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">was</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">sentenced</span>
+</div>
+
+<v-click>
 
 The flex-flow: row-reverse; declaration has reversed the visual order. In addition, the CSS order property was applied to the sixth word, "This", which visually moved that one word. The tabbing sequence is the order of the code, which no longer matches the visual order, creating a disconnect for keyboard users.
 
+</v-click>
+
+<v-click>
+
 Note:
-The <kbd>contenteditable</kbd> and <kbd>tabindex</kbd> attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with element.focus().
+The <kbd v-mark.underline.yellow="+3">contenteditable</kbd> and <kbd v-mark.underline.yellow="+4">tabindex</kbd> attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with `element.focus()`.
 A <kbd>tabindex</kbd>  attribute with a negative value makes the element focusable but not tabbable.
+
+</v-click>
 
 ---
 
 # Details and Summary
-
- Have you heard of a disclosure widget or come across it in a website before?
+<div></div>
+Have you heard of a disclosure widget or come across it in a website before?
 A disclosure widget, also known as an expandable or collapsible section, is a UI component that allows users to hide or show contents.
 
 Mostly, developers achieve this accordion trick using CSS or JavaScript but we can easily get this done with these tags: &lt;details&gt; and &lt;summary&gt;
 
- The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a &lt;summary&gt;, or releases the Enter key when the &lt;summary&gt; has focus, the contents of the parent &lt;details&gt; toggle to visible!
+The <kbd>&lt;details&gt;</kbd> and <kbd>&lt;summary&gt;</kbd> elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a <kbd>&lt;summary&gt;</kbd>, or releases the Enter key when the <kbd>&lt;summary&gt;</kbd> has focus, the contents of the parent <kbd>&lt;details&gt;</kbd> toggle to visible!
 
 # Creating an accordion with just HTML
 <aside>
@@ -1767,31 +1774,238 @@ Mostly, developers achieve this accordion trick using CSS or JavaScript but we c
 </aside>
 
 ---
-
+hideInToc: true
+---
 # Toggling visibility: the open attribute
+<div></div>
 
+ The <kbd>&lt;details&gt;</kbd> element is the disclosure widget container. The <kbd>&lt;summary&gt;</kbd> is the summary or legend for its parent <kbd>&lt;details&gt;</kbd>. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the <kbd>&lt;summary&gt;</kbd> toggles the display of the self-labeled summary siblings by toggling the <kbd>&lt;details&gt;</kbd> element's open attribute.
 
- The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
-
-The open attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the &lt;details&gt; contents are shown to the user. If the open attribute is not present, only the contents of the &lt;summary&gt; are shown.
+The open attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the <kbd>&lt;details&gt;</kbd> contents are shown to the user. If the open attribute is not present, only the contents of the <kbd>&lt;summary&gt;</kbd> are shown.
 
 Because the open attribute is added and removed automatically as the user interacts with the control, it can be used in CSS to style the element differently based on its state.
 
 ---
+hideInToc: true
+---
 
 # Toggling the summary marker
+<div></div>
+If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
 
- If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
-
-```
+```css
 details summary::before {
   /* all the styles */
 }
 details[open] summary::before {
   /* changes applied when open only */
 }
-
 ```
 
-Remember, &lt;details&gt;and &lt;summary&gt; can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
+Remember, <kbd>&lt;details&gt;</kbd>and <kbd>&lt;summary&gt;</kbd> can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
 
+---
+
+# What are Web Components?
+<div></div>
+
+Web components are a set of web standards that allow developers to create reusable, self-contained UI elements. These components can be seamlessly integrated into existing applications, just like regular HTML elements. The Web Component standard comprises three main parts:
+- HTML Templates: The <Kbd>&lt;template&gt;</kbd> element allows developers to declare fragments of HTML that can be cloned and inserted into the DOM using JavaScript. The contents of the <Kbd>&lt;template&gt;</kbd> element are not rendered by default.
+- Custom Elements: Custom Elements allow developers to define their own HTML elements with custom functionality. These elements can be created by extending the HTMLElement class using JavaScript.
+- Shadow DOM: The Shadow DOM is an encapsulated DOM tree that is attached to a custom element. It provides a way to scope CSS styles and DOM structures to a specific component, isolating it from the rest of the document. This prevents naming conflicts and style clashes with the rest of the application.
+---
+hideInToc: true
+---
+
+# The &lt;template&gt; Element
+<div></div>
+
+This section introduces the <kbd>&lt;template&gt;</kbd> element and demonstrates how to create a template for a star rating component. It also explains the concept of unnamed and named slots using the <kbd>&lt;slot&gt;</kbd> element.
+- The <kbd>&lt;template&gt;</kbd> element is used to declare HTML fragments that can be cloned and inserted into the DOM using JavaScript. The contents of the <Kbd>&lt;template&gt;</kbd> element are not rendered by default. In the given example, a template is created for a star rating component with a <Kbd>&lt;form&gt;</kbd> element containing radio inputs and buttons.
+
+---
+hideInToc: true
+---
+
+# Example(template)
+
+```html
+<template id="star-rating-template">
+  <form>
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <rating>
+        <input
+          type="radio"
+          name="rating"
+          value="1"
+          aria-label="1 star"
+          required
+        />
+        <input type="radio" name="rating" value="2" aria-label="2 stars" />
+        <input type="radio" name="rating" value="3" aria-label="3 stars" />
+        <input type="radio" name="rating" value="4" aria-label="4 stars" />
+        <input type="radio" name="rating" value="5" aria-label="5 stars" />
+      </rating>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+```
+---
+hideInToc: true
+---
+
+# Shadow DOM and Styling
+<div></div>
+
+This  discusses the Shadow DOM and how it encapsulates CSS styles within a web component. It demonstrates how to apply styles to the shadow DOM and explains the usage of the :host and ::slotted() pseudo-classes.
+- The Shadow DOM provides a way to scope CSS styles to a specific web component, isolating it from the rest of the document. This means that external CSS does not apply to the component, and component styles have no effect on the rest of the document, unless intentionally directed.
+
+---
+hideInToc: true
+---
+
+# Another Example
+<div class="grid grid-cols-2 gap-x-4">
+  <ul class="text-sm">
+    <v-clicks>
+      <li>
+        In the given example, a <kbd>&lt;style&gt;</kbd> element is included within the <kbd>&lt;template&gt;</kbd> to apply styles to the star rating component. These styles are encapsulated within the shadow DOM and do not affect the rest of the document.
+      </li>
+      <li >
+       The `:host` pseudo-class is used to select the shadow host element (the custom element to which the shadow DOM is attached). The <code>::slotted()</code> pseudo-element is used to select slotted elements (elements inserted into named slots) from within the shadow DOM.
+      </li>
+      <li>
+        The document also mentions the <code>::part()</code> pseudo-element, which allows styling elements within a shadow DOM from the global CSS scope. By adding a part attribute to elements in the <kbd>&lt;template&gt;</kbd>, those elements can be targeted using the <code>::part()</code> pseudo-element in the global CSS.
+      </li>
+    </v-clicks>
+  </ul>
+
+
+````md magic-move
+```html
+<template id="card-template">
+  <style>
+    :host {
+      display: block;
+      margin-bottom: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f5f5f5;
+    }
+    ::slotted(h2) {
+      margin-top: 0;
+    }
+    ::slotted(p) {
+      color: #666;
+    }
+  </style>
+  <div class="card">
+    <slot name="card-header"></slot>
+    <slot name="card-content"></slot>
+  </div>
+</template>
+```
+
+```html
+<script>
+class CustomCard extends HTMLElement {
+  constructor() {
+    super();
+    let template=document.getElementById('card-template');
+    let content = template.content;
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    shadowRoot.appendChild(template.cloneNode(true));
+  }
+}
+// Define the custom element
+customElements.define('custom-card', CustomCard);
+</script>
+```
+
+```html
+<custom-card>
+  <h2 slot="card-header">Card Title</h2>
+  <p slot="card-content">This is the content of the card.</p>
+</custom-card>
+```
+````
+</div>
+
+
+---
+hideInToc: true
+---
+
+
+# Slot
+The &lt;slot&gt; element is used within the &lt;template&gt; to create placeholders for custom content. If a name attribute is provided, it creates a "named slot" that can be used to insert custom content within the web component. In the example, a named slot is created for the legend of the star rating component.
+````md magic-move
+```html
+<template id="star-rating-template">
+  <form>
+    <fieldset>
+      <slot name="star-rating-legend">
+        <legend>Rate your experience:</legend>
+      </slot>
+    </fieldset>
+  </form>
+  </template>
+```
+```html
+<star-rating>
+  <legend slot="star-rating-legend">Blendan Smooth</legend>
+</star-rating>
+<star-rating>
+  <legend slot="star-rating-legend">Hoover Sukhdeep</legend>
+</star-rating>
+<star-rating>
+  <legend slot="star-rating-legend">Toasty McToastface</legend>
+  <p>Is this text visible?</p>
+</star-rating>
+```
+````
+
+---
+hideInToc: true
+---
+
+# Undefined Elements and Custom Elements
+This explains how browsers handle undefined (unrecognized) elements and demonstrates how to define a custom element using JavaScript and the customElements.define() method.
+- Browsers do not fail when encountering unrecognized HTML elements. Instead, they treat these elements as anonymous inline elements, similar to &lt;span&gt;>. In the given example, the &lt;star-rating&gt; element is initially treated as an unrecognized element, and its contents are displayed as if they were inside a &lt;span&gt; element.
+- To define a custom element, JavaScript is required. The customElements.define() method is used to register a custom element by extending the HTMLElement class.
+
+---
+hideInToc: true
+---
+
+# Undefined Elements and Custom Elements
+
+-  In the example, the star-rating custom element is defined, and a shadow DOM is attached to it using the attachShadow() method. The contents of the &lt;template&gt; element are cloned and appended to the shadow DOM, effectively encapsulating the star rating component.
+
+```js
+customElements.define('star-rating',
+class extends HTMLElement {
+  constructor() {
+    super(); // Always call super first in constructor
+    const starRating = document.getElementById('star-rating-template').content;
+    const shadowRoot = this.attachShadow({
+      mode: 'open'
+    });
+    shadowRoot.appendChild(starRating.cloneNode(true));
+  }
+});
+```
+
+---
+hideInToc: true
+---
+# Contributors
+
+
+- [Adebosin Ridwan](https://github.com/RidwanAdebosin)
+- [Olubebe Faith](https://github.com/Olubebe)
