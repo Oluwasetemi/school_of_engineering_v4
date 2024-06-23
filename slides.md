@@ -2002,6 +2002,22 @@ class extends HTMLElement {
 ```
 
 ---
+
+# Assignment 1
+<div></div>
+Build two web pages , the first is going to be about you, including your ALT SCHOOL ID , biography and any relevant information with reason why you join alt school, your goals for school of engineering programme. Use fragment identifier and build a feature to scroll to the top with a fragment identifier.
+
+Second page is a form that is a replica of the ALT SCHOOL application form ,linking both pages together using global navigation and the page must be accessible with proper relevant semantic HTML tags.
+
+```
+index.html
+form.html
+```
+
+NB: Strictly without CSS. Submission details will be sent to you in due time.
+
+
+---
 hideInToc: true
 ---
 # Contributors
