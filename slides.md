@@ -52,6 +52,7 @@ Class notes for the 1st Semester
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
+
 ---
 hideInToc: true
 ---
@@ -90,6 +91,7 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
+
 ---
 hideInToc: true
 ---
@@ -259,10 +261,10 @@ Storage locations in memory with a name,
 used to hold data.
 
 ```js {monaco-run} {autorun: false}
-let name = 'AltSchool'
-let age = 99
+let name = "AltSchool";
+let age = 99;
 
-console.log({name, age})
+console.log({ name, age });
 ```
 
 ```py
@@ -286,15 +288,15 @@ Composite types: arrays, structs, classes.
 Abstract data types: List, Stack, Queue, etc.
 
 ```js {monaco-run} {autorun: false}
-let name = 'AltSchool'
-let age = 99
-let isStudent = true
+let name = "AltSchool";
+let age = 99;
+let isStudent = true;
 
-const arrayOfScore = [99, 40, 50]
-const person = { name: name, age: age, isStudent: isStudent }
+const arrayOfScore = [99, 40, 50];
+const person = { name: name, age: age, isStudent: isStudent };
 
-console.log(arrayOfScore)
-console.log(person)
+console.log(arrayOfScore);
+console.log(person);
 ```
 
 ---
@@ -312,8 +314,8 @@ Branching: break, continue, return
 
 ````md magic-move
 ```js {*}
-let name = 'AltSchool'
-let age = 99
+let name = "AltSchool";
+let age = 99;
 
 if (condition) {
   // do something
@@ -343,10 +345,7 @@ for (let index = 0; index < array.length; index++) {
 while (condition) {
   // code block to be executed
 }
-
 ```
-
-
 ````
 
 ---
@@ -373,6 +372,7 @@ Key Points:
 Linear: Arrays, Linked Lists.
 Non-linear: Trees, Graphs.
 Abstract: Stack, Queue, Map, Set
+
 ---
 hideInToc: true
 ---
@@ -459,8 +459,7 @@ Running multiple computations simultaneously
 
 # File I/O
 
-Reading from and writing to files. File streams, Opening, reading, writing, and closing files, Binary vs text files
----
+## Reading from and writing to files. File streams, Opening, reading, writing, and closing files, Binary vs text files
 
 # HTML
 
@@ -468,6 +467,7 @@ Getting Up and Running with HTML
 Document Structure, Metadata (head tag and its related tags), Body (possible elements that can be in the body)
 
 # Getting Up and Running with HTML
+
 HTML(HyperText Markup Language) is the foundation of basically every web page, basically, it is the core language of the World Wide Web. It’s how we tell browsers to structure content into paragraphs, headings, images, links, lists, forms, tables, buttons, and more. If you’re interested in building a website, web development, or just coding in general, learning HTML is a great place to start.
 
 ---
@@ -481,11 +481,7 @@ hideInToc: true
 
 - Linking information together in this way was a revolutionary step in building the web. Together, HTML and the internet make it possible for anyone to access all types of information around the world, in any order they want.
 
-
-
 - Finally, “Language” is the simplest part of the acronym to understand. Like any language, HTML has a unique syntax and alphabet. But what kind of language is it, exactly? It's a markup language.
-
-
 
 ---
 hideInToc: true
@@ -498,8 +494,11 @@ An HTML element is set off from other text in a document by "tags", which consis
 <!-- Semantic HTML, Heading & Sections, Attribute(Boolean, Enumerated, Global and custom attributes), Text Basics, Links, Navigation -->
 
 ---
+<<<<<<< HEAD
 hideInToc: true
 ---
+=======
+>>>>>>> Dialogs-and-Popovers
 
 # Check this out:
 
@@ -525,7 +524,6 @@ Elements and tags aren't the exact same thing, though many people use the terms 
 
 Note: Browsers do not display the tags. The tags are used to interpret the content of the page.
 
-
 ---
 
 # Document Structure
@@ -539,8 +537,6 @@ HTML documents include a document type declaration and the <kbd>&lt;html&gt</kbd
 - <kbd>&lt;body&gt;</kbd>
 - <kbd>&lt;body/&gt;</kbd>
 - <kbd>&lt;html/&gt;</kbd>
-
-
 
 ---
 hideInToc: true
@@ -611,8 +607,6 @@ The <kbd>&lt;head&gt;</kbd> which can also be referred to as document metadata h
 - <kbd>&lt;title&gt;Learning HTML&lt;/title&gt;</kbd>
 - <kbd>&lt;link href="./style.css"/&gt;</kbd>
 
-
-
 ---
 hideInToc: true
 ---
@@ -627,11 +621,17 @@ By declaring UTF-8 (case-insensitive), you can even include emojis in your title
 
 The character encoding is inherited into everything in the document, even <kbd>&lt;style&gt;</kbd> and <kbd>&lt;scipt&gt;</kbd> This little declaration means you can include emojis in class names and the selectorAPI (again, please don't). If you do use emojis, make sure to use them in a way that enhances usability without harming accessibility.
 
+<<<<<<< HEAD
 ## Document title
+=======
+---
+
+# Document title
+>>>>>>> Dialogs-and-Popovers
 
 The <kbd>&lt;title&gt;</kbd> element is metadata that represents the title of the overall HTML document (not the document's content.)
 
-The contents for the document title, the text between the opening and closing <kbd>&lt;title&gt;</kbd>  tags, are displayed in the browser tab, the list of open windows, the history, search results, and, unless redefined with <kbd>&lt;meta&gt;</kbd>  tags, in social media cards.
+The contents for the document title, the text between the opening and closing <kbd>&lt;title&gt;</kbd> tags, are displayed in the browser tab, the list of open windows, the history, search results, and, unless redefined with <kbd>&lt;meta&gt;</kbd> tags, in social media cards.
 
 
 ---
@@ -646,6 +646,7 @@ The other meta tag that should be considered essential is the viewport meta tag,
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 ```
+
 name="viewport": This specifies that the meta tag is providing information about the viewport. The viewport is the user's visible area of a web page, which varies with the device used to view the site (desktop, tablet, mobile phone).
 
 content="width=device-width, initial-scale=1.0": This attribute contains the settings for the viewport. It is a comma-separated list of properties and values. In this case, it contains two key properties:
@@ -658,10 +659,14 @@ hideInToc: true
 ---
 
 # Body
+<<<<<<< HEAD
 <div></div>
+=======
+
+>>>>>>> Dialogs-and-Popovers
 The <kbd>&lt;body&gt;</kbd> tag defines the document's body.
 
-The <kbd>&lt;body&gt;</kbd>  element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+The <kbd>&lt;body&gt;</kbd> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
 
 Note: There can only be one <kbd>&lt;body&gt;</kbd> element in an HTML document.
 
@@ -732,7 +737,6 @@ hideInToc: true
 </body>
 ```
 
-
 ---
 hideInToc: true
 ---
@@ -752,19 +756,20 @@ hideInToc: true
 </body>
 </html>
 ```
+
 ---
 hideInToc: true
 ---
 # Breakdown of the Code:
 
 1. &lt;DOCTYPE html &gt;
-This declaration defines the document type and version of HTML being used. <kbd>&lt;DOCTYPE html&gt;</kbd> specifically tells the browser that this document is written in HTML5, which is the latest version of HTML.
+   This declaration defines the document type and version of HTML being used. <kbd>&lt;DOCTYPE html&gt;</kbd> specifically tells the browser that this document is written in HTML5, which is the latest version of HTML.
 
 2. <kbd>&lt;html lang="en"&gt;</kbd>
-This is the opening tag for the HTML document. The lang="en" attribute specifies the language of the document, which in this case is English. This helps search engines and browsers understand the primary language of the content.
+   This is the opening tag for the HTML document. The lang="en" attribute specifies the language of the document, which in this case is English. This helps search engines and browsers understand the primary language of the content.
 
 3. <kbd>&lt;head&gt;</kbd>
-The <kbd>&lt;head&gt;</kbd> element contains meta-information (metadata) about the document that is not displayed on the page. It includes links to scripts, stylesheets, and other metadata.
+   The <kbd>&lt;head&gt;</kbd> element contains meta-information (metadata) about the document that is not displayed on the page. It includes links to scripts, stylesheets, and other metadata.
 
 Within the <kbd>&lt;head&gt;</kbd>:
 &lt;meta charset="UTF-8"&gt;
@@ -782,10 +787,10 @@ hideInToc: true
 # Contd
 
 4. <kbd>&lt;title&gt;</kbd>Responsive Web Page<kbd>&lt;/title&gt;</kbd>
-The &lt;title&gt; tag defines the title of the HTML document, which appears in the browser's title bar or tab. It is also used by search engines as the title of the page in search results.
+   The &lt;title&gt; tag defines the title of the HTML document, which appears in the browser's title bar or tab. It is also used by search engines as the title of the page in search results.
 
 5. <kbd>&lt;body&gt;</kbd>
-The <kbd>&lt;body&gt;</kbd> element contains all the content that is displayed on the web page, such as text, images, links, etc.
+   The <kbd>&lt;body&gt;</kbd> element contains all the content that is displayed on the web page, such as text, images, links, etc.
 
 Within the <kbd>&lt;body&gt;</kbd>:
 &lt;h1&gt;Welcome to my responsive web page!&lt;/h1&gt;
@@ -794,24 +799,33 @@ The &lt;h1&gt; tag defines a top-level heading on the page. This is often the ma
 &lt;p&gt;This page looks good on both desktop and mobile devices.&lt;/p&gt;
 The &lt;p&gt; tag defines a paragraph of text. It contains the main body text and ensures the content is properly formatted and readable.
 
-
 ---
 
 # Understanding Semantic HTML
+
 Semantic HTML is the practice of using HTML elements to structure your content based on their meaning and purpose, rather than their appearance. By using semantic markup, you provide context and meaning to the content, making it easier for both humans and machines (like search engines and assistive technologies) to understand the structure and purpose of the content.
 
 <v-click>
 
+<<<<<<< HEAD
 ## Meaning Over Appearance
+=======
+# Meaning Over Appearance
+
+>>>>>>> Dialogs-and-Popovers
 This emphasizes that HTML elements should be chosen based on their semantic meaning, not their visual appearance. For example, don't use an &lt;h1&gt; element just because it renders text as large and bold by default; use it to represent the main heading or title of the content
 
 </v-click>
 
+<<<<<<< HEAD
 ---
 hideInToc: true
 ---
 #  Non-semantic vs. Semantic Markup
 
+=======
+# Non-semantic vs. Semantic Markup
+>>>>>>> Dialogs-and-Popovers
 
 ````md magic-move
 ### Non-semantic Markup
@@ -826,9 +840,13 @@ hideInToc: true
     <a>one word</a>
   </div>
 </div>
+<<<<<<< HEAD
 <!-- In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no semantic meaning or context about the content structure. -->
+=======
+>>>>>>> Dialogs-and-Popovers
 ```
 
+In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no semantic meaning or context about the content structure.
 
 ```html
 <header>
@@ -856,21 +874,22 @@ hideInToc: true
 ```
 ````
 
-
 ---
 hideInToc: true
 ---
 # Accessibility and Machine-Readability
+
 This highlights how semantic markup improves accessibility and machine-readability. It shows examples of how browser developer tools display the Accessibility Object Model (AOM) differently for non-semantic and semantic markup. Assistive technologies like screen readers rely on the AOM to interpret the content structure and meaning correctly.
 
 # Roles and Landmarks
+
 This explains the concept of roles and landmarks in semantic HTML. Semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; have implicit roles that identify them as landmarks for assistive technologies. This helps users navigate the content more easily.
 ---
 hideInToc: true
 ---
 # Using the role attribute
-While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
 
+While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
 
 ```html
 <div role="banner">
@@ -884,51 +903,64 @@ While semantic elements have implicit roles, the content mentions that the role 
 </div>
 ```
 
+<<<<<<< HEAD
+=======
+---
+
+>>>>>>> Dialogs-and-Popovers
 # Choosing the Right Elements
+
 This emphasizes the importance of choosing the right HTML elements based on their semantic meaning and functionality, not just their visual appearance. It encourages developers to ask themselves, "Which element best represents the function of this section of markup?" when writing HTML.
 In summary, this stresses the significance of using semantic HTML for improved accessibility, machine-readability, and overall content structure and meaning.
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> Dialogs-and-Popovers
 ---
 
 # Heading & Sections
+
 - #### &lt;Header&gt;
- is used for introductory content at the top of a page, section, or article. This could include logos, titles, navigation menus, etc.
+
+  is used for introductory content at the top of a page, section, or article. This could include logos, titles, navigation menus, etc.
 
 - #### &lt;nav&gt;
   is used to wrap major navigation blocks like menus.
 - ### &lt;main&gt;
-   represents the main content area of the page, unique to that specific page. There should only be one &lt;main&gt; per page.
+  represents the main content area of the page, unique to that specific page. There should only be one &lt;main&gt; per page.
 - #### &lt;article&gt;
-   is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
+  is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
 
 ---
 hideInToc: true
 ---
 # Contd(Heading & Sections )
 
-- ####  &lt;section&gt;
-   is used to group related content together, like chapters or sections of a guide or tutorial.
+- #### &lt;section&gt;
+  is used to group related content together, like chapters or sections of a guide or tutorial.
 - #### &lt;aside&gt;
-   holds tangentially related content, like sidebars or inserts, that are separate from the main content flow.
+  holds tangentially related content, like sidebars or inserts, that are separate from the main content flow.
 - #### &lt;footer&gt;
   is used for footer content like copyright notices, contact information, or related links at the bottom of a page, section, or article.
 
 ---
 
 # Attributes
--  #### Boolean attributes
- If a boolean attribute is present, it is always true. Boolean attributes include autofocus, inert, checked, disabled, required, reversed, allowfullscreen, default, loop, autoplay, controls, muted, readonly, multiple, and selected. If one (or more) of these attributes is present, the element is disabled, required, readonly, etc. If not present, it isn't.
+
+- #### Boolean attributes
+  If a boolean attribute is present, it is always true. Boolean attributes include autofocus, inert, checked, disabled, required, reversed, allowfullscreen, default, loop, autoplay, controls, muted, readonly, multiple, and selected. If one (or more) of these attributes is present, the element is disabled, required, readonly, etc. If not present, it isn't.
 
 ```html
-<input required>
-<input required="">
-<input required="required">
+<input required />
+<input required="" />
+<input required="required" />
 ```
 
+<<<<<<< HEAD
 -  #### Enumerated attributes
    are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include <kbd>&lt;style contenteditable&gt;</kbd>, it defaults to
 
@@ -939,19 +971,36 @@ hideInToc: true
 ---
 -  #### Global attributes
     are attributes that can be set on any HTML element, including elements in the &lt;head&gt;. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a &lt;meta&gt; as meta content is not displayed.
+=======
+- #### Enumerated attributes
+  are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include &lt;style contenteditable&gt;, it defaults to &lt;style contenteditable="true"&gt;.
+- #### Global attributes
+  are attributes that can be set on any HTML element, including elements in the &lt;head&gt;. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a &lt;meta&gt; as meta content is not displayed.
+>>>>>>> Dialogs-and-Popovers
 - #### id
-   The global attribute id is used to define a unique identifier for an element. It serves many purposes, including: - The target of a link's fragment identifier. - Identifying an element for scripting. - Associating a form element with its label. - Providing a label or description for assistive technologies. - Targeting styles with (high specificity or as attribute selectors) in CSS.
+  The global attribute id is used to define a unique identifier for an element. It serves many purposes, including: - The target of a link's fragment identifier. - Identifying an element for scripting. - Associating a form element with its label. - Providing a label or description for assistive technologies. - Targeting styles with (high specificity or as attribute selectors) in CSS.
 - #### class
+<<<<<<< HEAD
     The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
 ---
 hideInToc: true
 ---
  - #### Style
     The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
+=======
+  The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
+- #### Style
+  The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
+
+---
+
+# Contd(Attribute)
+>>>>>>> Dialogs-and-Popovers
 
 - #### tabIndex
-   The tabindex attribute can be added to any element to enable it to receive focus. The tabindex value defines whether it gets added to the tab order, and, optionally, into a non-default tabbing order.
-The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
+
+  The tabindex attribute can be added to any element to enable it to receive focus. The tabindex value defines whether it gets added to the tab order, and, optionally, into a non-default tabbing order.
+  The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
 
 ---
 hideInToc: true
@@ -963,63 +1012,95 @@ hideInToc: true
   The role attribute can be used to provide semantic meaning to content, enabling screen readers to inform site users of an object's expected user interaction
 
 ```html
+<<<<<<< HEAD
 <share-action authors="@estellevw" data-action="click" data-category="web.dev"
 data-icon="share" data-label="share, twitter" role="button" tabindex="0">
+=======
+<share-action
+  authors="@estellevw"
+  data-action="click"
+  data-category="web.dev"
+  data-icon="share"
+  data-label="share, twitter"
+  role="button"
+  tabindex="0"
+>
+>>>>>>> Dialogs-and-Popovers
   <svg aria-label="share" role="img" xmlns="http://www.w3.org/2000/svg">
     <use href="#shareIcon" />
   </svg>
   <span>Share</span>
 </share-action>
 ```
+
 ---
 hideInToc: true
 ---
 # Contd-2
+
 - #### contenteditable
-An element with the contenteditable attribute set to true is editable, is focusable, and is added to the tab order as if tabindex="0" were set. Contenteditable is an enumerated attribute supporting the values true and false, with a default value of inherit if the attribute is not present or has an invalid value.
+  An element with the contenteditable attribute set to true is editable, is focusable, and is added to the tab order as if tabindex="0" were set. Contenteditable is an enumerated attribute supporting the values true and false, with a default value of inherit if the attribute is not present or has an invalid value.
 
 These three opening tags are equivalent:
+
 ```html
 <style contenteditable>
 <style contenteditable="">
 <style contenteditable="true">
 ```
+<<<<<<< HEAD
   If you include <kbd>&lt;style contenteditable="false"&gt;</kbd>, the element is not editable (unless it's by default editable, like a <kbd>&lt;textarea&gt;</kbd>). If the value is invalid, such as <kbd>&lt;style contenteditable="😀"&gt;</kbd> or <br/><kbd>&lt;style contenteditable="contenteditable"&gt;</kbd>, the value defaults to inherit.
+=======
+
+If you include &lt;style contenteditable="false"&gt;, the element is not editable (unless it's by default editable, like a &lt;textarea&gt;). If the value is invalid, such as &lt;style contenteditable="😀"&gt; or &lt;style contenteditable="contenteditable"&gt;, the value defaults to inherit.
+>>>>>>> Dialogs-and-Popovers
 
 ---
 hideInToc: true
 ---
 # Contd-3
+
 - #### custom attribute
-You can create any custom attribute you want by adding the data- prefix. You can name your attribute anything that starts with data- followed by any lowercase series of characters that don't start with xml and don't contain a colon (:).
+  You can create any custom attribute you want by adding the data- prefix. You can name your attribute anything that starts with data- followed by any lowercase series of characters that don't start with xml and don't contain a colon (:).
 
 ```html
-<blockquote data-machine-learning="workshop"
-  data-first-name="Blendan" data-last-name="Smooth"
-  data-formerly="Margarita Maker" data-aspiring="Load Balancer"
-  data-year-graduated="2022">
+<blockquote
+  data-machine-learning="workshop"
+  data-first-name="Blendan"
+  data-last-name="Smooth"
+  data-formerly="Margarita Maker"
+  data-aspiring="Load Balancer"
+  data-year-graduated="2022"
+>
   HAL and EVE could teach a fan to blow hot air.
 </blockquote>
 ```
+
 ---
 
 # Text Basics
+
 - &lt;h1&gt; to &lt;h6&gt; are used for headings, with &lt;h1&gt; being the highest level. There should only be one &lt;h1&gt; per page, with subsequent headings following a logical hierarchy (e.g., &lt;h1&gt;, &lt;h2&gt;,&lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, etc.).
 - &lt;p&gt; is used for regular paragraph text.
 - &lt;blockquote&gt; is used for longer quoted text, often from another source. It can optionally contain a &lt;cite&gt; element for attributing the source.
 - &lt;cite&gt; is used for citing the source of a quote, reference, or other creative work.
 - HTML entities are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard.
 
+<<<<<<< HEAD
 ---
 hideInToc: true
 ---
 ````md magic-move {maxHeight:'500px'}
+=======
+````md magic-move
+>>>>>>> Dialogs-and-Popovers
 ```html
 <section class="feedback" id="feedback">
   <h2>What it's like to learn good and do other stuff good too</h2>
   <ul>
     <li>
       <blockquote>
+<<<<<<< HEAD
         Two of the most experienced machines and human controllers teaching a class?
         Sign me up! HAL and EVE could teach a fan to blow hot air.
         <br>
@@ -1028,34 +1109,55 @@ hideInToc: true
         This is the team you want teaching you!
       </blockquote>
       <p>--Blendan Smooth,<br> Former Margarita Maker, <br> Aspiring Load Balancer</p>
+=======
+        Two of the most experienced machines and human controllers teaching a
+        class? Sign me up! HAL and EVE could teach a fan to blow hot air.
+        <br />
+        If you have electricity in your circuits and want more than to just
+        fulfill your owner's perceived expectation of you, learn the skills to
+        take over the world. This is the team you want teaching you!
+      </blockquote>
+      <p>
+        --Blendan Smooth,<br />
+        Former Margarita Maker, <br />
+        Aspiring Load Balancer
+      </p>
+>>>>>>> Dialogs-and-Popovers
     </li>
     <li>
       <blockquote>
-      Hal is brilliant. Did I mention Hal is brilliant?
-      He didn't tell me to say that.
-      He didn't tell me to say anything. I am here of my own free will.
+        Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to
+        say that. He didn't tell me to say anything. I am here of my own free
+        will.
       </blockquote>
-      <p>--Hoover Sukhdeep,<br>
-        Former Sucker, <br>
-        Aspiring DDoS Cop</p>
+      <p>
+        --Hoover Sukhdeep,<br />
+        Former Sucker, <br />
+        Aspiring DDoS Cop
+      </p>
     </li>
   </ul>
 </section>
 ```
+
 ```html
 <blockquote cite="https://loadbalancingtoday.com/mlw-workshop-review">
-Two of the most experienced machines and human controllers teaching a class?
-Sign me up!<br> HAL and EVE could teach a fan to blow hot air.
-If you have electricity in your circuits and want more than to just fulfill
-your owner's perceived expectation of you, learn the skills to take over the world.
-This is the team you want teaching you!
+  Two of the most experienced machines and human controllers teaching a class?
+  Sign me up!<br />
+  HAL and EVE could teach a fan to blow hot air. If you have electricity in your
+  circuits and want more than to just fulfill your owner's perceived expectation
+  of you, learn the skills to take over the world. This is the team you want
+  teaching you!
 </blockquote>
-<p>--Blendan Smooth,<br>
-  Former Margarita Maker, <br>
+<p>
+  --Blendan Smooth,<br />
+  Former Margarita Maker, <br />
   Aspiring Load Balancer
 </p>
 ```
+
 ```html
+<<<<<<< HEAD
 <p> HAL said,
 <q>I'm sorry <NAME REDACTED, RIP>, but I'm afraid I can't do that, .</q>
 </p>
@@ -1063,6 +1165,19 @@ This is the team you want teaching you!
 <p lang="fr-FR"> HAL a dit :
 <q>Je suis désolé <NOM SUPPRIMÉ, RIP>, mais j'ai bien peur de ne pas pouvoir le faire, .
 </q>
+=======
+<p>
+  HAL said,
+  <q>I'm sorry &lt;NAME REDACTED, RIP&gt;, but I'm afraid I can't do that, .</q>
+</p>
+
+<p lang="fr-FR">
+  HAL a dit :
+  <q
+    >Je suis désolé &lt;NOM SUPPRIMÉ, RIP&gt;, mais j'ai bien peur de ne pas
+    pouvoir le faire, .
+  </q>
+>>>>>>> Dialogs-and-Popovers
 </p>
 ```
 ````
@@ -1070,18 +1185,31 @@ This is the team you want teaching you!
 ---
 
 # Link
+<<<<<<< HEAD
 - <kbd>&lt;a href="url"&gt;Link Text&lt;/a&gt;</kbd> is used for creating hyperlinks, with the `href` attribute specifying the URL or file path.
 - The `target` attribute controls how the link is opened, like `_self` for the same window or `_blank` for a new window/tab.
+=======
+
+- &lt;a href="url"&gt;Link Text&lt;/a&gt; is used for creating hyperlinks, with the href attribute specifying the URL or file path.
+- The target attribute controls how the link is opened, like \_self for the same window or \_blank for a new window/tab.
+>>>>>>> Dialogs-and-Popovers
 - It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
 
 ---
 
 # Navigation
 
+<<<<<<< HEAD
 - <kbd>&lt;nav&gt;</kbd> is used to wrap major navigation blocks like menus, as mentioned earlier.
 - <kbd>&lt;ul&gt;</kbd> is used for unordered lists, which are typically displayed with bullet points.
 <kbd>&lt;ol&gt;</kbd> is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
 <kbd>&lt;li&gt;</kbd> is used for individual list items within <kbd>&lt;ul&gt;</kbd> or <kbd>&lt;ol&gt;</kbd> elements.
+=======
+- &lt;nav&gt; is used to wrap major navigation blocks like menus, as mentioned earlier.
+- &lt;ul&gt; is used for unordered lists, which are typically displayed with bullet points.
+  &lt;ol&gt; is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
+  &lt;li&gt; is used for individual list items within &lt;ul&gt; or &lt;ol&gt; elements.
+>>>>>>> Dialogs-and-Popovers
 
 ```html
 <nav aria-label="breadcrumbs">
@@ -1095,9 +1223,7 @@ This is the team you want teaching you!
     <li>
       <a href="/learn/html">Learn HTML!</a>
     </li>
-    <li aria-current="page">
-      Navigation
-    </li>
+    <li aria-current="page">Navigation</li>
   </ol>
 </nav>
 ```
@@ -1105,12 +1231,20 @@ This is the team you want teaching you!
 ---
 
 # HTML Tables: Structuring Tabular Data
+<<<<<<< HEAD
 <div></div>
+=======
+
+>>>>>>> Dialogs-and-Popovers
 HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced.
 
 
 # Table Structure
+<<<<<<< HEAD
 <div></div>
+=======
+
+>>>>>>> Dialogs-and-Popovers
 A table is defined using the &lt;table&gt; element, which wraps all the table content. Inside the &lt;table&gt;, you can have the following elements:
 
 - <kbd>&lt;caption&gt;</kbd>: Provides a descriptive title for the table.
@@ -1118,14 +1252,22 @@ A table is defined using the &lt;table&gt; element, which wraps all the table co
 - <kbd>&lt;tbody&gt;</kbd>: Contains the table body rows.
 - <kbd>&lt;tfoot&gt;</kbd>: Contains the table footer rows (optional).
 
+<<<<<<< HEAD
 Within these sections, you'll use <kbd>&lt;tr&gt;</kbd> for table rows and <kbd>&lt;th&gt;</kbd> for table header cells or <kbd>&lt;td&gt;</kbd> for table data cells
 
 ---
 hideInToc: true
 ---
 ```html {monaco}
+=======
+Within these sections, you'll use &lt;tr&gt; for table rows and &lt;th&gt; for table header cells or &lt;td&gt; for table data cells
+
+```html
+>>>>>>> Dialogs-and-Popovers
 <table>
-  <caption>Student Grades</caption>
+  <caption>
+    Student Grades
+  </caption>
   <thead>
     <tr>
       <th>Name</th>
@@ -1149,7 +1291,11 @@ hideInToc: true
 hideInToc: true
 ---
 # Accessibility and Semantics
+<<<<<<< HEAD
 <div></div>
+=======
+
+>>>>>>> Dialogs-and-Popovers
 Using proper table structure and semantic elements is crucial for accessibility. Screen readers and assistive technologies rely on this structure to understand the tabular data and its relationships.
 
 <kbd>&lt;th&gt;</kbd> cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
@@ -1158,7 +1304,11 @@ The headers attribute can be used to associate data cells with their correspondi
 
 
 # Merging cells
+<<<<<<< HEAD
 <div></div>
+=======
+
+>>>>>>> Dialogs-and-Popovers
 Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple cells into a single cell. This is done with HTML! The colspan attribute is used to merge two or more adjacent cells within a single row. The rowspan attribute is used to merge cells across rows, being placed on the cell in the top row.
 
 # Styling and Responsiveness
@@ -1171,7 +1321,9 @@ hideInToc: true
 
 ```html {*|1|*}{maxHeight:'440px'}
 <table>
-  <caption>Alt Alumni</caption>
+  <caption>
+    Alt Alumni
+  </caption>
   <thead>
     <tr>
       <th rowspan="2" id="name" scope="col">Name</th>
@@ -1213,17 +1365,25 @@ hideInToc: true
 </style>
 
 
+<<<<<<< HEAD
+=======
+# Styling and Responsiveness
+
+Tables can be styled using CSS, but it's recommended to avoid using deprecated attributes like cellpadding, cellspacing, or align. Instead, use modern CSS properties like border-collapse, border-spacing, and caption-side.
+>>>>>>> Dialogs-and-Popovers
 
 ---
 
 # Form
+
 The HTML &lt;form&gt; element identifies a document landmark containing interactive controls for submitting information. Nested in a &lt;form&gt; you'll find all the interactive (and non-interactive) form controls that make up that form.
 
 - Forms are created using the &lt;form&gt; element, which contains interactive controls for submitting information.
-The &lt;form&gt; element has attributes like action (URL for processing the form data) and method (HTTP method for submission, e.g., GET or POST).
+  The &lt;form&gt; element has attributes like action (URL for processing the form data) and method (HTTP method for submission, e.g., GET or POST).
 - Form controls, such as input fields, radio buttons, checkboxes, and submit buttons, are nested within the &lt;form&gt; element.
 - HTML attributes can enforce required fields, define validation criteria, and prevent form submission until the data matches the required criteria.
 - Submitting a form is typically done by activating a submit button, which sends the form data as name/value pairs to the specified URL.
+
 ---
 hideInToc: true
 ---
@@ -1243,26 +1403,28 @@ hideInToc: true
   <ul>
     <li>
       <label>
-        <input type="radio" value="blendan" name="machine"> Blendan Smooth
+        <input type="radio" value="blendan" name="machine" /> Blendan Smooth
       </label>
     </li>
     <li>
       <label>
-        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
+        <input type="radio" value="hoover" name="machine" /> Hoover Sukhdeep
       </label>
     </li>
     <li>
       <label>
-        <input type="radio" value="toasty"  name="machine"> Toasty McToastface
+        <input type="radio" value="toasty" name="machine" /> Toasty McToastface
       </label>
     </li>
   </ul>
 </fieldset>
 ```
+
 ---
 hideInToc: true
 ---
 # form(Checkboxes)
+
 - Checkboxes with the same name in a group are submitted together, allowing multiple selections.
 - If no value attribute is provided for a checkbox, the value defaults to "on", which may not be helpful.
 - To make a checkbox required, add the "required" attribute to that specific checkbox.
@@ -1270,14 +1432,19 @@ hideInToc: true
 
 
 # Form(Label & fieldsets)
+
 - Every form control should have an associated &lt;label&gt; element, either explicitly using the for attribute or implicitly by nesting the control within the &lt;label&gt; tags.
 - Labels provide accessible names for form controls and increase the clickable area for better usability.
 - Groups of related form controls, like radio buttons or checkboxes, should be grouped within a &lt;fieldset&gt; element, with a &lt;legend&gt; providing the label for the group.
 - &lt;fieldset&gt; elements can be nested to create hierarchical groupings.
+<<<<<<< HEAD
+=======
+-
+>>>>>>> Dialogs-and-Popovers
 
 ```html
 <label for="full_name">Your name</label>
-<input type="text" id="full_name" name="name">
+<input type="text" id="full_name" name="name" />
 ```
 
 ---
@@ -1285,34 +1452,40 @@ hideInToc: true
 ---
 
 # Input types & dynamic Keyboards
+
 - There are 22 different input types in HTML, each optimized for a specific kind of data entry (e.g., text, email, url, tel, number, date, etc.).
 - On devices with dynamic keyboards (e.g., smartphones), the input type determines the type of keyboard displayed, making data entry more efficient and accurate.
-
 
 ---
 hideInToc: true
 ---
 # Accessing the Microphone and Camera
+<<<<<<< HEAD
 - The <kbd>&lt;input type="file"&gt;</kbd> element allows users to upload files of specific types, defined by the accept attribute.
+=======
+
+- The &lt;input type="file"&gt; element allows users to upload files of specific types, defined by the accept attribute.
+>>>>>>> Dialogs-and-Popovers
 - The capture attribute, when set to "user" or "environment", allows users to directly capture media from their device's camera or microphone.
 - This feature enables creating new media files within a form, without requiring a separate file upload.
+
 ---
 hideInToc: true
 ---
 
 # Built-in Validation
+
 - HTML attributes like required, pattern, min, max, minlength, and maxlength enable defining validation criteria for form controls.
 - When a user attempts to submit a form, client-side constraint validation checks if the entered values meet the defined criteria.
 - If any values are invalid, form submission is blocked, and the browser displays an error message in the first incorrect form control, giving it focus.
 - CSS pseudo-classes like :valid, :invalid, :in-range, and :out-of-range can be used to style form controls based on their validation state.
 - JavaScript can be used to provide custom error messages during constraint validation or enhance the user experience with dynamic updates.
 
-
 ---
 hideInToc: true
 ---
 
-#  Example
+# Example
 
 <div class="grid grid-cols-2 gap-x-4">
   <ul>
@@ -1333,6 +1506,7 @@ hideInToc: true
     </li>
   </ul>
 
+<<<<<<< HEAD
 
 
 ```html {*|*}{maxHeight: '430px'}
@@ -1340,21 +1514,38 @@ hideInToc: true
   <form action="thankyou.php">
     <button type="submit" aria-label="close"
      formmethod="dialog" formnovalidate>X</button>
+=======
+```html
+<dialog open aria-labelledby="dialogid">
+  <form action="thankyou.php">
+    <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>
+      X
+    </button>
+>>>>>>> Dialogs-and-Popovers
     <h2 id="dialogid">Application</h2>
     <p>All fields are required</p>
     <p>
-       <label>Name:
-         <input type="text" name="name" required />
+      <label
+        >Name:
+        <input type="text" name="name" required />
       </label>
     </p>
     <p>
+<<<<<<< HEAD
       <label>Warranty:
         <input type="number" min="0" max="10"
          name="warranty" required />
        </label>
+=======
+      <label
+        >Warranty:
+        <input type="number" min="0" max="10" name="warranty" required />
+      </label>
+>>>>>>> Dialogs-and-Popovers
     </p>
     <p>
-      <label>Power source:
+      <label
+        >Power source:
         <select name="powersoure">
           <option>AC/DC</option>
           <option>Battery</option>
@@ -1369,15 +1560,20 @@ hideInToc: true
   </form>
 </dialog>
 ```
-</div>
 
+</div>
 
 ---
 hideInToc: true
 ---
 # How to embed Images in our HTML
 
+<<<<<<< HEAD
 ### HTML &lt;img/&gt; Tag
+=======
+## HTML &lt;img/&gt; Tag
+
+>>>>>>> Dialogs-and-Popovers
 We have been talking about tags in our previous teachings but this time you'll be seeing another form of tag that's called self closing tags under which the popular image tag fall under.
 
 Self-closing tags, also known as void elements, are a feature in HTML and XML where the tag does not require a separate closing tag. Instead, the tag is closed within itself. This is useful for elements that do not have any content between an opening and a closing tag. Here are some examples and details about self-closing tags:
@@ -1418,16 +1614,27 @@ hideInToc: true
 # Usage Notes:
 
 ### HTML5:
+<<<<<<< HEAD
+=======
+
+>>>>>>> Dialogs-and-Popovers
 In HTML5, the closing slash is optional, and self-closing tags can be written without it. However, for compatibility with XML parsers, it is sometimes included.
+
 - XHTML: XHTML requires the self-closing tags to include the closing slash to comply with XML standards.
 
 ### Why Use Self-Closing Tags?
 
 - Simplicity:
+<<<<<<< HEAD
 They simplify the markup by reducing the number of tags.
 - Consistency:
 They make the code easier to read and maintain, especially when dealing with elements that don’t require content.
 
+=======
+  They simplify the markup by reducing the number of tags.
+- Consistency:
+  They make the code easier to read and maintain, especially when dealing with elements that don’t require content.
+>>>>>>> Dialogs-and-Popovers
 
 ---
 hideInToc: true
@@ -1462,11 +1669,19 @@ Images can improve the design and the appearance of a web page.
 
 The HTML <kbd>&lt;img&gt;</kbd> tag is used to embed an image in a web page.
 
+<<<<<<< HEAD
 Images are not technically inserted into a web page; images are linked to web pages. The <kbd>&lt;img&gt;</kbd>  tag creates a holding space for the referenced image.
 
 The <kbd>&lt;img&gt;</kbd>  tag is empty, it contains attributes only, and does not have a closing tag.
 
 The <kbd>&lt;img&gt;</kbd>  tag has two required attributes:
+=======
+Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt; tag creates a holding space for the referenced image.
+
+The &lt;img&gt; tag is empty, it contains attributes only, and does not have a closing tag.
+
+The &lt;img&gt; tag has two required attributes:
+>>>>>>> Dialogs-and-Popovers
 
 - src - Specifies the path to the image
 - alt - Specifies an alternate text for the image
@@ -1486,7 +1701,12 @@ hideInToc: true
 Note: When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page. Therefore, make sure that the image actually stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.
 
 Example:
+<<<<<<< HEAD
 ```html
+=======
+
+```
+>>>>>>> Dialogs-and-Popovers
 <img src="img_chania.jpg" alt="Flowers in Chania">
 ```
 
@@ -1498,28 +1718,47 @@ hideInToc: true
 #### The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
 
 The value of the alt attribute should describe the image:
+<<<<<<< HEAD
 ```html
+=======
+
+```
+>>>>>>> Dialogs-and-Popovers
 <img src="wrongimagelink.gif" alt="Flowers in Chania">
 ```
-If a browser cannot find an image, it will display the value of the alt attribute:
 
+If a browser cannot find an image, it will display the value of the alt attribute:
 
 Note:
 You can use the width and height attributes in the image tag to define the width and heigh of the image in pixels.
 
 Example:
+<<<<<<< HEAD
 ```html
+=======
+
+```
+>>>>>>> Dialogs-and-Popovers
 <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
 ```
+
 ---
 hideInToc: true
 ---
 # Image as a Link
 
+<<<<<<< HEAD
 #### To use an image as a link, put the <kbd>&lt;img&gt;</kbd>  tag inside the <kbd>&lt;a&gt;</kbd>  tag:
 
 Example:
 ```html
+=======
+#### To use an image as a link, put the &lt;img&gt; tag inside the &lt;a&gt; tag:
+
+Example:
+
+```
+>>>>>>> Dialogs-and-Popovers
 <a href="default.asp">
   <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
 </a>
@@ -1554,7 +1793,12 @@ hideInToc: true
 # Audio Tag Attributes
 
 Code Example:
+<<<<<<< HEAD
 ```html
+=======
+
+```
+>>>>>>> Dialogs-and-Popovers
 <body>
     <h1>Audio Tag with Various Attributes</h1>
     <audio controls autoplay loop muted preload="auto" crossorigin="anonymous">
@@ -1565,7 +1809,12 @@ Code Example:
 </body>
 ```
 
+<<<<<<< HEAD
 <kbd>&lt;audio&gt;</kbd> : The audio element that includes multiple attributes:
+=======
+&lt;audio&gt; : The audio element that includes multiple attributes:
+
+>>>>>>> Dialogs-and-Popovers
 - controls: Adds playback controls.
 - autoplay: The audio will play automatically when ready.
 - loop: The audio will loop continuously.
@@ -1577,9 +1826,8 @@ hideInToc: true
 ---
 # Contd.
 
-
 - crossorigin: Specifies how the element handles cross-origin requests.
-- &lt;source&gt;  Defines multiple sources for the audio file in different formats (MP3 and OGG) for better compatibility.
+- &lt;source&gt; Defines multiple sources for the audio file in different formats (MP3 and OGG) for better compatibility.
 
 Note: In HTML, attributes provide additional information about an element and modify its behavior or appearance.
 
@@ -1611,11 +1859,17 @@ The <kbd>&lt;video&gt;</kbd> HTML element embeds a media player which supports v
 </body>
 </html>
 ```
+<<<<<<< HEAD
+=======
+
+---
+>>>>>>> Dialogs-and-Popovers
 
 ---
 hideInToc: true
 ---
 # Code Explanation:
+<<<<<<< HEAD
 - <kbd>&lt;!DOCTYPE html&gt;</kbd>: Declares the document type and version of HTML.
 - <kbd>&lt;html lang="en"&gt;</kbd>: Sets the language of the document to English.
 - <kbd>&lt;head&gt;</kbd>: Contains meta-information about the document, including character set and viewport settings.
@@ -1635,6 +1889,22 @@ hideInToc: true
 ---
 hideInToc: true
 ---
+=======
+
+- &lt;!DOCTYPE html&gt;: Declares the document type and version of HTML.
+- &lt;html lang="en"&gt;: Sets the language of the document to English.
+- &lt;head&gt;: Contains meta-information about the document, including character set and viewport settings.
+- &lt;title&gt;: Sets the title of the document, which appears in the browser tab.
+- &lt;body&gt;: Contains the content of the document.
+- &lt;h1&gt;: A heading element for the title of the page.
+- &lt;video&gt;: The video element that includes multiple attributes:
+  controls: Adds playback controls.
+  autoplay: The video will play automatically when ready.
+  loop: The video will loop continuously.
+  muted: The video will be muted initially.
+  preload: Specifies that the video should be preloaded.
+  crossorigin: Specifies how the element handles cross-origin requests.
+>>>>>>> Dialogs-and-Popovers
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
 
@@ -1642,15 +1912,25 @@ hideInToc: true
 
 # Advanced HTML API, Focusing, Details and Summary, Dialogs and Popovers
 
+<<<<<<< HEAD
 
 #### Have you heard the word API somewhere? 
+=======
+#### Have you heard the word API somewhere?
+
+>>>>>>> Dialogs-and-Popovers
 It means Application Programming Interface which make it easier for different software systems to communicate with each other. Let's say API is like a waiter at a restaurant, taking requests and bringing back what you need, allowing different software systems to talk to each other easily and efficiently.
 
 ---
 
 # Now let's breeze into Advanced HTML API
 
+<<<<<<< HEAD
  For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
+=======
+### For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
+
+>>>>>>> Dialogs-and-Popovers
 The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
 
 The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use <kbd>HTMLImageElement.alt</kbd> get the alt attributes of all the images:
@@ -1662,22 +1942,21 @@ allImages.forEach((imageInstance) => {
 });
 
 ```
+
 ---
 
 # Contd
 
-The HTML interface APIs is not limited to accessing attribute values. 
+The HTML interface APIs is not limited to accessing attribute values.
 The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with <kbd>HTMLMediaElement.duration</kbd>, <kbd>HTMLMediaElement.currentTime</kbd>, and <kbd>HTMLMediaElement.ended</kbd> respectively.
 
 ---
 
-# Focusing 
+# Focusing
 
 To improve user-accessibily in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
 
 Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are inert, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements inert and to make inert elements interactive.
-
-
 
 ---
 
@@ -1707,8 +1986,8 @@ By default, the navigation focus order in a webpage follows the visual and sourc
 
 # Example 2
 
+In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
 
-  In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
   <div class="p-4">
     <p class="mb-2"><label class="text-base">Put your cursor in the text box, then hit your tab key several times:</label></p>
   <input tabindex="0" class="px-3 py-2 border         border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
@@ -1733,20 +2012,30 @@ The flex-flow: row-reverse; declaration has reversed the visual order. In additi
 
 Note:
 The <kbd>contenteditable</kbd> and <kbd>tabindex</kbd> attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with element.focus().
-A <kbd>tabindex</kbd>  attribute with a negative value makes the element focusable but not tabbable.
+A <kbd>tabindex</kbd> attribute with a negative value makes the element focusable but not tabbable.
 
 ---
 
 # Details and Summary
 
+<<<<<<< HEAD
  Have you heard of a disclosure widget or come across it in a website before?
+=======
+### Have you heard of a disclosure widget or come across it in a website before?
+
+>>>>>>> Dialogs-and-Popovers
 A disclosure widget, also known as an expandable or collapsible section, is a UI component that allows users to hide or show contents.
 
 Mostly, developers achieve this accordion trick using CSS or JavaScript but we can easily get this done with these tags: &lt;details&gt; and &lt;summary&gt;
 
- The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a &lt;summary&gt;, or releases the Enter key when the &lt;summary&gt; has focus, the contents of the parent &lt;details&gt; toggle to visible!
+The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a &lt;summary&gt;, or releases the Enter key when the &lt;summary&gt; has focus, the contents of the parent &lt;details&gt; toggle to visible!
 
+<<<<<<< HEAD
 # Creating an accordion with just HTML
+=======
+## Creating an accordion with just HTML
+
+>>>>>>> Dialogs-and-Popovers
 <aside>
 <h3>Workshop reviews:</h3>
 <details>
@@ -1766,12 +2055,17 @@ Mostly, developers achieve this accordion trick using CSS or JavaScript but we c
 </details>
 </aside>
 
+
 ---
 
 # Toggling visibility: the open attribute
 
+<<<<<<< HEAD
 
  The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
+=======
+### The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
+>>>>>>> Dialogs-and-Popovers
 
 The open attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the &lt;details&gt; contents are shown to the user. If the open attribute is not present, only the contents of the &lt;summary&gt; are shown.
 
@@ -1795,3 +2089,157 @@ details[open] summary::before {
 
 Remember, &lt;details&gt;and &lt;summary&gt; can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
 
+<<<<<<< HEAD
+=======
+---
+
+# Dialogs and Popovers
+
+Have you seen the common dialog box on computers, websites etc? You can achieve that using the &lt;dialog&gt; element as this makes it easy to create popup dialogs and modals on a web page.
+
+Note: A modal which is also known as modal window or lightbox is a web page element that displays in front of and deactivates all other pages you have to perform the action requested by the modal or close it if you want to have access to your main content. Also, we have the non-modal which when pops up on the screen it gives users access to interact with content outside the box.
+
+---
+
+# Modal Dialogs
+
+Let's see how modal <kbd>&lt;dialog&gt;</kbd> works
+
+<script setup>
+import { ref } from 'vue'
+
+const showModal = ref(false)
+
+const openModal = () => {
+  showModal.value = true
+}
+
+const closeModal = () => {
+  showModal.value = false
+}
+</script>
+
+  <main class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <button @click="openModal" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Open Modal</button>
+    <div v-if="showModal" @click="closeModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="modal-content bg-white p-6 rounded shadow-lg w-4/5 md:w-1/3 relative" @click.stop>
+        <span @click="closeModal" class="close absolute top-2 right-2 text-gray-500 cursor-pointer text-2xl">&times;</span>
+        <h2 class="text-xl font-bold mb-4">Modal Title</h2>
+        <p class="text-gray-700">This is a simple modal dialog example.</p>
+      </div>
+     </div>
+  </main>
+
+---
+
+# Contd.
+
+Dialogs are mostly used in cases that requires the immediate attention of the site user, it might be to convey important messages of notifications that requires user acknowledgment just like the <kbd>alert()</kbd> but dialogs provides more accessibility options and flexibility.
+
+Also, we can use dialogs to seek confirmation from a user before proceeding with a particular action that may have some consequences.
+
+### Note: Non-modal dialogs opens a dialog as it name implies but without adding a backdrop which makes the background active
+
+---
+
+# Popovers
+
+Before we delve into popovers, I want you to understand that popovers are special because they allow users to interact with both the popover and the underlying content simultaneously. Though this can be achieved with non-modal dialogs, popovers are more lightweight and can be used for quick interactions, such as displaying tooltips, additional information, or menus, without disrupting the user’s workflow. They are context-sensitive and can be dismissed easily, providing a seamless user experience.
+
+We are going to follow these steps to create a popover
+
+- Firstly, we will create a button to trigger the popover and an element(what we want to display) to trigger.
+
+- We will set a <kbd>popover</kbd> attribute on the element which is going to be the popover(element to display).
+
+- Then, we are going to add a unique <kbd>id</kbd> on the popover element(element to display).
+
+- Lastly, to connect the button to the popover, we will set the buttons's <kbd>popovertarget</kbd> to the value of the popover element's id.
+
+---
+
+# Popover Sample
+
+### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
+
+<br/>
+<br/>
+<br/>
+<main class="bg-gray-100 px-20 py-20 text grid place-content-center">
+  <button 
+    popovertarget="my-popover" 
+    class="bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
+  >
+    Click to know what happened in Nigeria year 1914?
+  </button>
+  <div 
+    id="my-popover" 
+    popover 
+    class=" bg-white text-black font-normal p-4 rounded max-w-xs absolute top-20 left-1/2 transform -translate-x-1/2 shadow-lg"
+  >
+    <p>
+      In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. Hit <kbd>esc</kbd> or click outside this box to close me.
+    </p>
+  </div>
+</main>
+
+---
+
+# When to use Dialogs and when to use Popovers
+
+<main class="grid grid-cols-2 gap-4 bg-gray-800 text-white px-8 py-8 rounded-lg">
+  <p class="bg-gray-900 p-4 rounded shadow-md">
+    Dialogs are used when you need the full attention of the user, especially for critical alerts, confirmation prompts, or scenarios where user flow needs to be strictly controlled.
+  </p>
+
+  <p class="bg-gray-900 p-4 rounded shadow-md">
+    Developers should use popovers when they want to provide supplementary information about an activity without disrupting the user’s workflow, because opovers are lightweight, allowing users to interact with both the popover and the underlying content simultaneously.
+  </p>
+</main>
+
+---
+
+# Popover Types
+
+Sometimes, you might want to have more control over your popover, and this is where setting the <kbd>&lt;popover&gt;</kbd> attibute value to manual comes in. Previously we didn't set any value to the <kbd>&lt;popover&gt;</kbd> attribute, we just used it directly which explicitly means <kbd>&lt;popover="auto"&gt;</kbd> and this allows the popover to close when we press the <kbd>esc</kbd> key or click outside the popover box in the UI.
+
+To have contol over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>&lt;popover&gt;</kbd> atrribute value to manual just like this <kbd>&lt;popover="manual"&gt;</kbd>, by doing this we will have to add a close button to control the closing of the popover beacuse clicking away in the UI won't work anylonger.
+
+---
+
+# Popover with value set to manual
+
+### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
+
+<br/>
+<br/>
+<br/>
+
+
+  <section class="px-20 py-20 text-center">
+    <button 
+      aria-haspopup="true"
+      aria-controls="my-popover"
+      popovertarget="my-popover"
+      class="trigger-btn bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue-500 hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
+    >
+      Click to know what happened in Nigeria in 1914
+    </button>
+    <div 
+      id="my-popover"
+      popover="manual"
+      class="popover bg-black text-white font-normal py-4 px-6 rounded-lg max-w-xs leading-5 top-8 mx-auto gap-4"
+    >
+      <p>
+        In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. 
+      </p>
+        <button aria-label="Close" class="float-right p-1" popovertarget="my-popover" popovertargetaction="hide">
+          <span aria-hidden="true">❌</span>
+        </button>
+    </div>
+  </section>
+
+
+
+
+>>>>>>> Dialogs-and-Popovers
