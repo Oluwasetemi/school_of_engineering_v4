@@ -39,7 +39,7 @@ Class notes for the 1st Semester
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/oluwasetemi/" target="_blank" alt="GitHub" title="Open in GitHub"
+  <a href="https://github.com/oluwasetemi/school_of_engineering_v4" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -141,7 +141,9 @@ hideInToc: true
 
 ---
 
-# Some Account You Expected to (Create || Have)
+# Accounts
+
+Some Account You Expected to (Create || Have)
 
 - [GitHub](https://github.com/Oluwasetemi) and any other equivalent in GitLab or BitBucket
 - [LinkedIn](https://www.linkedin.com/in/setemiojo)
@@ -1194,6 +1196,7 @@ hideInToc: true
 - The target attribute controls how the link is opened, like \_self for the same window or \_blank for a new window/tab.
 >>>>>>> Dialogs-and-Popovers
 - It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
+- Fragment Identifiers
 
 ---
 
@@ -1231,7 +1234,6 @@ hideInToc: true
 ---
 
 # HTML Tables: Structuring Tabular Data
-<<<<<<< HEAD
 <div></div>
 =======
 
@@ -1889,22 +1891,6 @@ hideInToc: true
 ---
 hideInToc: true
 ---
-=======
-
-- &lt;!DOCTYPE html&gt;: Declares the document type and version of HTML.
-- &lt;html lang="en"&gt;: Sets the language of the document to English.
-- &lt;head&gt;: Contains meta-information about the document, including character set and viewport settings.
-- &lt;title&gt;: Sets the title of the document, which appears in the browser tab.
-- &lt;body&gt;: Contains the content of the document.
-- &lt;h1&gt;: A heading element for the title of the page.
-- &lt;video&gt;: The video element that includes multiple attributes:
-  controls: Adds playback controls.
-  autoplay: The video will play automatically when ready.
-  loop: The video will loop continuously.
-  muted: The video will be muted initially.
-  preload: Specifies that the video should be preloaded.
-  crossorigin: Specifies how the element handles cross-origin requests.
->>>>>>> Dialogs-and-Popovers
 - &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
 - Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
 
@@ -1912,37 +1898,25 @@ hideInToc: true
 
 # Advanced HTML API, Focusing, Details and Summary, Dialogs and Popovers
 
-<<<<<<< HEAD
 
 #### Have you heard the word API somewhere? 
-=======
-#### Have you heard the word API somewhere?
-
->>>>>>> Dialogs-and-Popovers
 It means Application Programming Interface which make it easier for different software systems to communicate with each other. Let's say API is like a waiter at a restaurant, taking requests and bringing back what you need, allowing different software systems to talk to each other easily and efficiently.
 
 ---
 
 # Now let's breeze into Advanced HTML API
 
-<<<<<<< HEAD
  For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
-=======
-### For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
-
->>>>>>> Dialogs-and-Popovers
 The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
 
 The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use <kbd>HTMLImageElement.alt</kbd> get the alt attributes of all the images:
 
-```
+```js
 let allImages = document.querySelectorAll('img');
 allImages.forEach((imageInstance) => {
   console.log(imageInstance.alt);
 });
-
 ```
-
 ---
 
 # Contd
@@ -1950,85 +1924,91 @@ allImages.forEach((imageInstance) => {
 The HTML interface APIs is not limited to accessing attribute values.
 The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with <kbd>HTMLMediaElement.duration</kbd>, <kbd>HTMLMediaElement.currentTime</kbd>, and <kbd>HTMLMediaElement.ended</kbd> respectively.
 
+
 ---
 
 # Focusing
 
-To improve user-accessibily in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
+To improve user-accessibility in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
 
 Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are inert, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements inert and to make inert elements interactive.
 
+
+
+---
+hideInToc: true
 ---
 
-# Focus
-
-By default, the navigation focus order in a webpage follows the visual and source code order. Although HTML attributes and CSS properties can change this order, doing so can negatively impact user experience. Modifying the tabbing order or visual rendering order can lead to confusion and a poor user experience. Therefore, it's recommended not to alter the perceived and actual tabbing order with CSS and HTML, as demonstrated by examples showing the negative effects of such changes.
 
 # Example 1
+<div></div>
 
 <p>Click in any input, then hit the tab key.</p>
   <ol class="grid grid-cols-4 gap-4">
-    <li><input tabindex="3" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="6" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="2" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="-1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="8" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="1" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="5" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="7" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="4" class="text-2xl w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="3" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="6" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="2" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="-1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="8" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="5" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="7" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+    <li><input tabindex="4" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
   </ol>
 
+---
+hideInToc: true
 ---
 
 # Example 2
 
-In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
 
+  In this example, CSS has created a divergence between the tabbing order and the visual order of the content:
   <div class="p-4">
     <p class="mb-2"><label class="text-base">Put your cursor in the text box, then hit your tab key several times:</label></p>
   <input tabindex="0" class="px-3 py-2 border         border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
   </div>
 
-  <div class="inline-flex flex-row-reverse gap-2">
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">flexbox.</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">CSS</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">with</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">styled</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">then</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600 order-3">This</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">order</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">reverse</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">in</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">written</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">was</span>
-    <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">sentenced</span>
-  </div>
+<div class="inline-flex flex-row-reverse gap-2">
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">flexbox.</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">CSS</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">with</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">styled</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">then</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600 order-3">This</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">order</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">reverse</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">in</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">written</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">was</span>
+  <span tabindex="0" class="border border-dashed focus:bg-palegoldenrod focus:border-green-600 focus:outline focus:outline-2 focus:outline-red-600">sentenced</span>
+</div>
+
+<v-click>
 
 The flex-flow: row-reverse; declaration has reversed the visual order. In addition, the CSS order property was applied to the sixth word, "This", which visually moved that one word. The tabbing sequence is the order of the code, which no longer matches the visual order, creating a disconnect for keyboard users.
 
+</v-click>
+
+<v-click>
+
 Note:
 The <kbd>contenteditable</kbd> and <kbd>tabindex</kbd> attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with element.focus().
-A <kbd>tabindex</kbd> attribute with a negative value makes the element focusable but not tabbable.
+A <kbd>tabindex</kbd>  attribute with a negative value makes the element focusable but not tabbable.
 
 ---
 
 # Details and Summary
 
-<<<<<<< HEAD
  Have you heard of a disclosure widget or come across it in a website before?
-=======
-### Have you heard of a disclosure widget or come across it in a website before?
-
->>>>>>> Dialogs-and-Popovers
 A disclosure widget, also known as an expandable or collapsible section, is a UI component that allows users to hide or show contents.
 
 Mostly, developers achieve this accordion trick using CSS or JavaScript but we can easily get this done with these tags: &lt;details&gt; and &lt;summary&gt;
 
-The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a &lt;summary&gt;, or releases the Enter key when the &lt;summary&gt; has focus, the contents of the parent &lt;details&gt; toggle to visible!
+ The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a &lt;summary&gt;, or releases the Enter key when the &lt;summary&gt; has focus, the contents of the parent &lt;details&gt; toggle to visible!
 
 <<<<<<< HEAD
 # Creating an accordion with just HTML
@@ -2057,189 +2037,34 @@ The &lt;details&gt; and &lt;summary&gt; elements are all you need: they are a bu
 
 
 ---
-
+hideInToc: true
+---
 # Toggling visibility: the open attribute
+<div></div>
 
-<<<<<<< HEAD
 
  The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
-=======
-### The &lt;details&gt; element is the disclosure widget container. The &lt;summary&gt; is the summary or legend for its parent&lt;details&gt;. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the &lt;summary&gt; toggles the display of the self-labeled summary siblings by toggling the&lt;details&gt;' element's open attribute.
->>>>>>> Dialogs-and-Popovers
 
 The open attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the &lt;details&gt; contents are shown to the user. If the open attribute is not present, only the contents of the &lt;summary&gt; are shown.
 
 Because the open attribute is added and removed automatically as the user interacts with the control, it can be used in CSS to style the element differently based on its state.
 
 ---
+hideInToc: true
+---
 
 # Toggling the summary marker
+<div></div>
+If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
 
- If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
-
-```
+```css
 details summary::before {
   /* all the styles */
 }
 details[open] summary::before {
   /* changes applied when open only */
 }
-
 ```
 
-Remember, &lt;details&gt;and &lt;summary&gt; can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
+Remember, <kbd>&lt;details&gt;</kbd>and <kbd>&lt;summary&gt;</kbd> can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
 
-<<<<<<< HEAD
-=======
----
-
-# Dialogs and Popovers
-
-Have you seen the common dialog box on computers, websites etc? You can achieve that using the &lt;dialog&gt; element as this makes it easy to create popup dialogs and modals on a web page.
-
-Note: A modal which is also known as modal window or lightbox is a web page element that displays in front of and deactivates all other pages you have to perform the action requested by the modal or close it if you want to have access to your main content. Also, we have the non-modal which when pops up on the screen it gives users access to interact with content outside the box.
-
----
-
-# Modal Dialogs
-
-Let's see how modal <kbd>&lt;dialog&gt;</kbd> works
-
-<script setup>
-import { ref } from 'vue'
-
-const showModal = ref(false)
-
-const openModal = () => {
-  showModal.value = true
-}
-
-const closeModal = () => {
-  showModal.value = false
-}
-</script>
-
-  <main class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <button @click="openModal" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Open Modal</button>
-    <div v-if="showModal" @click="closeModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div class="modal-content bg-white p-6 rounded shadow-lg w-4/5 md:w-1/3 relative" @click.stop>
-        <span @click="closeModal" class="close absolute top-2 right-2 text-gray-500 cursor-pointer text-2xl">&times;</span>
-        <h2 class="text-xl font-bold mb-4">Modal Title</h2>
-        <p class="text-gray-700">This is a simple modal dialog example.</p>
-      </div>
-     </div>
-  </main>
-
----
-
-# Contd.
-
-Dialogs are mostly used in cases that requires the immediate attention of the site user, it might be to convey important messages of notifications that requires user acknowledgment just like the <kbd>alert()</kbd> but dialogs provides more accessibility options and flexibility.
-
-Also, we can use dialogs to seek confirmation from a user before proceeding with a particular action that may have some consequences.
-
-### Note: Non-modal dialogs opens a dialog as it name implies but without adding a backdrop which makes the background active
-
----
-
-# Popovers
-
-Before we delve into popovers, I want you to understand that popovers are special because they allow users to interact with both the popover and the underlying content simultaneously. Though this can be achieved with non-modal dialogs, popovers are more lightweight and can be used for quick interactions, such as displaying tooltips, additional information, or menus, without disrupting the user’s workflow. They are context-sensitive and can be dismissed easily, providing a seamless user experience.
-
-We are going to follow these steps to create a popover
-
-- Firstly, we will create a button to trigger the popover and an element(what we want to display) to trigger.
-
-- We will set a <kbd>popover</kbd> attribute on the element which is going to be the popover(element to display).
-
-- Then, we are going to add a unique <kbd>id</kbd> on the popover element(element to display).
-
-- Lastly, to connect the button to the popover, we will set the buttons's <kbd>popovertarget</kbd> to the value of the popover element's id.
-
----
-
-# Popover Sample
-
-### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
-
-<br/>
-<br/>
-<br/>
-<main class="bg-gray-100 px-20 py-20 text grid place-content-center">
-  <button 
-    popovertarget="my-popover" 
-    class="bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
-  >
-    Click to know what happened in Nigeria year 1914?
-  </button>
-  <div 
-    id="my-popover" 
-    popover 
-    class=" bg-white text-black font-normal p-4 rounded max-w-xs absolute top-20 left-1/2 transform -translate-x-1/2 shadow-lg"
-  >
-    <p>
-      In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. Hit <kbd>esc</kbd> or click outside this box to close me.
-    </p>
-  </div>
-</main>
-
----
-
-# When to use Dialogs and when to use Popovers
-
-<main class="grid grid-cols-2 gap-4 bg-gray-800 text-white px-8 py-8 rounded-lg">
-  <p class="bg-gray-900 p-4 rounded shadow-md">
-    Dialogs are used when you need the full attention of the user, especially for critical alerts, confirmation prompts, or scenarios where user flow needs to be strictly controlled.
-  </p>
-
-  <p class="bg-gray-900 p-4 rounded shadow-md">
-    Developers should use popovers when they want to provide supplementary information about an activity without disrupting the user’s workflow, because opovers are lightweight, allowing users to interact with both the popover and the underlying content simultaneously.
-  </p>
-</main>
-
----
-
-# Popover Types
-
-Sometimes, you might want to have more control over your popover, and this is where setting the <kbd>&lt;popover&gt;</kbd> attibute value to manual comes in. Previously we didn't set any value to the <kbd>&lt;popover&gt;</kbd> attribute, we just used it directly which explicitly means <kbd>&lt;popover="auto"&gt;</kbd> and this allows the popover to close when we press the <kbd>esc</kbd> key or click outside the popover box in the UI.
-
-To have contol over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>&lt;popover&gt;</kbd> atrribute value to manual just like this <kbd>&lt;popover="manual"&gt;</kbd>, by doing this we will have to add a close button to control the closing of the popover beacuse clicking away in the UI won't work anylonger.
-
----
-
-# Popover with value set to manual
-
-### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
-
-<br/>
-<br/>
-<br/>
-
-
-  <section class="px-20 py-20 text-center">
-    <button 
-      aria-haspopup="true"
-      aria-controls="my-popover"
-      popovertarget="my-popover"
-      class="trigger-btn bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue-500 hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
-    >
-      Click to know what happened in Nigeria in 1914
-    </button>
-    <div 
-      id="my-popover"
-      popover="manual"
-      class="popover bg-black text-white font-normal py-4 px-6 rounded-lg max-w-xs leading-5 top-8 mx-auto gap-4"
-    >
-      <p>
-        In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. 
-      </p>
-        <button aria-label="Close" class="float-right p-1" popovertarget="my-popover" popovertargetaction="hide">
-          <span aria-hidden="true">❌</span>
-        </button>
-    </div>
-  </section>
-
-
-
-
->>>>>>> Dialogs-and-Popovers
