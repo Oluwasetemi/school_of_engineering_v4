@@ -1806,6 +1806,150 @@ Remember, <kbd>&lt;details&gt;</kbd>and <kbd>&lt;summary&gt;</kbd> can be heavil
 
 ---
 
+
+# Dialogs and Popovers
+Have you seen the common dialog box on computers, websites etc? You can achieve that using the &lt;dialog&gt; element as this makes it easy to create popup dialogs and modals on a web page.
+Note: A modal which is also known as modal window or lightbox is a web page element that displays in front of and deactivates all other pages you have to perform the action requested by the modal or close it if you want to have access to your main content. Also, we have the non-modal which when pops up on the screen it gives users access to interact with content outside the box.
+---
+# Modal Dialogs
+Let's see how modal <kbd>&lt;dialog&gt;</kbd> works
+<script setup>
+import { ref } from 'vue'
+const showModal = ref(false)
+const openModal = () => {
+  showModal.value = true
+}
+const closeModal = () => {
+  showModal.value = false
+}
+</script>
+
+  <main class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <button @click="openModal" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Open Modal</button>
+    <div v-if="showModal" @click="closeModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="modal-content bg-white p-6 rounded shadow-lg w-4/5 md:w-1/3 relative" @click.stop>
+        <span @click="closeModal" class="close absolute top-2 right-2 text-gray-500 cursor-pointer text-2xl">&times;</span>
+        <h2 class="text-xl font-bold mb-4">Modal Title</h2>
+        <p class="text-gray-700">This is a simple modal dialog example.</p>
+      </div>
+     </div>
+  </main>
+
+---
+
+# Contd.
+
+Dialogs are mostly used in cases that requires the immediate attention of the site user, it might be to convey important messages of notifications that requires user acknowledgment just like the <kbd>alert()</kbd> but dialogs provides more accessibility options and flexibility.
+
+Also, we can use dialogs to seek confirmation from a user before proceeding with a particular action that may have some consequences.
+
+### Note: Non-modal dialogs opens a dialog as it name implies but without adding a backdrop which makes the background active
+
+---
+
+# Popovers
+
+Before we delve into popovers, I want you to understand that popovers are special because they allow users to interact with both the popover and the underlying content simultaneously. Though this can be achieved with non-modal dialogs, popovers are more lightweight and can be used for quick interactions, such as displaying tooltips, additional information, or menus, without disrupting the user’s workflow. They are context-sensitive and can be dismissed easily, providing a seamless user experience.
+
+We are going to follow these steps to create a popover
+
+- Firstly, we will create a button to trigger the popover and an element(what we want to display) to trigger.
+
+- We will set a <kbd>popover</kbd> attribute on the element which is going to be the popover(element to display).
+
+- Then, we are going to add a unique <kbd>id</kbd> on the popover element(element to display).
+
+- Lastly, to connect the button to the popover, we will set the buttons's <kbd>popovertarget</kbd> to the value of the popover element's id.
+
+---
+
+# Popover Sample
+
+### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
+
+<br/>
+<br/>
+<br/>
+<main class="bg-gray-100 px-20 py-20 text grid place-content-center">
+  <button 
+    popovertarget="my-popover" 
+    class="bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
+  >
+    Click to know what happened in Nigeria year 1914?
+  </button>
+  <div 
+    id="my-popover" 
+    popover 
+    class=" bg-white text-black font-normal p-4 rounded max-w-xs absolute top-20 left-1/2 transform -translate-x-1/2 shadow-lg"
+  >
+    <p>
+      In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. Hit <kbd>esc</kbd> or click outside this box to close me.
+    </p>
+  </div>
+</main>
+
+---
+
+# When to use Dialogs and when to use Popovers
+
+<main class="grid grid-cols-2 gap-4 bg-gray-800 text-white px-8 py-8 rounded-lg">
+  <p class="bg-gray-900 p-4 rounded shadow-md">
+    Dialogs are used when you need the full attention of the user, especially for critical alerts, confirmation prompts, or scenarios where user flow needs to be strictly controlled.
+  </p>
+
+  <p class="bg-gray-900 p-4 rounded shadow-md">
+    Developers should use popovers when they want to provide supplementary information about an activity without disrupting the user’s workflow, because opovers are lightweight, allowing users to interact with both the popover and the underlying content simultaneously.
+  </p>
+</main>
+
+---
+
+# Popover Types
+
+Sometimes, you might want to have more control over your popover, and this is where setting the <kbd>&lt;popover&gt;</kbd> attibute value to manual comes in. Previously we didn't set any value to the <kbd>&lt;popover&gt;</kbd> attribute, we just used it directly which explicitly means <kbd>&lt;popover="auto"&gt;</kbd> and this allows the popover to close when we press the <kbd>esc</kbd> key or click outside the popover box in the UI.
+
+To have contol over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>&lt;popover&gt;</kbd> atrribute value to manual just like this <kbd>&lt;popover="manual"&gt;</kbd>, by doing this we will have to add a close button to control the closing of the popover beacuse clicking away in the UI won't work anylonger.
+
+---
+
+# Popover with value set to manual
+
+### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
+
+<br/>
+<br/>
+<br/>
+
+
+  <section class="px-20 py-20 text-center">
+    <button 
+      aria-haspopup="true"
+      aria-controls="my-popover"
+      popovertarget="my-popover"
+      class="trigger-btn bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue-500 hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
+    >
+      Click to know what happened in Nigeria in 1914
+    </button>
+    <div 
+      id="my-popover"
+      popover="manual"
+      class="popover bg-black text-white font-normal py-4 px-6 rounded-lg max-w-xs leading-5 top-8 mx-auto gap-4"
+    >
+      <p>
+        In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. 
+      </p>
+        <button aria-label="Close" class="float-right p-1" popovertarget="my-popover" popovertargetaction="hide">
+          <span aria-hidden="true">❌</span>
+        </button>
+    </div>
+  </section>
+
+
+
+
+
+---
+
 # What are Web Components?
 <div></div>
 
