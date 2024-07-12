@@ -32,11 +32,12 @@ jobs:
 
       - name: Export
         run: |
-          npm exec slidev export -- --per-slide --format pdf --output ./_export/slides.pdf
-          npm exec slidev export -- --per-slide --with-clicks false --format pptx --output ./_export/slides.pptx
+          npm run export:pdf
+          npm exec slidev export -- --timeout 60000 --with-clicks false --format pptx --output ./_export/slides.pptx
 
       - name: Generate Body
-        run: echo "### Please download PDF and PPTX files from the assets section below." > ./_export/body.txt
+        run: |
+          echo -e "## Welcome to the resource download section\n### Please download the class note in PDF or PPTX (just pictures in png) files from the assets section below"\n Best of Luc
 
       - name: Create Tag
         uses: rickstaa/action-create-tag@v1.7.2
@@ -51,5 +52,5 @@ jobs:
           tag_name: export-${{ github.sha }}
           make_latest: true
           files: |
-            ./_export/slides.pdf
-            ./_export/slides.pptx
+            ./_export/soe_altschool_semester1.pdf
+            ./_export/soe_altschool_semester1.pptx
