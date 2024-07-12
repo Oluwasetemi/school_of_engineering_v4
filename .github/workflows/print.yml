@@ -33,11 +33,10 @@ jobs:
       - name: Export
         run: |
           npm run export:pdf
-          npm exec slidev export -- --timeout 60000 --with-clicks false --format pptx --output ./_export/slides.pptx
-
+          npm run export:pptx
       - name: Generate Body
         run: |
-          echo -e "## Welcome to the resource download section\n### Please download the class note in PDF or PPTX (just pictures in png) files from the assets section below"\n Best of Luc
+          echo -e "## Welcome to the resource download section\n### Please download the class note in PDF or PPTX (just pictures in png) files from the assets section below"\n Best of Luck and may the fourth be with you.
 
       - name: Create Tag
         uses: rickstaa/action-create-tag@v1.7.2
