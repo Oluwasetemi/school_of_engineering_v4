@@ -495,7 +495,7 @@ hideInToc: true
 
 # HTML Element
 
-An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by &lt; and &gt;. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kdb>&lt;title&gt;&lt;title&gt;</kdb> tag can be written as &lt;/Title&gt;&lt;/Title&gt;, <kdb>&lt;TITLE&gt;</kdb><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by &lt; and &gt;. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kbd>&lt;title&gt;&lt;title&gt;</kbd> tag can be written as &lt;/Title&gt;&lt;/Title&gt;, <kbd>&lt;TITLE&gt;</kbd><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
 
 <!-- Semantic HTML, Heading & Sections, Attribute(Boolean, Enumerated, Global and custom attributes), Text Basics, Links, Navigation -->
 
@@ -1072,6 +1072,7 @@ This is the team you want teaching you!
 ---
 
 # Link
+
 - <kbd>&lt;a href="url"&gt;Link Text&lt;/a&gt;</kbd> is used for creating hyperlinks, with the `href` attribute specifying the URL or file path.
 - The `target` attribute controls how the link is opened, like `_self` for the same window or `_blank` for a new window/tab.
 - It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
@@ -1104,6 +1105,13 @@ This is the team you want teaching you!
   </ol>
 </nav>
 ```
+
+---
+hideInToc: true
+---
+
+<CodepenBreadcrumbs />
+
 
 ---
 
@@ -1220,6 +1228,7 @@ hideInToc: true
 ---
 
 # Form
+<div></div>
 The HTML &lt;form&gt; element identifies a document landmark containing interactive controls for submitting information. Nested in a &lt;form&gt; you'll find all the interactive (and non-interactive) form controls that make up that form.
 
 - Forms are created using the &lt;form&gt; element, which contains interactive controls for submitting information.
@@ -1227,6 +1236,7 @@ The &lt;form&gt; element has attributes like action (URL for processing the form
 - Form controls, such as input fields, radio buttons, checkboxes, and submit buttons, are nested within the &lt;form&gt; element.
 - HTML attributes can enforce required fields, define validation criteria, and prevent form submission until the data matches the required criteria.
 - Submitting a form is typically done by activating a submit button, which sends the form data as name/value pairs to the specified URL.
+
 ---
 hideInToc: true
 ---
@@ -1645,7 +1655,7 @@ hideInToc: true
 ---
 
 # HTML API
-
+<div></div>
 For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
 The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
 
@@ -1661,17 +1671,219 @@ allImages.forEach((imageInstance) => {
 The HTML interface APIs is not limited to accessing attribute values.
 The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with <kbd>HTMLMediaElement.duration</kbd>, <kbd>HTMLMediaElement.currentTime</kbd>, and <kbd>HTMLMediaElement.ended</kbd> respectively.
 
+---
+hideInToc: true
+---
+
+# List of HTML API interfaces
+
+<div class="grid grid-cols-2 gap-x-4">
+
+
+<div>
+<v-clicks every="1">
+
+- [HTMLAnchorElement](https://mdn.io/API/HTMLAnchorElement) - `<a>`
+
+- [HTMLAreaElement](https://mdn.io/API/HTMLAreaElement) - `<area>`
+
+- [HTMLAudioElement](https://mdn.io/API/HTMLAudioElement) - `<audio>`
+
+- [HTMLBaseElement](https://mdn.io/API/HTMLBaseElement) - `<base>`
+
+- [HTMLButtonElement](https://mdn.io/API/HTMLButtonElement) - `<button>`
+
+- [HTMLCanvasElement](https://mdn.io/API/HTMLCanvasElement) - `<canvas>`
+
+- [HTMLDataElement](https://mdn.io/API/HTMLDataElement) - `<data>`
+
+- [HTMLDataListElement](https://mdn.io/API/HTMLDataListElement) - `<datalist>`
+
+- [HTMLDetailsElement](https://mdn.io/API/HTMLDetailsElement) - `<details>`
+
+- [HTMLDialogElement](https://mdn.io/API/HTMLDialogElement) - `<dialog>`
+
+</v-clicks>
+</div>
+
+
+<div>
+<v-clicks>
+
+- [HTMLEmbedElement](https://mdn.io/API/HTMLEmbedElement) - `<embed>`
+
+- [HTMLFieldSetElement](https://mdn.io/API/HTMLFieldSetElement) - `<fieldset>`
+
+- [HTMLFormElement](https://mdn.io/API/HTMLFormElement) - `<form>`
+
+- [HTMLHtmlElement](https://mdn.io/API/HTMLHtmlElement) - `<html>`
+
+- [HTMLIFrameElement](https://mdn.io/API/HTMLIFrameElement) - `<iframe>`
+
+- [HTMLImageElement](https://mdn.io/API/HTMLImageElement) - `<img>`
+
+- [HTMLInputElement](https://mdn.io/API/HTMLInputElement) - `<input>`
+
+- [HTMLLabelElement](https://mdn.io/API/HTMLLabelElement) - `<label>`
+
+- [HTMLLegendElement](https://mdn.io/API/HTMLLegendElement) - `<legend>`
+
+- [HTMLLIElement](https://mdn.io/API/HTMLLIElement) - `<li>`
+
+
+</v-clicks>
+</div>
+
+</div>
+---
+hideInToc: true
+---
+<div class="grid grid-cols-2 gap-x-4">
+
+
+<div>
+<v-clicks>
+
+- [HTMLLinkElement](https://mdn.io/API/HTMLLinkElement) - `<link>`
+
+- [HTMLMapElement](https://mdn.io/API/HTMLMapElement) - `<map>`
+
+- [HTMLMediaElement](https://mdn.io/API/HTMLMediaElement) - `<audio>, <video>`
+
+- [HTMLMenuElement](https://mdn.io/API/HTMLMenuElement) - `<menu>`
+
+- [HTMLMetaElement](https://mdn.io/API/HTMLMetaElement) - `<meta>`
+
+- [HTMLModElement](https://mdn.io/API/HTMLModElement) - `<ins>, <del>`
+
+- [HTMLMeterElement](https://mdn.io/API/HTMLMeterElement) - `<meter>`
+
+- [HTMLObjectElement](https://mdn.io/API/HTMLObjectElement) - `<object>`
+
+- [HTMLOListElement](https://mdn.io/API/HTMLOListElement) - `<ol>`
+
+- [HTMLOptGroupElement](https://mdn.io/API/HTMLOptGroupElement)- `<optgroup>`
+
+- [HTMLOptionElement](https://mdn.io/API/HTMLOptionElement) - `<option>`
+
+</v-clicks>
+</div>
+
+<div>
+<v-clicks>
+<li><a href="https://mdn.io/API/HTMLOutputElement" target="_blank" >HTMLOutputElement</a> - <code>&lt;output&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLPictureElement" target="_blank" >HTMLPictureElement</a> - <code>&lt;picture&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLProgressElement" target="_blank" >HTMLProgressElement</a> - <code>&lt;progress&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLQuoteElement" target="_blank" >HTMLQuoteElement</a> - <code>&lt;q&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;cite&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLScriptElement" target="_blank" >HTMLScriptElement</a> - <code>&lt;script&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLSelectElement" target="_blank" >HTMLSelectElement</a> - <code>&lt;select&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLSlotElement" target="_blank" >HTMLSlotElement</a> - <code>&lt;slot&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLSourceElement" target="_blank" >HTMLSourceElement</a> - <code>&lt;source&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLStyleElement" target="_blank" >HTMLStyleElement</a> - <code>&lt;style&gt;</code></li>
+
+<li><a href="https://mdn.io/API/HTMLTableCellElement" target="_blank" >HTMLTableCellElement</a> - <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></li>
+
+
+</v-clicks>
+</div>
+
+
+</div>
+
+---
+hideInToc: true
+---
+
+<div class="grid grid-cols-2 gap-x-4">
+
+<v-clicks>
+<ul>
+
+  <li>
+      <a href="https://mdn.io/API/HTMLTableColElement" target="_blank"
+        >HTMLTableColElement</a
+      >
+      - <code>&lt;col&gt;, &lt;colgroup&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTableElement" target="_blank"
+        >HTMLTableElement</a
+      >
+      - <code>&lt;table&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTableRowElement" target="_blank"
+        >HTMLTableRowElement</a
+      >
+      - <code>&lt;tr&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTableSectionElement" target="_blank"
+        >HTMLTableSectionElement</a
+      >
+      - <code>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTemplateElement" target="_blank"
+        >HTMLTemplateElement</a
+      >
+      - <code>&lt;template&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTextAreaElement" target="_blank"
+        >HTMLTextAreaElement</a
+      >
+      - <code>&lt;textarea&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTimeElement" target="_blank"
+        >HTMLTimeElement</a
+      >
+      - <code>&lt;time&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTitleElement" target="_blank"
+        >HTMLTitleElement</a
+      >
+      - <code>&lt;title&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLTrackElement" target="_blank"
+        >HTMLTrackElement</a
+      >
+      - <code>&lt;track&gt;</code>
+  </li>
+  <li>
+      <a href="https://mdn.io/API/HTMLVideoElement" target="_blank"
+        >HTMLVideoElement</a
+      >
+      - <code>&lt;video&gt;</code>
+  </li>
+
+</ul>
+
+</v-clicks>
+
+</div>
 
 ---
 
 # Focusing
-
+<div></div>
 To improve user-accessibility in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
 
 Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are inert, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements inert and to make inert elements interactive.
 
 # Focus
-
+<div></div>
 By default, the navigation focus order in a webpage follows the visual and source code order. Although HTML attributes and CSS properties can change this order, doing so can negatively impact user experience. Modifying the tabbing order or visual rendering order can lead to confusion and a poor user experience. Therefore, it's recommended not to alter the perceived and actual tabbing order with CSS and HTML, as demonstrated by examples showing the negative effects of such changes.
 
 
@@ -1684,20 +1896,20 @@ hideInToc: true
 <div></div>
 
 <p>Click in any input, then hit the tab key.</p>
-  <ol class="grid grid-cols-4 gap-4">
-    <li><input tabindex="3" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="6" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="2" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="-1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="8" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="5" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="7" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-    <li><input tabindex="4" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  </ol>
+<ol class="grid grid-cols-4 gap-4">
+  <li><input tabindex="3" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="6" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="2" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="-1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="8" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="5" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="7" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+  <li><input tabindex="4" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+</ol>
 
 ---
 hideInToc: true
@@ -1808,10 +2020,13 @@ Remember, <kbd>&lt;details&gt;</kbd>and <kbd>&lt;summary&gt;</kbd> can be heavil
 
 
 # Dialogs and Popovers
+<div></div>
 Have you seen the common dialog box on computers, websites etc? You can achieve that using the &lt;dialog&gt; element as this makes it easy to create popup dialogs and modals on a web page.
 Note: A modal which is also known as modal window or lightbox is a web page element that displays in front of and deactivates all other pages you have to perform the action requested by the modal or close it if you want to have access to your main content. Also, we have the non-modal which when pops up on the screen it gives users access to interact with content outside the box.
----
-# Modal Dialogs
+
+<v-clicks>
+
+### Modal Dialogs
 Let's see how modal <kbd>&lt;dialog&gt;</kbd> works
 <script setup>
 import { ref } from 'vue'
@@ -1824,19 +2039,21 @@ const closeModal = () => {
 }
 </script>
 
-  <main class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <button @click="openModal" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Open Modal</button>
-    <div v-if="showModal" @click="closeModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div class="modal-content bg-white p-6 rounded shadow-lg w-4/5 md:w-1/3 relative" @click.stop>
-        <span @click="closeModal" class="close absolute top-2 right-2 text-gray-500 cursor-pointer text-2xl">&times;</span>
-        <h2 class="text-xl font-bold mb-4">Modal Title</h2>
-        <p class="text-gray-700">This is a simple modal dialog example.</p>
-      </div>
-     </div>
-  </main>
+<main class="bg-gray-100 flex items-center justify-center min-h-60">
+  <button @click="openModal" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Open Modal</button>
+  <div v-if="showModal" @click="closeModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="modal-content bg-white p-6 rounded shadow-lg w-4/5 md:w-1/3 relative" @click.stop>
+      <span @click="closeModal" class="close absolute top-2 right-2 text-gray-500 cursor-pointer text-2xl">&times;</span>
+      <h2 class="text-xl font-bold mb-4">Modal Title</h2>
+      <p class="text-gray-700">This is a simple modal dialog example.</p>
+    </div>
+  </div>
+</main>
+</v-clicks>
 
 ---
-
+hideInToc: true
+---
 # Contd.
 
 Dialogs are mostly used in cases that requires the immediate attention of the site user, it might be to convey important messages of notifications that requires user acknowledgment just like the <kbd>alert()</kbd> but dialogs provides more accessibility options and flexibility.
@@ -1846,7 +2063,8 @@ Also, we can use dialogs to seek confirmation from a user before proceeding with
 ### Note: Non-modal dialogs opens a dialog as it name implies but without adding a backdrop which makes the background active
 
 ---
-
+hideInToc: true
+---
 # Popovers
 
 Before we delve into popovers, I want you to understand that popovers are special because they allow users to interact with both the popover and the underlying content simultaneously. Though this can be achieved with non-modal dialogs, popovers are more lightweight and can be used for quick interactions, such as displaying tooltips, additional information, or menus, without disrupting the user’s workflow. They are context-sensitive and can be dismissed easily, providing a seamless user experience.
@@ -1862,7 +2080,8 @@ We are going to follow these steps to create a popover
 - Lastly, to connect the button to the popover, we will set the buttons's <kbd>popovertarget</kbd> to the value of the popover element's id.
 
 ---
-
+hideInToc: true
+---
 # Popover Sample
 
 ### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
@@ -1871,15 +2090,15 @@ We are going to follow these steps to create a popover
 <br/>
 <br/>
 <main class="bg-gray-100 px-20 py-20 text grid place-content-center">
-  <button 
-    popovertarget="my-popover" 
+  <button
+    popovertarget="my-popover"
     class="bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
   >
     Click to know what happened in Nigeria year 1914?
   </button>
-  <div 
-    id="my-popover" 
-    popover 
+  <div
+    id="my-popover"
+    popover
     class=" bg-white text-black font-normal p-4 rounded max-w-xs absolute top-20 left-1/2 transform -translate-x-1/2 shadow-lg"
   >
     <p>
@@ -1889,7 +2108,13 @@ We are going to follow these steps to create a popover
 </main>
 
 ---
+hideInToc: true
+---
+<PopOver />
 
+---
+hideInToc: true
+---
 # When to use Dialogs and when to use Popovers
 
 <main class="grid grid-cols-2 gap-4 bg-gray-800 text-white px-8 py-8 rounded-lg">
@@ -1903,15 +2128,17 @@ We are going to follow these steps to create a popover
 </main>
 
 ---
-
+hideInToc: true
+---
 # Popover Types
 
-Sometimes, you might want to have more control over your popover, and this is where setting the <kbd>&lt;popover&gt;</kbd> attibute value to manual comes in. Previously we didn't set any value to the <kbd>&lt;popover&gt;</kbd> attribute, we just used it directly which explicitly means <kbd>&lt;popover="auto"&gt;</kbd> and this allows the popover to close when we press the <kbd>esc</kbd> key or click outside the popover box in the UI.
+Sometimes, you might want to have more control over your popover, and this is where setting the <kbd>&lt;popover&gt;</kbd> attribute value to manual comes in. Previously we didn't set any value to the <kbd>&lt;popover&gt;</kbd> attribute, we just used it directly which explicitly means <kbd>&lt;popover="auto"&gt;</kbd> and this allows the popover to close when we press the <kbd>esc</kbd> key or click outside the popover box in the UI.
 
-To have contol over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>&lt;popover&gt;</kbd> atrribute value to manual just like this <kbd>&lt;popover="manual"&gt;</kbd>, by doing this we will have to add a close button to control the closing of the popover beacuse clicking away in the UI won't work anylonger.
+To have control over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>&lt;popover&gt;</kbd> attribute value to manual just like this <kbd>&lt;popover="manual"&gt;</kbd>, by doing this we will have to add a close button to control the closing of the popover because clicking away in the UI won't work any longer.
 
 ---
-
+hideInToc: true
+---
 # Popover with value set to manual
 
 ### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
@@ -1922,7 +2149,7 @@ To have contol over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>
 
 
   <section class="px-20 py-20 text-center">
-    <button 
+    <button
       aria-haspopup="true"
       aria-controls="my-popover"
       popovertarget="my-popover"
@@ -1930,13 +2157,13 @@ To have contol over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>
     >
       Click to know what happened in Nigeria in 1914
     </button>
-    <div 
+    <div
       id="my-popover"
       popover="manual"
       class="popover bg-black text-white font-normal py-4 px-6 rounded-lg max-w-xs leading-5 top-8 mx-auto gap-4"
     >
       <p>
-        In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. 
+        In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria.
       </p>
         <button aria-label="Close" class="float-right p-1" popovertarget="my-popover" popovertargetaction="hide">
           <span aria-hidden="true">❌</span>
@@ -2144,9 +2371,17 @@ class extends HTMLElement {
   }
 });
 ```
-
 ---
 
+# Assignments
+
+<ul>
+  <li ><a @click="$slidev.nav.next()">Assignment 1</a></li>
+  <li ><a @click="$slidev.nav.go(113)">Assignment 2</a></li>
+</ul>
+---
+hideInToc: true
+---
 # Assignment 1
 <div></div>
 Build two web pages , the first is going to be about you, including your ALT SCHOOL ID , biography and any relevant information with reason why you join alt school, your goals for school of engineering programme. Use fragment identifier and build a feature to scroll to the top with a fragment identifier.
@@ -2160,6 +2395,45 @@ form.html
 
 NB: Strictly without CSS. Submission details will be sent to you in due time.
 
+---
+hideInToc: true
+---
+
+# Assignment 2
+<div></div>
+Build additional two web pages , the first is going to be a table about all the courses and schools existing at AltSchool Africa, with School of engineering we have frontend engineering, backend engineering, cloud engineering and cybersecurity. School of Product - Product Design, Marketing, Management. School of Data - Data Analysis, Science, Engineering.
+
+
+|School|Courses|||
+|--|--|--|--|
+|SOE| Frontend|Backend|Cloud|Cyber|
+|SOD| Design|Marketing|Marketing||
+
+
+Second page is a page where you use all the media element existing in html to create powerful message about yourself. Specially use picture element with more that 3 sources with responsiveness for mobile, tablet and laptop.
+
+```
+table.html
+media.html
+```
+
+NB: Strictly without CSS. Submission details will be sent to you in due time.
+
+---
+
+# Terminal
+
+---
+
+# Git
+
+---
+
+# GitHub
+
+---
+
+# Open Source
 
 ---
 hideInToc: true
