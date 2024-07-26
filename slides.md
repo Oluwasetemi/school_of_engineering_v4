@@ -2365,9 +2365,7 @@ class extends HTMLElement {
 });
 ```
 ---
-glowX: -10
-glowY: 50
----
+
 # Assignments
 
 <ul>
