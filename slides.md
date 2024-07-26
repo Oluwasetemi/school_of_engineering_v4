@@ -2028,27 +2028,7 @@ Note: A modal which is also known as modal window or lightbox is a web page elem
 
 ### Modal Dialogs
 Let's see how modal <kbd>&lt;dialog&gt;</kbd> works
-<script setup>
-import { ref } from 'vue'
-const showModal = ref(false)
-const openModal = () => {
-  showModal.value = true
-}
-const closeModal = () => {
-  showModal.value = false
-}
-</script>
-
-<main class="bg-gray-100 flex items-center justify-center min-h-60">
-  <button @click="openModal" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Open Modal</button>
-  <div v-if="showModal" @click="closeModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="modal-content bg-white p-6 rounded shadow-lg w-4/5 md:w-1/3 relative" @click.stop>
-      <span @click="closeModal" class="close absolute top-2 right-2 text-gray-500 cursor-pointer text-2xl">&times;</span>
-      <h2 class="text-xl font-bold mb-4">Modal Title</h2>
-      <p class="text-gray-700">This is a simple modal dialog example.</p>
-    </div>
-  </div>
-</main>
+<Dialog />
 </v-clicks>
 
 ---
@@ -2151,28 +2131,35 @@ hideInToc: true
   <section class="px-20 py-20 text-center">
     <button
       aria-haspopup="true"
-      aria-controls="my-popover"
-      popovertarget="my-popover"
+      aria-controls="my-p"
+      popovertarget="my-p"
       class="trigger-btn bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue-500 hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
     >
       Click to know what happened in Nigeria in 1914
     </button>
     <div
-      id="my-popover"
+      id="my-p"
       popover="manual"
       class="popover bg-black text-white font-normal py-4 px-6 rounded-lg max-w-xs leading-5 top-8 mx-auto gap-4"
     >
       <p>
         In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria.
       </p>
-        <button aria-label="Close" class="float-right p-1" popovertarget="my-popover" popovertargetaction="hide">
-          <span aria-hidden="true">❌</span>
+        <button aria-label="Close" class="float-right p-1" popovertarget="my-p" popovertargetaction="hide">
+          <span aria-hidden="true">❌ Some</span>
         </button>
     </div>
   </section>
 
 
 
+
+
+---
+hideInToc: true
+---
+
+<MixedPopOverDialog />
 
 
 ---
@@ -2224,6 +2211,12 @@ hideInToc: true
   </form>
 </template>
 ```
+---
+hideInToc: true
+---
+
+<custom-element />
+
 ---
 hideInToc: true
 ---
@@ -2372,18 +2365,21 @@ class extends HTMLElement {
 });
 ```
 ---
-
+glowX: -10
+glowY: 50
+---
 # Assignments
 
 <ul>
   <li ><a @click="$slidev.nav.next()">Assignment 1</a></li>
-  <li ><a @click="$slidev.nav.go(113)">Assignment 2</a></li>
+  <li ><a @click="$slidev.nav.go($page + 2)">Assignment 2</a></li>
 </ul>
 ---
 hideInToc: true
 ---
 # Assignment 1
 <div></div>
+
 Build two web pages , the first is going to be about you, including your ALT SCHOOL ID , biography and any relevant information with reason why you join alt school, your goals for school of engineering programme. Use fragment identifier and build a feature to scroll to the top with a fragment identifier.
 
 Second page is a form that is a replica of the ALT SCHOOL application form ,linking both pages together using global navigation and the page must be accessible with proper relevant semantic HTML tags.
@@ -2423,17 +2419,171 @@ NB: Strictly without CSS. Submission details will be sent to you in due time.
 
 # Terminal
 
+- File and Directory Management:
+
+`ls` - List files and directories.
+`cd` - Change directory.
+`mkdir` - Create a new directory.
+`touch` - Create an empty file.
+`cp` - Copy files or directories.
+`mv` - Move or rename files or directories.
+`rm` - Remove files or directories (with caution).
+
+- Viewing and Editing Files:
+
+`cat`, `less` - View file contents.
+`nano`, `vi`, `vim` - Basic introduction to terminal-based text editors.
+
+- Others
+
+`echo` - Print text to the terminal, `man` - Display the manual for a command, `clear` - Clear the terminal screen, `chmod` - Change file permissions, `chown` - Change file ownership.
 ---
 
 # Git
+
+<v-clicks>
+
+- Version Control: A system that records changes to files over time, allowing you to recall specific versions later.
+
+- Distributed Version Control System (DVCS): A version control system that allows multiple developers to work on a project simultaneously.
+
+- Git: A popular DVCS that tracks changes to files and directories, allowing you to collaborate with others and manage your project's history.
+
+- GitHub: A web-based platform that hosts Git repositories and provides collaboration tools for developers.
+
+- Repository (Repo): A directory that contains your project files and a .git directory, which tracks the history of changes.
+
+</v-clicks>
+
+---
+
+<v-clicks>
+
+- Clone: Creating a copy of an existing Git repository.
+- Commit: A snapshot of changes in the repository. It represents a point in the history of your project.
+- Branch: A separate line of development, allowing you to work on different features or fixes without affecting the main codebase.
+- Merge: Combining changes from one branch into another.
+- Remote: A version of your project hosted on the internet or network (e.g., GitHub, GitLab).
+- Pull: Fetching changes from a remote repository and merging them into your local repository.
+- Push: Sending your commits to a remote repository.
+- Pull Request: A request to merge changes from one branch into another.
+- Fork: Creating a personal copy of a repository on GitHub.
+- Issue: A task, bug, or feature request associated with a repository on GitHub.
+- Markdown: A lightweight markup language used to format text on GitHub.
+- README: A file that provides information about a project, typically written in Markdown.
+
+</v-clicks>
+
+---
+hideInToc: true
+---
+
+# Git Commands
+
+- `git init` - Initialize a new Git repository.
+- `git clone` - Clone a repository into a new directory.
+- `git add` - Add changes to the staging area.
+- `git commit` - Record changes to the repository.
+- `git status` - Show the working tree status.
+- `git log` - Show commit logs.
+- `git branch` - List, create, or delete branches.
+- `git checkout` - Switch branches or restore working tree files.
+- `git merge` - Join two or more development histories together.
+
+---
+
+- `git pull` - Fetch from and integrate with another repository or a local branch.
+- `git push` - Update remote refs along with associated objects.
+- `git remote` - Manage set of tracked repositories.
+- `git fetch` - Download objects and refs from another repository.
+- `git reset` - Reset current HEAD to the specified state.
+- `git rebase` - Reapply commits on top of another base tip.
+- `git revert` - Revert some existing commits.
+- `git stash` - Stash the changes in a dirty working directory away.
+- `git tag` - Create, list, delete or verify a tag object signed with GPG.
+
+
+---
+hideInToc: true
+---
+
+![Git Storage](https://github.com/ByteByteGoHq/system-design-101/raw/main/images/git-commands.png){ .max-h-md.object-contain }
+
+
+---
+hideInToc: true
+---
+
+Git maintains three local storages on our machine and one on a remote server like Github, which means that our code can be found in four places
+
+- Working directory: where we edit files
+- Staging area: a temporary location where files are kept for the next commit
+- Local repository: contains the code that has been committed
+- Remote repository: the remote server that stores the code
+
+
+---
+hideInToc: true
+---
+
+![Git Workflow](https://github.com/ByteByteGoHq/system-design-101/raw/main/images/git-workflow.jpeg){ .max-h-md }
 
 ---
 
 # GitHub
 
+- GitHub is a web-based platform that hosts Git repositories and provides collaboration tools for developers. It allows you to store, manage, and share your code with others.
+
+- GitHub provides features such as pull requests, issues, and project boards to help you collaborate with your team and manage your projects more effectively.
+
+- You can use GitHub to host your code, track changes, and work on projects with other developers. It's a powerful tool for version control and project management.
+
+## Creating a Repository
+
+- Either push an existing local repository to GitHub or create a new repository on GitHub and clone it to your local machine.
+
+```shell
+git clone <repository-url>
+gh repo create <repository-name>
+git remote add origin <repository-url>
+git push
+```
+
+---
+hideInToc: true
+---
+
+# Pull Requests
+
+- A pull request is a way to propose changes to a repository on GitHub. It allows you to submit your changes for review and merge them into the main branch.
+
+- When you create a pull request, you can compare the changes between two branches and request feedback from other developers. You can also discuss the changes, make additional commits, and address any feedback before merging the changes.
+
+## Creating a Pull Request
+
+- To create a pull request, push your changes to a branch on GitHub and then open a pull request from that branch to the main branch.
+
+```shell
+git push origin <branch-name>
+gh pr create
+gh pr list
+gh pr checkout <pull-request-number>
+```
+
+
 ---
 
 # Open Source
+
+- Open source software is software that is freely available to use, modify, and distribute. It is developed collaboratively by a community of developers who contribute their time and expertise to improve the software  is used by individuals, businesses, and organizations around the world to build websites, applications, and other software products.
+
+- Open source projects are typically hosted on platforms like GitHub, GitLab, and Bitbucket, where developers can access the source code, report issues, and contribute to the project.
+
+## Contributing and Creating Open Source Projects
+
+- You can contribute to open source projects by fixing bugs, adding new features, and improving documentation. You can also create your own open source projects and share them with the community.
+
+- Create tools, libraries, and frameworks that solve common problems and help other developers build better software. Open source projects can be a great way to showcase your skills, collaborate with others, and give back to the community.
 
 ---
 hideInToc: true
