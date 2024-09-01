@@ -2128,28 +2128,28 @@ hideInToc: true
 <br/>
 
 
-  <section class="px-20 py-20 text-center">
-    <button
-      aria-haspopup="true"
-      aria-controls="my-p"
-      popovertarget="my-p"
-      class="trigger-btn bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue-500 hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
-    >
-      Click to know what happened in Nigeria in 1914
-    </button>
-    <div
-      id="my-p"
-      popover="manual"
-      class="popover bg-black text-white font-normal py-4 px-6 rounded-lg max-w-xs leading-5 top-8 mx-auto gap-4"
-    >
-      <p>
-        In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria.
-      </p>
-        <button aria-label="Close" class="float-right p-1" popovertarget="my-p" popovertargetaction="hide">
-          <span aria-hidden="true">❌ Some</span>
-        </button>
-    </div>
-  </section>
+<section class="px-20 py-20 text-center">
+  <button
+    aria-haspopup="true"
+    aria-controls="my-p"
+    popovertarget="my-p"
+    class="trigger-btn bg-white px-4 py-2 border-4 border-blue-500 rounded transition duration-500 ease-in-out hover:bg-blue-500 hover:text-white hover:font-bold focus:bg-blue-500 focus:text-white shadow-lg"
+  >
+    Click to know what happened in Nigeria in 1914
+  </button>
+  <div
+    id="my-p"
+    popover="manual"
+    class="popover bg-black text-white font-normal py-4 px-6 rounded-lg max-w-xs leading-5 top-8 mx-auto gap-4"
+  >
+    <p>
+      In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria.
+    </p>
+      <button aria-label="Close" class="float-right p-1" popovertarget="my-p" popovertargetaction="hide">
+        <span aria-hidden="true">❌ Some</span>
+      </button>
+  </div>
+</section>
 
 
 
