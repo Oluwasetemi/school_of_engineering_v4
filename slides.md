@@ -9,6 +9,14 @@ author: Oluwasetemi Ojo
 highlighter: shiki
 twoslash: true
 lineNumbers: true
+download: true
+exportFilename: soe_altschool_semester1
+export:
+  format: pdf
+  timeout: 60000
+  dark: false
+  withClicks: false
+  withToc: true
 drawings:
   persist: false
 transition: slide-left
