@@ -81,13 +81,4 @@ export default defineConfig({
       },
     },
   },
-  optimizeDeps: {
-    // TODO: only exclude in prod.
-    include: [
-      '@vue/compiler-sfc',
-      'react',
-      'react-dom/client',
-      '@babel/standalone',
-    ],
-  },
 })

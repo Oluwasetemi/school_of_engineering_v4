@@ -52,4 +52,4 @@ jobs:
           make_latest: true
           files: |
             ./_export/soe_altschool_semester1.pdf
-            ./_export/soe_altschool_semester1.pptx
+            # ./_export/soe_altschool_semester1.pptx
