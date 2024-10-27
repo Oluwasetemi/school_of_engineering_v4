@@ -1,26 +1,25 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: https://res.cloudinary.com/drnqdd87d/image/upload/f_auto/nmgakkzd3lmlibnfosps
-# some information about your slides, markdown enabled
 title: School of Engineering
+titleTemplate: '%s - AltSchool Africa'
 info: |
-  ## AltSchool v4 Class Notes
-  making of world class developers
-
-  join at [AltSchool Africa](https://altschoolafrica.com)
-# apply any unocss classes to the current slide
+  AltSchool v4 Class Notes.The Making of world class developers. To join visit (https://altschoolafrica.com)
 class: text-center
-# https://sli.dev/custom/highlighters.html
+author: Oluwasetemi Ojo
 highlighter: shiki
-# https://sli.dev/guide/drawing
+twoslash: true
+lineNumbers: true
+download: true
+exportFilename: soe_altschool_semester1
+export:
+  format: pdf
+  timeout: 60000
+  dark: false
+  withClicks: false
+  withToc: true
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 hideInToc: true
 ---
@@ -1108,9 +1107,9 @@ This is the team you want teaching you!
 
 ---
 hideInToc: true
+layout: iframe
+url: https://codepen.io/setemiojo/embed/JjxNJVm?default-tab=html%2Cresult
 ---
-
-<CodepenBreadcrumbs />
 
 
 ---
@@ -1880,7 +1879,7 @@ hideInToc: true
 <div></div>
 To improve user-accessibility in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
 
-Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are inert, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements inert and to make inert elements interactive.
+Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are `inert`, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements `inert` and to make `inert` elements interactive.
 
 # Focus
 <div></div>
@@ -1965,7 +1964,10 @@ Mostly, developers achieve this accordion trick using CSS or JavaScript but we c
 
 The <kbd>&lt;details&gt;</kbd> and <kbd>&lt;summary&gt;</kbd> elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a <kbd>&lt;summary&gt;</kbd>, or releases the Enter key when the <kbd>&lt;summary&gt;</kbd> has focus, the contents of the parent <kbd>&lt;details&gt;</kbd> toggle to visible!
 
+<div class="overflow-y-scroll h-50">
+
 # Creating an accordion with just HTML
+
 <aside>
 <h3>Workshop reviews:</h3>
 <details>
@@ -1984,6 +1986,37 @@ The <kbd>&lt;details&gt;</kbd> and <kbd>&lt;summary&gt;</kbd> elements are all y
 </ul>
 </details>
 </aside>
+</div>
+
+---
+hideInToc: true
+---
+
+# [Grouped Details and Summary or Nested Details and Summary or Accordion]{.text-gradient}
+
+<aside>
+  <h3>Workshop reviews:</h3>
+  <details open  name="group_details">
+    <summary>Blendan Smooth</summary>
+    <p>Two of the most experienced machines and human controllers
+    teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
+  </details>
+  <details name="group_details">
+    <summary>Hoover Sukhdeep</summary>
+    <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
+  </details>
+  <details name="group_details">
+    <summary>AltSchool offers these courses</summary>
+    <ul>
+      <li>Frontend development</li>
+      <li>Backend development</li>
+      <li>Cloud Engineering</li>
+      <li>Cybersecurity</li>
+    </ul>
+  </details>
+</aside>
+
+
 
 ---
 hideInToc: true
@@ -2308,6 +2341,7 @@ hideInToc: true
 
 # Slot
 The &lt;slot&gt; element is used within the &lt;template&gt; to create placeholders for custom content. If a name attribute is provided, it creates a "named slot" that can be used to insert custom content within the web component. In the example, a named slot is created for the legend of the star rating component.
+
 ````md magic-move
 ```html
 <template id="star-rating-template">
@@ -2365,6 +2399,237 @@ class extends HTMLElement {
 });
 ```
 ---
+hideInToc: true
+---
+
+# Do you know?
+
+- Clipboard API provides the ability to respond to clipboard commands (cut, copy, and paste), as well as to asynchronously read from and write to the system clipboard.
+
+```js
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
+```
+
+- `autocomplete` attribute provide hints to the browser about the type of data expected in the input field. e.g. name, honorific-prefix, tel, cc-number etc. `<input name="address_firstline" autocomplete="billing street-address" />`
+
+- File System Access API provides access files and directories on the user's local device.
+
+```js
+const handle = await window.showSaveFilePicker(opts);
+```
+
+- Badging API - set a badge on the web application’s icon to notify about updated state in a less intrusive, persistent way.`navigator.setAppBadge(unreadCount)`
+
+---
+hideInToc: true
+---
+
+# Do you know?
+
+- `<datalist>` is used to provide a list of predefined options for an input element. The list attribute of the input element is used to associate the input with the datalist.
+
+<label for="ice-cream-choice">Choose a flavor:</label>
+<input class="input" list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+<datalist id="ice-cream-flavors">
+  <option value="Chocolate"></option>
+  <option value="Coconut"></option>
+  <option value="Mint"></option>
+  <option value="Strawberry"></option>
+  <option value="Vanilla"></option>
+</datalist>
+
+
+```html
+<input name="country" list="countries">
+<datalist id="countries">
+  <option>Afghanistan</option>
+  ...
+</datalist>
+```
+
+- Web Share API exposes a mechanism for sharing content to various user-selected destinations. `navigator.share(shareData)`
+
+- Launch Handler API allows PWAs to control how they are launched.
+
+```json
+{
+  "launch_handler": {"client_mode": "navigate-new"}
+}
+```
+
+---
+hideInToc: true
+---
+
+# Do you know?
+
+- File Handling API allows PWAs to register themselves as handlers for certain file types or protocols.
+
+```json
+{
+  "file_handlers": [{
+      "action": "/open-file",
+      "accept": {
+        "image/svg+xml": ".svg",
+        "image/png": ".png"
+      }
+  }]
+}
+```
+
+- Window Controls Overlay API allows PWAs to display custom content over the title bar area, whose controls become an overlay. `"display_override": ["window-controls-overlay"]`
+
+- Isolated Web Apps allow native like packaging, permission and signing updates for PWAs.
+
+
+---
+hideInToc: true
+---
+
+# Do you know?
+
+- HTML Media Capture allows users to capture media (audio, video, or images) using the device's camera or microphone. The capture attribute is used with the input element to specify the type of media to capture. `<input type="file" accept="video/*" capture>`
+
+- `input.showPicker()` method is used to display the file picker dialog for the input element.
+
+```html
+<input type="file" id="fileInput">
+<button onclick="document.getElementById('fileInput').showPicker()">Select File</button>
+```
+
+- FormData API can be used tp easily extract and manipulate form data values via JS.
+
+```js
+let fd = new FormData(form);
+let data = JSON.stringify(Object.fromEntries(fd));
+```
+
+- Customizable Select allow styling control and customizing dropdown control, previously `<selectlist>` and `<selectmenu>` were used for this purpose.
+
+```css
+select,
+  ::picker(select) {
+    appearance: base-select;
+  }
+```
+
+---
+hideInToc: true
+---
+
+# Do you know?
+
+- The `:user-error` pseudo-class is used to style form elements that have invalid input. It is used to indicate that the user has made an error in the input field.
+
+```css
+input:user-error {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+```
+
+- plaintext-only value for contenteditable permits editing of the element's raw text, but not rich text formatting. `<h2 class="title" contenteditable="plaintext-only"></h2>`
+
+- EditContext: The EditContext interface represents the text edit context of an element that was made editable by using the EditContext API.
+
+```js
+const canvas = document.createElement("canvas");
+const editContext = new EditContext();
+canvas.editContext = editContext;
+```
+
+- Lazy Loading: The loading attribute is used to specify whether an image/iframe should be loaded immediately or only when it is visible to the user.
+`<img src="picture.jpg" loading="lazy" />`
+
+---
+hideInToc: true
+---
+
+# Do you know?
+
+- The `caretPositionFromPoint()` method returns the caret's character offset. [Check out this examples form MDN to see how it works](https://developer.mozilla.org/en-US/docs/Web/API/Document/caretPositionFromPoint#examples).
+
+```js
+const range = document.caretPositionFromPoint(e.clientX, e.clientY);
+const textNode = range.offsetNode;
+const offset = range.offset;
+```
+
+- Resource Hints (all) - allows work to begin on certain resources early to improve performance. `<link rel="pre* | dns-prefetch | modulepreload">`.
+
+```html
+<link rel="preload" href="picture.jpg" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
+```
+
+- Content-Security Policy (CSP) is an added layer of security that helps to detect and mitigate XSS and other attacks. `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">` `Content-Security-Policy: default-src 'self'`
+
+- fetchpriority attribute is used to specify the priority of the fetch request. `<img src="picture.jpg" fetchpriority="high" />`
+
+---
+hideInToc: true
+---
+
+- `blocking="render"` attribute is used to specify that the resource should block rendering until it is loaded. `<script blocking="render" async src="async-script.js"></script>`
+
+- `<model>` element allows embedding 3D graphical content into a webpage. `<model src="3d-assets/car"></model>`
+
+- `<video src="fun.mp4" controlslist="nodownload"></video>`. The controlslist attribute is used to specify the controls that should be displayed in the video player.
+
+- CSS Custom Hightlight API provides a mechanism for styling arbitrary text ranges on a document by using JavaScript to create the ranges, and CSS to style them.
+
+<div class="grid grid-cols-2 gap-x-3">
+
+```css
+::highlight(my-custom-highlight) {
+  background-color: blue;
+}
+```
+
+```js
+const parentNode = document.getElementById("foo");
+const range1 = new Range();
+range1.setStart(parentNode, 10);
+range1.setEnd(parentNode, 20);
+const highlight = new Highlight(range1);
+CSS.highlights.set("my-custom-highlight", highlight);
+```
+
+</div>
+
+- `setHtmlUnsafe()` is used to parse a string of HTML into a DocumentFragment, which then replaces the element's subtree in the DOM.`element.setHTMLUnsafe("<p>Unsafe HTML</p>")`;
+
+---
+hideInToc: true
+---
+
+# Do you know?
+
+- parseHtmlUnsafe() is used to parse a string of HTML, which may contain declarative shadow roots, in order to create a new Document instance. `document.parseHTMLUnsafe("<p>Unsafe HTML</p>")`
+
+- Intl.Segmenter API is used to break text into segments based on the language-specific rules. `const segmenter = new Intl.Segmenter("en", {granularity: "word"});`
+
+- HTML Modules allow import HTML files via JS imports and access their elements and JS exports. Support for JSON modules is also available.
+
+```html
+<script type="module">
+  import { TabList } from "./tablist.html" with { type: 'html' };
+  customElements.define("tab-list", TabList);
+</script>
+```
+
+- `focusgroup` facilitate keyboard focus navigation using the keyboard arrow keys among a set of focusable elements.`<div focusgroup="wrap horizontal">`
+
+- search element is Semantic element for wrapping search UI.. `<search>...</search>`
+
+
+
+---
 
 # Assignments
 
@@ -2372,15 +2637,16 @@ class extends HTMLElement {
   <li ><a @click="$slidev.nav.next()">Assignment 1</a></li>
   <li ><a @click="$slidev.nav.go($page + 2)">Assignment 2</a></li>
 </ul>
+
 ---
 hideInToc: true
 ---
 # Assignment 1
 <div></div>
 
-Build two web pages , the first is going to be about you, including your ALT SCHOOL ID , biography and any relevant information with reason why you join alt school, your goals for school of engineering programme. Use fragment identifier and build a feature to scroll to the top with a fragment identifier.
+Create a web page that should display your basic information, with ALT SCHOOL ID, a biography, relevant details explaining why you joined the program, and your goals for the School of Engineering program. Implement a fragment identifier feature to enable scrolling back to the top of the page. Create a folder and name the file index.html
 
-Second page is a form that is a replica of the ALT SCHOOL application form ,linking both pages together using global navigation and the page must be accessible with proper relevant semantic HTML tags.
+Create a web page consisting of a form that mirrors the ALT SCHOOL application form (https://portal.altschoolafrica.com/auth/create-account), name the file form.html, connect the form.html to your first assignment via global navigation ensuring both files are in the folder of the first assignment, which should be at the top of both pages. You should create a footer with your address and a copyright. It must also be accessible, incorporating appropriate semantic HTML tags.
 
 ```
 index.html
@@ -2447,7 +2713,7 @@ NB: Strictly without CSS. Submission details will be sent to you in due time.
 
 - Git: A popular DVCS that tracks changes to files and directories, allowing you to collaborate with others and manage your project's history.
 
-- GitHub: A web-based platform that hosts Git repositories and provides collaboration tools for developers.
+- {GitHub}: A web-based platform that hosts Git repositories and provides collaboration tools for developers.
 
 - Repository (Repo): A directory that contains your project files and a .git directory, which tracks the history of changes.
 
@@ -2530,15 +2796,15 @@ hideInToc: true
 
 # GitHub
 
-- GitHub is a web-based platform that hosts Git repositories and provides collaboration tools for developers. It allows you to store, manage, and share your code with others.
+- {GitHub} is a web-based platform that hosts Git repositories and provides collaboration tools for developers. It allows you to store, manage, and share your code with others.
 
-- GitHub provides features such as pull requests, issues, and project boards to help you collaborate with your team and manage your projects more effectively.
+- {GitHub} provides features such as pull requests, issues, and project boards to help you collaborate with your team and manage your projects more effectively.
 
-- You can use GitHub to host your code, track changes, and work on projects with other developers. It's a powerful tool for version control and project management.
+- You can use {GitHub} to host your code, track changes, and work on projects with other developers. It's a powerful tool for version control and project management.
 
 ## Creating a Repository
 
-- Either push an existing local repository to GitHub or create a new repository on GitHub and clone it to your local machine.
+- Either push an existing local repository to GitHub or create a new repository on {GitHub} and clone it to your local machine.
 
 ```shell
 git clone <repository-url>
@@ -2589,5 +2855,5 @@ hideInToc: true
 # Contributors
 
 
-- [Adebosin Ridwan](https://github.com/RidwanAdebosin)
-- [Olubebe Faith](https://github.com/Olubebe)
+- {@RidwanAdebosin}
+- {@Olubebe}
