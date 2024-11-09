@@ -123,18 +123,18 @@ hideInToc: true
 
 # Focus of this Class
 
-- HTML
-- CSS
-- JavaScript
-- Git and GitHub | Open Source
+- {HTML}
+- {CSS}
+- {JavaScript}
+- {Git} and {GitHub} | Open Source
 
 ---
 
 # Tools
 
-- [Visual Studio Code](https://code.visualstudio.com/download) or any equivalent (JetBrains IDE, Zed, Sublime Text)
-- [Git and GitBash for windows](https://git-scm.com/downloads), Git only for mac and linux
-- [Nodejs](https://nodejs.org/en/), Python
+- {Visual Studio Code} or any equivalent (JetBrains {Webstorm} IDE, {Zed}, Sublime Text)
+- [Git and GitBash for windows](https://git-scm.com/downloads), {Git} only for mac and linux
+- {Nodejs}, {Python}
 
 ---
 
@@ -142,18 +142,18 @@ hideInToc: true
 
 Some Account You Expected to (Create || Have)
 
-- [GitHub](https://github.com/Oluwasetemi) and any other equivalent in GitLab or BitBucket
+- {GitHub} and any other equivalent in GitLab or BitBucket
 - [LinkedIn](https://www.linkedin.com/in/setemiojo)
 - [Twitter or X](https://x.com/setemiojo)
-- Stackblitz or CodeSandBox
-- [Codepen](https://codepen.io/setemiojo)
+- {Stackblitz} or {Codesandbox}
+- {Codepen}
 - [Stackoverflow](https://stackoverflow.com/users/4330745/oluwasetemi)
-- ChatGPT
-- Figma
+- {ChatGPT}
+- {Figma}
 - [Dev.to](https://dev.to/oluwasetemi) | [hashnode](https://hashnode.com/@setemiojo) | [Medium](https://medium.com/@setemiojo)
-- Slack
-- Netlify | Vercel | Render
-- [Personal Website](https://www.oluwasetemi.dev/). we teach to create your own.
+- {Slack} or {Discord}
+- {Netlify} | {Vercel} | {Render}
+- [Personal Website](https://www.oluwasetemi.dev/). we will teach to create your own.
 
 ---
 
@@ -169,6 +169,24 @@ Definition: An algorithm is a step-by-step procedure or a set of rules designed 
 
 Example: An algorithm for making a cup of tea might include steps like boiling water, adding a tea bag to a cup, pouring the hot water into the cup, letting it steep for a few minutes, and then removing the tea bag.
 
+<div class="grid grid-cols-2 gap-1">
+<Tips type="tip">
+<ol>
+<li>Patterns Reduce Complexity like two-pointer, sliding window, divide and conquer, dynamic programming, etc.</li>
+
+<li>Optimize Thinking for Efficiency</li>
+
+<li>Develop Transferable Skills</li>
+
+<li>Practice and Apply</li>
+</ol>
+</Tips>
+
+<Tips type="success">
+Building intuition around patterns will significantly improve your problem-solving skills, speed, and confidence in tackling algorithmic challenges.
+</Tips>
+</div>
+
 ---
 hideInToc: true
 ---
@@ -178,11 +196,34 @@ Definition: A flowchart is a visual representation of the steps in a process or 
 
 Example: A flowchart for logging into a website might start with a "Start" symbol, followed by a decision symbol asking if the user has entered their username and password, arrows leading to "Enter username" and "Enter password" steps, and an end symbol once the login process is successful.
 
+```mermaid
+---
+title: Flowchart for finding the greatest of three numbers a, b, and c
+---
+flowchart LR
+  Start[Start] --> InputNumbers[Input three numbers: a, b, and c]
+  InputNumbers --> CheckA{Is a > b and a > c?}
+
+  CheckA -- Yes --> AisGreatest[Print a is the greatest]
+  CheckA -- No --> CheckB{Is b > a and b > c?}
+
+  CheckB -- Yes --> BisGreatest[Print b is the greatest]
+  CheckB -- No --> CisGreatest[Print c is the greatest]
+
+  AisGreatest --> End[End]
+  BisGreatest --> End
+  CisGreatest --> End
+```
+
 ---
 hideInToc: true
 ---
 
 # Problem Solving
+
+<div />
+
+Use {ChatGPT} to researh what the key components of problem solving are. Try to use it to solve any problem you have.
 
 ---
 
@@ -463,17 +504,19 @@ Running multiple computations simultaneously
 Reading from and writing to files. File streams, Opening, reading, writing, and closing files, Binary vs text files
 ---
 
-# HTML
+# {HTML}
+<div />
 
-Getting Up and Running with HTML
-Document Structure, Metadata (head tag and its related tags), Body (possible elements that can be in the body)
+Getting Up and Running with HTML, its important to understand the basic structure of an HTML document. Document Type and HTML content itself (html tag) which contains the Metadata (head tag and its related tags) and Body, what is displayed in the browser visible area (possible elements that can be in the body)
 
-# Getting Up and Running with HTML
+##  Getting Up and Running with {HTML}
+
 HTML(HyperText Markup Language) is the foundation of basically every web page, basically, it is the core language of the World Wide Web. It’s how we tell browsers to structure content into paragraphs, headings, images, links, lists, forms, tables, buttons, and more. If you’re interested in building a website, web development, or just coding in general, learning HTML is a great place to start.
 
 ---
 hideInToc: true
 ---
+
 # Let's break it down a bit
 
 - HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as <kbd>&lt;head&gt;</kbd>, <kbd>&lt;title&gt;</kbd>, <kbd>&lt;body&gt;</kbd>, <kbd>&lt;header&gt;</kbd>, <kbd>&lt;footer&gt;</kbd>, <kbd>&lt;article&gt;</kbd>, <kbd>&lt;section&gt;</kbd>, <kbd>&lt;p&gt;</kbd>, <kbd>&lt;div&gt;</kbd>, <kbd>&lt;span&gt;</kbd>, <kbd>&lt;img&gt;</kbd>, <kbd>&lt;aside&gt;</kbd>, <kbd>&lt;audio&gt;</kbd>, <kbd>&lt;canvas&gt;</kbd>, <kbd>&lt;datalist&gt;</kbd>, <kbd>&lt;details&gt;</kbd>, <kbd>&lt;embed&gt;</kbd>, <kbd>&lt;nav&gt;</kbd>, <kbd>&lt;search&gt;</kbd>, <kbd>&lt;output&gt;</kbd>, <kbd>&lt;progress&gt;</kbd>, <kbd>&lt;video&gt;</kbd>, <kbd>&lt;ul&gt;</kbd>, <kbd>&lt;ol&gt;</kbd>, <kbd>&lt;li&gt;</kbd> and many others.
@@ -481,8 +524,6 @@ hideInToc: true
 - “HyperText” is text on a web page that contains references to another web page. You probably know these as hyperlinks. We use hyperlinks to jump to another section of the same page, a different page on the current website, or a completely new website. Hyperlinks can also open a PDF, email, or multimedia, like a video or audio file.
 
 - Linking information together in this way was a revolutionary step in building the web. Together, HTML and the internet make it possible for anyone to access all types of information around the world, in any order they want.
-
-
 
 - Finally, “Language” is the simplest part of the acronym to understand. Like any language, HTML has a unique syntax and alphabet. But what kind of language is it, exactly? It's a markup language.
 
@@ -493,10 +534,51 @@ hideInToc: true
 ---
 
 # HTML Element
+<div />
 
-An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by &lt; and &gt;. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kbd>&lt;title&gt;&lt;title&gt;</kbd> tag can be written as &lt;/Title&gt;&lt;/Title&gt;, <kbd>&lt;TITLE&gt;</kbd><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by &lt; and &gt;. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kbd>&lt;title&gt;&lt;title&gt;</kbd> tag can be written as <kbd>&lt;/Title&gt;&lt;/Title&gt;</kbd>, <kbd>&lt;TITLE&gt;</kbd><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+
+<div class="grid grid-cols-3 gap-1" >
+<Tips type="danger">
+There are three rendering modes in modern browsers: Quirks Mode(Old, pre-standardized HTML CSS behaviour), Standards Mode(modern HTML/CSS standards), and Almost Standards Mode (slight compatibility)
+</Tips>
+<Tips type="danger">
+A page will enter into quirks mode if the doctype is not declared or is declared incorrectly.
+</Tips>
+<Tips type="danger">
+Browser can auto complete tags, but it is recommended to close tags properly. this can lead to unexpected results.
+</Tips>
+</div>
 
 <!-- Semantic HTML, Heading & Sections, Attribute(Boolean, Enumerated, Global and custom attributes), Text Basics, Links, Navigation -->
+
+---
+hideInToc: true
+---
+
+# First HTML Document
+<div />
+
+create a folder and add an `index.html` file either using your vs code or terminal. Use the liveserver extension to view the file in the browser.
+
+<Tips type="info">
+Always open your vscode on the right folder your created for your project not on the root folder of your computer or desktop or documents or downloads.
+</Tips>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <meta name="description" content="This is a responsive web page">
+</head>
+<body>
+    <h1>Welcome to the world of HTML</h1>
+</body>
+</html>
+```
 
 ---
 hideInToc: true
@@ -520,20 +602,62 @@ hideInToc: true
 ---
 
 # Explanation of the Diagram in the previous slide
+<div />
 
 The closing tag is the same tag as the opening tag, preceded by a slash.
 Elements and tags aren't the exact same thing, though many people use the terms interchangeably. The tag name is the content in the brackets. The tag includes the brackets. In this case, &lt;h1&gt;. An "element" is the opening and closing tags, and all the content between those tags, including nested elements.
 
 Note: Browsers do not display the tags. The tags are used to interpret the content of the page.
 
+---
+hideInToc: true
+---
+# Usage Notes:
+
+### HTML5:
+In HTML5, the closing slash is optional, and self-closing tags can be written without it. However, for compatibility with XML parsers, it is sometimes included.
+- XHTML: XHTML requires the self-closing tags to include the closing slash to comply with XML standards.
+
+### Why Use Self-Closing Tags?
+
+- Simplicity:
+They simplify the markup by reducing the number of tags.
+- Consistency:
+They make the code easier to read and maintain, especially when dealing with elements that don’t require content.
+
+
+---
+hideInToc: true
+---
+# Code Example on Self-Closing Tags
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Closing Tags Example</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>Self-Closing Tags Example</h1>
+    <img src="image.jpg" alt="A beautiful view" />
+    <br />
+    <input type="text" name="username" placeholder="Enter your username" />
+    <hr />
+</body>
+</html>
+```
 
 ---
 
 # Document Structure
+<div />
 
-HTML documents include a document type declaration and the <kbd>&lt;html&gt</kbd>; root element. Nested in the <kbd>&lt;html&gt</kbd>; element are the document head and document body. While the head of the document isn't visible to the sighted visitor, it is vital to make your site function. It contains all the meta information, including information for search engines and social media results, icons for the browser tab and mobile home screen shortcut, and the behavior and presentation of your content.
+HTML documents include a document type declaration and the <kbd>&lt;html&gt;</kbd> root element. Nested in the <kbd>&lt;html&gt;</kbd> element are the document head and document body. While the head of the document isn't visible to the sighted visitor, it is vital to make your site function. It contains all the meta information, including information for search engines and social media results, icons for the browser tab and mobile home screen shortcut, and the behavior and presentation of your content.
 
-- &lt;DOCTYPE html /&gt;
+- <kbd>&lt;DOCTYPE html&gt;</kbd>
 - <kbd>&lt;html&gt;</kbd>
 - <kbd>&lt;head&gt;</kbd>
 - <kbd>&lt;head/&gt;</kbd>
@@ -612,6 +736,7 @@ The <kbd>&lt;head&gt;</kbd> which can also be referred to as document metadata h
 - <kbd>&lt;title&gt;Learning HTML&lt;/title&gt;</kbd>
 - <kbd>&lt;link href="./style.css"/&gt;</kbd>
 
+Read more about what elements should be included in the head {@Oluwasetemi/HEAD}
 
 
 ---
@@ -896,14 +1021,14 @@ In summary, this stresses the significance of using semantic HTML for improved a
 ---
 
 # Heading & Sections
-- #### &lt;Header&gt;
+- #### `<header>`
  is used for introductory content at the top of a page, section, or article. This could include logos, titles, navigation menus, etc.
 
-- #### &lt;nav&gt;
+- #### `<nav>`
   is used to wrap major navigation blocks like menus.
-- ### &lt;main&gt;
-   represents the main content area of the page, unique to that specific page. There should only be one &lt;main&gt; per page.
-- #### &lt;article&gt;
+- ### `<main>`
+   represents the main content area of the page, unique to that specific page. There should only be one <kbd>&lt;main&gt;</kbd> per page.
+- #### `<article>`
    is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
 
 ---
@@ -911,11 +1036,11 @@ hideInToc: true
 ---
 # Contd(Heading & Sections )
 
-- ####  &lt;section&gt;
+- ####  `section`
    is used to group related content together, like chapters or sections of a guide or tutorial.
-- #### &lt;aside&gt;
+- #### `aside`
    holds tangentially related content, like sidebars or inserts, that are separate from the main content flow.
-- #### &lt;footer&gt;
+- #### `footer`
   is used for footer content like copyright notices, contact information, or related links at the bottom of a page, section, or article.
 
 ---
@@ -1005,11 +1130,11 @@ You can create any custom attribute you want by adding the data- prefix. You can
 ---
 
 # Text Basics
-- &lt;h1&gt; to &lt;h6&gt; are used for headings, with &lt;h1&gt; being the highest level. There should only be one &lt;h1&gt; per page, with subsequent headings following a logical hierarchy (e.g., &lt;h1&gt;, &lt;h2&gt;,&lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, etc.).
-- &lt;p&gt; is used for regular paragraph text.
-- &lt;blockquote&gt; is used for longer quoted text, often from another source. It can optionally contain a &lt;cite&gt; element for attributing the source.
-- &lt;cite&gt; is used for citing the source of a quote, reference, or other creative work.
-- HTML entities are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard.
+- `h1` to `h6` are used for headings, with `h1` being the highest level. There should only be one `h1` per page, with subsequent headings following a logical hierarchy (e.g., `h1`, `h2`,`h3`, `h4`, `h5`, etc.).
+- `p` is used for regular paragraph text.
+- `blockquote` is used for longer quoted text, often from another source. It can optionally contain a `cite` element for attributing the source.
+- `cite` is used for citing the source of a quote, reference, or other creative work.
+- <u>HTML entities</u> are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard. `&copy;` is an example of an HTML entity that displays the copyright symbol ©. `&lt;` and `&gt;` are used to display the less-than (<) and greater-than (>) symbols, respectively. `&trade;` is used to display the trademark symbol ™.
 
 ---
 hideInToc: true
@@ -1073,9 +1198,13 @@ This is the team you want teaching you!
 # Link
 
 - <kbd>&lt;a href="url"&gt;Link Text&lt;/a&gt;</kbd> is used for creating hyperlinks, with the `href` attribute specifying the URL or file path.
-- The `target` attribute controls how the link is opened, like `_self` for the same window or `_blank` for a new window/tab.
+- The `target` attribute controls how the link is opened, like `_self` for the same window or `_blank` for a new window/tab. [download](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#download) attribute is used to download the linked file instead of opening it.
 - It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
-- Fragment Identifiers
+- Fragment Identifiers are used to link to a specific section of a page using id attribute as href like <kbd>&lt;a href="#section"&gt;Link Text&lt;/a&gt;</kbd>.
+- Most website will have a skip to content link at the top of the page to allow keyboard users to skip the navigation and go straight to the main content. This is done by linking to the main content with a fragment identifier like <kbd>&lt;a href="#main-content"&gt;Skip to main content&lt;/a&gt;</kbd>.
+- Absolute URLs include the full address of the page, like <kbd>&lt;a href="https://www.oluwasetemi.dev"&gt;Link Text&lt;/a&gt;</kbd>. Relative URLs are shorter and only include the path from the current page, like <kbd>&lt;a href="/about"&gt;Link Text&lt;/a&gt;</kbd>. Relative URLs are often used for internal links within the same website.
+
+
 
 ---
 
@@ -1423,47 +1552,6 @@ This syntax is valid in HTML5 and does not require a closing slash (/).
 - &lt;br /&gt;
 
 This syntax is required in XHTML, which is a stricter form of HTML based on XML.
-
----
-hideInToc: true
----
-# Usage Notes:
-
-### HTML5:
-In HTML5, the closing slash is optional, and self-closing tags can be written without it. However, for compatibility with XML parsers, it is sometimes included.
-- XHTML: XHTML requires the self-closing tags to include the closing slash to comply with XML standards.
-
-### Why Use Self-Closing Tags?
-
-- Simplicity:
-They simplify the markup by reducing the number of tags.
-- Consistency:
-They make the code easier to read and maintain, especially when dealing with elements that don’t require content.
-
-
----
-hideInToc: true
----
-# Code Example on Self-Closing Tags
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Closing Tags Example</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <h1>Self-Closing Tags Example</h1>
-    <img src="image.jpg" alt="A beautiful view" />
-    <br />
-    <input type="text" name="username" placeholder="Enter your username" />
-    <hr />
-</body>
-</html>
-```
 
 ---
 hideInToc: true
@@ -1993,6 +2081,9 @@ hideInToc: true
 ---
 
 # [Grouped Details and Summary or Nested Details and Summary or Accordion]{.text-gradient}
+<div />
+
+This can be achieved by grouping the <kbd>&lt;details&gt;</kbd> elements with a <kbd>name</kbd> attribute. This way, only one <kbd>&lt;details&gt;</kbd> element can be open at a time.
 
 <aside>
   <h3>Workshop reviews:</h3>
