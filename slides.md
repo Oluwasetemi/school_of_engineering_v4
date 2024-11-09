@@ -13,7 +13,7 @@ download: true
 exportFilename: soe_altschool_semester1
 export:
   format: pdf
-  timeout: 60000
+  timeout: 160000
   dark: false
   withClicks: false
   withToc: true
