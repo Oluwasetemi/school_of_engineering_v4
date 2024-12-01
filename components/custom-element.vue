@@ -10,8 +10,8 @@
                 <input type="radio" name="rating" value="5" aria-label="5 stars" />
             </rating>
         </fieldset>
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
+        <button class="btn" type="reset">Reset</button>
+        <button class="btn ml-3" type="submit">Submit</button>
     </form>
 </template>
 
