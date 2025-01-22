@@ -1,6 +1,6 @@
 ---
 background: https://res.cloudinary.com/drnqdd87d/image/upload/f_auto/nmgakkzd3lmlibnfosps
-title: School of Engineering
+title: School of Engineering(HTML)
 titleTemplate: '%s - AltSchool Africa'
 info: |
   AltSchool v4 Class Notes.The Making of world class developers. To join visit (https://altschoolafrica.com)
@@ -10,6 +10,7 @@ highlighter: shiki
 twoslash: true
 lineNumbers: true
 download: true
+browserExporter: true
 exportFilename: soe_altschool_semester1
 export:
   format: pdf
@@ -23,6 +24,7 @@ transition: slide-left
 mdc: true
 hideInToc: true
 overviewSnapshots: true
+selectable: true
 ---
 
 # [AltSchool School of Engineering]{.font-hand}
@@ -509,13 +511,15 @@ name: Getting Started With HTML
 ---
 
 # {HTML}
+
 <div />
 
-Getting Up and Running with HTML, its important to understand the basic structure of an HTML document. Document Type and HTML content itself (html tag) which contains the Metadata (head tag and its related tags) and Body, what is displayed in the browser visible area (possible elements that can be in the body)
+HTML(HyperText Markup Language) is the foundation of basically every web page, basically, it is the core language of the World Wide Web. It’s how we tell browsers to structure content into paragraphs, headings, images, links, lists, forms, tables, buttons, and more. If you’re interested in building a website, web development, or just coding in general, learning HTML is a great place to start.
 
 ##  Getting Up and Running with {HTML}
 
-HTML(HyperText Markup Language) is the foundation of basically every web page, basically, it is the core language of the World Wide Web. It’s how we tell browsers to structure content into paragraphs, headings, images, links, lists, forms, tables, buttons, and more. If you’re interested in building a website, web development, or just coding in general, learning HTML is a great place to start.
+Getting Up and Running with HTML, its important to understand the basic structure of an HTML document. The `Document Type` and HTML content itself (which is the `html` element). This contains the Metadata (`head` element and its related elements) and Body, which is what is displayed in the browser's visible area.
+
 
 ---
 hideInToc: true
@@ -546,9 +550,10 @@ hideInToc: true
 ---
 
 # HTML Element
+
 <div />
 
-An HTML element or "tags", which consist of the element name surrounded by &lt; and &gt; like <kbd>&lt;p&gt;</kbd>. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kbd>&lt;title&gt;&lt;/title&gt;</kbd> tag can be written as <kbd>&lt;/Title&gt;&lt;/Title&gt;</kbd>, <kbd>&lt;TITLE&gt;</kbd><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, the convention and recommended practice is to write tags in lowercase. These tags or elements can be either self closing <kbd>&lt;img/&gt;</kbd> or normal/common once with opening tag <kbd>&lt;p&gt;</kbd> and a closing tag <kbd>&lt;/p&gt;</kbd>.
+An HTML element or "tags", which consist of the element name surrounded by &lt; and &gt; like <kbd>&lt;p&gt;</kbd>. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kbd>&lt;title&gt;&lt;/title&gt;</kbd> tag can be written as <kbd>&lt;Title&gt;</kbd><kbd>&lt;/Title&gt;</kbd>, <kbd>&lt;TITLE&gt;</kbd><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, for convention and recommendation practice is to write tags in lowercase. These tags or elements can be either self closing <kbd>&lt;img/&gt;</kbd> or normal/common once with opening tag <kbd>&lt;p&gt;</kbd> and a closing tag <kbd>&lt;/p&gt;</kbd>.
 
 <div class="grid grid-cols-3 gap-1" >
 <Tips type="danger">
@@ -571,6 +576,7 @@ hideInToc: true
 ---
 
 # First HTML Document
+
 <div />
 
 create a folder and add an `index.html` file either using your vs code or terminal or file explorer. Use the liveserver extension to view the file in the browser.
@@ -615,6 +621,7 @@ sequenceDiagram
 ::right::
 
 # Explanation
+
 <div />
 
 The diagram explains what happens when a user view the first html page we created in a browser using right localhost:port / 127.0.0.1:port.
@@ -629,11 +636,19 @@ The text "Welcome to the world of HTML" is displayed as the main heading of the 
 
 ---
 hideInToc: true
+name: HTML Element Structure
+layout: image
 ---
 
-# Self Closing Tags
+![](./public/self-closing.png)
 
-### HTML &lt;img/&gt; Tag
+
+---
+hideInToc: true
+---
+
+# Self Closing Tags like HTML &lt;img/&gt; Tag
+
 We have been talking about tags in our previous teachings but this time you'll be seeing another form of tag that's called self closing tags under which the popular image tag fall under.
 
 Self-closing tags, also known as void elements, are a feature in HTML and XML where the tag does not require a separate closing tag. Instead, the tag is closed within itself. This is useful for elements that do not have any content between an opening and a closing tag. Here are some examples and details about self-closing tags:
@@ -643,26 +658,27 @@ Self-closing tags, also known as void elements, are a feature in HTML and XML wh
 - <kbd>&lt;hr /&gt;</kbd>: Creates a horizontal rule (a line).
 - <kbd>&lt;input /&gt;</kbd>: Defines an input field.
 - <kbd>&lt;meta /&gt;</kbd>: Provides metadata about the HTML document.
-- <kbd>&lt;link /&gt;</kbd>: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets).
+- <kbd>&lt;link /&gt;</kbd>: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets). and many more.
 
 ---
 hideInToc: true
 ---
 
 # More on the Self Closing Tags and Difference between `tags` and `elements`
+
 <div />
 
-The closing tag is the same tag as the opening tag, preceded by a slash.
+The closing system of a self-closing tag is appending the slash before the last `>`. It is required in HTML 5 Spec Validation.
 
-Examples of html element that are self-closing includes `img`, `input`, `br`, `hr` and others.
+In HTML5, the closing slash is optional, and self-closing tags can be written without it. However, for compatibility with XML parsers, it is sometimes included. XHTML requires the self-closing tags to include the closing slash to comply with XML standards.
+
+More html element that are self-closing includes `area`, `base`, `col`, `embed`, `source`, `track`, `wbr`.
+
+HTML can be categorized to block and inline element. Block elements typically start on a new line and take up the full width available. Inline elements do not start on a new line and only take up as much width as necessary using the size of its content. `div` is a block element while `span` is an inline element. Multiple inline element can stay on a block.
 
 Elements and tags aren't the exact same thing, though many people use the terms interchangeably. The tag name is the content in the angle brackets. The tag includes the angle brackets and the name of the element. In this case, `<h1>`. An "element" is the opening and closing tags, and all the content between those tags, including nested elements.
 
 Note: Browsers do not display the tags. The tags are used to interpret the content of the page.
-
-HTML can be categorized to block and inline element. Block elements typically start on a new line and take up the full width available. Inline elements do not start on a new line and only take up as much width as necessary using the size of its content. `div` is a block element while `span` is an inline element. Multiple inline element can stay on a block.
-
-In HTML5, the closing slash is optional, and self-closing tags can be written without it. However, for compatibility with XML parsers, it is sometimes included. XHTML requires the self-closing tags to include the closing slash to comply with XML standards.
 
 ---
 hideInToc: true
@@ -689,21 +705,6 @@ This syntax is valid in HTML5 and does not require a closing slash (/).
 
 This syntax is required in XHTML, which is a stricter form of HTML based on XML.
 
-
-
----
-hideInToc: true
-layout: image
-name: Block and Inline Element
----
-
-![](./public/block_inline.jpg)
-
-
-
-
-
-
 ---
 hideInToc: true
 ---
@@ -721,7 +722,7 @@ hideInToc: true
 </head>
 <body>
     <h1>Self-Closing Tags Example</h1>
-    <span>I will only contain the size of my content: 
+    <span>I will only contain the size of my content:
       Use <code>br</code> to break the content to the next page
     </span>
     <img src="image.jpg" alt="A beautiful view" />
@@ -732,9 +733,19 @@ hideInToc: true
 </html>
 ```
 
+
+---
+hideInToc: true
+layout: image
+name: Block and Inline Element
+---
+
+![](./public/block_inline.jpg)
+
 ---
 
 # Document Structure
+
 <div />
 
 HTML documents include a document type declaration and the <kbd>&lt;html&gt;</kbd> root element. Nested in the <kbd>&lt;html&gt;</kbd> element are the document head and document body. While the head of the document isn't visible to the sighted visitor, it is vital to make your site function. It contains all the meta information, including information for search engines and social media results, icons for the browser tab and mobile home screen shortcut, and the behavior and presentation of your content.
@@ -746,7 +757,6 @@ HTML documents include a document type declaration and the <kbd>&lt;html&gt;</kb
 - <kbd>&lt;body&gt;</kbd>
 - <kbd>&lt;body/&gt;</kbd>
 - <kbd>&lt;html/&gt;</kbd>
-
 
 
 ---
@@ -792,7 +802,7 @@ Nested between the opening and closing <kbd>&lt;html&gt;</kbd> tags, we find the
 
 <div>
 
-- <kbd>&lt;meta /&gt;</kbd>
+- <kbd>&lt;meta/&gt;</kbd>
 - <kbd>&lt;link /&gt;</kbd>
 - <kbd>&lt;script&gt;</kbd>
 - <kbd>&lt;style&gt;</kbd>
@@ -1424,7 +1434,9 @@ url: https://codepen.io/setemiojo/embed/JjxNJVm?default-tab=html%2Cresult
 ---
 
 # HTML Tables
+
 <div></div>
+
 HTML tables are used for displaying tabular data with rows and columns. They provide a semantic way to structure and present data that needs to be compared, sorted, calculated, or cross-referenced.
 
 
@@ -1443,7 +1455,10 @@ Within these sections, you'll use <kbd>&lt;tr&gt;</kbd> for table rows and <kbd>
 ---
 hideInToc: true
 name: Examples Working With Tables
+layout: two-cols
 ---
+
+
 
 ```html {monaco}
 <table>
@@ -1467,12 +1482,35 @@ name: Examples Working With Tables
 </table>
 ```
 
+::right::
+
+<table class="border">
+  <caption>Student Grades</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>John</th>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>Emily</th>
+      <td>92</td>
+    </tr>
+  </tbody>
+</table>
 ---
 hideInToc: true
 ---
 
 # Accessibility and Semantics
+
 <div></div>
+
 Using proper table structure and semantic elements is crucial for accessibility. Screen readers and assistive technologies rely on this structure to understand the tabular data and its relationships.
 
 <kbd>&lt;th&gt;</kbd> cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
@@ -1481,16 +1519,21 @@ The headers attribute can be used to associate data cells with their correspondi
 
 
 # Merging cells
+
 <div></div>
-Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple cells into a single cell. This is done with HTML! The colspan attribute is used to merge two or more adjacent cells within a single row. The rowspan attribute is used to merge cells across rows, being placed on the cell in the top row.
+
+Similar to MS Excel, Google Sheets, and Numbers, it is possible to join multiple cells into a single cell. This is done with HTML! The `colspan` attribute is used to merge two or more adjacent cells within a single row. The `rowspan` attribute is used to merge cells across rows, being placed on the cell in the top row.
 
 # Styling and Responsiveness
+
 <div></div>
+
 Tables can be styled using CSS, but it's recommended to avoid using deprecated attributes like cellpadding, cellspacing, or align. Instead, use modern CSS properties like border-collapse, border-spacing, and caption-side.
 
 ---
 hideInToc: true
 name: More on Tables
+layout: two-cols
 ---
 
 ```html {*|1|*}{maxHeight:'440px'}
@@ -1530,6 +1573,44 @@ name: More on Tables
 </table>
 ```
 
+::right::
+
+<table class="border">
+  <caption>Alt Alumni</caption>
+  <thead class="border">
+    <tr>
+      <th rowspan="2" id="name" scope="col" class="border">Name</th>
+      <th colspan="2" id="path">Career path</th>
+      <th rowspan="2" id="year" class="border">Year</th>
+    </tr>
+    <tr>
+      <th id="past" scope="col" class="border">Past</th>
+      <th id="future" scope="col" class="border">Destiny</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="hal" scope="row" class="border">Hal Gibrah</th>
+      <td headers="hal path past" class="border">Calculator</td>
+      <td headers="hal path future" class="border">Mars rover</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th id="cathy" scope="row" class="border">James Bond</th>
+      <td headers="cathy path past" class="border">Waste disposal</td>
+      <td headers="cathy path future" class="border">Automated teller</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th id="lou" scope="row" class="border">Lou Minious</th>
+      <td headers="lou path past" class="border">Lightbulb</td>
+      <td headers="lou path future" class="border">Smart bulb</td>
+      <td>1956</td>
+    </tr>
+  </tbody>
+</table>
+
+
 <style>
   .slidev-code-wrapper {
     @apply border border-main rounded
@@ -1541,7 +1622,9 @@ name: More on Tables
 ---
 
 # Form
+
 <div></div>
+
 The HTML &lt;form&gt; element identifies a document landmark containing interactive controls for submitting information. Nested in a &lt;form&gt; you'll find all the interactive (and non-interactive) form controls that make up that form.
 
 - Forms are created using the &lt;form&gt; element, which contains interactive controls for submitting information.
@@ -1563,6 +1646,7 @@ hideInToc: true
 ---
 hideInToc: true
 name: Form Examples
+layout: two-cols
 ---
 
 ```html {monaco}
@@ -1587,6 +1671,33 @@ name: Form Examples
   </ul>
 </fieldset>
 ```
+
+::right::
+
+<fieldset>
+  <legend>Who is your favorite student?</legend>
+  <ul>
+    <li class="list-none">
+      <label>
+        <input type="radio" value="blendan" name="machine"> Blendan Smooth
+      </label>
+    </li>
+    <li class="list-none">
+      <label>
+        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
+      </label>
+    </li>
+    <li class="list-none">
+      <label>
+        <input type="radio" value="toasty"  name="machine"> Toasty McToastface
+      </label>
+    </li>
+  </ul>
+
+  <button class="btn">Pick your favorite student</button>
+
+</fieldset>
+
 ---
 hideInToc: true
 ---
@@ -1786,7 +1897,7 @@ Example:
 hideInToc: true
 ---
 
-# `picture` 
+# `picture`
 
 <div />
 
@@ -1955,7 +2066,7 @@ The DOM provides insight into the current state of the UI. HTML APIs can access 
 
 ---
 hideInToc: true
-clicksToStart: 2
+clicksStart: 2
 ---
 
 # List of HTML API interfaces
@@ -2019,7 +2130,7 @@ clicksToStart: 2
 
 </div>
 ---
-clicksToStart: 2
+clicksStart: 2
 hideInToc: true
 name: More on HTML API
 ---
@@ -2357,6 +2468,8 @@ name: Accordion
 
 This can be achieved by grouping the <kbd>&lt;details&gt;</kbd> elements with a <kbd>name</kbd> attribute. This way, only one <kbd>&lt;details&gt;</kbd> element can be open at a time.
 
+<div grid="~ cols-2" gap="1">
+
 <aside>
   <h3>Workshop reviews:</h3>
   <details open  name="group_details">
@@ -2378,6 +2491,39 @@ This can be achieved by grouping the <kbd>&lt;details&gt;</kbd> elements with a 
     </ul>
   </details>
 </aside>
+
+<div class=" overflow-auto">
+<details style="max-height: 300px; overflow-y: auto;" >
+<summary><code>HTML Codes for the Grouped Accordion</code></summary>
+
+```html
+<aside>
+  <h3>Workshop reviews:</h3>
+  <details open  name="group_details">
+    <summary>Blendan Smooth</summary>
+    <p>Two of the most experienced machines and human controllers
+    teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
+  </details>
+  <details name="group_details">
+    <summary>Hoover Sukhdeep</summary>
+    <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
+  </details>
+  <details name="group_details">
+    <summary>AltSchool offers these courses</summary>
+    <ul>
+      <li>Frontend development</li>
+      <li>Backend development</li>
+      <li>Cloud Engineering</li>
+      <li>Cybersecurity</li>
+    </ul>
+  </details>
+</aside>
+```
+
+</details>
+</div>
+
+</div>
 
 
 
@@ -2489,9 +2635,14 @@ hideInToc: true
 ---
 hideInToc: true
 name: Popover examples
+layout: two-cols
 ---
 
 <PopOver />
+
+::right::
+
+<PopOverCode />
 
 ---
 hideInToc: true
@@ -2633,6 +2784,7 @@ This  discusses the Shadow DOM and how it encapsulates CSS styles within a web c
 
 ---
 hideInToc: true
+clicksStart: 3
 ---
 
 # Another Example
@@ -3093,6 +3245,7 @@ NB: Strictly without CSS. Submission details will be sent to you in due time.
 ---
 hideInToc: true
 name: Git Terminologies
+clicksStart: 2
 ---
 
 <v-clicks>

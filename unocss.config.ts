@@ -31,7 +31,7 @@ export default mergeConfigs([
           fast: 'Ubuntu',
           hand: 'Caveat',
           mono: {
-            name: 'IBM Plex Mono',
+            name: 'Operator Mono',
             italic: true,
           },
         },
