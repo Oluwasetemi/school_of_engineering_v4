@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -21,4 +22,16 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
+=======
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  },
+  "exclude": ["**/*.md"]
+>>>>>>> 8f61027180ec21cd4504ae23165929637f9b6ed7
 }

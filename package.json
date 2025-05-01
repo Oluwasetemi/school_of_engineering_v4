@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "vue-assignment",
   "private": true,
   "version": "0.0.0",
@@ -15,5 +16,29 @@
     "tailwindcss": "^4.1.5",
     "typescript": "~5.7.2",
     "vite": "^6.3.1"
+=======
+  "name": "school_of_engineering_v4",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "postinstall": "npx playwright-core install chromium",
+    "build": "slidev build",
+    "dev": "nodemon -w '../../packages/slidev/dist/*.mjs' --exec \"slidev ./slides.md --open=false --log=info --inspect\"",
+    "export": "slidev export",
+    "export:pdf": "npm run export -- --timeout 160000 --with-toc --output ./_export/soe_altschool_semester1.pdf",
+    "export:pptx": "npm run export -- --timeout 160000 --with-clicks false --format pptx --output ./_export/soe_altschool_semester1.pptx"
+  },
+  "dependencies": {
+    "@slidev/cli": "51.0.1",
+    "@slidev/theme-default": "latest",
+    "markdown-it-magic-link": "^0.1.4",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/mdi": "^1.2.3",
+    "nodemon": "^3.1.9",
+    "playwright-chromium": "^1.49.1"
+>>>>>>> 8f61027180ec21cd4504ae23165929637f9b6ed7
   }
 }
