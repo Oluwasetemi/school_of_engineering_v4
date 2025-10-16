@@ -11,7 +11,7 @@
     "export:pptx": "npm run export -- --timeout 160000 --with-clicks false --format pptx --output ./_export/soe_altschool_semester1.pptx"
   },
   "dependencies": {
-    "@slidev/cli": "52.1.0",
+    "@slidev/cli": "52.2.5",
     "@slidev/theme-default": "latest",
     "@vueuse/core": "^13.9.0",
     "markdown-it-magic-link": "^0.1.4",
