@@ -6,6 +6,7 @@
       "dependencies": {
         "@slidev/cli": "52.1.0",
         "@slidev/theme-default": "latest",
+        "@vueuse/core": "^13.9.0",
         "markdown-it-magic-link": "^0.1.4",
         "vue": "^3.5.21",
       },
