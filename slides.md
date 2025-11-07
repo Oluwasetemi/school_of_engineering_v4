@@ -45,7 +45,7 @@ Class notes for the 1st Semester
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
-  <a href="https://github.com/Oluwasetemi/school_of_engineering_v4/releases" target="_blank" alt="DOwnload" title="Download PDF or PPTX version of the slide"
+  <a href="https://html.oluwasetemi.dev/export" target="_blank" alt="Download" title="Download PDF or PPTX version of the slide"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-download />
   </a>
@@ -99,9 +99,7 @@ hideInToc: true
 # [Foundational Requirement](https://norvig.com/21-days.html)
 
 - coding
-- coding
-- coding
-- coding
+
 
 ---
 
@@ -135,7 +133,7 @@ hideInToc: true
 
 # Tools
 
-- {Visual Studio Code} or any equivalent (JetBrains {Webstorm} IDE, {Zed}, Sublime Text)
+- {Visual Studio Code} or any equivalent (JetBrains {Webstorm} IDE, {Zed}, Sublime Text), Cursor
 - [Git and GitBash for windows](https://git-scm.com/downloads), {Git} only for mac and linux
 - {Nodejs}, {Python}
 
@@ -226,7 +224,7 @@ hideInToc: true
 
 <div />
 
-Use {ChatGPT} to research what the key components of problem solving are. Try to use it to solve any problem you have.
+Use {ChatGPT} or Google to research what the key components of problem solving are. Try to use it to solve any problem you have.
 
 ---
 

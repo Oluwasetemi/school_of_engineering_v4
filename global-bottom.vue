@@ -35,7 +35,7 @@ const displayCount = computed(() => {
   <footer
     class="select-none abs-tr p-2 mb-9 mr-9 hover:underline hover:underline-offset-8 focus:ring active:text-red-500"
   >
-    <span>👁 {{ displayCount }}</span>
+    <span>👀 {{ displayCount }}</span>
     <a
       href="https://github.com/Oluwasetemi"
       target="_blank"
