@@ -5,7 +5,7 @@ import '@slidev/cli'
 export default defineConfig({
   slidev: {
     markdown: {
-      markdownItSetup(md) {
+      markdownSetup(md) {
         md.use(MarkdownItMagicLink, {
           linksMap: {
             Nodejs: {
@@ -142,5 +142,30 @@ export default defineConfig({
         })
       },
     },
+  },
+  build: {
+    chunkSizeWarningLimit: 2000,
+    sourcemap: false,
+    minify: 'esbuild',
+    target: ['chrome90', 'firefox90', 'safari14'],
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('monaco-editor')) return 'monaco'
+          if (id.includes('@babel/standalone')) return 'babel'
+        },
+      },
+    },
+  },
+  optimizeDeps: {
+    include: [
+      '@vue/compiler-sfc',
+      'react',
+      'react-dom/client',
+      '@babel/standalone',
+    ],
+  },
+  worker: {
+    format: 'es',
   },
 })
