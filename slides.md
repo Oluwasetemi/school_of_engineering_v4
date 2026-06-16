@@ -25,7 +25,6 @@ mdc: true
 hideInToc: true
 overviewSnapshots: false
 selectable: true
-lineNumbers: true
 monacoTypesIgnoreDefaults: true
 ---
 
