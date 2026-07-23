@@ -12,7 +12,7 @@
 }
 
 a:has(> code) {
-    underline: none;
+    text-decoration-line: none;
     border: 0px !important;
 }
 
@@ -212,4 +212,24 @@ h6 {
 
 .rough-annotation>path[stroke-width='2'] {
     stroke-width: calc(2px * var(--slidev-slide-scale));
+}
+
+/* Monaco run: editor left, preview right */
+.slidev-monaco-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch;
+}
+
+.slidev-monaco-container-inner {
+  flex: 1;
+  min-width: 0;
+}
+
+.slidev-monaco-container > div:not(.slidev-monaco-container-inner) {
+  flex: 1;
+  min-width: 0;
+  border-top: none !important;
+  border-left: 1px solid #eee1;
+  border-radius: 0 var(--slidev-code-radius) var(--slidev-code-radius) 0;
 }

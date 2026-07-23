@@ -13,6 +13,7 @@ export default mergeConfigs([
       btn: 'px-4 py-1 bg-blue-500 text-white rounded',
       card: 'p-4 shadow-md border rounded-lg',
       input: 'px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200',
+      radio: 'appearance-none w-4 h-4 border border-gray-300 rounded-full focus:outline checked:bg-blue-500 checked:border-blue-500',
       'form-basic': 'p-1 text-sm border border-blue border-2 focus:outline-none'
     },
     rules: [

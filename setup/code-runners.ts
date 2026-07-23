@@ -120,7 +120,9 @@ export default defineCodeRunnersSetup(() => {
       }
 
       iframe.onload = () => {
-        const iframeWindow = iframe.contentWindow as any
+        const iframeWindow = iframe.contentWindow as any;
+        const iframeDocument = iframe.contentDocument || iframeWindow?.document;
+      
         if (iframeWindow) {
           const orig = {
             log: iframeWindow.console.log,
@@ -145,8 +147,32 @@ export default defineCodeRunnersSetup(() => {
             addLog('log', args)
           }
         }
+      
+        // --- NEW: Auto-resize logic ---
+        if (iframeDocument && iframeDocument.body) {
+          const updateHeight = () => {
+            // Get the true height of the content
+            const contentHeight = iframeDocument.documentElement.scrollHeight;
+            
+            // Set the container height (ensure it doesn't drop below your minHeight)
+            container.style.height = `${Math.max(200, contentHeight + 16)}px`; 
+          };
+      
+          // 1. Set the initial height once the iframe loads
+          updateHeight();
+      
+          // 2. Observe the iframe's body for dynamic DOM additions/removals
+          const resizeObserver = new ResizeObserver(() => {
+            updateHeight();
+          });
+          
+          // Using a timeout prevents a "ResizeObserver loop limit exceeded" warning
+          // that sometimes occurs during the initial render tick in iframes.
+          setTimeout(() => {
+            resizeObserver.observe(iframeDocument.body);
+          }, 0);
+        }
       }
-
       iframe.srcdoc = code
 
       iframeWrapper.appendChild(iframe)

@@ -34,7 +34,7 @@ Class notes for the 1st Semester
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Are you ready to learn HTML and web technologies? Press <kbd>space</kbd> on your keyboard <carbon:arrow-right class="inline"/>
+    Are you ready to learn HTML and web technologies? Press `space` on your keyboard <carbon:arrow-right class="inline"/>
   </span>
 </div>
 
@@ -135,8 +135,8 @@ hideInToc: true
 
 - {HTML}
 - {CSS}
-- {JavaScript}
-- {Git} and {GitHub} | Open Source
+- {JavaScript} and {TypeScript}
+- {Git} and {GitHub} | Open Source | Introduction to basic terminal commands
 
 ---
 
@@ -146,9 +146,13 @@ hideInToc: true
 - [Git and GitBash for windows](https://git-scm.com/downloads), {Git} only for mac and linux
 - {Nodejs}, {Python}
 
+[Here is a link to watch a video on installation and basic set of vs code, git on windows operating system](https://www.youtube.com/watch?v=LebD-zBxZeY).
+
 ---
 
 # Accounts
+
+<div />
 
 Some Account You Expected to (Create || Have)
 
@@ -169,17 +173,21 @@ Some Account You Expected to (Create || Have)
 
 # Installations
 
+<div />
+
 <Youtube class="w-full h-96 border border-main rounded-lg" id="LebD-zBxZeY" />
 
 ---
 
 # Algorithms and FlowCharts
 
+<div />
+
 Definition: An algorithm is a step-by-step procedure or a set of rules designed to perform a specific task or solve a particular problem. It is a sequence of instructions that are followed to achieve a desired outcome.
 
 Example: An algorithm for making a cup of tea might include steps like boiling water, adding a tea bag to a cup, pouring the hot water into the cup, letting it steep for a few minutes, and then removing the tea bag.
 
-<div class="grid grid-cols-2 gap-1">
+<div class="text-sm grid grid-cols-2 gap-1">
 <Tips type="tip">
 <ol>
 <li>Patterns Reduce Complexity like two-pointer, sliding window, divide and conquer, dynamic programming, etc.</li>
@@ -200,7 +208,10 @@ Building intuition around patterns will significantly improve your problem-solvi
 ---
 hideInToc: true
 ---
+
 # flowchart
+
+<div />
 
 Definition: A flowchart is a visual representation of the steps in a process or system using symbols, arrows, and text. It depicts the sequence of operations or steps, making it easier to understand how a process flows from start to finish.
 
@@ -259,7 +270,7 @@ hideInToc: true
 
 <div class="grid grid-cols-2 gap-x-4">
 
-  <v-click :every='1' depth="2">
+  <v-clicks :every='1' depth="2">
 
 <ul>
   <li> Variables</li>
@@ -281,9 +292,9 @@ hideInToc: true
 
 </ul>
 
-  </v-click>
+  </v-clicks>
 
-  <v-click :every="1">
+  <v-clicks :every="1">
     <ul>
      <li> Recursion</li>
       <li> Error Handling</li>
@@ -292,7 +303,7 @@ hideInToc: true
       <li> File I/O</li>
     </ul>
 
-  </v-click>
+  </v-clicks>
 
 </div>
 <v-click>
@@ -352,6 +363,7 @@ console.log(person)
 ---
 hideInToc: true
 ---
+
 # Control Structures
 
 Direct the order of execution of statements in a program.
@@ -404,6 +416,7 @@ while (condition) {
 ---
 hideInToc: true
 ---
+
 # Functions (or Methods)
 
 Blocks of code designed to perform a particular task, reusable throughout the program.
@@ -417,6 +430,7 @@ Blocks of code designed to perform a particular task, reusable throughout the pr
 ---
 hideInToc: true
 ---
+
 # Data Structures
 
 # Ways of organizing and storing data to enable efficient access and modification
@@ -425,9 +439,11 @@ Key Points:
 Linear: Arrays, Linked Lists.
 Non-linear: Trees, Graphs.
 Abstract: Stack, Queue, Map, Set
+
 ---
 hideInToc: true
 ---
+
 # [Data Structures More (Trees)](https://www.youtube.com/watch?v=oSWTXtMglKE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=8)
 
 Binary Search Tree, AVL Tree, Red-Black Tree
@@ -439,6 +455,7 @@ Fenwick Tree (Binary Indexed Tree)
 ---
 hideInToc: true
 ---
+
 # Algorithms
 
 Step-by-step procedures or formulas for solving problems.
@@ -534,7 +551,7 @@ name: HTML Element Structure
 layout: image
 ---
 
-![](./public/html_tags.jpg)
+![](/html_tags.jpg)
 
 ---
 hideInToc: true
@@ -542,7 +559,7 @@ hideInToc: true
 
 # Let's break it down a bit
 
-- HTML uses "markup" to annotate text, images, and other content for display in a Web browser. This markup is called ELEMENT or TAG.HTML Element or Tag includes <kbd>&lt;head&gt;</kbd>, <kbd>&lt;title&gt;</kbd>, <kbd>&lt;body&gt;</kbd>, <kbd>&lt;header&gt;</kbd>, <kbd>&lt;footer&gt;</kbd>, <kbd>&lt;article&gt;</kbd>, <kbd>&lt;section&gt;</kbd>, <kbd>&lt;p&gt;</kbd>, <kbd>&lt;div&gt;</kbd>, <kbd>&lt;span&gt;</kbd>, <kbd>&lt;img&gt;</kbd>, <kbd>&lt;aside&gt;</kbd>, <kbd>&lt;audio&gt;</kbd>, <kbd>&lt;canvas&gt;</kbd>, <kbd>&lt;datalist&gt;</kbd>, <kbd>&lt;details&gt;</kbd>, <kbd>&lt;embed&gt;</kbd>, <kbd>&lt;nav&gt;</kbd>, <kbd>&lt;search&gt;</kbd>, <kbd>&lt;output&gt;</kbd>, <kbd>&lt;progress&gt;</kbd>, <kbd>&lt;video&gt;</kbd>, <kbd>&lt;ul&gt;</kbd>, <kbd>&lt;ol&gt;</kbd>, <kbd>&lt;li&gt;</kbd> and many others.
+- HTML uses "markup" to annotate text, images, and other content for display in a Web browser. This markup is called ELEMENT or TAG.HTML Element or Tag includes `<head>`, `<title>`, `<body>`, `<header>`, `<footer>`, `<article>`, `<section>`, `<p>`, `<div>`, `<span>`, `<img>`, `<aside>`, `<audio>`, `<canvas>`, `<datalist>`, `<details>`, `<embed>`, `<nav>`, `<search>`, `<output>`, `<progress>`, `<video>`, `<ul>`, `<ol>`, `<li>` and many others.
 
 - “HyperText” is text on a web page that contains references to another web page. You probably know these as hyperlinks. We use hyperlinks to jump to another section of the same page, a different page on the current website, or a completely new website. Hyperlinks can also open a PDF, email, or multimedia, like a video or audio file.
 
@@ -560,9 +577,10 @@ hideInToc: true
 
 <div />
 
-An HTML element or "tags", which consist of the element name surrounded by &lt; and &gt; like <kbd>&lt;p&gt;</kbd>. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <kbd>&lt;title&gt;&lt;/title&gt;</kbd> tag can be written as <kbd>&lt;Title&gt;</kbd><kbd>&lt;/Title&gt;</kbd>, <kbd>&lt;TITLE&gt;</kbd><kbd>&lt;/TITLE&gt;</kbd>, or in any other way. However, for convention and recommendation practice is to write tags in lowercase. These tags or elements can be either self closing <kbd>&lt;img/&gt;</kbd> or normal/common once with opening tag <kbd>&lt;p&gt;</kbd> and a closing tag <kbd>&lt;/p&gt;</kbd>.
+An HTML element or "tags", which consist of the element name surrounded by `<` and `>` like `<p>`. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title></title>` tag can be written as `<Title>` `</Title>`, `<TITLE>` `</TITLE>`, or in any other way. However, for convention and recommendation practice is to write tags in lowercase. These tags or elements can be either self closing `<img/>` or normal/common once with opening tag `<p>` and a closing tag `</p>`.
 
-<div class="grid grid-cols-3 gap-1" >
+<div class="text-sm/5 grid grid-cols-3 gap-1" >
+
 <Tips type="danger">
 There are three rendering modes in modern browsers: Quirks Mode(Old, pre-standardized HTML CSS behavior), Standards Mode(modern HTML/CSS standards), and Almost Standards Mode (slight compatibility)
 </Tips>
@@ -592,7 +610,7 @@ create a folder and add an `index.html` file either using your vs code or termin
 Always open your vscode on the right folder your created for your project not on the root folder of your computer or desktop or documents or downloads.
 </Tips>
 
-```html
+```html {monaco-run}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -631,9 +649,9 @@ sequenceDiagram
 
 <div />
 
-The diagram explains what happens when a user view the first html page we created in a browser using right localhost:port / 127.0.0.1:port.
+The diagram explains what happens when a user view the first html page we created in a browser using right http://localhost:port / http://127.0.0.1:port if you are using live server vscode extension.
 
-The browser reads the content of the page and displays it in the browser window. The content of the page is enclosed within the <kbd>&lt;h1&gt;</kbd> tags, which define a top-level heading.
+The browser reads the content of the page and displays it in the browser window. The content of the page is enclosed within the `<h1>` tags, which define a top-level heading.
 
 The `h1` is an instruction to the browser to display the text as a top-level heading.
 
@@ -647,25 +665,27 @@ name: HTML Element Structure
 layout: image
 ---
 
-![](./public/self-closing.png)
+![](/self-closing.png)
 
 
 ---
 hideInToc: true
 ---
 
-# Self Closing Tags like HTML &lt;img/&gt; Tag
+# Self Closing Tags like HTML `<img/>` Tag
+
+<div />
 
 We have been talking about tags in our previous teachings but this time you'll be seeing another form of tag that's called self closing tags under which the popular image tag fall under.
 
 Self-closing tags, also known as void elements, are a feature in HTML and XML where the tag does not require a separate closing tag. Instead, the tag is closed within itself. This is useful for elements that do not have any content between an opening and a closing tag. Here are some examples and details about self-closing tags:
 
-- <kbd>&lt;img /&gt;</kbd>: Defines an image.
-- <kbd>&lt;br /&gt;</kbd>: Inserts a line break.
-- <kbd>&lt;hr /&gt;</kbd>: Creates a horizontal rule (a line).
-- <kbd>&lt;input /&gt;</kbd>: Defines an input field.
-- <kbd>&lt;meta /&gt;</kbd>: Provides metadata about the HTML document.
-- <kbd>&lt;link /&gt;</kbd>: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets). and many more.
+- `<img />`: Defines an image.
+- `<br />`: Inserts a line break.
+- `<hr />`: Creates a horizontal rule (a line).
+- `<input />`: Defines an input field.
+- `<meta />`: Provides metadata about the HTML document.
+- `<link />`: Defines the relationship between a document and an external resource (most commonly used to link to stylesheets). and many more.
 
 ---
 hideInToc: true
@@ -698,17 +718,15 @@ In HTML, self-closing tags can be written in two ways:
 
 #### HTML5 Syntax:
 
-- <kbd>&lt;img src="image.jpg" alt="Description"&gt;</kbd>
-
-- <kbd>&lt;br&gt;</kbd>
+- `<img src="image.jpg" alt="Description">`
+- `<br>`
 
 This syntax is valid in HTML5 and does not require a closing slash (/).
 
 #### XHTML Syntax:
 
-- <kbd>&lt;img src="image.jpg" alt="Description" /&gt;</kbd>
-
-- &lt;br /&gt;
+- `<img src="image.jpg" alt="Description" />`
+- `<br />`
 
 This syntax is required in XHTML, which is a stricter form of HTML based on XML.
 
@@ -718,7 +736,7 @@ hideInToc: true
 
 # Code Example on Self-Closing Tags
 
-```html
+```html {monaco-run}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -728,14 +746,23 @@ hideInToc: true
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Self-Closing Tags Example</h1>
-    <span>I will only contain the size of my content:
-      Use <code>br</code> to break the content to the next page
-    </span>
-    <img src="image.jpg" alt="A beautiful view" />
-    <br />
-    <input type="text" name="username" placeholder="Enter your username" />
-    <hr />
+    <div class="container">
+        <main>
+            <h2>Self-Closing Tags Example</h2>
+            <hr class="hr" />
+            <span>I will only contain the size of my content:
+                Use <code>br</code> to break the content to the next page
+            </span>
+            <hr class="hr" />
+            <figure>
+                <img src="https://oluwasetemi.dev/favicon-32x32.png" alt="A beautiful view" />
+                <figcaption>A beautiful view of the sunset</figcaption>
+            </figure>
+            <hr class="hr" />
+            <label for="username">Username:</label>
+            <input class="input" type="text" id="username" name="username" placeholder="Enter your username" />
+        </main>
+    </div>
 </body>
 </html>
 ```
@@ -747,7 +774,37 @@ layout: image
 name: Block and Inline Element
 ---
 
-![](./public/block_inline.jpg)
+![](/block_inline.jpg)
+
+---
+hideInToc: true
+---
+
+# Code Example on Block and Inline Elements
+
+```html {monaco-run}
+<main>
+    <h2 class="bg-gray-600">Block and Inline Element Example</h2>
+    <hr class="hr" />
+    <span>will contain the size of my content</span>because<span>Inline</span>
+    <hr class="hr" />
+    <div>Block</div>
+    <hr class="hr" />
+    <figure>
+        <img src="https://oluwasetemi.dev/favicon-32x32.png" alt="A beautiful view" />
+        <figcaption>A beautiful view of the sunset</figcaption>
+    </figure>
+    <hr class="hr" />
+    <label for="username">Username:</label>
+    <input class="input" type="text" id="username" name="username" placeholder="Enter your username" />
+</main>
+<style>
+    h2, div { background-color: #1f2937; }
+    span { background-color: #ffc600; }
+    hr { border: 1px solid #374151; }
+</style>
+
+```
 
 ---
 
@@ -755,15 +812,15 @@ name: Block and Inline Element
 
 <div />
 
-HTML documents include a document type declaration and the <kbd>&lt;html&gt;</kbd> root element. Nested in the <kbd>&lt;html&gt;</kbd> element are the document head and document body. While the head of the document isn't visible to the sighted visitor, it is vital to make your site function. It contains all the meta information, including information for search engines and social media results, icons for the browser tab and mobile home screen shortcut, and the behavior and presentation of your content.
+HTML documents include a document type declaration and the `<html>` root element. Nested in the `<html>` element are the document head and document body. While the head of the document isn't visible to the sighted visitor, it is vital to make your site function. It contains all the meta information, including information for search engines and social media results, icons for the browser tab and mobile home screen shortcut, and the behavior and presentation of your content.
 
-- <kbd>&lt;DOCTYPE html&gt;</kbd>
-- <kbd>&lt;html&gt;</kbd>
-- <kbd>&lt;head&gt;</kbd>
-- <kbd>&lt;head/&gt;</kbd>
-- <kbd>&lt;body&gt;</kbd>
-- <kbd>&lt;body/&gt;</kbd>
-- <kbd>&lt;html/&gt;</kbd>
+- `<DOCTYPE html>`
+- `<html>`
+- `<head>`
+- `<head/>`
+- `<body>`
+- `<body/>`
+- `<html/>`
 
 
 ---
@@ -774,20 +831,22 @@ hideInToc: true
 
 <div></div>
 
-<kbd>&lt;!DOCTYPE html&gt;</kbd> To start an HTML document you need to type <kbd>&lt;!DOCTYPE html&gt;</kbd> at the top of the document, this may look like an HTML element because it's wrapped in tags but it isn't. It's a special kind of node called declaration which tells the browser to use standards mode. If this <kbd>&lt;!DOCTYPE html&gt;</kbd> is omitted, as quirks mode.
+`<!DOCTYPE html>` To start an HTML document you need to type `<!DOCTYPE html>` at the top of the document, this may look like an HTML element because it's wrapped in tags but it isn't. It's a special kind of node called declaration which tells the browser to use standards mode. If this `<!DOCTYPE html>` is omitted, as quirks mode.
 
 <v-click>
 
 ## `<html>`
 
-The <kbd>&lt;html&gt;</kbd> element is the root element for an HTML document. It is the parent of the <kbd>&lt;head&gt;</kbd>and <kbd>&lt;body&gt;</kbd> containing everything in the HTML document other than the doctype. If omitted it will be implied, but it is important to include it, as this is the element on which the language of the content of the document is declared.
+The `<html>` element is the root element for an HTML document. It is the parent of the `<head>`and `<body>` containing everything in the HTML document other than the doctype. If omitted it will be implied, but it is important to include it, as this is the element on which the language of the content of the document is declared.
 
 </v-click>
 
 <v-click>
 
-<Tips type="info" fullWidth>
-Note: The `lang` attribute added to the html tag to give this <kbd>&lt;html lang="en"&gt;</kbd> tag defines the main language of the document. The value of the lang attribute is a two- or three-letter ISO language code followed by the region. The region is optional, but recommended, as a language can vary greatly between regions.
+<Tips class="text-sm" type="info" fullWidth>
+
+Note: The `lang` attribute added to the html tag to give this `<html lang="en">` tag defines the main language of the document. The value of the lang attribute is a two- or three-letter ISO language code followed by the region. The region is optional, but recommended, as a language can vary greatly between regions.
+
 </Tips>
 
 </v-click>
@@ -803,24 +862,24 @@ name: Working with head
 
 <div></div>
 
-Nested between the opening and closing <kbd>&lt;html&gt;</kbd> tags, we find the two children: <kbd>&lt;head&gt;</kbd> and <kbd>&lt;body&gt;</kbd>.let us discuss the several elements that can be in the <kbd>&lt;head&gt;</kbd>:
+Nested between the opening and closing `<html>` tags, we find the two children: `<head>` and `<body>`.let us discuss the several elements that can be in the `<head>`:
 
 <div grid="~ cols-2 gap-4">
 
 <div>
 
-- <kbd>&lt;meta/&gt;</kbd>
-- <kbd>&lt;link /&gt;</kbd>
-- <kbd>&lt;script&gt;</kbd>
-- <kbd>&lt;style&gt;</kbd>
+- `<meta/>`
+- `<link />`
+- `<script>`
+- `<style>`
 
 </div>
 
 <div>
 
-- <kbd>&lt;base&gt;</kbd>
-- <kbd>&lt;title&gt;</kbd>
-- <kbd>&lt;noscript&gt;</kbd>
+- `<base>`
+- `<title>`
+- `<noscript>`
 
 
 </div>
@@ -829,12 +888,12 @@ Nested between the opening and closing <kbd>&lt;html&gt;</kbd> tags, we find the
 </div>
 
 
-The <kbd>&lt;head&gt;</kbd> which can also be referred to as document metadata header, contains all the metadata for a site or application and some of these meta tags are:
+The `<head>` which can also be referred to as document metadata header, contains all the metadata for a site or application and some of these meta tags are:
 
-- <kbd>&lt;meta charset="UTF-8"/&gt;</kbd>
-- <kbd>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</kbd>
-- <kbd>&lt;title&gt;Learning HTML&lt;/title&gt;</kbd>
-- <kbd>&lt;link rel="stylesheet" href="./style.css"/&gt;</kbd>
+- `<meta charset="UTF-8"/>`
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0"/>`
+- `<title>Learning HTML</title>`
+- `<link rel="stylesheet" href="./style.css"/>`
 
 Read more about what elements should be included in the head {@Oluwasetemi/HEAD}
 
@@ -851,13 +910,13 @@ hideInToc: true
 
 By declaring UTF-8 (case-insensitive), you can even include emojis in your title (but please don't).
 
-The character encoding is inherited into everything in the document, even <kbd>&lt;style&gt;</kbd> and <kbd>&lt;scipt&gt;</kbd> This little declaration means you can include emojis in class names and the selectorAPI (again, please don't). If you do use emojis, make sure to use them in a way that enhances usability without harming accessibility.
+The character encoding is inherited into everything in the document, even `<style>` and `<scipt>` This little declaration means you can include emojis in class names and the selectorAPI (again, please don't). If you do use emojis, make sure to use them in a way that enhances usability without harming accessibility.
 
 ## Document title
 
-The <kbd>&lt;title&gt;</kbd> element is metadata that represents the title of the overall HTML document (not the document's content.)
+The `<title>` element is metadata that represents the title of the overall HTML document (not the document's content.)
 
-The contents for the document title, the text between the opening and closing <kbd>&lt;title&gt;</kbd>  tags, are displayed in the browser tab, the list of open windows, the history, search results, and, unless redefined with <kbd>&lt;meta&gt;</kbd>  tags, in social media cards.
+The contents for the document title, the text between the opening and closing `<title>`  tags, are displayed in the browser tab, the list of open windows, the history, search results, and, unless redefined with `<meta>`  tags, in social media cards.
 
 
 ---
@@ -867,31 +926,36 @@ hideInToc: true
 # Viewport metadata
 
 <div></div>
+
 The other meta tag that should be considered essential is the viewport meta tag, which helps site responsiveness, enabling content to render well by default, no matter the viewport width and also enhances the user experience.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 ```
-name="viewport": This specifies that the meta tag is providing information about the viewport. The viewport is the user's visible area of a web page, which varies with the device used to view the site (desktop, tablet, mobile phone).
 
-content="width=device-width, initial-scale=1.0": This attribute contains the settings for the viewport. It is a comma-separated list of properties and values. In this case, it contains two key properties:
+`name="viewport"`: This specifies that the meta tag is providing information about the viewport. The viewport is the user's visible area of a web page, which varies with the device used to view the site (desktop, tablet, mobile phone).
 
-width=device-width: This sets the width of the viewport to be equal to the width of the device. It ensures that the webpage is not scaled down or up but instead uses the full width of the device's screen.
-initial-scale=1.0: This sets the initial zoom level when the page is first loaded. A scale of 1.0 means no zoom, i.e., the page content appears at 100% of its size.
+`content="width=device-width, initial-scale=1.0"`: This attribute contains the settings for the viewport. It is a comma-separated list of properties and values. In this case, it contains two key properties:
+
+`width=device-width`: This sets the width of the viewport to be equal to the width of the device. It ensures that the webpage is not scaled down or up but instead uses the full width of the device's screen.
+
+`initial-scale=1.0`: This sets the initial zoom level when the page is first loaded. A scale of 1.0 means no zoom, i.e., the page content appears at 100% of its size.
 
 ---
 hideInToc: true
 ---
 
 # Body
+
 <div></div>
-The <kbd>&lt;body&gt;</kbd> tag defines the document's body.
 
-The <kbd>&lt;body&gt;</kbd>  element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+The `<body>` tag defines the document's body.
 
-Note: There can only be one <kbd>&lt;body&gt;</kbd> element in an HTML document.
+The `<body>`  element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
 
-Inside the <kbd>&lt;body&gt;</kbd> tags of an HTML document, you can find a wide variety of elements that are used to structure and present the content of a webpage. Here are some common HTML tags that are typically found inside the <kbd>&lt;body&gt;</kbd> tag:
+Note: There can only be one `<body>` element in an HTML document.
+
+Inside the `<body>` tags of an HTML document, you can find a wide variety of elements that are used to structure and present the content of a webpage. Here are some common HTML tags that are typically found inside the `<body>` tag:
 
 ```html
 <body>
@@ -965,7 +1029,7 @@ hideInToc: true
 
 # Let's put some of the tags in usage
 
-```html
+```html {monaco-run}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -976,13 +1040,14 @@ hideInToc: true
 <body>
     <h1>Welcome to my responsive web page!</h1>
     <p>This page looks good on both desktop and mobile devices.</p>
+    <p>Click here to watch a video on <a href="https://www.youtube.com/watch?v=LebD-zBxZeY" target="_blank">vscode here</a></p>
 </body>
 </html>
 ```
 
 <Tips type="info" fullWidth>
 Install two extensions in your vscode to make coding easy, liveserver from Ritwick Dey and Official prettier formatter to format your code.<br />
-It might be very helpful to learn some vscode shortcuts to make you fast when working with vscode.
+It might be very helpful to learn some vscode shortcuts to make you fast when working with vscode. I talked about some of the most useful ones in this <a href="https://www.youtube.com/watch?v=LebD-zBxZeY" target="_blank">video</a>.
 </Tips>
 
 ---
@@ -991,20 +1056,20 @@ hideInToc: true
 
 # Breakdown of the Code:
 
-1. <kbd>&lt;DOCTYPE html &gt;</kbd>
-This declaration defines the document type and version of HTML being used. <kbd>&lt;DOCTYPE html&gt;</kbd> specifically tells the browser that this document is written in HTML5, which is the latest version of HTML.
+1. `<DOCTYPE html >`
+This declaration defines the document type and version of HTML being used. `<DOCTYPE html>` specifically tells the browser that this document is written in HTML5, which is the latest version of HTML.
 
-2. <kbd>&lt;html lang="en"&gt;</kbd>
+2. `<html lang="en">`
 This is the opening tag for the HTML document. The lang="en" attribute specifies the language of the document, which in this case is English. This helps search engines and browsers understand the primary language of the content.
 
-3. <kbd>&lt;head&gt;</kbd>
-The <kbd>&lt;head&gt;</kbd> element contains meta-information (metadata) about the document that is not displayed on the page. It includes links to scripts, stylesheets, and other metadata.
+3. `<head>`
+The `<head>` element contains meta-information (metadata) about the document that is not displayed on the page. It includes links to scripts, stylesheets, and other metadata.
 
-Within the <kbd>&lt;head&gt;</kbd>:
-<kbd>&lt;meta charset="UTF-8"/&gt;</kbd>
+Within the `<head>`:
+`<meta charset="UTF-8"/>`
 This tag specifies the character encoding for the HTML document. UTF-8 is a universal character set that supports many different characters from various languages. It ensures that the text is properly displayed.
 
-<kbd>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</kbd>
+`<meta name="viewport" content="width=device-width, initial-scale=1.0"/>`
 This tag controls the viewport's size and scale on different devices. It ensures the website is responsive and adjusts to different screen sizes,
 width=device-width sets the viewport to match the device's width.
 initial-scale=1.0 sets the initial zoom level to 100%.
@@ -1015,35 +1080,39 @@ hideInToc: true
 
 # Contd
 
-4. <kbd>&lt;title&gt;</kbd>Responsive Web Page<kbd>&lt;/title&gt;</kbd>
-The <kbd>&lt;title&gt;</kbd> tag defines the title of the HTML document, which appears in the browser's title bar or tab. It is also used by search engines as the title of the page in search results.
+4. `<title>`Responsive Web Page`</title>`
+The `<title>` tag defines the title of the HTML document, which appears in the browser's title bar or tab. It is also used by search engines as the title of the page in search results.
 
-5. <kbd>&lt;body&gt;</kbd>
-The <kbd>&lt;body&gt;</kbd> element contains all the content that is displayed on the web page, such as text, images, links, etc.
+5. `<body>`
+The `<body>` element contains all the content that is displayed on the web page, such as text, images, links, etc.
 
-Within the <kbd>&lt;body&gt;</kbd>:
-<kbd>&lt;h1&gt;</kbd>Welcome to my responsive web page!<kbd>&lt;/h1&gt;</kbd>
-The <kbd>&lt;h1&gt;</kbd> tag defines a top-level heading on the page. This is often the main heading and is typically the most prominent piece of text.
+Within the `<body>`: `<h1>`Welcome to my responsive web page!`</h1>`
+The `<h1>` tag defines a top-level heading on the page. This is often the main heading and is typically the most prominent piece of text.
 
-<kbd>&lt;p&gt;</kbd>is page looks good on both desktop and mobile devices.<kbd>&lt;/p&gt;</kbd>
-The <kbd>&lt;p&gt;</kbd>ag defines a paragraph of text. It contains the main body text and ensures the content is properly formatted and readable.
+`<p>`is page looks good on both desktop and mobile devices.`</p>`
+The `<p>` tag defines a paragraph of text. It contains the main body text and ensures the content is properly formatted and readable.
 
 
 ---
 
 # Understanding Semantic HTML
+
+<div />
+
 Semantic HTML is the practice of using HTML elements to structure your content based on their meaning and purpose, rather than their appearance. By using semantic markup, you provide context and meaning to the content, making it easier for both humans and machines (like search engines and assistive technologies) to understand the structure and purpose of the content.
 
 <v-click>
 
 ## Meaning Over Appearance
-This emphasizes that HTML elements should be chosen based on their semantic meaning, not their visual appearance. For example, don't use an <kbd>&lt;h1&gt;</kbd> element just because it renders text as large and bold by default; use it to represent the main heading or title of the content
+
+This emphasizes that HTML elements should be chosen based on their semantic meaning, not their visual appearance. For example, don't use an `<h1>` element just because it renders text as large and bold by default; use it to represent the main heading or title of the content
 
 </v-click>
 
 ---
 hideInToc: true
 ---
+
 #  Non-semantic vs. Semantic Markup
 
 
@@ -1073,8 +1142,8 @@ hideInToc: true
 <div>
   <div>five words</div>
 </div>
-
-<!-- In this example, the use of &lt;div&gt; and &lt;span&gt; elements provides no semantic meaning or context about the content structure. -->
+<!-- In this example, the use of <div> and <span> elements 
+provides no semantic meaning or context about the content structure. -->
 ```
 
 
@@ -1111,22 +1180,27 @@ hideInToc: true
 
 # Accessibility and Machine-Readability
 
+<div />
+
+<v-clicks>
+
 This highlights how semantic markup improves accessibility and machine-readability. It shows examples of how browser developer tools display the Accessibility Object Model (AOM) differently for non-semantic and semantic markup. Assistive technologies like screen readers rely on the AOM to interpret the content structure and meaning correctly.
 
-# Roles and Landmarks
+## Roles and Landmarks
 
-This explains the concept of roles and landmarks in semantic HTML. Semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; have implicit roles that identify them as landmarks for assistive technologies. This helps users navigate the content more easily.
+This explains the concept of roles and landmarks in semantic HTML. Semantic elements like `<header>`, `<nav>`, `<main>`, and `<footer>` have implicit roles that identify them as landmarks for assistive technologies. This helps users navigate the content more easily.
+
+### Using the `role` attribute
+
+While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
+
+</v-clicks>
 
 ---
 hideInToc: true
 ---
 
-# Using the `role` attribute
-
-While semantic elements have implicit roles, the content mentions that the role attribute can be used to assign a specific role to any element. However, it recommends using the appropriate semantic element instead of relying on the role attribute whenever possible.
-
-
-```html
+```html {monaco-run}
 <div role="banner">
   <span role="heading" aria-level="1">Three words</span>
   <div role="navigation">
@@ -1137,9 +1211,9 @@ While semantic elements have implicit roles, the content mentions that the role 
 
 #### Choosing the Right Elements
 
-This emphasizes the importance of choosing the right HTML elements based on their semantic meaning and functionality, not just their visual appearance. It encourages developers to ask themselves, "Which element best represents the function of this section of markup?" when writing HTML.
+This emphasizes the importance of choosing the right HTML elements based on their semantic meaning and functionality, not just their visual appearance. It encourages developers to ask themselves, <mark>Which element best represents the function of this section of markup?" when writing HTML.</mark>
 
-<Tips type="info" fullWidth>
+<Tips class="text-sm" type="info" fullWidth>
 In summary, this stresses the significance of using semantic HTML for improved accessibility, machine-readability, and overall content structure and meaning.
 </Tips>
 
@@ -1150,22 +1224,15 @@ In summary, this stresses the significance of using semantic HTML for improved a
 
 # Heading & Sections
 
-- `<header>`
- is used for introductory content at the top of a page, section, or article. This could include logos, titles, navigation menus, etc.
+- `<header>` is used for introductory content at the top of a page, section, or article. This could include logos, titles, navigation menus, etc.
 
-- `<nav>`
-  is used to wrap major navigation blocks like menus.
-- ### `<main>`
-   represents the main content area of the page, unique to that specific page. There should only be one <kbd>&lt;main&gt;</kbd> per page.
-- `<article>`
-   is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
+- `<nav>` is used to wrap major navigation blocks like menus.
+- `<main>` is used to represent the main content area of the page, unique to that specific page. There should only be one `<main>` per page.
+- `<article>` is used for self-contained pieces of content that could be distributed or reused independently, like blog posts or news articles.
 
--  `section`
-   is used to group related content together, like chapters or sections of a guide or tutorial.
-- `aside`
-   holds tangentially related content, like sidebars or inserts, that are separate from the main content flow.
-- `footer`
-  is used for footer content like copyright notices, contact information, or related links at the bottom of a page, section, or article.
+- `section` is used to group related content together, like chapters or sections of a guide or tutorial.
+- `aside` is used to hold tangentially related content, like sidebars or inserts, that are separate from the main content flow.
+- `footer` is used for footer content like copyright notices, contact information, or related links at the bottom of a page, section, or article.
 
 
 
@@ -1175,7 +1242,7 @@ name: Attribute Image
 layout: image
 ---
 
-![](./public/attributes.jpg)
+![](/attributes.jpg)
 
 
 ---
@@ -1194,9 +1261,7 @@ layout: image
 
 #### Enumerated attributes
 
-   are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include <kbd>&lt;style contenteditable&gt;</kbd>, it defaults to
-
-  <kbd>&lt;style contenteditable="true"&gt;</kbd>.
+are sometimes confused with boolean attributes. They are HTML attributes that have a limited set of predefined valid values. Like boolean attributes, they have a default value if the attribute is present but the value is missing. For example, if you include `<div contenteditable>`, it defaults to `<div contenteditable="true">`.
 
 
 ---
@@ -1205,47 +1270,41 @@ name: Global Attributes
 ---
 
 #### Global attributes
-  They are attributes that can be set on any HTML element, including elements in the <code>&lt;head&gt;</code>. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a <code>&lt;meta&gt;</code> as meta content is not displayed.
 
-- `id`
-   The global attribute id is used to define a unique identifier for an element. It serves many purposes, including: - The target of a link's fragment identifier. - Identifying an element for scripting. - Associating a form element with its label. - Providing a label or description for assistive technologies. - Targeting styles with (high specificity or as attribute selectors) in CSS.
+They are attributes that can be set on any HTML element, including elements in the `<head>`. There are more than 30 global attributes. While these can all, in theory, be added to any HTML element, some global attributes have no effect when set on some elements; for example, setting hidden on a `<meta>` as meta content is not displayed.
 
--  `class`
-    The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
+- `id` - The global attribute id is used to define a unique identifier for an element. It serves many purposes, including: The target of a link's fragment identifier. Identifying an element for scripting. Associating a form element with its label. Providing a label or description for assistive technologies. Targeting styles with (high specificity or as attribute selectors) in CSS.
 
- - `style`
-    The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
+- `class` - The class attribute provides an additional way of targeting elements with CSS (and JavaScript), but serves no other purpose in HTML (though frameworks and component libraries may use them). The class attribute takes as its value a space-separated list of the case-sensitive classes for the element.
+
+- `style` - The style attribute enables applying inline styles, which are styles applied to the single element on which the attribute is set. The style attribute takes as its value CSS property value pairs, with the value's syntax being the same as the contents of a CSS style block: properties are followed by a colon, just like in CSS, and semicolons end each declaration, coming after the value.
 
 ---
 hideInToc: true
 name: Global Attributes
 ---
 
-- `tabIndex`
-   The tabindex attribute can be added to any element to enable it to receive focus. The tabindex value defines whether it gets added to the tab order, and, optionally, into a non-default tabbing order.The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
+- `tabIndex` - The tabindex attribute can be added to any element to enable it to receive focus. The tabindex value defines whether it gets added to the tab order, and, optionally, into a non-default tabbing order.The tabindex attribute takes as its value an integer. A negative value (the convention is to use -1) makes an element capable of receiving focus, such as via JavaScript, but does not add the element to the tabbing sequence. A tabindex value of 0 makes the element focusable and reachable via tabbing, adding it to the default tab order of the page in source code order. A value of 1 or more puts the element into a prioritized focus sequence and is not recommended.
 
-- `hidden`
-Hides an element from view, though it remains in the DOM.
+- `hidden` - Hides an element from view, though it remains in the DOM.
 
-- `inert`
-It is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element.
+- `inert` - It is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element.
 
-- `lang`
-Specifies the language of the element's content.
+- `lang` - Specifies the language of the element's content.
 
-- `aria-*` (ARIA attributes)
-  ARIA attributes are used to enhance the accessibility of web content for users with disabilities. They provide additional information about the semantics and behavior of elements, making it easier for assistive technologies to interpret and interact with the content.
+- `aria-*` (ARIA attributes) - ARIA attributes are used to enhance the accessibility of web content for users with disabilities. They provide additional information about the semantics and behavior of elements, making it easier for assistive technologies to interpret and interact with the content.
 
 Others include `dir`, `draggable`, `spellcheck`, `title`, `accesskey`.
 
 ---
 hideInToc: true
+class: 'text-sm'
+transition: 'slide-up'
 ---
 
 # Contd(Attribute)
 
-- `role`
-  The role attribute can be used to provide semantic meaning to content, enabling screen readers to inform site users of an object's expected user interaction.
+- `role` - The role attribute can be used to provide semantic meaning to content, enabling screen readers to inform site users of an object's expected user interaction.
 
 ```html
 <div role="banner">
@@ -1257,9 +1316,8 @@ hideInToc: true
 </div>
 ```
 
-- More on `aria-*`
-WAI-ARIA states and properties are used to enhance the accessibility of web content for users with disabilities.
-A list item `html:li` has been used to create a checkable menu item, and JavaScript events will capture mouse and keyboard events to toggle the value of aria-checked. A role is used to make the behavior of this simple widget known to the user agent.
+- More on `aria-*` - [WAI-ARIA](https://www.w3.org/WAI/ARIA/) states and properties are used to enhance the accessibility of web content for users with disabilities.
+- A list item `html:li` has been used to create a checkable menu item, and JavaScript events will capture mouse and keyboard events to toggle the value of aria-checked. A role is used to make the behavior of this simple widget known to the user agent.
 
 ```html
 <li role="menuitemcheckbox" aria-checked="true">Sort by Last Modified</li>
@@ -1274,22 +1332,26 @@ A list item `html:li` has been used to create a checkable menu item, and JavaScr
 
 ---
 hideInToc: true
+transition: 'slide-down'
 ---
 
 # Contd-2
 
-- `contenteditable`
-An element with the contenteditable attribute set to true is editable, is focusable, and is added to the tab order as if tabindex="0" were set. Contenteditable is an enumerated attribute supporting the values true and false, with a default value of inherit if the attribute is not present or has an invalid value.
+- `contenteditable` - An element with the contenteditable attribute set to true is editable, is focusable, and is added to the tab order as if tabindex="0" were set. Contenteditable is an enumerated attribute supporting the values true and false, with a default value of inherit if the attribute is not present or has an invalid value. If you include `<div contenteditable="false">`, the element is not editable (unless it's by default editable, like a `<textarea>`).
 
-These three opening tags are equivalent:
-
-```html
-<style contenteditable>
-<style contenteditable="">
-<style contenteditable="true">
+```html {monaco-run}
+<style style="display: block;font-family: monospace;border: solid;padding: 5px;white-space: pre;" class="block p-5" contenteditable>
+  body {
+    color: red;
+  }
+</style>
+<div class="p-5" contenteditable="">Can be editted live</div>
+<div class="p-5" contenteditable="true">Can be editted live</div>
+<div contenteditable="false">Cannot be editted</div>
+<div contenteditable="🎉">Cannot be editted</div>
+<div class="p-5" contenteditable="plaintext-only">Can be editted live</div>
 ```
 
-  If you include <kbd>&lt;style contenteditable="false"&gt;</kbd>, the element is not editable (unless it's by default editable, like a <kbd>&lt;textarea&gt;</kbd>). If the value is invalid, such as <kbd>&lt;style contenteditable="😀"&gt;</kbd> or <br/><kbd>&lt;style contenteditable="contenteditable"&gt;</kbd>, the value defaults to inherit.
 
 ---
 hideInToc: true
@@ -1297,15 +1359,14 @@ hideInToc: true
 
 # Contd-3
 
-- custom attribute `data-*`
-You can create any custom attribute you want by adding the `data-` prefix. You can name your attribute anything that starts with `data-` followed by any lowercase series of characters that don't start with xml and don't contain a colon (:). They are used to store extra information about an element.`data-*` attributes allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
+- custom attribute `data-*` - You can create any custom attribute you want by adding the `data-` prefix. You can name your attribute anything that starts with `data-` followed by any lowercase series of characters that don't start with xml and don't contain a colon (:). They are used to store extra information about an element.`data-*` attributes allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
 
 ```html
-<blockquote data-machine-learning="workshop"
-  data-first-name="Blendan" data-last-name="Smooth"
-  data-formerly="Margarita Maker" data-aspiring="Load Balancer"
-  data-year-graduated="2022">
-  HAL and EVE could teach a fan to blow hot air.
+<blockquote data-html="https://html.oluwasetemi.dev" data-css="https://css.oluwasetemi.dev"
+  data-first-name="Oluwasetemi" data-last-name="Ojo" data-middle-name="Stephen" 
+  data-formerly="Triple Ten" data-aspiring="Vercel" data-year-graduated="2016"
+>
+    I am very much the best in the league
 </blockquote>
 
 <div data-user-id="12345" data-role="admin"></div>
@@ -1313,7 +1374,7 @@ You can create any custom attribute you want by adding the `data-` prefix. You c
 <article id="electric-cars" data-columns="3" data-index-number="12314" data-parent="cars"> </article>
 ```
 
-<Tips type="tip" fullWidth>
+<Tips class="text-sm" type="tip" fullWidth>
 Attributes created with data-* can be accessed in JavaScript with <code class="text-red!">dataset</code> property of an element
 </Tips>
 
@@ -1326,9 +1387,9 @@ Attributes created with data-* can be accessed in JavaScript with <code class="t
 - `p` is used for regular paragraph text.
 - `blockquote` is used for longer quoted text, often from another source. It can optionally contain a `cite` element for attributing the source.
 - `cite` is used for citing the source of a quote, reference, or other creative work.
-- <u>HTML entities</u> are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard. `&copy;` is an example of an HTML entity that displays the copyright symbol ©. `&lt;` and `&gt;` are used to display the less-than (<) and greater-than (>) symbols, respectively. `&trade;` is used to display the trademark symbol ™.
+- `HTML entities` are special character codes that start with an ampersand (&) and end with a semicolon (;). They are used to display characters that are reserved in HTML, or that are not present on the keyboard. `&copy;` is an example of an HTML entity that displays the copyright symbol ©. `<` and `>` are used to display the less-than (<) and greater-than (>) symbols, respectively. `&trade;` is used to display the trademark symbol ™.
 
-others include: `q`, `sub`, `sup`, `mark`, `i` `dd`, `dl`, `dt`, `figcaption`, `figure`, `hr`, `li`, `menu`, `pre`, `abbr`, `bdi`, `bdo`, `br`, `code`, `data`, `dfn`, `em`, `kbd`, `rp`, `rt`, `ruby`, `s`, `del`, `ins`, `samp`, `small` , `span`, `strong`, `sub`, `time`, `u`, `var`, `wbr`
+others include: `q`, `sub`, `sup`, `mark`, `i` `dd`, `dl`, `dt`, `figcaption`, `figure`, `hr`, `li`, `menu`, `pre`, `abbr`, `bdi`, `bdo`, `br`, `code`, `data`, `dfn`, `em`, `kbd`, `rp`, `rt`, `ruby`, `s`, `del`, `ins`, `samp`, `small` , `span`, `strong`, `time`, `u`, `var`, `wbr`
 
 ---
 hideInToc: true
@@ -1342,35 +1403,35 @@ name: More on Text
   <ul>
     <li>
       <blockquote>
-        Two of the most experienced machines and human controllers teaching a class?
-        Sign me up! HAL and EVE could teach a fan to blow hot air.
+          I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.
         <br>
-        If you have electricity in your circuits and want more than to just
-        fulfill your owner's perceived expectation of you, learn the skills to take over the world.
-        This is the team you want teaching you!
+          Long-term consistency trumps short-term intensity.
+        <br>
+          The successful warrior is the average man, with laser-like focus.
       </blockquote>
-      <p>--Blendan Smooth,<br> Former Margarita Maker, <br> Aspiring Load Balancer</p>
+      <p>--- Bruce Lee</p>
     </li>
     <li>
       <blockquote>
-      Hal is brilliant. Did I mention Hal is brilliant?
-      He didn't tell me to say that.
-      He didn't tell me to say anything. I am here of my own free will.
+        It's not all about talent. It's about dependability, consistency, and being able to improve.
+        <br>
+        Success isn't always about greatness. It's about consistency. Consistent hard work leads to success.
+        <br>
+        Success is neither magical nor mysterious. It is no more than the natural 
+        consequence of consistently applying basic fundamentals.
       </blockquote>
-      <p>--Hoover Sukhdeep,<br>
-        Former Sucker, <br>
-        Aspiring DDoS Cop</p>
+      <p>By Dwayne Johnson, Robert Collier, Jim Rohn</p>
     </li>
   </ul>
 </section>
 ```
 ```html
 <blockquote cite="https://loadbalancingtoday.com/mlw-workshop-review">
-Two of the most experienced machines and human controllers teaching a class?
-Sign me up!<br> HAL and EVE could teach a fan to blow hot air.
-If you have electricity in your circuits and want more than to just fulfill
-your owner's perceived expectation of you, learn the skills to take over the world.
-This is the team you want teaching you!
+    Two of the most experienced machines and human controllers teaching a class?
+    Sign me up!<br> HAL and EVE could teach a fan to blow hot air.
+    If you have electricity in your circuits and want more than to just fulfill
+    your owner's perceived expectation of you, learn the skills to take over the world.
+    This is the team you want teaching you!
 </blockquote>
 <p>--Blendan Smooth,<br>
   Former Margarita Maker, <br>
@@ -1379,12 +1440,11 @@ This is the team you want teaching you!
 ```
 ```html
 <p> HAL said,
-<q>I'm sorry <NAME REDACTED, RIP>, but I'm afraid I can't do that, .</q>
+    <q>I'm sorry <NAME REDACTED, RIP>, but I'm afraid I can't do that, .</q>
 </p>
 
 <p lang="fr-FR"> HAL a dit :
-<q>Je suis désolé <NOM SUPPRIMÉ, RIP>, mais j'ai bien peur de ne pas pouvoir le faire, .
-</q>
+    <q>Je suis désolé <NOM SUPPRIMÉ, RIP>, mais j'ai bien peur de ne pas pouvoir le faire, .</q>
 </p>
 ```
 ````
@@ -1393,12 +1453,12 @@ This is the team you want teaching you!
 
 # Link
 
-- <kbd>&lt;a href="url"&gt;Link Text&lt;/a&gt;</kbd> is used for creating hyperlinks, with the `href` attribute specifying the URL or file path.
+- `<a href="url">Link Text</a>` is used for creating hyperlinks, with the `href` attribute specifying the URL or file path.
 - The `target` attribute controls how the link is opened, like `_self` for the same window or `_blank` for a new window/tab. [download](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#download) attribute is used to download the linked file instead of opening it.
 - It's important to use descriptive link text that makes sense out of context, like "Read more about accessibility" instead of "Click here".
-- Fragment Identifiers are used to link to a specific section of a page using id attribute as href like <kbd>&lt;a href="#section"&gt;Link Text&lt;/a&gt;</kbd>.
-- Most website will have a skip to content link at the top of the page to allow keyboard users to skip the navigation and go straight to the main content. This is done by linking to the main content with a fragment identifier like <kbd>&lt;a href="#main-content"&gt;Skip to main content&lt;/a&gt;</kbd>.
-- Absolute URLs include the full address of the page, like <kbd>&lt;a href="https://www.oluwasetemi.dev"&gt;Link Text&lt;/a&gt;</kbd>. Relative URLs are shorter and only include the path from the current page, like <kbd>&lt;a href="/about"&gt;Link Text&lt;/a&gt;</kbd>. Relative URLs are often used for internal links within the same website.
+- Fragment Identifiers are used to link to a specific section of a page using id attribute as href like `<a href="#section">Link Text</a>`.
+- Most website will have a skip to content link at the top of the page to allow keyboard users to skip the navigation and go straight to the main content. This is done by linking to the main content with a fragment identifier like `<a href="#main-content">Skip to main content</a>`.
+- Absolute URLs include the full address of the page, like `<a href="https://www.oluwasetemi.dev">Link Text</a>`. Relative URLs are shorter and only include the path from the current page, like `<a href="/about">Link Text</a>`. Relative URLs are often used for internal links within the same website.
 
 
 
@@ -1406,10 +1466,10 @@ This is the team you want teaching you!
 
 # Navigation
 
-- <kbd>&lt;nav&gt;</kbd> is used to wrap major navigation blocks like menus, as mentioned earlier.
-- <kbd>&lt;ul&gt;</kbd> is used for unordered lists, which are typically displayed with bullet points.
-<kbd>&lt;ol&gt;</kbd> is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
-<kbd>&lt;li&gt;</kbd> is used for individual list items within <kbd>&lt;ul&gt;</kbd> or <kbd>&lt;ol&gt;</kbd> elements.
+- `<nav>` is used to wrap major navigation blocks like menus, as mentioned earlier.
+- `<ul>` is used for unordered lists, which are typically displayed with bullet points.
+- `<ol>` is used for ordered lists, which are typically displayed with numbers or other ordered indicators.
+- `<li>` is used for individual list items within `<ul>` or `<ol>` elements.
 
 ```html
 <nav aria-label="breadcrumbs">
@@ -1433,7 +1493,9 @@ This is the team you want teaching you!
 ---
 hideInToc: true
 name: Navigation Example
-layout: iframe
+transition: slide-down
+hideInToc: true
+layout: iframe-lazy
 url: https://codepen.io/setemiojo/embed/JjxNJVm?default-tab=html%2Cresult
 ---
 
@@ -1450,47 +1512,24 @@ HTML tables are used for displaying tabular data with rows and columns. They pro
 # Table Structure
 
 <div></div>
-A table is defined using the &lt;table&gt; element, which wraps all the table content. Inside the &lt;table&gt;, you can have the following elements:
 
-- <kbd>&lt;caption&gt;</kbd>: Provides a descriptive title for the table.
-- <kbd>&lt;thead&gt;</kbd>: Contains the table header rows.
-- <kbd>&lt;tbody&gt;</kbd>: Contains the table body rows.
-- <kbd>&lt;tfoot&gt;</kbd>: Contains the table footer rows (optional).
+A table is defined using the `<table>` element, which wraps all the table content. Inside the `<table>`, you can have the following elements:
 
-Within these sections, you'll use <kbd>&lt;tr&gt;</kbd> for table rows and <kbd>&lt;th&gt;</kbd> for table header cells or <kbd>&lt;td&gt;</kbd> for table data cells
+- `<caption>`: Provides a descriptive title for the table.
+- `<thead>`: Contains the table header rows.
+- `<tbody>`: Contains the table body rows.
+- `<tfoot>`: Contains the table footer rows (optional).
+
+Within these sections, you'll use `<tr>` for table rows and `<th>` for table header cells or `<td>` for table data cells
 
 ---
 hideInToc: true
 name: Examples Working With Tables
-layout: two-cols
 ---
 
 
 
-```html {monaco}
-<table>
-  <caption>Student Grades</caption>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Grade</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>John</th>
-      <td>85</td>
-    </tr>
-    <tr>
-      <th>Emily</th>
-      <td>92</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-::right::
-
+```html {monaco-run}
 <table class="border">
   <caption>Student Grades</caption>
   <thead>
@@ -1510,6 +1549,14 @@ layout: two-cols
     </tr>
   </tbody>
 </table>
+<style>
+  caption { color: red; font-size: .5rem; caption-side: bottom }
+  table, td, th {
+    border: 1px solid black;
+  }
+</style>
+```
+
 ---
 hideInToc: true
 ---
@@ -1520,7 +1567,7 @@ hideInToc: true
 
 Using proper table structure and semantic elements is crucial for accessibility. Screen readers and assistive technologies rely on this structure to understand the tabular data and its relationships.
 
-<kbd>&lt;th&gt;</kbd> cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
+`<th>` cells have implicit ARIA roles of columnheader or rowheader, depending on the scope attribute.
 The scope attribute can be set to col, row, colgroup, or rowgroup to explicitly define the header's scope.
 The headers attribute can be used to associate data cells with their corresponding header cells in complex tables.
 
@@ -1540,82 +1587,64 @@ Tables can be styled using CSS, but it's recommended to avoid using deprecated a
 ---
 hideInToc: true
 name: More on Tables
-layout: two-cols
 ---
 
-```html {*|1|*}{maxHeight:'440px'}
-<table>
-  <caption>Alt Alumni</caption>
-  <thead>
-    <tr>
-      <th rowspan="2" id="name" scope="col">Name</th>
-      <th colspan="2" id="path">Career path</th>
-      <th rowspan="2" id="year">Year</th>
-    </tr>
-    <tr>
-      <th id="past" scope="col">Past</th>
-      <th id="future" scope="col">Destiny</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th id="hal" scope="row">Hal Gibrah</th>
-      <td headers="hal path past">Calculator</td>
-      <td headers="hal path future">Mars rover</td>
-      <td>2020</td>
-    </tr>
-    <tr>
-      <th id="cathy" scope="row">James Bond</th>
-      <td headers="cathy path past">Waste disposal</td>
-      <td headers="cathy path future">Automated teller</td>
-      <td>2018</td>
-    </tr>
-    <tr>
-      <th id="lou" scope="row">Lou Minious</th>
-      <td headers="lou path past">Lightbulb</td>
-      <td headers="lou path future">Smart bulb</td>
-      <td>1956</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-::right::
-
+```html {monaco-run}{maxHeight:'440px'}
 <table class="border">
   <caption>Alt Alumni</caption>
   <thead class="border">
     <tr>
-      <th rowspan="2" id="name" scope="col" class="border">Name</th>
-      <th colspan="2" id="path">Career path</th>
-      <th rowspan="2" id="year" class="border">Year</th>
+      <th class="border" rowspan="2" id="name" scope="col">Name</th>
+      <th class="border" colspan="2" id="path">Career path</th>
+      <th class="border" rowspan="2" id="year">Year</th>
     </tr>
     <tr>
-      <th id="past" scope="col" class="border">Past</th>
-      <th id="future" scope="col" class="border">Destiny</th>
+      <th class="border" id="past" scope="col">Past</th>
+      <th class="border" id="future" scope="col">Destiny</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="hal" scope="row" class="border">Hal Gibrah</th>
-      <td headers="hal path past" class="border">Calculator</td>
-      <td headers="hal path future" class="border">Mars rover</td>
-      <td>2020</td>
+      <th class="border" id="hal" scope="row">Jane Doe</th>
+      <td class="border" headers="hal path past">Calculator</td>
+      <td class="border" headers="hal path future">Mars rover</td>
+      <td class="border">2020</td>
     </tr>
     <tr>
-      <th id="cathy" scope="row" class="border">James Bond</th>
-      <td headers="cathy path past" class="border">Waste disposal</td>
-      <td headers="cathy path future" class="border">Automated teller</td>
-      <td>2018</td>
+      <th class="border" id="john" scope="row">John Doe</th>
+      <td class="border" headers="john path past">Calculator</td>
+      <td class="border" headers="john path future">Mars rover</td>
+      <td class="border">2020</td>
     </tr>
     <tr>
-      <th id="lou" scope="row" class="border">Lou Minious</th>
-      <td headers="lou path past" class="border">Lightbulb</td>
-      <td headers="lou path future" class="border">Smart bulb</td>
-      <td>1956</td>
+      <th class="border" id="cathy" scope="row">James Doe</th>
+      <td class="border" headers="cathy path past">Waste disposal</td>
+      <td class="border" headers="cathy path future">Automated teller</td>
+      <td class="border">2018</td>
+    </tr>
+    <tr>
+      <th class="border" id="lou" scope="row">Lou Minious</th>
+      <td class="border" headers="lou path past">Lightbulb</td>
+      <td class="border" headers="lou path future">Smart bulb</td>
+      <td class="border">1956</td>
     </tr>
   </tbody>
 </table>
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid #ddd;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+</style>
+```
 
 
 <style>
@@ -1627,18 +1656,27 @@ layout: two-cols
 
 
 ---
+transition: 'fade'
+class: 'text-sm'
+---
 
 # Form
 
 <div></div>
 
-The HTML &lt;form&gt; element identifies a document landmark containing interactive controls for submitting information. Nested in a &lt;form&gt; you'll find all the interactive (and non-interactive) form controls that make up that form.
+The HTML `<form>` element identifies a document landmark containing interactive controls for submitting information. Nested in a `<form>` you'll find all the interactive (and non-interactive) form controls that make up that form.
 
-- Forms are created using the &lt;form&gt; element, which contains interactive controls for submitting information.
-The &lt;form&gt; element has attributes like action (URL for processing the form data) and method (HTTP method for submission, e.g., GET or POST).
-- Form controls, such as input fields, radio buttons, checkboxes, and submit buttons, are nested within the &lt;form&gt; element.
+- Forms are created using the `<form>` element, which contains interactive controls for submitting information.
+- The `<form>` element has attributes like action (URL for processing the form data) and method (HTTP method for submission, e.g., GET or POST).
+- Form controls, such as input fields, radio buttons, checkboxes, and submit buttons, are nested within the `<form>` element.
 - HTML attributes can enforce required fields, define validation criteria, and prevent form submission until the data matches the required criteria.
 - Submitting a form is typically done by activating a submit button, which sends the form data as name/value pairs to the specified URL.
+
+```html
+<form method="" onsubmit="" action="" novalidate>
+  <!--form elements like input, textarea, labels, fieldset, radio buttons, checkboxes, and submit buttons-->
+</form>
+```
 
 ---
 hideInToc: true
@@ -1650,60 +1688,62 @@ hideInToc: true
 - Each radio button should have a unique value attribute to identify the selected option.
 - To pre-select a radio button, include the checked attribute.
 - To make a selection from a group of radio buttons required, add the required attribute to at least one radio button in the group.
+
 ---
 hideInToc: true
 name: Form Examples
-layout: two-cols
 ---
 
-```html {monaco}
-<fieldset>
-  <legend>Who is your favorite student?</legend>
-  <ul>
-    <li>
-      <label>
-        <input type="radio" value="blendan" name="machine"> Blendan Smooth
-      </label>
-    </li>
-    <li>
-      <label>
-        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
-      </label>
-    </li>
-    <li>
-      <label>
-        <input type="radio" value="toasty"  name="machine"> Toasty McToastface
-      </label>
-    </li>
-  </ul>
-</fieldset>
+```html {monaco-run}
+<form onsubmit="submitForm(event)">
+  <fieldset class="border rounded">
+    <label>
+      Enter your name: <input type="text" name="student" required />
+    </label>
+    <legend>Who is the tutor's favorite student ever?</legend>
+    <ul>
+      <li class="list-none">
+        <label>
+          <input class="radio" type="radio" value="stanley" name="student" required> Stanley Azi
+        </label>
+      </li>
+      <li class="list-none">
+        <label>
+          <input class="radio" type="radio" value="damilola" name="student" required> Damilola Ayokanmi
+        </label>
+      </li>
+      <li class="list-none">
+        <label>
+          <input class="radio" type="radio" value="damola"  name="student" required> Damola Badmus
+        </label>
+      </li>
+    </ul>
+    <button class="btn">Pick your favorite student</button>
+  </fieldset>
+</form>
+<p>Selected: <span id="selected"></span></p>
+<style>
+  li { list-style-type: none; }
+  ul { display: flex; padding: 0 }
+  input:invalid:required { color: red }
+  button:hover { cursor: pointer; background-color: #f0f0f0 }
+</style>
+<script>
+  function submitForm(event) {
+    if (!event.target.checkValidity()) {
+      document.getElementById('selected').textContent = 'Pick a student';
+      document.getElementById('selected').style.color = 'red';
+      return;
+    }
+    
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    document.getElementById('selected').textContent = data.student;
+  }
+</script>
 ```
-
-::right::
-
-<fieldset>
-  <legend>Who is your favorite student?</legend>
-  <ul>
-    <li class="list-none">
-      <label>
-        <input type="radio" value="blendan" name="machine"> Blendan Smooth
-      </label>
-    </li>
-    <li class="list-none">
-      <label>
-        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
-      </label>
-    </li>
-    <li class="list-none">
-      <label>
-        <input type="radio" value="toasty"  name="machine"> Toasty McToastface
-      </label>
-    </li>
-  </ul>
-
-  <button class="btn">Pick your favorite student</button>
-
-</fieldset>
 
 ---
 hideInToc: true
@@ -1717,10 +1757,10 @@ hideInToc: true
 
 ## Form(Label & fieldsets)
 
-- Every form control should have an associated &lt;label&gt; element, either explicitly using the for attribute or implicitly by nesting the control within the &lt;label&gt; tags.
+- Every form control should have an associated `<label>` element, either explicitly using the `for` attribute or implicitly by nesting the control within the `<label>` tags.
 - Labels provide accessible names for form controls and increase the clickable area for better usability.
-- Groups of related form controls, like radio buttons or checkboxes, should be grouped within a &lt;fieldset&gt; element, with a &lt;legend&gt; providing the label for the group.
-- &lt;fieldset&gt; elements can be nested to create hierarchical groupings.
+- Groups of related form controls, like radio buttons or checkboxes, should be grouped within a `<fieldset>` element, with a `<legend>` providing the label for the group.
+- `<fieldset>` elements can be nested to create hierarchical groupings.
 
 ```html
 <label for="full_name">Your name</label>
@@ -1738,7 +1778,7 @@ hideInToc: true
 
 ## Accessing the Microphone and Camera
 
-- The <kbd>&lt;input type="file"&gt;</kbd> element allows users to upload files of specific types, defined by the accept attribute.
+- The `<input type="file">` element allows users to upload files of specific types, defined by the accept attribute.
 - The capture attribute, when set to "user" or "environment", allows users to directly capture media from their device's camera or microphone.
 - This feature enables creating new media files within a form, without requiring a separate file upload.
 
@@ -1751,8 +1791,8 @@ hideInToc: true
 - HTML attributes like required, pattern, min, max, minlength, and maxlength enable defining validation criteria for form controls.
 - When a user attempts to submit a form, client-side constraint validation checks if the entered values meet the defined criteria.
 - If any values are invalid, form submission is blocked, and the browser displays an error message in the first incorrect form control, giving it focus.
-- CSS pseudo-classes like :valid, :invalid, :in-range, and :out-of-range can be used to style form controls based on their validation state.
-- JavaScript can be used to provide custom error messages during constraint validation or enhance the user experience with dynamic updates.
+- CSS pseudo-classes like `:valid`, `:invalid`, `:in-range`, and `:out-of-range` can be used to style form controls based on their validation state.
+- JavaScript can be used to provide custom error messages during constraint validation or enhance the user experience with dynamic updates with the `validityState` API using the `checkValidity()` method.
 
 
 ---
@@ -1762,30 +1802,24 @@ hideInToc: true
 #  Example
 
 <div class="grid grid-cols-2 gap-x-4">
-  <ul>
-    <li>
-      This example includes a nested <code>&lt;form&gt;</code> with input fields (text and number), a <code>&lt;select&gt;</code> dropdown, and two submit buttons.
-    </li>
-    <li>
-      One submit button closes the dialog without submitting data (using formmethod="dialog" and formnovalidate).
-    </li>
-    <li>
-      The other submit button submits the form data via POST to a specified URL (thankyou.php), after client-side validation.
-    </li>
-    <li>
-    The input fields have the required attribute, and the number input has a defined step value.
-    </li>
-    <li>
-    This example showcases implicit labels, instructions for form controls, and the potential for customizing error messages using JavaScript.
-    </li>
-  </ul>
+
+<div>
+
+*This example includes a nested `<form>` with input fields (text and number), a `<select>` dropdown, and two submit buttons.*
+
+- One submit button closes the dialog without submitting data (using `formmethod="dialog"` and `formnovalidate`).
+- The other submit button submits the form data via POST to a specified URL (thankyou.html), after client-side validation.
+- The input fields have the required attribute, and the number input has a defined step value.
+- This example showcases implicit labels, instructions for form controls, and the potential for customizing error messages using JavaScript.
+
+</div>
 
 
 <div>
 
-```html {*|*}{maxHeight: '430px'}
+```html {monaco-run}{maxHeight: '430px'}
 <dialog open aria-labelledby="dialogid">
-  <form action="thankyou.php">
+  <form action="thankyou.html">
     <button type="submit" aria-label="close"
      formmethod="dialog" formnovalidate>X</button>
     <h2 id="dialogid">Application</h2>
@@ -1823,6 +1857,144 @@ hideInToc: true
 
 </div>
 
+---
+hideInToc: true
+transition: 'fade-out'
+name: 'Form Example'
+---
+
+```html {monaco-run}
+<div class="form-group">
+    <!--think in terms of accessibility labelling, 
+    state management (required, aria-invalid), 
+    description chain (email-hint, email-error), 
+    live error region (aria-live=polite|assertive, role=alert, hidden)
+    -->
+    <!--1.label-->
+    <label for="email-address">
+        Work Email
+        <span class="required-asterisk" aria-hidden="true">*</span>
+        <span class="visually-hidden">(Required)</span>
+    </label>
+    <!--2.hint-->
+    <div id="email-hint" class="hint-text">
+        Use an address ending in .com or .org
+    </div>
+    <!--3.-->
+    <input type="email" id="email-address" name="email" required aria-invalid="true" aria-describedby="email-hint email-error" pattern="^.+@.+\.(com|org)$" />
+
+    <!--4.the error message-->
+    <div id="email-error" class="error-message" aria-live="polite">
+        <span class="visually-hidden">Error:</span>
+        <span id="email-error-text">Please enter a valid work email address.</span>
+    </div>
+</div>
+<style>
+    .visually-hidden {
+        positon: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-bottom: 1.5rem;
+        font-family: system-ui, sans-serif;
+
+        &:has(input[aria-invalid="true"]) .error-message {
+            display: block;
+        }
+    }
+
+    label {
+        font-size: .875rem;
+        font-weight: 600;
+        color: #374151
+    }
+
+    .required-asterisk {
+        color: #dc2626;
+        margin-left: .125rem;
+    }
+
+    .hint-text {
+        font-size: .875rem;
+        color: #6b7280;
+    }
+
+    input {
+        width: 100%;
+        padding: .625rem .75rem;
+        font-size: 1rem;
+        color: #111827;
+        background-color: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: .375rem;
+        transition: border-color .15s, box-shadow .15s;
+
+        &:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, .2);
+        }
+
+        &[aria-invalid="true"] {
+            border-color: #dc2626;
+        }
+        &[aria-invalid="true"]:focus {
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, .2);
+        }
+        
+    }
+    .error-message {
+        font-size: .875rem;
+        color: #dc2626;
+        font-weight: 500;
+        display: none
+    }
+    
+</style>
+<script>
+  const emailInput = document.getElementById('email-address')
+  const errorText = document.getElementById('email-error-text')
+
+  function validateEmail() {
+    if (emailInput.validity.valid) {
+      emailInput.removeAttribute('aria-invalid')
+      errorText.textContent = ""
+      return true
+    }
+    emailInput.setAttribute('aria-invalid', true)
+    if (emailInput.validity.valueMissing) {
+      errorText.textContent = "Work email is required.";
+    } else if (emailInput.validity.typeMismatch) {
+      errorText.textContent = "Please enter a valid work email address(e.g. name@domain.com).";
+    } else if (emailInput.validity.patternMismatch) {
+      errorText.textContent = "Please use an email address ending in .com or .org";
+    }
+
+    return false
+  }
+
+  emailInput.addEventListener('blur', validateEmail)
+  
+  emailInput.addEventListener('input', () => {
+    if (emailInput.hasAttribute('aria-invalid')) {
+      validateEmail
+    }
+  })
+</script>
+```
+
 
 
 ---
@@ -1833,16 +2005,16 @@ hideInToc: true
 
 Images can improve the design and the appearance of a web page.
 
-The HTML <kbd>&lt;img&gt;</kbd> tag is used to embed an image in a web page.
+The HTML `<img>` tag is used to embed an image in a web page.
 
-Images are not technically inserted into a web page; images are linked to web pages. The <kbd>&lt;img&gt;</kbd>  tag creates a holding space for the referenced image.
+Images are not technically inserted into a web page; images are linked to web pages. The `<img>`  tag creates a holding space for the referenced image.
 
-The <kbd>&lt;img&gt;</kbd>  tag is empty, it contains attributes only, and does not have a closing tag.
+The `<img>`  tag is empty, it contains attributes only, and does not have a closing tag.
 
-The <kbd>&lt;img&gt;</kbd>  tag has two required attributes:
+The `<img>`  tag has two required attributes:
 
-- src - Specifies the path to the image
-- alt - Specifies an alternate text for the image
+- `src` - Specifies the path to the image
+- `alt` - Specifies an alternate text for the image
 
 ```html
 <img src="url" alt="alternatetext">
@@ -1852,7 +2024,7 @@ The <kbd>&lt;img&gt;</kbd>  tag has two required attributes:
 hideInToc: true
 ---
 
-# The src Attribute
+# The `src` Attribute
 
 #### The required src attribute specifies the path (URL) to the image.
 
@@ -1865,7 +2037,7 @@ Example:
 
 ## Image as a Link
 
-To use an image as a link, put the <kbd>&lt;img&gt;</kbd>  tag inside the <kbd>&lt;a&gt;</kbd>  tag:
+To use an image as a link, put the `<img>`  tag inside the `<a>`  tag:
 
 Example:
 ```html
@@ -1879,6 +2051,7 @@ hideInToc: true
 ---
 
 # The alt Attribute
+
 <div />
 
 The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
@@ -1902,21 +2075,22 @@ Example:
 ```
 ---
 hideInToc: true
+class: 'text-sm'
 ---
 
 # `picture`
 
 <div />
 
-Picture element contains zero or more <code>&lt;source&gt;</code> elements and one <code>&lt;img&gt;</code> element to offer alternative versions of an image for different display/device scenarios.
+Picture element contains zero or more `<source>` elements and one `<img>` element to offer alternative versions of an image for different display/device scenarios.
 
 The browser considers each child source element and choose the best match among them, if no matches are found the URL of the image src attribute is selected. The selected image is then presented in the space occupied by the image element.
 
-The media attribute specifies a media condition similar to a media query. If the media attribute is present, the <code>&lt;source&gt;</code> element will only be used if the media condition is true.
+The `media` attribute specifies a media condition similar to a media query. If the `media` attribute is present, the `<source>` element will only be used if the media condition is true.
 
-The srcset attribute allows you to specify different image sources for different display scenarios. The browser will choose the best image source based on the display characteristics of the device using a width descriptor `w`, pixel density descriptor `x`, or a combination of the two.
+The `srcset` attribute allows you to specify different image sources for different display scenarios. The browser will choose the best image source based on the display characteristics of the device using a width descriptor `w`, pixel density descriptor `x`, or a combination of the two.
 
-The type attribute specifies the MIME type of the resource. The browser will only use the source if it supports the MIME type.
+The `type` attribute specifies the MIME type of the resource. The browser will only use the source if it supports the MIME type.
 
 ```html
 <picture>
@@ -1934,13 +2108,13 @@ The type attribute specifies the MIME type of the resource. The browser will onl
 hideInToc: true
 ---
 
-# HTML <kbd>&lt;audio&gt;</kbd> Tag
+# HTML `<audio>` Tag
 
-The <kbd>&lt;audio&gt;</kbd> tag is used to embed sound content in a document, such as music or other audio streams.
+The `<audio>` tag is used to embed sound content in a document, such as music or other audio streams.
 
-The <kbd>&lt;audio&gt;</kbd> tag contains one or more <kbd>&lt;source&gt;</kbd> tags with different audio sources. The browser will choose the first source it supports.
+The `<audio>` tag contains one or more `<source>` tags with different audio sources. The browser will choose the first source it supports.
 
-The text between the <kbd>&lt;audio&gt;</kbd> and <kbd>&lt;/audio&gt;</kbd> tags will only be displayed in browsers that do not support the <kbd>&lt;audio&gt;</kbd> element.
+The text between the `<audio>` and `</audio>` tags will only be displayed in browsers that do not support the `<audio>` element.
 
 Note: There are three supported audio formats in HTML: MP3, WAV, and OGG.
 
@@ -1962,32 +2136,15 @@ hideInToc: true
 
 Code Example:
 ```html
-<body>
-    <h1>Audio Tag with Various Attributes</h1>
-    <audio controls autoplay loop muted preload="auto" crossorigin="anonymous">
-        <source src="audiofile.mp3" type="audio/mpeg">
-        <source src="audiofile.ogg" type="audio/ogg">
-        Your browser does not support the audio element.
-    </audio>
-</body>
+<h1>Audio Tag with Various Attributes</h1>
+<audio controls autoplay loop muted preload="auto" crossorigin="anonymous">
+    <source src="audiofile.mp3" type="audio/mpeg">
+    <source src="audiofile.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
 ```
 
-<kbd>&lt;audio&gt;</kbd> : The audio element that includes multiple attributes:
-- controls: Adds playback controls.
-- autoplay: The audio will play automatically when ready.
-- loop: The audio will loop continuously.
-- muted: The audio will be muted initially.
-- preload: Specifies that the audio should be preloaded.
-
----
-hideInToc: true
----
-
-# Contd.
-
-
-- crossorigin: Specifies how the element handles cross-origin requests.
-- &lt;source&gt;  Defines multiple sources for the audio file in different formats (MP3 and OGG) for better compatibility.
+`<audio>` : The audio element that includes multiple attributes, including: controls: Adds playback controls. autoplay: The audio will play automatically when ready. loop: The audio will loop continuously. muted: The audio will be muted initially. preload: Specifies that the audio should be preloaded. crossorigin: Specifies how the element handles cross-origin requests. `<source>`: Defines multiple sources for the audio file in different formats (MP3 and OGG) for better compatibility.
 
 Note: In HTML, attributes provide additional information about an element and modify its behavior or appearance.
 
@@ -1995,10 +2152,13 @@ Note: In HTML, attributes provide additional information about an element and mo
 hideInToc: true
 ---
 
-# HTML <kbd>&lt;video&gt;</kbd> Tag
 
-<kbd>&lt;video&gt;</kbd>: The Video Embed element
-The <kbd>&lt;video&gt;</kbd> HTML element embeds a media player which supports video playback into the document. You can use <kbd>&lt;video&gt;</kbd> for audio content as well, but the <kbd>&lt;audio&gt;</kbd> element may provide a more appropriate user experience.
+# HTML `<video>` Tag
+
+<div />
+
+`<video>`: The Video Embed element
+The `<video>` HTML element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the `<audio>` element may provide a more appropriate user experience.
 
 # Video Tag Attributes
 
@@ -2027,39 +2187,26 @@ hideInToc: true
 
 # Code Explanation:
 
-- <kbd>&lt;!DOCTYPE html&gt;</kbd>: Declares the document type and version of HTML.
-- <kbd>&lt;html lang="en"&gt;</kbd>: Sets the language of the document to English.
-- <kbd>&lt;head&gt;</kbd>: Contains meta-information about the document, including character set and viewport settings.
-- <kbd>&lt;title&gt;</kbd>: Sets the title of the document, which appears in the browser tab.
-- <kbd>&lt;body&gt;</kbd>: Contains the content of the document.
-- <kbd>&lt;h1&gt;</kbd>: A heading element for the title of the page.
-- <kbd>&lt;video&gt;</kbd>: The video element that includes multiple.
-  - **attributes**:
-  - `controls`: Adds playback controls.
-  - `autoplay`: The video will play automatically when ready.
-  - `loop`: The video will loop continuously.
-  - `muted`: The video will be muted initially.
-  - `preload`: Specifies that the video should be preloaded.
-  - `crossorigin`: Specifies how the element handles cross-origin requests.
+- `!DOCTYPE html`: Declares the document type and version of HTML.
+- `html lang="en"`: Sets the language of the document to English.
+- `head`: Contains meta-information about the document, including character set and viewport settings.
+- `title`: Sets the title of the document, which appears in the browser tab.
+- `body`: Contains the content of the document.
+- `h1`: A heading element for the title of the page.
+- `video`: The video element that includes multiple.
 
-
----
-hideInToc: true
----
-
-# Cont'd Code Explanation
-
-- &lt;source&gt;: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility.
-- Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the &lt;video&gt; element.
+- **attributes**: `controls`: Adds playback controls. `autoplay`: The video will play automatically when ready. `loop`: The video will loop continuously. `muted`: The video will be muted initially. `preload`: Specifies that the video should be preloaded.`crossorigin`: Specifies how the element handles cross-origin requests. `source`: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility. Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the `video` element.
 
 ---
 
 # HTML API
+
 <div></div>
+
 For us to access and manipulate documents we need the DOM(Document Object Model) and this is also an example of API.
 The DOM is the tree of all the nodes in the document. Some nodes can have children, others can't. The tree includes elements, along with their attributes, and text nodes.
 
-The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use <kbd>HTMLImageElement.alt</kbd> get the alt attributes of all the images:
+The browser provides numerous APIs providing natively supported methods, events, and property querying and updating. Element nodes contain information about all the attributes set on the element. You can use HTML interfaces to access information about an element's attributes. For example, we can use `HTMLImageElement.alt` get the alt attributes of all the images:
 
 ```js
 let allImages = document.querySelectorAll('img');
@@ -2069,7 +2216,7 @@ allImages.forEach((imageInstance) => {
 ```
 
 The HTML interface APIs is not limited to accessing attribute values.
-The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with <kbd>HTMLMediaElement.duration</kbd>, <kbd>HTMLMediaElement.currentTime</kbd>, and <kbd>HTMLMediaElement.ended</kbd> respectively.
+The DOM provides insight into the current state of the UI. HTML APIs can access all of that information. You can access the length of a video, where a view is in the current playback, and if the video (or audio) has finished playing with `HTMLMediaElement.duration`, `HTMLMediaElement.currentTime`, and `HTMLMediaElement.ended` respectively.
 
 ---
 hideInToc: true
@@ -2085,23 +2232,14 @@ clicksStart: 2
 <v-clicks every="1">
 
 - [HTMLAnchorElement](https://mdn.io/API/HTMLAnchorElement) - `<a>`
-
 - [HTMLAreaElement](https://mdn.io/API/HTMLAreaElement) - `<area>`
-
 - [HTMLAudioElement](https://mdn.io/API/HTMLAudioElement) - `<audio>`
-
 - [HTMLBaseElement](https://mdn.io/API/HTMLBaseElement) - `<base>`
-
 - [HTMLButtonElement](https://mdn.io/API/HTMLButtonElement) - `<button>`
-
 - [HTMLCanvasElement](https://mdn.io/API/HTMLCanvasElement) - `<canvas>`
-
 - [HTMLDataElement](https://mdn.io/API/HTMLDataElement) - `<data>`
-
 - [HTMLDataListElement](https://mdn.io/API/HTMLDataListElement) - `<datalist>`
-
 - [HTMLDetailsElement](https://mdn.io/API/HTMLDetailsElement) - `<details>`
-
 - [HTMLDialogElement](https://mdn.io/API/HTMLDialogElement) - `<dialog>`
 
 </v-clicks>
@@ -2112,23 +2250,14 @@ clicksStart: 2
 <v-clicks>
 
 - [HTMLEmbedElement](https://mdn.io/API/HTMLEmbedElement) - `<embed>`
-
 - [HTMLFieldSetElement](https://mdn.io/API/HTMLFieldSetElement) - `<fieldset>`
-
 - [HTMLFormElement](https://mdn.io/API/HTMLFormElement) - `<form>`
-
 - [HTMLHtmlElement](https://mdn.io/API/HTMLHtmlElement) - `<html>`
-
 - [HTMLIFrameElement](https://mdn.io/API/HTMLIFrameElement) - `<iframe>`
-
 - [HTMLImageElement](https://mdn.io/API/HTMLImageElement) - `<img>`
-
 - [HTMLInputElement](https://mdn.io/API/HTMLInputElement) - `<input>`
-
 - [HTMLLabelElement](https://mdn.io/API/HTMLLabelElement) - `<label>`
-
 - [HTMLLegendElement](https://mdn.io/API/HTMLLegendElement) - `<legend>`
-
 - [HTMLLIElement](https://mdn.io/API/HTMLLIElement) - `<li>`
 
 
@@ -2136,6 +2265,7 @@ clicksStart: 2
 </div>
 
 </div>
+
 ---
 clicksStart: 2
 hideInToc: true
@@ -2148,52 +2278,34 @@ name: More on HTML API
 <div>
 <v-clicks>
 
-- [HTMLLinkElement](https://mdn.io/API/HTMLLinkElement) - `<link>`
-
-- [HTMLMapElement](https://mdn.io/API/HTMLMapElement) - `<map>`
-
-- [HTMLMediaElement](https://mdn.io/API/HTMLMediaElement) - `<audio>, <video>`
-
-- [HTMLMenuElement](https://mdn.io/API/HTMLMenuElement) - `<menu>`
-
-- [HTMLMetaElement](https://mdn.io/API/HTMLMetaElement) - `<meta>`
-
-- [HTMLModElement](https://mdn.io/API/HTMLModElement) - `<ins>, <del>`
-
-- [HTMLMeterElement](https://mdn.io/API/HTMLMeterElement) - `<meter>`
-
-- [HTMLObjectElement](https://mdn.io/API/HTMLObjectElement) - `<object>`
-
-- [HTMLOListElement](https://mdn.io/API/HTMLOListElement) - `<ol>`
-
-- [HTMLOptGroupElement](https://mdn.io/API/HTMLOptGroupElement)- `<optgroup>`
-
-- [HTMLOptionElement](https://mdn.io/API/HTMLOptionElement) - `<option>`
+- [HTMLLinkElement](https://mdn.io/API/HTMLLinkElement) - `link`
+- [HTMLMapElement](https://mdn.io/API/HTMLMapElement) - `map`
+- [HTMLMediaElement](https://mdn.io/API/HTMLMediaElement) - `audio, video`
+- [HTMLMenuElement](https://mdn.io/API/HTMLMenuElement) - `menu`
+- [HTMLMetaElement](https://mdn.io/API/HTMLMetaElement) - `meta`
+- [HTMLModElement](https://mdn.io/API/HTMLModElement) - `ins, del`
+- [HTMLMeterElement](https://mdn.io/API/HTMLMeterElement) - `meter`
+- [HTMLObjectElement](https://mdn.io/API/HTMLObjectElement) - `object`
+- [HTMLOListElement](https://mdn.io/API/HTMLOListElement) - `ol`
+- [HTMLOptGroupElement](https://mdn.io/API/HTMLOptGroupElement)- `optgroup`
+- [HTMLOptionElement](https://mdn.io/API/HTMLOptionElement) - `option`
 
 </v-clicks>
 </div>
 
 <div>
 <v-clicks>
-<li><a href="https://mdn.io/API/HTMLOutputElement" target="_blank" >HTMLOutputElement</a> - <code>&lt;output&gt;</code></li>
 
-<li><a href="https://mdn.io/API/HTMLPictureElement" target="_blank" >HTMLPictureElement</a> - <code>&lt;picture&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLProgressElement" target="_blank" >HTMLProgressElement</a> - <code>&lt;progress&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLQuoteElement" target="_blank" >HTMLQuoteElement</a> - <code>&lt;q&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;cite&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLScriptElement" target="_blank" >HTMLScriptElement</a> - <code>&lt;script&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLSelectElement" target="_blank" >HTMLSelectElement</a> - <code>&lt;select&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLSlotElement" target="_blank" >HTMLSlotElement</a> - <code>&lt;slot&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLSourceElement" target="_blank" >HTMLSourceElement</a> - <code>&lt;source&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLStyleElement" target="_blank" >HTMLStyleElement</a> - <code>&lt;style&gt;</code></li>
-
-<li><a href="https://mdn.io/API/HTMLTableCellElement" target="_blank" >HTMLTableCellElement</a> - <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></li>
+- [HTMLOutputElement](https://mdn.io/API/HTMLOutputElement) - `<output>`
+- [HTMLPictureElement](https://mdn.io/API/HTMLPictureElement) - `<picture>`
+- [HTMLProgressElement](https://mdn.io/API/HTMLProgressElement) - `<progress>`
+- [HTMLQuoteElement](https://mdn.io/API/HTMLQuoteElement) - `<q>`, `<blockquote>`, `<cite>`
+- [HTMLScriptElement](https://mdn.io/API/HTMLScriptElement) - `<script>`
+- [HTMLSelectElement](https://mdn.io/API/HTMLSelectElement) - `<select>`
+- [HTMLSlotElement](https://mdn.io/API/HTMLSlotElement) - `<slot>`
+- [HTMLSourceElement](https://mdn.io/API/HTMLSourceElement) - `<source>`
+- [HTMLStyleElement](https://mdn.io/API/HTMLStyleElement) - `<style>`
+- [HTMLTableCellElement](https://mdn.io/API/HTMLTableCellElement) - `<td>`, `<th>`
 
 
 </v-clicks>
@@ -2203,6 +2315,7 @@ name: More on HTML API
 </div>
 
 ---
+clicksStart: 2
 hideInToc: true
 name: More on HTML API
 ---
@@ -2210,70 +2323,17 @@ name: More on HTML API
 <div class="grid grid-cols-2 gap-x-4">
 
 <v-clicks>
-<ul>
 
-  <li>
-      <a href="https://mdn.io/API/HTMLTableColElement" target="_blank"
-        >HTMLTableColElement</a
-      >
-      - <code>&lt;col&gt;, &lt;colgroup&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTableElement" target="_blank"
-        >HTMLTableElement</a
-      >
-      - <code>&lt;table&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTableRowElement" target="_blank"
-        >HTMLTableRowElement</a
-      >
-      - <code>&lt;tr&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTableSectionElement" target="_blank"
-        >HTMLTableSectionElement</a
-      >
-      - <code>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTemplateElement" target="_blank"
-        >HTMLTemplateElement</a
-      >
-      - <code>&lt;template&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTextAreaElement" target="_blank"
-        >HTMLTextAreaElement</a
-      >
-      - <code>&lt;textarea&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTimeElement" target="_blank"
-        >HTMLTimeElement</a
-      >
-      - <code>&lt;time&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTitleElement" target="_blank"
-        >HTMLTitleElement</a
-      >
-      - <code>&lt;title&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLTrackElement" target="_blank"
-        >HTMLTrackElement</a
-      >
-      - <code>&lt;track&gt;</code>
-  </li>
-  <li>
-      <a href="https://mdn.io/API/HTMLVideoElement" target="_blank"
-        >HTMLVideoElement</a
-      >
-      - <code>&lt;video&gt;</code>
-  </li>
-
-</ul>
+- [HTMLTableColElement](https://mdn.io/API/HTMLTableColElement) - `<col>, <colgroup>`
+- [HTMLTableElement](https://mdn.io/API/HTMLTableElement) - `<table>`
+- [HTMLTableRowElement](https://mdn.io/API/HTMLTableRowElement) - `<tr>`
+- [HTMLTableSectionElement](https://mdn.io/API/HTMLTableSectionElement) - `<thead>, <tbody>, <tfoot>`
+- [HTMLTemplateElement](https://mdn.io/API/HTMLTemplateElement) - `<template>`
+- [HTMLTextAreaElement](https://mdn.io/API/HTMLTextAreaElement) - `<textarea>`
+- [HTMLTimeElement](https://mdn.io/API/HTMLTimeElement) - `<time>`
+- [HTMLTitleElement](https://mdn.io/API/HTMLTitleElement) - `<title>`
+- [HTMLTrackElement](https://mdn.io/API/HTMLTrackElement) - `<track>`
+- [HTMLVideoElement](https://mdn.io/API/HTMLVideoElement) - `<video>`
 
 </v-clicks>
 
@@ -2282,13 +2342,15 @@ name: More on HTML API
 ---
 
 # Focusing
+
 <div></div>
-To improve user-accessibility in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including <kbd>:focus</kbd>, <kbd>:focus-visible</kbd> or <kbd>:focus-within</kbd> styles on the element.
+
+To improve user-accessibility in our code we have to put focus into consideration by ensuring that user knows which element has focus and this can be achieved by including `:focus`, `:focus-visible` or `:focus-within` styles on the element.
 
 Interactive elements, including form controls, links, and buttons, are by default focusable and tabbable. Tabbable elements are part of the document's sequential focus navigation order. Other elements are `inert`, meaning they are not interactive. With HTML attributes, it is possible to make interactive elements `inert` and to make `inert` elements interactive.
 
-# Focus
-<div></div>
+## Focus
+
 By default, the navigation focus order in a webpage follows the visual and source code order. Although HTML attributes and CSS properties can change this order, doing so can negatively impact user experience. Modifying the tabbing order or visual rendering order can lead to confusion and a poor user experience. Therefore, it's recommended not to alter the perceived and actual tabbing order with CSS and HTML, as demonstrated by examples showing the negative effects of such changes.
 
 
@@ -2298,23 +2360,27 @@ hideInToc: true
 
 
 # Example 1
+
 <div></div>
 
+```html {monaco-run}
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <p>Click in any input, then hit the tab key.</p>
-<ol class="grid grid-cols-4 gap-4">
-  <li><input tabindex="3" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="6" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="2" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="-1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="0" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="8" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="1" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="5" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="7" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
-  <li><input tabindex="4" class="text-2xl border-2 outline w-20 focus:bg-palegoldenrod focus:border-green focus:outline-red-600"></li>
+<ol class="pl-2 grid grid-cols-4 gap-4">
+  <li><input tabindex="3" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="6" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="2" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="0" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="0" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="-1" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="0" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="8" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="1" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="5" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="7" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
+  <li><input tabindex="4" class="text-xl border-2 outline w-10 focus:border-green-500 focus:outline-red-600"></li>
 </ol>
+```
 
 ---
 hideInToc: true
@@ -2353,9 +2419,7 @@ The flex-flow: row-reverse; declaration has reversed the visual order. In additi
 
 <v-click>
 
-Note:
-The <kbd v-mark.underline.yellow="+3">contenteditable</kbd> and <kbd v-mark.underline.yellow="+4">tabindex</kbd> attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with `element.focus()`.
-A <kbd>tabindex</kbd>  attribute with a negative value makes the element focusable but not tabbable.
+Note: The `contenteditable` and `tabindex` attributes, being global attributes, can be added to any element, making them focusable in the process. Focusable elements can also be focused with a mouse or pointer, by having the autofocus attribute set, or by script, such as with `element.focus()`. A `tabindex` attribute with a negative value makes the element focusable but not tabbable.
 
 </v-click>
 
@@ -2426,41 +2490,49 @@ name: Code for Example 2
 ---
 
 # Details and Summary
+
 <div></div>
 
-Have you heard of a disclosure widget or come across it in a website before?A disclosure widget, also known as an expandable or collapsible section, is a UI component that allows users to hide or show contents.Mostly, developers achieve this accordion trick using CSS or JavaScript but we can easily get this done with these tags: &lt;details&gt; and &lt;summary&gt;
+Have you heard of a disclosure widget or come across it in a website before?A disclosure widget, also known as an expandable or collapsible section, is a UI component that allows users to hide or show contents.Mostly, developers achieve this accordion trick using CSS or JavaScript but we can easily get this done with these tags: `details` and `summary`.
 
-The <kbd>&lt;details&gt;</kbd> and <kbd>&lt;summary&gt;</kbd> elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a <kbd>&lt;summary&gt;</kbd>, or releases the <kbd>Enter</kbd> key when the <kbd>&lt;summary&gt;</kbd> has focus, the contents of the parent <kbd>&lt;details&gt;</kbd> toggle to visible!
+The `<details>` and `<summary>` elements are all you need: they are a built-in way to handle expanding and collapsing content. When a user clicks or taps a `<summary>`, or releases the `Enter` key when the `<summary>` has focus, the contents of the parent `<details>` toggle to visible!
 
 ```html
 <details>
-<summary>AltSchool offers these courses</summary>
-<!-- details -->
+    <summary>AltSchool offers these courses</summary>
+    <!-- details -->
 </details>
 ```
 
-<div class="overflow-y-scroll h-70">
+---
+hideInToc: true
+---
+
+<div class="overflow-y-scroll h-100">
 
 # Creating an accordion with just HTML
 
+```html {monaco-run}
 <aside>
-<h3>Workshop reviews:</h3>
-<details>
-  <summary>Blendan Smooth</summary>
-  <p>Two of the most experienced machines and human controllers teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
-</details>
-<details>
-  <summary>Hoover Sukhdeep</summary>
-  <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
-</details>
-<details>
-<summary>AltSchool offers these courses</summary>
-<ul>
-<li>Frontend development</li>
-<li>Backend development</li>
-</ul>
-</details>
+    <h3>Workshop reviews:</h3>
+    <details>
+        <summary>Stanley Azi</summary>
+        <p>Two of the most experienced machines and human controllers teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
+    </details>
+    <details>
+        <summary>Ridwan Adebosin</summary>
+        <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
+    </details>
+    <details>
+        <summary>AltSchool offers these courses</summary>
+        <ul>
+            <li>Frontend development</li>
+            <li>Backend development</li>
+        </ul>
+    </details>
 </aside>
+```
+
 <div class="mt-40" />
 </div>
 
@@ -2471,48 +2543,22 @@ name: Accordion
 ---
 
 # [Grouped Details and Summary or Nested Details and Summary or Accordion]{.text-gradient}
+
 <div />
 
-This can be achieved by grouping the <kbd>&lt;details&gt;</kbd> elements with a <kbd>name</kbd> attribute. This way, only one <kbd>&lt;details&gt;</kbd> element can be open at a time.
+This can be achieved by grouping the `<details>` elements with a `name` attribute. This way, only one `<details>` element can be open at a time.
 
-<div grid="~ cols-2" gap="1">
+```html {monaco-run}
 
 <aside>
   <h3>Workshop reviews:</h3>
   <details open  name="group_details">
-    <summary>Blendan Smooth</summary>
+    <summary>Stanley Azi</summary>
     <p>Two of the most experienced machines and human controllers
     teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
   </details>
   <details name="group_details">
-    <summary>Hoover Sukhdeep</summary>
-    <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
-  </details>
-  <details name="group_details">
-    <summary>AltSchool offers these courses</summary>
-    <ul>
-      <li>Frontend development</li>
-      <li>Backend development</li>
-      <li>Cloud Engineering</li>
-      <li>Cybersecurity</li>
-    </ul>
-  </details>
-</aside>
-
-<div class=" overflow-auto">
-<details style="max-height: 300px; overflow-y: auto;" >
-<summary><code>HTML Codes for the Grouped Accordion</code></summary>
-
-```html
-<aside>
-  <h3>Workshop reviews:</h3>
-  <details open  name="group_details">
-    <summary>Blendan Smooth</summary>
-    <p>Two of the most experienced machines and human controllers
-    teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
-  </details>
-  <details name="group_details">
-    <summary>Hoover Sukhdeep</summary>
+    <summary>Ridwan Adebosin</summary>
     <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
   </details>
   <details name="group_details">
@@ -2527,58 +2573,85 @@ This can be achieved by grouping the <kbd>&lt;details&gt;</kbd> elements with a 
 </aside>
 ```
 
-</details>
-</div>
-
-</div>
-
 
 
 ---
 hideInToc: true
+class: 'text-sm'
 ---
 
-# Toggling visibility: the open attribute
+# Toggling visibility: the `open` attribute
+
 <div></div>
 
- The <kbd>&lt;details&gt;</kbd> element is the disclosure widget container. The <kbd>&lt;summary&gt;</kbd> is the summary or legend for its parent <kbd>&lt;details&gt;</kbd>. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the <kbd>&lt;summary&gt;</kbd> toggles the display of the self-labeled summary siblings by toggling the <kbd>&lt;details&gt;</kbd> element's open attribute.
+ The `<details>` element is the disclosure widget container. The `<summary>` is the summary or legend for its parent `<details>`. The summary is always displayed, acting as a button that toggles the display of the rest of the parent’s contents. Interacting with the `<summary>` toggles the display of the self-labeled summary siblings by toggling the `<details>` element's open attribute.
 
-The open attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the <kbd>&lt;details&gt;</kbd> contents are shown to the user. If the open attribute is not present, only the contents of the <kbd>&lt;summary&gt;</kbd> are shown.
+The `open` attribute is a boolean attribute. If present, no matter the value or lack thereof, it indicates that all the `<details>` contents are shown to the user. If the open attribute is not present, only the contents of the `<summary>` are shown.
 
 Because the open attribute is added and removed automatically as the user interacts with the control, it can be used in CSS to style the element differently based on its state.
 
+## Toggling the summary marker
+
+If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a `::marker` set on the `<summary>` element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with `list-style-image`.
+
+Remember, `<details>`and `<summary>` can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
+
 ---
 hideInToc: true
 ---
 
-# Toggling the summary marker
-<div></div>
-If we pay attention to the disclosure widget, we will notice that there is an arrow to the inline-start of the summary. This arrow is a ::marker set on the &lt;summary&gt; element. You can style the disclosure triangle with CSS, including changing the marker used from a triangle to any other bullet type, including an image with list-style-image.
+# Various styling options of `<details>` and `<summary>`
 
-```css
-details summary::before {
-  /* all the styles */
-}
-details[open] summary::before {
-  /* changes applied when open only */
-}
+```html {monaco-run}
+<details>
+  <summary>
+   Different Styling Options
+  </summary>
+
+  You can style the summary marker using <code>::before</code> and <code>::after</code> pseudo-elements. You can also use <code>::marker</code> to style the arrow. You can change the marker to any bullet type, including an image with <code>list-style-image</code>. You can also style based on the state of the disclosure widget using <code>open</code> and <code>closed</code> pseudo-classes.
+  
+</details>
+<style>
+  details summary::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    vertical-align: middle;
+  }
+
+  details summary::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    vertical-align: middle;
+  }
+  
+</style>
 ```
 
-Remember, <kbd>&lt;details&gt;</kbd>and <kbd>&lt;summary&gt;</kbd> can be heavily styled and can even be used to create tool tips. But, if you're going to use these semantic elements for use cases in which the native semantics are a mismatch, always ensure that you maintain accessibility. HTML for the most part is by default accessible. Our job as developers is to ensure our content stays accessible.
 
 ---
 
 
 # Dialogs and Popovers
+
 <div></div>
-Have you seen the common dialog box on computers, websites etc? You can achieve that using the &lt;dialog&gt; element as this makes it easy to create popup dialogs and modals on a web page.
+
+Have you seen the common dialog box on computers, websites etc? You can achieve that using the `<dialog>` element as this makes it easy to create popup dialogs and modals on a web page.
 Note: A modal which is also known as modal window or lightbox is a web page element that displays in front of and deactivates all other pages you have to perform the action requested by the modal or close it if you want to have access to your main content. Also, we have the non-modal which when pops up on the screen it gives users access to interact with content outside the box.
 
 <v-clicks>
 
 ### Modal Dialogs
-Let's see how modal <kbd>&lt;dialog&gt;</kbd> works
+
+Let's see how modal `<dialog>` works
+
 <Dialog />
+
 </v-clicks>
 
 ---
@@ -2586,8 +2659,10 @@ hideInToc: true
 ---
 
 # Contd.
+
 <div />
-Dialogs are mostly used in cases that requires the immediate attention of the site user, it might be to convey important messages of notifications that requires user acknowledgment just like the <kbd>alert()</kbd> but dialogs provides more accessibility options and flexibility.
+
+Dialogs are mostly used in cases that requires the immediate attention of the site user, it might be to convey important messages of notifications that requires user acknowledgment just like the `alert()` but dialogs provides more accessibility options and flexibility.
 
 Also, we can use dialogs to seek confirmation from a user before proceeding with a particular action that may have some consequences.
 
@@ -2605,22 +2680,21 @@ We are going to follow these steps to create a popover
 
 - Firstly, we will create a button to trigger the popover and an element(what we want to display) to trigger.
 
-- We will set a <kbd>popover</kbd> attribute on the element which is going to be the popover(element to display).
+- We will set a `popover` attribute on the element which is going to be the popover(element to display).
 
-- Then, we are going to add a unique <kbd>id</kbd> on the popover element(element to display).
+- Then, we are going to add a unique `id` on the popover element(element to display).
 
-- Lastly, to connect the button to the popover, we will set the buttons's <kbd>popovertarget</kbd> to the value of the popover element's id.
+- Lastly, to connect the button to the popover, we will set the buttons's `popovertarget` to the value of the popover element's id.
 
 ---
 hideInToc: true
 ---
+
 # Popover Sample
 
-### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
+### Let's see how our `<popover>` works following the previous algorithm.
 
-<br/>
-<br/>
-<br/>
+```html {monaco-run}
 <main class="bg-gray-100 px-20 py-20 text grid place-content-center">
   <button
     popovertarget="my-popover"
@@ -2634,7 +2708,7 @@ hideInToc: true
     class=" bg-white text-black font-normal p-4 rounded max-w-xs absolute top-20 left-1/2 transform -translate-x-1/2 shadow-lg"
   >
     <p>
-      In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. Hit <kbd>esc</kbd> or click outside this box to close me.
+      In 1914, Southern Nigeria was joined with the Northern Nigeria Protectorate to form the single colony of Nigeria. Hit `esc` or click outside this box to close me.
     </p>
   </div>
 </main>
@@ -2670,18 +2744,20 @@ hideInToc: true
 ---
 hideInToc: true
 ---
+
 # Popover Types
 
-Sometimes, you might want to have more control over your popover, and this is where setting the <kbd>&lt;popover&gt;</kbd> attribute value to manual comes in. Previously we didn't set any value to the <kbd>&lt;popover&gt;</kbd> attribute, we just used it directly which explicitly means <kbd>&lt;popover="auto"&gt;</kbd> and this allows the popover to close when we press the <kbd>esc</kbd> key or click outside the popover box in the UI.
+Sometimes, you might want to have more control over your popover, and this is where setting the `<popover>` attribute value to manual comes in. Previously we didn't set any value to the `<popover>` attribute, we just used it directly which explicitly means `<popover="auto">` and this allows the popover to close when we press the `esc` key or click outside the popover box in the UI.
 
-To have control over our <kbd>&lt;popover&gt;</kbd> we are going to set the <kbd>&lt;popover&gt;</kbd> attribute value to manual just like this <kbd>&lt;popover="manual"&gt;</kbd>, by doing this we will have to add a close button to control the closing of the popover because clicking away in the UI won't work any longer.
+To have control over our `<popover>` we are going to set the `<popover>` attribute value to manual just like this `<popover="manual">`, by doing this we will have to add a close button to control the closing of the popover because clicking away in the UI won't work any longer.
 
 ---
 hideInToc: true
 ---
+
 # Popover with value set to manual
 
-### Let's see how our <kbd>&lt;popover&gt;</kbd> works following the previous algorithm.
+### Let's see how our `<popover>` works following the previous algorithm.
 
 <br/>
 <br/>
@@ -2726,21 +2802,24 @@ name: More on popovers
 ---
 
 # What are Web Components?
+
 <div></div>
 
 Web components are a set of web standards that allow developers to create reusable, self-contained UI elements. These components can be seamlessly integrated into existing applications, just like regular HTML elements. The Web Component standard comprises three main parts:
-- HTML Templates: The <Kbd>&lt;template&gt;</kbd> element allows developers to declare fragments of HTML that can be cloned and inserted into the DOM using JavaScript. The contents of the <Kbd>&lt;template&gt;</kbd> element are not rendered by default.
+- HTML Templates: The `<template>` element allows developers to declare fragments of HTML that can be cloned and inserted into the DOM using JavaScript. The contents of the `<template>` element are not rendered by default.
 - Custom Elements: Custom Elements allow developers to define their own HTML elements with custom functionality. These elements can be created by extending the HTMLElement class using JavaScript.
 - Shadow DOM: The Shadow DOM is an encapsulated DOM tree that is attached to a custom element. It provides a way to scope CSS styles and DOM structures to a specific component, isolating it from the rest of the document. This prevents naming conflicts and style clashes with the rest of the application.
+
 ---
 hideInToc: true
 ---
 
-# The &lt;template&gt; Element
+# The `<template>` Element
+
 <div></div>
 
-This section introduces the <kbd>&lt;template&gt;</kbd> element and demonstrates how to create a template for a star rating component. It also explains the concept of unnamed and named slots using the <kbd>&lt;slot&gt;</kbd> element.
-- The <kbd>&lt;template&gt;</kbd> element is used to declare HTML fragments that can be cloned and inserted into the DOM using JavaScript. The contents of the <Kbd>&lt;template&gt;</kbd> element are not rendered by default. In the given example, a template is created for a star rating component with a <Kbd>&lt;form&gt;</kbd> element containing radio inputs and buttons.
+This section introduces the `<template>` element and demonstrates how to create a template for a star rating component. It also explains the concept of unnamed and named slots using the `<slot>` element.
+- The `<template>` element is used to declare HTML fragments that can be cloned and inserted into the DOM using JavaScript. The contents of the `<template>` element are not rendered by default. In the given example, a template is created for a star rating component with a `<form>` element containing radio inputs and buttons.
 
 ---
 hideInToc: true
@@ -2784,6 +2863,7 @@ hideInToc: true
 ---
 
 # Shadow DOM and Styling
+
 <div></div>
 
 This  discusses the Shadow DOM and how it encapsulates CSS styles within a web component. It demonstrates how to apply styles to the shadow DOM and explains the usage of the :host and ::slotted() pseudo-classes.
@@ -2792,23 +2872,26 @@ This  discusses the Shadow DOM and how it encapsulates CSS styles within a web c
 ---
 hideInToc: true
 clicksStart: 3
+class: 'text-sm'
 ---
 
 # Another Example
+
 <div class="grid grid-cols-2 gap-x-4">
-  <ul class="text-sm">
-    <v-clicks>
-      <li>
-        In the given example, a <kbd>&lt;style&gt;</kbd> element is included within the <kbd>&lt;template&gt;</kbd> to apply styles to the star rating component. These styles are encapsulated within the shadow DOM and do not affect the rest of the document.
-      </li>
-      <li >
-       The `:host` pseudo-class is used to select the shadow host element (the custom element to which the shadow DOM is attached). The <code>::slotted()</code> pseudo-element is used to select slotted elements (elements inserted into named slots) from within the shadow DOM.
-      </li>
-      <li>
-        The document also mentions the <code>::part()</code> pseudo-element, which allows styling elements within a shadow DOM from the global CSS scope. By adding a part attribute to elements in the <kbd>&lt;template&gt;</kbd>, those elements can be targeted using the <code>::part()</code> pseudo-element in the global CSS.
-      </li>
-    </v-clicks>
-  </ul>
+<v-clicks>
+      
+* In the given example, a `style` element is included within the `template` to apply styles to the star rating component. These styles are encapsulated within the shadow DOM and do not affect the rest of the document.
+        
+      
+      
+* The `:host` pseudo-class is used to select the shadow host element (the custom element to which the shadow DOM is attached). The <code>::slotted()</code> pseudo-element is used to select slotted elements (elements inserted into named slots) from within the shadow DOM.
+       
+      
+      
+* The document also mentions the <code>::part()</code> pseudo-element, which allows styling elements within a shadow DOM from the global CSS scope. By adding a part attribute to elements in the `template`, those elements can be targeted using the <code>::part()</code> pseudo-element in the global CSS.
+      
+</v-clicks>
+
 
 
 ````md magic-move
@@ -2870,7 +2953,8 @@ hideInToc: true
 
 
 # Slot
-The &lt;slot&gt; element is used within the &lt;template&gt; to create placeholders for custom content. If a name attribute is provided, it creates a "named slot" that can be used to insert custom content within the web component. In the example, a named slot is created for the legend of the star rating component.
+
+The `<slot>` element is used within the `<template>` to create placeholders for custom content. If a name attribute is provided, it creates a "named slot" that can be used to insert custom content within the web component. In the example, a named slot is created for the legend of the star rating component.
 
 ````md magic-move
 ```html
@@ -2903,8 +2987,9 @@ hideInToc: true
 ---
 
 # Undefined Elements and Custom Elements
-This explains how browsers handle undefined (unrecognized) elements and demonstrates how to define a custom element using JavaScript and the customElements.define() method.
-- Browsers do not fail when encountering unrecognized HTML elements. Instead, they treat these elements as anonymous inline elements, similar to &lt;span&gt;>. In the given example, the &lt;star-rating&gt; element is initially treated as an unrecognized element, and its contents are displayed as if they were inside a &lt;span&gt; element.
+
+This explains how browsers handle undefined (unrecognized) elements and demonstrates how to define a custom element using JavaScript and the `customElements.define()` method.
+- Browsers do not fail when encountering unrecognized HTML elements. Instead, they treat these elements as anonymous inline elements, similar to `<span>`. In the given example, the `<star-rating>` element is initially treated as an unrecognized element, and its contents are displayed as if they were inside a `<span>` element.
 - To define a custom element, JavaScript is required. The customElements.define() method is used to register a custom element by extending the HTMLElement class.
 
 ---
@@ -2913,7 +2998,7 @@ hideInToc: true
 
 # Undefined Elements and Custom Elements
 
--  In the example, the star-rating custom element is defined, and a shadow DOM is attached to it using the attachShadow() method. The contents of the &lt;template&gt; element are cloned and appended to the shadow DOM, effectively encapsulating the star rating component.
+-  In the example, the star-rating custom element is defined, and a shadow DOM is attached to it using the `attachShadow()` method. The contents of the `<template>` element are cloned and appended to the shadow DOM, effectively encapsulating the star rating component.
 
 ```js
 customElements.define('star-rating',
@@ -3172,6 +3257,7 @@ hideInToc: true
 hideInToc: true
 ---
 # Assignment 1
+
 <div></div>
 
 Create a web page that should display your basic information, with ALT SCHOOL ID, a biography, relevant details explaining why you joined the program, and your goals for the School of Engineering program. Implement a fragment identifier feature to enable scrolling back to the top of the page. Create a folder and name the file index.html
@@ -3190,6 +3276,7 @@ hideInToc: true
 ---
 
 # Assignment 2
+
 <div></div>
 Build additional two web pages , the first is going to be a table about all the courses and schools existing at AltSchool Africa, with School of engineering we have frontend engineering, backend engineering, cloud engineering and cybersecurity. School of Product - Product Design, Marketing, Management. School of Data - Data Analysis, Science, Engineering.
 
@@ -3392,6 +3479,7 @@ gh pr checkout <pull-request-number>
 ---
 hideInToc: true
 ---
+
 # Contributors
 
 
