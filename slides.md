@@ -1,9 +1,10 @@
 ---
-background: https://res.cloudinary.com/drnqdd87d/image/upload/f_auto/nmgakkzd3lmlibnfosps
+# background: https://res.cloudinary.com/drnqdd87d/image/upload/f_auto/nmgakkzd3lmlibnfosps
+background: https://source.unsplash.com/collection/94734566/1920x1080
 title: School of Engineering(HTML)
 titleTemplate: '%s - AltSchool Africa'
 info: |
-  AltSchool v4 Class Notes.The Making of world class developers. To join visit (https://altschoolafrica.com)
+  HTML Class Notes.The Making of world class developers. To join visit (https://altschoolafrica.com)
 class: text-center
 author: Oluwasetemi Ojo
 highlighter: shiki
@@ -1494,7 +1495,6 @@ name: More on Text
 hideInToc: true
 name: Navigation Example
 transition: slide-down
-hideInToc: true
 layout: iframe-lazy
 url: https://codepen.io/setemiojo/embed/JjxNJVm?default-tab=html%2Cresult
 ---
@@ -2712,6 +2712,7 @@ hideInToc: true
     </p>
   </div>
 </main>
+```
 
 ---
 hideInToc: true
@@ -2759,11 +2760,8 @@ hideInToc: true
 
 ### Let's see how our `<popover>` works following the previous algorithm.
 
-<br/>
-<br/>
-<br/>
-
-
+```html {monaco-run}
+<main class="bg-gray-100 px-20 py-20 text grid place-content-center">
 <section class="px-20 py-20 text-center">
   <button
     aria-haspopup="true"
@@ -2786,6 +2784,8 @@ hideInToc: true
       </button>
   </div>
 </section>
+</main>
+```
 
 
 
@@ -2945,6 +2945,53 @@ customElements.define('custom-card', CustomCard);
 ```
 ````
 </div>
+
+--- 
+hideInToc: true
+---
+
+```html {monaco-run}
+<script>
+class CustomCard extends HTMLElement {
+  constructor() {
+    super();
+    let template=document.getElementById('card-template');
+    let content = template.content;
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    shadowRoot.appendChild(template.cloneNode(true));
+  }
+}
+// Define the custom element
+customElements.define('custom-card', CustomCard);
+</script>
+<custom-card>
+  <h2 slot="card-header">Card Title</h2>
+  <p slot="card-content">This is the content of the card.</p>
+</custom-card>
+<template id="card-template">
+  <style>
+    :host {
+      display: block;
+      margin-bottom: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f5f5f5;
+    }
+    ::slotted(h2) {
+      margin-top: 0;
+    }
+    ::slotted(p) {
+      color: #666;
+    }
+  </style>
+  <div class="card">
+    <slot name="card-header"></slot>
+    <slot name="card-content"></slot>
+  </div>
+</template>
+```
 
 
 ---
@@ -3278,6 +3325,7 @@ hideInToc: true
 # Assignment 2
 
 <div></div>
+
 Build additional two web pages , the first is going to be a table about all the courses and schools existing at AltSchool Africa, with School of engineering we have frontend engineering, backend engineering, cloud engineering and cybersecurity. School of Product - Product Design, Marketing, Management. School of Data - Data Analysis, Science, Engineering.
 
 
