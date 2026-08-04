@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useRouter } from 'vue-router'
+import { useNav } from '@slidev/client'
 
-const router = useRouter()
+const { router } = useNav()
 
 const DEFAULT_HTML = `<!DOCTYPE html>
 <html lang="en">

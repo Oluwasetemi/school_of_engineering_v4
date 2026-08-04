@@ -47,9 +47,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useNav } from '@slidev/client'
 
-const router = useRouter()
+const { router } = useNav()
 const isLoaded = ref(false)
 const isLoading = ref(false)
 

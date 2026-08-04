@@ -39,9 +39,9 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useNav } from '@slidev/client'
 
-const router = useRouter()
+const { router } = useNav()
 
 const groups = [
   {

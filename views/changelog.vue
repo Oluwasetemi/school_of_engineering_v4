@@ -45,8 +45,8 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useNav } from '@slidev/client'
 import { entries } from '../changelog'
 
-const router = useRouter()
+const { router } = useNav()
 </script>
