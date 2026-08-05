@@ -58,6 +58,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 ---
 hideInToc: true
+class: 'text-sm'
 ---
 
 # Table of contents
