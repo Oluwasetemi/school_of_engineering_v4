@@ -1784,6 +1784,34 @@ hideInToc: true
 
 ---
 hideInToc: true
+class: 'text-sm'
+---
+
+# Form (Textarea)
+
+- The `<textarea>` element accepts multi-line text, such as comments or messages.
+- Associate it with a `<label>` and give it a `name` so its value is included when the form is submitted.
+- Use `rows` and `cols` to suggest its initial size; users can usually resize it.
+
+```html
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="4" cols="30"></textarea>
+```
+
+## Select
+
+Use `<select>` with nested `<option>` elements when users must choose from a fixed list. Add a `<label>` and `name` for accessibility and form submission.
+
+```html
+<label for="role">Role</label>
+<select id="role" name="role">
+  <option value="student">Student</option>
+  <option value="tutor">Tutor</option>
+</select>
+```
+
+---
+hideInToc: true
 ---
 
 # Built-in Validation
