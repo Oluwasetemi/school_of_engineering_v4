@@ -95,7 +95,7 @@ const groups = [
             v-for="section in group.sections"
             :key="section.slug"
             class="flex flex-col items-center gap-2 py-5 px-4 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl cursor-pointer transition-colors duration-150 text-[#e5e5e5] font-sans hover:bg-[#222] hover:border-blue-500"
-            @click="router.push(`/#/${section.slug}`)"
+            @click="router.push({ name: section.slug })"
           >
             <span class="text-2xl">{{ section.icon }}</span>
             <span class="text-sm font-medium text-center leading-tight">{{ section.name }}</span>
