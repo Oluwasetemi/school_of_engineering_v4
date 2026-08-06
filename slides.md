@@ -111,6 +111,47 @@ hideInToc: true
 
 - coding
 
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Software Engineering Is More Than Coding
+
+Coding is one part of building software that remains useful, reliable, secure, and understandable over time.
+
+```mermaid
+flowchart LR
+    A[Understand the problem] --> B[Design]
+    B --> C[Implement]
+    C --> D[Test]
+    D --> E[Deploy]
+    E --> F[Observe and maintain]
+    F --> A
+```
+
+- **Requirements:** What problem are we solving, and for whom?
+- **Quality:** Does it work correctly, safely, and accessibly?
+- **Collaboration:** Can another engineer understand, review, and improve it?
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# A Practical Engineering Workflow
+
+1. Clarify the user need and define what “done” means.
+2. Break the problem into small, testable tasks.
+3. Design the simplest suitable solution.
+4. Implement and verify one small change at a time.
+5. Use Git, code review, tests, and documentation to protect quality.
+6. Deploy, observe real usage, fix problems, and improve.
+
+<Tips type="info" fullWidth>
+AI can assist at every step, but the engineer remains responsible for the requirements, decisions, verification, and outcome.
+</Tips>
+
 
 ---
 
@@ -533,6 +574,128 @@ Running multiple computations simultaneously
 Reading from and writing to files. File streams, Opening, reading, writing, and closing files, Binary vs text files
 
 ---
+name: How the Web Works
+class: 'text-sm'
+---
+
+# How the Web Works
+
+The **internet** is the global network connecting computers. The **Web** is a service that uses that network to exchange linked documents and application data.
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant B as Browser / client
+    participant D as DNS
+    participant S as Web server
+    U->>B: Enter a URL or follow a link
+    B->>D: Find the domain's IP address
+    D-->>B: Return the IP address
+    B->>S: HTTPS request
+    S-->>B: HTTP response
+    B-->>U: Render the page
+```
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# From URL to Page
+
+- A **URL** identifies a resource: `https://example.com/about?lang=en#team`.
+- **DNS** translates the domain name into an IP address.
+- The browser opens a secure **HTTPS** connection to the server.
+- It sends an HTTP request such as `GET /about`.
+- The server handles the request and sends a response.
+- The browser requests linked assets, builds the page, and renders it.
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# HTTP Requests and Responses
+
+An HTTP message has a starting line, headers containing metadata, and sometimes a body containing data.
+
+```text
+GET /about HTTP/1.1
+Host: example.com
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!doctype html>...
+```
+
+- A request states what the client wants to do and which resource it needs.
+- A response contains a status code, headers, and usually HTML, JSON, an image, or another resource.
+- Common status codes: `200` success, `301` redirect, `404` not found, and `500` server error.
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# The Parts of a Web Application
+
+| Part | Responsibility |
+|---|---|
+| HTML | Content and meaning |
+| CSS | Presentation and layout |
+| JavaScript | Behaviour and interaction |
+| Frontend | The application running in the browser |
+| Backend | Business logic, authentication, and server-side APIs |
+| Database | Persistent application data |
+| Deployment | Making the application available to users |
+
+A **static** site can return prepared files. A **dynamic** application generates or retrieves data for each request, often through an API using JSON.
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Where AI Fits in a Full-stack Application
+
+```mermaid
+flowchart LR
+    U[User] --> F[Frontend UI]
+    F --> B[Backend API]
+    B --> M[AI model API]
+    B <--> D[(Database)]
+    M --> B --> F --> U
+```
+
+- The frontend collects input and presents results.
+- The backend validates requests, applies business rules, and calls the model securely.
+- The database stores only the data the application is permitted to retain.
+- Model output is untrusted input: validate it before displaying, storing, or acting on it.
+
+<Tips type="danger" fullWidth>
+Never place AI provider secrets or private API keys in browser HTML or client-side JavaScript.
+</Tips>
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Responsible Use of AI
+
+- Treat generated answers and code as suggestions—not verified facts.
+- Test the result and understand it before submitting or deploying it.
+- Do not share passwords, API keys, personal data, or proprietary code with an AI tool.
+- Review generated interfaces for accessibility, security, and maintainability.
+- Record important assumptions and decisions so teammates can review them.
+- Follow programme, employer, and client rules for attribution and acceptable AI use.
+
+<Tips type="info" fullWidth>
+AI can increase your speed; engineering judgment determines whether the result is correct and safe.
+</Tips>
+
+---
 name: Getting Started With HTML
 ---
 
@@ -626,6 +789,133 @@ Always open your vscode on the right folder your created for your project not on
 </body>
 </html>
 ```
+
+---
+hideInToc: true
+class: 'text-sm'
+title: from-html-to-the-dom
+name: from-html-to-the-dom
+---
+
+# From HTML to the DOM
+
+The browser parses HTML into the **Document Object Model (DOM)**: a tree of objects representing the document. JavaScript and browser tools interact with this tree—not directly with the source file.
+
+```mermaid
+flowchart LR
+    A[index.html] --> B[HTML parser]
+    B --> C[DOM tree]
+    C --> D[Rendered page]
+    E[CSS] --> D
+    F[JavaScript] --> C
+```
+
+Malformed HTML may still render because browsers recover from errors, but the resulting DOM might differ from what you intended.
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Browser Developer Tools
+
+Open DevTools with **Inspect** or your browser's keyboard shortcut `ctrl + shift + i` or `cmd + option + i` (Mac).
+
+- **Elements:** inspect the DOM, attributes, and accessibility information.
+- **Network:** inspect requests, responses, status codes, and missing assets.
+- **Console:** view browser errors and test small JavaScript expressions.
+- **Device mode:** check the page at different viewport sizes.
+
+Suggested debugging loop: reproduce the problem → inspect the DOM and Network panel → read the error → make one change → verify again. Logging, debugger statements, and breakpoints can help you understand the flow of execution.
+
+<Tips type="warning" fullWidth>
+Changes made inside DevTools are temporary. Update the source file to keep them.
+</Tips>
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Paths, Links, and Form Destinations
+
+```text
+project/
+├── index.html
+├── pages/about.html
+└── images/profile.jpg
+```
+
+- Relative path from `index.html`: `images/profile.jpg`
+- Relative path from `pages/about.html`: `../images/profile.jpg`
+- Root-relative path: `/images/profile.jpg`
+- Absolute URL: `https://example.com/images/profile.jpg`
+- Fragment: `#contact`
+
+The same path rules apply to links, images, stylesheets, scripts, and form `action` URLs. File paths may be case-sensitive after deployment.
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Metadata and Discoverability
+
+- Give every page a concise, unique `<title>`.
+- Add a useful description for search results and link previews.
+- Declare the document language and character encoding.
+- Use meaningful headings, landmarks, link text, and image alternatives.
+- Ensure important content is present in HTML and is understandable without visual styling.
+
+```html
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply | AI Full-stack Programme</title>
+  <meta name="description" content="Apply for the AI Full-stack career programme.">
+</head>
+```
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Validate and Test HTML
+
+- Validate HTML to find invalid nesting, duplicate IDs, and missing required attributes.
+- Test keyboard navigation, zoom, narrow screens, links, forms, images, and error states.
+- Check the DOM and accessibility tree for the structure the browser created.
+- Use the Network panel to find missing resources and unsuccessful requests.
+- Fix the first meaningful error, then test again; one mistake can cause several later errors.
+
+<Tips type="info" fullWidth>
+Validation checks markup rules. Testing checks whether real users can complete the intended task. A quality page needs both.
+</Tips>
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Progressive Enhancement
+
+Start with semantic HTML that delivers the core content and actions. Add CSS for presentation and JavaScript for richer interaction.
+
+```mermaid
+flowchart LR
+    A[Semantic HTML<br/>content and actions] --> B[CSS<br/>presentation]
+    B --> C[JavaScript<br/>enhanced behaviour]
+```
+
+- Use links for navigation and buttons for actions.
+- Prefer native controls before recreating them with scripts.
+- Keep essential tasks usable when a resource fails or is delayed.
+- Treat accessibility and resilience as part of the design, not a final patch.
+
+<Tips type="info" fullWidth>
+Progressive enhancement keeps the core content and actions usable when styles fail, JavaScript is delayed, or a user relies on assistive technology.
+</Tips>
 
 ---
 hideInToc: true
@@ -2699,6 +2989,47 @@ Also, we can use dialogs to seek confirmation from a user before proceeding with
 
 ---
 hideInToc: true
+class: 'text-sm'
+---
+
+# Invokers: Trigger → Action → Target
+
+An **invoker** is an interactive element that asks another element—the **target**—to perform an action.
+
+`button` → `show-modal` → `dialog`
+
+```html {monaco-run}{maxHeight: '390px'}
+<main>
+  <h2>Declarative dialog</h2>
+  <p>The button invokes a command on the dialog—no JavaScript required.</p>
+  <button class="primary" commandfor="profile-dialog" command="show-modal">
+    Open profile
+  </button>
+
+  <dialog id="profile-dialog" closedby="any">
+    <h2>Student profile</h2>
+    <p>Learning to build accessible AI-powered web applications.</p>
+    <button commandfor="profile-dialog" command="close">Close</button>
+  </dialog>
+</main>
+
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 system-ui, sans-serif; color: #172033; }
+  main { max-width: 38rem; margin: 3rem auto; padding: 1.5rem; }
+  button { border: 1px solid #94a3b8; border-radius: .5rem; padding: .65rem 1rem; cursor: pointer; }
+  .primary { border-color: #2563eb; background: #2563eb; color: white; }
+  dialog { width: min(28rem, calc(100% - 2rem)); border: 0; border-radius: .75rem; padding: 1.5rem; box-shadow: 0 1rem 3rem #0f172a55; }
+  dialog::backdrop { background: #0f172a99; backdrop-filter: blur(2px); }
+</style>
+```
+
+`commandfor` identifies the target by `id`; `command` names the action. Other invokers use `popovertarget` or the experimental `interestfor` attribute.
+
+[Read about command invokers in the HTML Standard](https://html.spec.whatwg.org/dev/form-elements.html#the-button-element).
+
+---
+hideInToc: true
 ---
 
 # Popovers
@@ -3091,6 +3422,12 @@ class extends HTMLElement {
 ```
 ---
 hideInToc: true
+layout: quote
+class: 'text-center'
+---
+
+# Tips that will be useful in your software development journey
+
 ---
 
 # Do you know?
@@ -3258,7 +3595,7 @@ const offset = range.offset;
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 ```
 
-- Content-Security Policy (CSP) is an added layer of security that helps to detect and mitigate XSS and other attacks. `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">` `Content-Security-Policy: default-src 'self'`
+- Content-Security Policy (CSP) is an added layer of security that helps to detect and mitigate XSS (cross-site scripting) and other attacks. `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">` `Content-Security-Policy: default-src 'self'`
 
 - fetchpriority attribute is used to specify the priority of the fetch request. `<img src="picture.jpg" fetchpriority="high" />`
 
@@ -3317,6 +3654,114 @@ hideInToc: true
 - `focusgroup` facilitate keyboard focus navigation using the keyboard arrow keys among a set of focusable elements.`<div focusgroup="wrap horizontal">`
 
 - search element is Semantic element for wrapping search UI.. `<search>...</search>`
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Do you know? Declarative Commands
+
+The newer `commandfor` and `command` attributes let a `<button>` control another element without an inline `onclick` handler.
+
+```html
+<button commandfor="profile-dialog" command="show-modal">
+  Open profile
+</button>
+
+<dialog id="profile-dialog">
+  <p>Profile details</p>
+  <button commandfor="profile-dialog" command="close">Close</button>
+</dialog>
+```
+
+Built-in `command` values include:
+
+- `show-popover`, `hide-popover`, and `toggle-popover`
+- `show-modal`, `close`, and `request-close`
+- Custom commands beginning with `--`, such as `command="--rotate"`
+
+[Read about `command` and `commandfor` in the HTML Standard](https://html.spec.whatwg.org/dev/form-elements.html#the-button-element).
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Do you know? New Dialog and Popover Controls
+
+The `closedby` attribute controls how a `<dialog>` can be dismissed:
+
+- `any` — an outside click or close request can close it.
+- `closerequest` — Escape or another platform close request can close it.
+- `none` — users cannot dismiss it automatically.
+
+```html
+<dialog id="notice" closedby="any">
+  <p>Click outside or press Escape to close.</p>
+</dialog>
+```
+
+`popover="hint"` is intended for hint-like UI. Unlike an `auto` popover, opening a hint does not normally close an existing auto popover.
+
+```html
+<p id="save-hint" popover="hint">Saves your current work</p>
+```
+
+[Read about dialogs](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element) and [popover states](https://html.spec.whatwg.org/multipage/popover.html#the-popover-attribute).
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Do you know? Popover Anchoring
+
+Using `popovertarget`, `commandfor`, or `interestfor` creates an **implicit anchor relationship** between an invoker and its popover. CSS Anchor Positioning can then place the popover relative to that control.
+
+
+Related CSS features include `anchor-name`, `position-anchor`, `position-area`, `position-try-fallbacks`, and the `anchor()` function.
+
+The HTML `anchor="element-id"` attribute can explicitly associate a popover with an element, but it should still be treated as experimental.
+
+[Explore CSS Anchor Positioning and implicit popover anchors](https://developer.chrome.com/blog/new-in-web-ui-io-2025-recap#anchor-positioning).
+
+```html {monaco-run}
+<button commandfor="actions" command="toggle-popover">Actions</button>
+<div id="actions" popover>I am a popover acting as an anchored tooltip</div>
+
+<style>
+  #actions {
+    position-area: bottom;
+    position-try-fallbacks: flip-block;
+  }
+</style>
+```
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Do you know? Interest Invokers
+
+The experimental `interestfor` attribute can show a related element when someone demonstrates interest through hover, focus, or long press.
+
+```html {monaco-run}
+<a href="/tutors/setemi" interestfor="setemi-preview">
+  Meet Setemi
+</a>
+
+<aside id="setemi-preview" popover="hint">
+  Full-stack engineering tutor
+</aside>
+```
+
+- Supported invokers include `<a>`, `<button>`, and `<area>`.
+- The target receives `interest` and `loseinterest` events.
+- It progressively enhances a normal link: activating the link still navigates.
+- Browser support is limited, so provide a usable fallback.
+
+[Read the MDN guide to interest invokers](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers).
 
 
 

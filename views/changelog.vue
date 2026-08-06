@@ -1,10 +1,16 @@
+<script setup lang="ts">
+import { useNav } from '@slidev/client'
+import { entries } from '../changelog'
+
+const { router } = useNav()
+</script>
 <template>
-  <div class="min-h-screen bg-[#0f0f0f] text-[#e5e5e5] font-sans py-10 px-5">
+  <div class="h-screen overflow-y-auto bg-[#0f0f0f] text-[#e5e5e5] font-sans py-10 px-5">
     <div class="max-w-2xl mx-auto">
       <div class="mb-10">
         <button
           class="bg-transparent border border-[#444] text-[#999] px-3.5 py-1.5 rounded-md cursor-pointer text-sm mb-4 transition-colors duration-150 hover:border-[#666] hover:text-[#ccc]"
-          @click="router.push('/#/2')"
+          @click="router.push('/2')"
         >
           ← Back to slides
         </button>
@@ -35,7 +41,7 @@
         </li>
       </ul>
 
-      <div class="flex gap-4 mt-10 pt-6 border-t border-[#2a2a2a]">
+      <div class="flex flex-wrap gap-4 mt-10 pt-6 border-t border-[#2a2a2a]">
         <button class="bg-transparent border-0 p-0 text-blue-500 text-sm cursor-pointer transition-opacity duration-150 hover:opacity-75" @click="router.push('/playground')">▶ JS/TS Playground</button>
         <button class="bg-transparent border-0 p-0 text-blue-500 text-sm cursor-pointer transition-opacity duration-150 hover:opacity-75" @click="router.push('/html-playground')">🌐 HTML Playground</button>
         <button class="bg-transparent border-0 p-0 text-blue-500 text-sm cursor-pointer transition-opacity duration-150 hover:opacity-75" @click="router.push('/routes')">📋 Course Sections</button>
@@ -43,10 +49,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { useNav } from '@slidev/client'
-import { entries } from '../changelog'
-
-const { router } = useNav()
-</script>

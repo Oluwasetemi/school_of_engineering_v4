@@ -104,7 +104,7 @@ run()
       <div class="flex items-center gap-4">
         <button
           class="px-[14px] py-[6px] bg-[#2a2a2a] text-[#ccc] border border-[#444] rounded-md cursor-pointer text-sm transition-colors duration-150 hover:bg-[#333]"
-          @click="router.push('/')"
+          @click="router.push('/2')"
         >
           ← Back to slides
         </button>
