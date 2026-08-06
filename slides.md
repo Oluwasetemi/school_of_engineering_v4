@@ -2530,7 +2530,16 @@ Resize the browser window and run the example again to see the browser choose th
   figure { margin: 0; padding: 12px; }
   img { display: block; width: 100%; max-height: 260px; object-fit: cover; border-radius: 12px; }
   figcaption { margin-top: 8px; font: 14px ui-monospace, monospace; }
+  nav { display: flex; gap: 8px; padding: 12px 12px 0; }
+  button { padding: 6px 10px; border: 0; border-radius: 6px; cursor: pointer; }
 </style>
+
+<nav aria-label="Choose an image source">
+  <button data-size="wide">Wide</button>
+  <button data-size="medium">Medium</button>
+  <button data-size="narrow">Narrow</button>
+  <button data-size="auto">Auto</button>
+</nav>
 
 <figure>
   <picture>
@@ -2544,12 +2553,34 @@ Resize the browser window and run the example again to see the browser choose th
 <script>
   const image = document.querySelector('img')
   const selection = document.querySelector('#selection')
+  const sources = document.querySelectorAll('source')
+  const files = {
+    wide: '/picture-wide.svg',
+    medium: '/picture-medium.svg',
+    narrow: '/picture-narrow.svg',
+  }
+
+  function useAutomaticSources() {
+    sources[0].srcset = files.wide
+    sources[1].srcset = files.medium
+    image.src = files.narrow
+  }
+
+  function useSource(size) {
+    if (size === 'auto') return useAutomaticSources()
+
+    sources.forEach(source => source.srcset = files[size])
+    image.src = files[size]
+  }
 
   function showSelectedSource() {
     const file = new URL(image.currentSrc).pathname.split('/').pop()
     selection.textContent = `${innerWidth}px viewport → ${file}`
   }
 
+  document.querySelector('nav').addEventListener('click', event => {
+    if (event.target.matches('button')) useSource(event.target.dataset.size)
+  })
   image.addEventListener('load', showSelectedSource)
   addEventListener('resize', showSelectedSource)
 </script>
