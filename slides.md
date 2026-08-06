@@ -636,7 +636,7 @@ class: 'text-sm'
 
 The **internet** is the global network connecting computers. The **Web** is a service that uses that network to exchange linked documents and application data.
 
-```mermaid
+```mermaid {scale: 0.7}
 sequenceDiagram
     participant U as User
     participant B as Browser / client
