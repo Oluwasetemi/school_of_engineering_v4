@@ -2509,9 +2509,50 @@ The `type` attribute specifies the MIME type of the resource. The browser will o
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
-  <img src="mdn-logo-narrow.png" alt="MDN" />
+  <source media="(min-width: 900px)" srcset="picture-wide.svg" />
+  <source media="(min-width: 600px)" srcset="picture-medium.svg" />
+  <img src="picture-narrow.svg" alt="A responsive mountain landscape" />
 </picture>
+```
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Responsive `<picture>` Demo
+
+Resize the browser window and run the example again to see the browser choose the most suitable image.
+
+```html {monaco-run}{maxHeight: '430px'}
+<style>
+  body { margin: 0; font-family: system-ui; background: #0f172a; color: white; }
+  figure { margin: 0; padding: 12px; }
+  img { display: block; width: 100%; max-height: 260px; object-fit: cover; border-radius: 12px; }
+  figcaption { margin-top: 8px; font: 14px ui-monospace, monospace; }
+</style>
+
+<figure>
+  <picture>
+    <source media="(min-width: 900px)" srcset="/picture-wide.svg" />
+    <source media="(min-width: 600px)" srcset="/picture-medium.svg" />
+    <img src="/picture-narrow.svg" alt="A responsive mountain landscape" />
+  </picture>
+  <figcaption id="selection">Checking the selected source…</figcaption>
+</figure>
+
+<script>
+  const image = document.querySelector('img')
+  const selection = document.querySelector('#selection')
+
+  function showSelectedSource() {
+    const file = new URL(image.currentSrc).pathname.split('/').pop()
+    selection.textContent = `${innerWidth}px viewport → ${file}`
+  }
+
+  image.addEventListener('load', showSelectedSource)
+  addEventListener('resize', showSelectedSource)
+</script>
 ```
 
 
