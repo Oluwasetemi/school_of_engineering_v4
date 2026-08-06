@@ -3989,7 +3989,7 @@ gh pr checkout <pull-request-number>
 
 # Open Source
 
-- Open source software is software that is freely available to use, modify, and distribute. It is developed collaboratively by a community of developers who contribute their time and expertise to improve the software  is used by individuals, businesses, and organizations around the world to build websites, applications, and other software products.
+- Open source software is software that is freely available to use, modify, and distribute. It is developed collaboratively by a community of developers who contribute their time and expertise to improve the software. This software will be used by individuals, businesses, and organizations around the world to build websites, applications, and other software products.
 
 - Open source projects are typically hosted on platforms like GitHub, GitLab, and Bitbucket, where developers can access the source code, report issues, and contribute to the project.
 
