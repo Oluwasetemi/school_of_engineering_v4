@@ -73,6 +73,9 @@ class: 'text-sm'
 </div>
 
 ---
+routeAlias: what-is-software-engineering
+title: Software Engineering
+---
 
 # What is Software Engineering?
 <div></div>
@@ -114,13 +117,15 @@ hideInToc: true
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: software-engineering-is-more-than-coding
+title: Engineering Lifecycle
 ---
 
 # Software Engineering Is More Than Coding
 
 Coding is one part of building software that remains useful, reliable, secure, and understandable over time.
 
-```mermaid
+```mermaid {scale: 0.8}
 flowchart LR
     A[Understand the problem] --> B[Design]
     B --> C[Implement]
@@ -137,6 +142,8 @@ flowchart LR
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: a-practical-engineering-workflow
+title: Engineering Workflow
 ---
 
 # A Practical Engineering Workflow
@@ -221,6 +228,9 @@ Some Account You Expected to (Create || Have)
 <Youtube class="w-full h-96 border border-main rounded-lg" id="LebD-zBxZeY" />
 
 ---
+routeAlias: algorithms-and-flow-charts
+title: Algorithms & Flowcharts
+---
 
 # Algorithms and FlowCharts
 
@@ -281,6 +291,8 @@ flowchart LR
 
 ---
 hideInToc: true
+routeAlias: problem-solving
+title: Problem Solving
 ---
 
 # Problem Solving
@@ -289,6 +301,9 @@ hideInToc: true
 
 Use {ChatGPT} or Google to research what the key components of problem solving are. Try to use it to solve any problem you have.
 
+---
+routeAlias: programming-paradigms
+title: Programming Paradigms
 ---
 
 # Programming Paradigms
@@ -307,6 +322,8 @@ Use {ChatGPT} or Google to research what the key components of problem solving a
 
 ---
 hideInToc: true
+routeAlias: programming-concepts
+title: Programming Concepts
 ---
 
 # Programming Concepts
@@ -375,6 +392,8 @@ Use these ByteByteGo visual guides to review concepts from these notes:
 
 ---
 hideInToc: true
+routeAlias: variables
+title: Variables
 ---
 
 # Variables
@@ -398,6 +417,8 @@ print(name, age)
 
 ---
 hideInToc: true
+routeAlias: data-types
+title: Data Types
 ---
 # Data Types
 
@@ -423,6 +444,8 @@ console.log(person)
 
 ---
 hideInToc: true
+routeAlias: control-structures
+title: Control Structures
 ---
 
 # Control Structures
@@ -476,6 +499,8 @@ while (condition) {
 
 ---
 hideInToc: true
+routeAlias: functions-or-methods
+title: Functions
 ---
 
 # Functions (or Methods)
@@ -490,6 +515,8 @@ Blocks of code designed to perform a particular task, reusable throughout the pr
 
 ---
 hideInToc: true
+routeAlias: data-structures
+title: Data Structures
 ---
 
 # Data Structures
@@ -515,6 +542,8 @@ Fenwick Tree (Binary Indexed Tree)
 
 ---
 hideInToc: true
+routeAlias: algorithms
+title: Algorithms
 ---
 
 # Algorithms
@@ -529,6 +558,8 @@ Complexity: Big O notation for time and space.
 
 ---
 hideInToc: true
+routeAlias: object-oriented-concepts
+title: OOP Concepts
 ---
 
 # Object-Oriented Concepts
@@ -549,6 +580,8 @@ Constructors and destructors
 
 ---
 hideInToc: true
+routeAlias: recursion
+title: Recursion
 ---
 
 # Recursion
@@ -563,6 +596,8 @@ A function calling itself to solve a smaller instance of the same problem.
 
 ---
 hideInToc: true
+routeAlias: error-handling
+title: Error Handling
 ---
 
 # Error Handling
@@ -592,7 +627,8 @@ Running multiple computations simultaneously
 Reading from and writing to files. File streams, Opening, reading, writing, and closing files, Binary vs text files
 
 ---
-name: How the Web Works
+routeAlias: how-the-web-works
+title: How the Web Works
 class: 'text-sm'
 ---
 
@@ -600,7 +636,7 @@ class: 'text-sm'
 
 The **internet** is the global network connecting computers. The **Web** is a service that uses that network to exchange linked documents and application data.
 
-```mermaid
+```mermaid {scale: 0.7}
 sequenceDiagram
     participant U as User
     participant B as Browser / client
@@ -617,6 +653,8 @@ sequenceDiagram
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: from-url-to-page
+title: URL to Page
 ---
 
 # From URL to Page
@@ -631,6 +669,8 @@ class: 'text-sm'
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: http-requests-and-responses
+title: HTTP Messages
 ---
 
 # HTTP Requests and Responses
@@ -654,6 +694,8 @@ Content-Type: text/html
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: the-parts-of-a-web-application
+title: Full-stack Architecture
 ---
 
 # The Parts of a Web Application
@@ -673,6 +715,8 @@ A **static** site can return prepared files. A **dynamic** application generates
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: where-ai-fits-in-a-full-stack-application
+title: AI App Architecture
 ---
 
 # Where AI Fits in a Full-stack Application
@@ -698,6 +742,8 @@ Never place AI provider secrets or private API keys in browser HTML or client-si
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: responsible-use-of-ai
+title: Responsible AI
 ---
 
 # Responsible Use of AI
@@ -714,7 +760,8 @@ AI can increase your speed; engineering judgment determines whether the result i
 </Tips>
 
 ---
-name: Getting Started With HTML
+routeAlias: getting-started-with-html
+title: Getting Started
 ---
 
 # {HTML}
@@ -730,7 +777,8 @@ Getting Up and Running with HTML, its important to understand the basic structur
 
 ---
 hideInToc: true
-name: HTML Element Structure
+routeAlias: html-element-structure
+title: Element Structure
 layout: image
 ---
 
@@ -811,8 +859,8 @@ Always open your vscode on the right folder your created for your project not on
 ---
 hideInToc: true
 class: 'text-sm'
-title: from-html-to-the-dom
-name: from-html-to-the-dom
+routeAlias: from-html-to-the-dom
+title: HTML to DOM
 ---
 
 # From HTML to the DOM
@@ -833,6 +881,8 @@ Malformed HTML may still render because browsers recover from errors, but the re
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: browser-developer-tools
+title: Developer Tools
 ---
 
 # Browser Developer Tools
@@ -853,6 +903,8 @@ Changes made inside DevTools are temporary. Update the source file to keep them.
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: paths-links-and-form-destinations
+title: Paths & Resources
 ---
 
 # Paths, Links, and Form Destinations
@@ -875,6 +927,8 @@ The same path rules apply to links, images, stylesheets, scripts, and form `acti
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: metadata-and-discoverability
+title: Metadata
 ---
 
 # Metadata and Discoverability
@@ -897,6 +951,8 @@ class: 'text-sm'
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: validate-and-test-html
+title: Validation & Testing
 ---
 
 # Validate and Test HTML
@@ -914,6 +970,8 @@ Validation checks markup rules. Testing checks whether real users can complete t
 ---
 hideInToc: true
 class: 'text-sm'
+routeAlias: progressive-enhancement
+title: Progressive Enhancement
 ---
 
 # Progressive Enhancement
@@ -971,7 +1029,6 @@ The text "Welcome to the world of HTML" is displayed as the main heading of the 
 
 ---
 hideInToc: true
-name: HTML Element Structure
 layout: image
 ---
 
@@ -1081,7 +1138,8 @@ hideInToc: true
 ---
 hideInToc: true
 layout: image
-name: Block and Inline Element
+routeAlias: block-and-inline-element
+title: Block & Inline
 ---
 
 ![](/block_inline.jpg)
@@ -1165,7 +1223,8 @@ Note: The `lang` attribute added to the html tag to give this `<html lang="en">`
 
 ---
 hideInToc: true
-name: Working with head
+routeAlias: working-with-head
+title: Head & Meta
 ---
 
 # `<head>`
@@ -1404,6 +1463,9 @@ The `<p>` tag defines a paragraph of text. It contains the main body text and en
 
 
 ---
+routeAlias: understanding-semantic-html
+title: Semantic HTML
+---
 
 # Understanding Semantic HTML
 
@@ -1556,6 +1618,9 @@ layout: image
 
 
 ---
+routeAlias: attributes
+title: Attributes
+---
 
 # Attributes
 
@@ -1690,6 +1755,9 @@ Attributes created with data-* can be accessed in JavaScript with <code class="t
 
 
 ---
+routeAlias: text-basics
+title: Text Basics
+---
 
 # Text Basics
 
@@ -1760,6 +1828,9 @@ name: More on Text
 ````
 
 ---
+routeAlias: link
+title: Links
+---
 
 # Link
 
@@ -1809,6 +1880,9 @@ url: https://codepen.io/setemiojo/embed/JjxNJVm?default-tab=html%2Cresult
 ---
 
 
+---
+routeAlias: html-tables
+title: Tables
 ---
 
 # HTML Tables
@@ -1967,6 +2041,8 @@ name: More on Tables
 ---
 transition: 'fade'
 class: 'text-sm'
+routeAlias: form
+title: Forms
 ---
 
 # Form
@@ -2336,6 +2412,8 @@ name: 'Form Example'
 
 ---
 hideInToc: true
+routeAlias: html-images-syntax
+title: Images & Media
 ---
 
 # HTML Images Syntax
@@ -2431,9 +2509,81 @@ The `type` attribute specifies the MIME type of the resource. The browser will o
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
-  <img src="mdn-logo-narrow.png" alt="MDN" />
+  <source media="(min-width: 900px)" srcset="picture-wide.svg" />
+  <source media="(min-width: 600px)" srcset="picture-medium.svg" />
+  <img src="picture-narrow.svg" alt="A responsive mountain landscape" />
 </picture>
+```
+
+---
+hideInToc: true
+class: 'text-sm'
+---
+
+# Responsive `<picture>` Demo
+
+Resize the browser window and run the example again to see the browser choose the most suitable image.
+
+```html {monaco-run}{maxHeight: '430px'}
+<style>
+  body { margin: 0; font-family: system-ui; background: #0f172a; color: white; }
+  figure { margin: 0; padding: 12px; }
+  img { display: block; width: 100%; max-height: 260px; object-fit: cover; border-radius: 12px; }
+  figcaption { margin-top: 8px; font: 14px ui-monospace, monospace; }
+  nav { display: flex; gap: 8px; padding: 12px 12px 0; }
+  button { padding: 6px 10px; border: 0; border-radius: 6px; cursor: pointer; }
+</style>
+
+<nav aria-label="Choose an image source">
+  <button data-size="wide">Wide</button>
+  <button data-size="medium">Medium</button>
+  <button data-size="narrow">Narrow</button>
+  <button data-size="auto">Auto</button>
+</nav>
+
+<figure>
+  <picture>
+    <source media="(min-width: 900px)" srcset="/picture-wide.svg" />
+    <source media="(min-width: 600px)" srcset="/picture-medium.svg" />
+    <img src="/picture-narrow.svg" alt="A responsive mountain landscape" />
+  </picture>
+  <figcaption id="selection">Checking the selected source…</figcaption>
+</figure>
+
+<script>
+  const image = document.querySelector('img')
+  const selection = document.querySelector('#selection')
+  const sources = document.querySelectorAll('source')
+  const files = {
+    wide: '/picture-wide.svg',
+    medium: '/picture-medium.svg',
+    narrow: '/picture-narrow.svg',
+  }
+
+  function useAutomaticSources() {
+    sources[0].srcset = files.wide
+    sources[1].srcset = files.medium
+    image.src = files.narrow
+  }
+
+  function useSource(size) {
+    if (size === 'auto') return useAutomaticSources()
+
+    sources.forEach(source => source.srcset = files[size])
+    image.src = files[size]
+  }
+
+  function showSelectedSource() {
+    const file = new URL(image.currentSrc).pathname.split('/').pop()
+    selection.textContent = `${innerWidth}px viewport → ${file}`
+  }
+
+  document.querySelector('nav').addEventListener('click', event => {
+    if (event.target.matches('button')) useSource(event.target.dataset.size)
+  })
+  image.addEventListener('load', showSelectedSource)
+  addEventListener('resize', showSelectedSource)
+</script>
 ```
 
 
@@ -2534,6 +2684,9 @@ hideInToc: true
 
 - **attributes**: `controls`: Adds playback controls. `autoplay`: The video will play automatically when ready. `loop`: The video will loop continuously. `muted`: The video will be muted initially. `preload`: Specifies that the video should be preloaded.`crossorigin`: Specifies how the element handles cross-origin requests. `source`: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility. Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the `video` element.
 
+---
+routeAlias: html-api
+title: HTML API
 ---
 
 # HTML API
@@ -2825,6 +2978,9 @@ name: Code for Example 2
 
 
 ---
+routeAlias: details-and-summary
+title: Details & Summary
+---
 
 # Details and Summary
 
@@ -2939,38 +3095,70 @@ hideInToc: true
 
 # Various styling options of `<details>` and `<summary>`
 
-```html {monaco-run}
+```html {monaco-run}{maxHeight: '430px'}
+<style>
+  body {
+    margin: 0;
+    padding: 18px;
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+  }
+  details {
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background: white;
+    overflow: hidden;
+  }
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { background: #eff6ff; }
+  summary:focus-visible { outline: 3px solid #60a5fa; outline-offset: -3px; }
+  .icon { width: 22px; height: 22px; margin-left: auto; color: #2563eb; }
+  .icon-minus { display: none; }
+  details[open] .icon-plus { display: none; }
+  details[open] .icon-minus { display: block; }
+  .content { padding: 0 16px 16px; line-height: 1.5; }
+  code { color: #1d4ed8; }
+</style>
+
 <details>
   <summary>
-   Different Styling Options
+    How does this disclosure icon work?
+
+    <svg class="icon icon-plus" aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" />
+    </svg>
+
+    <svg class="icon icon-minus" aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M5 12h14" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" />
+    </svg>
   </summary>
 
-  You can style the summary marker using <code>::before</code> and <code>::after</code> pseudo-elements. You can also use <code>::marker</code> to style the arrow. You can change the marker to any bullet type, including an image with <code>list-style-image</code>. You can also style based on the state of the disclosure widget using <code>open</code> and <code>closed</code> pseudo-classes.
-  
+  <div class="content">
+    <p>The native marker is hidden, then two inline SVG icons provide the
+      <strong>closed (+)</strong> and <strong>open (−)</strong> visuals.</p>
+    <p>CSS reads the native <code>open</code> attribute to swap the icons.
+      The SVGs are decorative, so <code>aria-hidden="true"</code> keeps the
+      accessible name focused on the summary text.</p>
+  </div>
 </details>
-<style>
-  details summary::before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    vertical-align: middle;
-  }
-
-  details summary::after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    vertical-align: middle;
-  }
-  
-</style>
 ```
 
 
+---
+routeAlias: dialogs-and-popovers
+title: Dialogs & Popovers
 ---
 
 
@@ -3177,6 +3365,9 @@ name: More on popovers
 <MixedPopOverDialog />
 
 
+---
+routeAlias: what-are-web-components
+title: Web Components
 ---
 
 # What are Web Components?
@@ -3836,6 +4027,9 @@ media.html
 NB: Strictly without CSS. Submission details will be sent to you in due time.
 
 ---
+routeAlias: terminal
+title: Terminal
+---
 
 # Terminal
 
@@ -3857,6 +4051,9 @@ NB: Strictly without CSS. Submission details will be sent to you in due time.
 - Others
 
 `echo` - Print text to the terminal, `man` - Display the manual for a command, `clear` - Clear the terminal screen, `chmod` - Change file permissions, `chown` - Change file ownership.
+---
+routeAlias: git
+title: Git
 ---
 
 # Git
@@ -3932,7 +4129,6 @@ name: more on Git commands
 
 ---
 hideInToc: true
-name: Git
 ---
 
 Git maintains three local storages on our machine and one on a remote server like Github, which means that our code can be found in four places
@@ -3942,6 +4138,9 @@ Git maintains three local storages on our machine and one on a remote server lik
 - Local repository: contains the code that has been committed
 - Remote repository: the remote server that stores the code
 
+---
+routeAlias: github
+title: GitHub
 ---
 
 # GitHub

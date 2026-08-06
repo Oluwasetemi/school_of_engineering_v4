@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="640" viewBox="0 0 480 640">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#fb7185"/><stop offset="1" stop-color="#ffe4e6"/></linearGradient></defs>
+  <rect width="480" height="640" fill="url(#sky)"/>
+  <circle cx="365" cy="125" r="55" fill="#fef3c7"/>
+  <path d="M0 530 105 360l85 95 115-270 175 280v175H0z" fill="#881337"/>
+  <path d="m305 185 68 109-91-54z" fill="#fff1f2"/>
+  <text x="28" y="65" fill="#4c0519" font-family="system-ui" font-size="27" font-weight="700">NARROW · 480 × 640</text>
+</svg>
