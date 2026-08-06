@@ -73,7 +73,7 @@ class: 'text-sm'
 </div>
 
 ---
-name: what-is-software-engineering
+routeAlias: what-is-software-engineering
 title: Software Engineering
 ---
 
@@ -117,7 +117,7 @@ hideInToc: true
 ---
 hideInToc: true
 class: 'text-sm'
-name: software-engineering-is-more-than-coding
+routeAlias: software-engineering-is-more-than-coding
 title: Engineering Lifecycle
 ---
 
@@ -142,7 +142,7 @@ flowchart LR
 ---
 hideInToc: true
 class: 'text-sm'
-name: a-practical-engineering-workflow
+routeAlias: a-practical-engineering-workflow
 title: Engineering Workflow
 ---
 
@@ -228,7 +228,7 @@ Some Account You Expected to (Create || Have)
 <Youtube class="w-full h-96 border border-main rounded-lg" id="LebD-zBxZeY" />
 
 ---
-name: algorithms-and-flow-charts
+routeAlias: algorithms-and-flow-charts
 title: Algorithms & Flowcharts
 ---
 
@@ -291,7 +291,7 @@ flowchart LR
 
 ---
 hideInToc: true
-name: problem-solving
+routeAlias: problem-solving
 title: Problem Solving
 ---
 
@@ -302,7 +302,7 @@ title: Problem Solving
 Use {ChatGPT} or Google to research what the key components of problem solving are. Try to use it to solve any problem you have.
 
 ---
-name: programming-paradigms
+routeAlias: programming-paradigms
 title: Programming Paradigms
 ---
 
@@ -322,7 +322,7 @@ title: Programming Paradigms
 
 ---
 hideInToc: true
-name: programming-concepts
+routeAlias: programming-concepts
 title: Programming Concepts
 ---
 
@@ -392,7 +392,7 @@ Use these ByteByteGo visual guides to review concepts from these notes:
 
 ---
 hideInToc: true
-name: variables
+routeAlias: variables
 title: Variables
 ---
 
@@ -417,7 +417,7 @@ print(name, age)
 
 ---
 hideInToc: true
-name: data-types
+routeAlias: data-types
 title: Data Types
 ---
 # Data Types
@@ -444,7 +444,7 @@ console.log(person)
 
 ---
 hideInToc: true
-name: control-structures
+routeAlias: control-structures
 title: Control Structures
 ---
 
@@ -499,7 +499,7 @@ while (condition) {
 
 ---
 hideInToc: true
-name: functions-or-methods
+routeAlias: functions-or-methods
 title: Functions
 ---
 
@@ -515,7 +515,7 @@ Blocks of code designed to perform a particular task, reusable throughout the pr
 
 ---
 hideInToc: true
-name: data-structures
+routeAlias: data-structures
 title: Data Structures
 ---
 
@@ -542,7 +542,7 @@ Fenwick Tree (Binary Indexed Tree)
 
 ---
 hideInToc: true
-name: algorithms
+routeAlias: algorithms
 title: Algorithms
 ---
 
@@ -558,7 +558,7 @@ Complexity: Big O notation for time and space.
 
 ---
 hideInToc: true
-name: object-oriented-concepts
+routeAlias: object-oriented-concepts
 title: OOP Concepts
 ---
 
@@ -580,7 +580,7 @@ Constructors and destructors
 
 ---
 hideInToc: true
-name: recursion
+routeAlias: recursion
 title: Recursion
 ---
 
@@ -596,7 +596,7 @@ A function calling itself to solve a smaller instance of the same problem.
 
 ---
 hideInToc: true
-name: error-handling
+routeAlias: error-handling
 title: Error Handling
 ---
 
@@ -627,7 +627,7 @@ Running multiple computations simultaneously
 Reading from and writing to files. File streams, Opening, reading, writing, and closing files, Binary vs text files
 
 ---
-name: how-the-web-works
+routeAlias: how-the-web-works
 title: How the Web Works
 class: 'text-sm'
 ---
@@ -653,7 +653,7 @@ sequenceDiagram
 ---
 hideInToc: true
 class: 'text-sm'
-name: from-url-to-page
+routeAlias: from-url-to-page
 title: URL to Page
 ---
 
@@ -669,7 +669,7 @@ title: URL to Page
 ---
 hideInToc: true
 class: 'text-sm'
-name: http-requests-and-responses
+routeAlias: http-requests-and-responses
 title: HTTP Messages
 ---
 
@@ -694,7 +694,7 @@ Content-Type: text/html
 ---
 hideInToc: true
 class: 'text-sm'
-name: the-parts-of-a-web-application
+routeAlias: the-parts-of-a-web-application
 title: Full-stack Architecture
 ---
 
@@ -715,7 +715,7 @@ A **static** site can return prepared files. A **dynamic** application generates
 ---
 hideInToc: true
 class: 'text-sm'
-name: where-ai-fits-in-a-full-stack-application
+routeAlias: where-ai-fits-in-a-full-stack-application
 title: AI App Architecture
 ---
 
@@ -742,7 +742,7 @@ Never place AI provider secrets or private API keys in browser HTML or client-si
 ---
 hideInToc: true
 class: 'text-sm'
-name: responsible-use-of-ai
+routeAlias: responsible-use-of-ai
 title: Responsible AI
 ---
 
@@ -760,7 +760,7 @@ AI can increase your speed; engineering judgment determines whether the result i
 </Tips>
 
 ---
-name: getting-started-with-html
+routeAlias: getting-started-with-html
 title: Getting Started
 ---
 
@@ -777,7 +777,7 @@ Getting Up and Running with HTML, its important to understand the basic structur
 
 ---
 hideInToc: true
-name: html-element-structure
+routeAlias: html-element-structure
 title: Element Structure
 layout: image
 ---
@@ -859,7 +859,7 @@ Always open your vscode on the right folder your created for your project not on
 ---
 hideInToc: true
 class: 'text-sm'
-name: from-html-to-the-dom
+routeAlias: from-html-to-the-dom
 title: HTML to DOM
 ---
 
@@ -881,7 +881,7 @@ Malformed HTML may still render because browsers recover from errors, but the re
 ---
 hideInToc: true
 class: 'text-sm'
-name: browser-developer-tools
+routeAlias: browser-developer-tools
 title: Developer Tools
 ---
 
@@ -903,7 +903,7 @@ Changes made inside DevTools are temporary. Update the source file to keep them.
 ---
 hideInToc: true
 class: 'text-sm'
-name: paths-links-and-form-destinations
+routeAlias: paths-links-and-form-destinations
 title: Paths & Resources
 ---
 
@@ -927,7 +927,7 @@ The same path rules apply to links, images, stylesheets, scripts, and form `acti
 ---
 hideInToc: true
 class: 'text-sm'
-name: metadata-and-discoverability
+routeAlias: metadata-and-discoverability
 title: Metadata
 ---
 
@@ -951,7 +951,7 @@ title: Metadata
 ---
 hideInToc: true
 class: 'text-sm'
-name: validate-and-test-html
+routeAlias: validate-and-test-html
 title: Validation & Testing
 ---
 
@@ -970,7 +970,7 @@ Validation checks markup rules. Testing checks whether real users can complete t
 ---
 hideInToc: true
 class: 'text-sm'
-name: progressive-enhancement
+routeAlias: progressive-enhancement
 title: Progressive Enhancement
 ---
 
@@ -1138,7 +1138,7 @@ hideInToc: true
 ---
 hideInToc: true
 layout: image
-name: block-and-inline-element
+routeAlias: block-and-inline-element
 title: Block & Inline
 ---
 
@@ -1223,7 +1223,7 @@ Note: The `lang` attribute added to the html tag to give this `<html lang="en">`
 
 ---
 hideInToc: true
-name: working-with-head
+routeAlias: working-with-head
 title: Head & Meta
 ---
 
@@ -1463,7 +1463,7 @@ The `<p>` tag defines a paragraph of text. It contains the main body text and en
 
 
 ---
-name: understanding-semantic-html
+routeAlias: understanding-semantic-html
 title: Semantic HTML
 ---
 
@@ -1618,7 +1618,7 @@ layout: image
 
 
 ---
-name: attributes
+routeAlias: attributes
 title: Attributes
 ---
 
@@ -1755,7 +1755,7 @@ Attributes created with data-* can be accessed in JavaScript with <code class="t
 
 
 ---
-name: text-basics
+routeAlias: text-basics
 title: Text Basics
 ---
 
@@ -1828,7 +1828,7 @@ name: More on Text
 ````
 
 ---
-name: link
+routeAlias: link
 title: Links
 ---
 
@@ -1881,7 +1881,7 @@ url: https://codepen.io/setemiojo/embed/JjxNJVm?default-tab=html%2Cresult
 
 
 ---
-name: html-tables
+routeAlias: html-tables
 title: Tables
 ---
 
@@ -2041,7 +2041,7 @@ name: More on Tables
 ---
 transition: 'fade'
 class: 'text-sm'
-name: form
+routeAlias: form
 title: Forms
 ---
 
@@ -2412,7 +2412,7 @@ name: 'Form Example'
 
 ---
 hideInToc: true
-name: html-images-syntax
+routeAlias: html-images-syntax
 title: Images & Media
 ---
 
@@ -2613,7 +2613,7 @@ hideInToc: true
 - **attributes**: `controls`: Adds playback controls. `autoplay`: The video will play automatically when ready. `loop`: The video will loop continuously. `muted`: The video will be muted initially. `preload`: Specifies that the video should be preloaded.`crossorigin`: Specifies how the element handles cross-origin requests. `source`: Defines multiple sources for the video file in different formats (MP4 and WebM) for better compatibility. Fallback text: "Your browser does not support the video element." This text will be displayed if the browser does not support the `video` element.
 
 ---
-name: html-api
+routeAlias: html-api
 title: HTML API
 ---
 
@@ -2906,7 +2906,7 @@ name: Code for Example 2
 
 
 ---
-name: details-and-summary
+routeAlias: details-and-summary
 title: Details & Summary
 ---
 
@@ -3056,7 +3056,7 @@ hideInToc: true
 
 
 ---
-name: dialogs-and-popovers
+routeAlias: dialogs-and-popovers
 title: Dialogs & Popovers
 ---
 
@@ -3265,7 +3265,7 @@ name: More on popovers
 
 
 ---
-name: what-are-web-components
+routeAlias: what-are-web-components
 title: Web Components
 ---
 
@@ -3926,7 +3926,7 @@ media.html
 NB: Strictly without CSS. Submission details will be sent to you in due time.
 
 ---
-name: terminal
+routeAlias: terminal
 title: Terminal
 ---
 
@@ -3951,7 +3951,7 @@ title: Terminal
 
 `echo` - Print text to the terminal, `man` - Display the manual for a command, `clear` - Clear the terminal screen, `chmod` - Change file permissions, `chown` - Change file ownership.
 ---
-name: git
+routeAlias: git
 title: Git
 ---
 
@@ -4038,7 +4038,7 @@ Git maintains three local storages on our machine and one on a remote server lik
 - Remote repository: the remote server that stores the code
 
 ---
-name: github
+routeAlias: github
 title: GitHub
 ---
 
