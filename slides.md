@@ -3095,35 +3095,64 @@ hideInToc: true
 
 # Various styling options of `<details>` and `<summary>`
 
-```html {monaco-run}
+```html {monaco-run}{maxHeight: '430px'}
+<style>
+  body {
+    margin: 0;
+    padding: 18px;
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+  }
+  details {
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background: white;
+    overflow: hidden;
+  }
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { background: #eff6ff; }
+  summary:focus-visible { outline: 3px solid #60a5fa; outline-offset: -3px; }
+  .icon { width: 22px; height: 22px; margin-left: auto; color: #2563eb; }
+  .icon-minus { display: none; }
+  details[open] .icon-plus { display: none; }
+  details[open] .icon-minus { display: block; }
+  .content { padding: 0 16px 16px; line-height: 1.5; }
+  code { color: #1d4ed8; }
+</style>
+
 <details>
   <summary>
-   Different Styling Options
+    How does this disclosure icon work?
+
+    <svg class="icon icon-plus" aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" />
+    </svg>
+
+    <svg class="icon icon-minus" aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M5 12h14" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" />
+    </svg>
   </summary>
 
-  You can style the summary marker using <code>::before</code> and <code>::after</code> pseudo-elements. You can also use <code>::marker</code> to style the arrow. You can change the marker to any bullet type, including an image with <code>list-style-image</code>. You can also style based on the state of the disclosure widget using <code>open</code> and <code>closed</code> pseudo-classes.
-  
+  <div class="content">
+    <p>The native marker is hidden, then two inline SVG icons provide the
+      <strong>closed (+)</strong> and <strong>open (−)</strong> visuals.</p>
+    <p>CSS reads the native <code>open</code> attribute to swap the icons.
+      The SVGs are decorative, so <code>aria-hidden="true"</code> keeps the
+      accessible name focused on the summary text.</p>
+  </div>
 </details>
-<style>
-  details summary::before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    vertical-align: middle;
-  }
-
-  details summary::after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    vertical-align: middle;
-  }
-  
-</style>
 ```
 
 
