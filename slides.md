@@ -125,7 +125,7 @@ title: Engineering Lifecycle
 
 Coding is one part of building software that remains useful, reliable, secure, and understandable over time.
 
-```mermaid
+```mermaid {scale: 0.8}
 flowchart LR
     A[Understand the problem] --> B[Design]
     B --> C[Implement]
