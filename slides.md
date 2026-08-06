@@ -357,6 +357,24 @@ hideInToc: true
 
 ---
 hideInToc: true
+class: text-sm
+---
+
+# Helpful resources
+
+Use these ByteByteGo visual guides to review concepts from these notes:
+
+- **Software development lifecycle / workflow:** [How do Companies Ship Code to Production?](https://bytebytego.com/guides/how-do-companies-ship-code-to-production/), [CI/CD Pipeline Explained in Simple Terms](https://bytebytego.com/guides/cicd-pipeline-explained-in-simple-terms/), [DevOps vs NoOps](https://bytebytego.com/guides/devops-vs-noops/)
+- **Code quality and engineering habits:** [10 Good Coding Principles to Improve Code Quality](https://bytebytego.com/guides/10-good-coding-principles-to-improve-code-quality/)
+- **Programming paradigms:** [Top 8 Programming Paradigms](https://bytebytego.com/guides/top-8-programming-paradigms/), [Imperative vs Functional vs Object-oriented Programming](https://bytebytego.com/guides/imperative-vs-functional-vs-object-oriented-programming/)
+- **Object-oriented programming:** [The Fundamental Pillars of Object-Oriented Programming](https://bytebytego.com/guides/the-fundamental-pillars-of-object-oriented-programming/)
+- **Data structures and algorithms:** [10 Key Data Structures We Use Every Day](https://bytebytego.com/guides/10-key-data-structures-we-use-every-day/), [The 9 Algorithms That Dominate Our World](https://bytebytego.com/guides/the-9-algorithms-that-dominate-our-world/)
+- **Concurrency and memory management:** [Concurrency vs Parallelism](https://bytebytego.com/guides/concurrency-is-not-parallelism/), [How does Garbage Collection work?](https://bytebytego.com/guides/how-does-garbage-collection-work/)
+- **Web, DNS, URL, and HTTP:** [How Does DNS Lookup Work?](https://bytebytego.com/guides/how-does-the-domain-name-system-dns-lookup-work/), [URL, URI, URN - Differences Explained](https://bytebytego.com/guides/url-uri-urn-do-you-know-the-differences/), [HTTP Status Codes You Should Know](https://bytebytego.com/guides/http-status-code-you-should-know/), [Top 9 HTTP Request Methods](https://bytebytego.com/guides/top-9-http-request-methods/)
+- **Browser and web application basics:** [How Browsers Render Web Pages](https://bytebytego.com/guides/how-does-the-browser-render-a-web-page/), [10 Essential Components of a Production Web Application](https://bytebytego.com/guides/10-essential-components-of-a-production-web-application/)
+
+---
+hideInToc: true
 ---
 
 # Variables
