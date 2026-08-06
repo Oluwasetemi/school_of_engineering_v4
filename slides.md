@@ -3746,6 +3746,13 @@ class: 'text-sm'
 
 The experimental `interestfor` attribute can show a related element when someone demonstrates interest through hover, focus, or long press.
 
+- Supported invokers include `<a>`, `<button>`, and `<area>`.
+- The target receives `interest` and `loseinterest` events.
+- It progressively enhances a normal link: activating the link still navigates.
+- Browser support is limited, so provide a usable fallback.
+
+[Read the MDN guide to interest invokers](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers).
+
 ```html {monaco-run}
 <a href="/tutors/setemi" interestfor="setemi-preview">
   Meet Setemi
