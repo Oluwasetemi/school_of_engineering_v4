@@ -3763,14 +3763,6 @@ The experimental `interestfor` attribute can show a related element when someone
 </aside>
 ```
 
-- Supported invokers include `<a>`, `<button>`, and `<area>`.
-- The target receives `interest` and `loseinterest` events.
-- It progressively enhances a normal link: activating the link still navigates.
-- Browser support is limited, so provide a usable fallback.
-
-[Read the MDN guide to interest invokers](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using_interest_invokers).
-
-
 
 ---
 
@@ -3922,14 +3914,6 @@ name: more on Git commands
 
 ---
 hideInToc: true
-name: Git details
----
-
-![Git Storage](https://github.com/ByteByteGoHq/system-design-101/raw/main/images/git-commands.png){ .max-h-md.object-contain }
-
-
----
-hideInToc: true
 name: Git
 ---
 
@@ -3939,14 +3923,6 @@ Git maintains three local storages on our machine and one on a remote server lik
 - Staging area: a temporary location where files are kept for the next commit
 - Local repository: contains the code that has been committed
 - Remote repository: the remote server that stores the code
-
-
----
-hideInToc: true
-name: More on Git Workflow
----
-
-![Git Workflow](https://github.com/ByteByteGoHq/system-design-101/raw/main/images/git-workflow.jpeg){ .max-h-md }
 
 ---
 
