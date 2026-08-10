@@ -3095,7 +3095,7 @@ hideInToc: true
 
 # Various styling options of `<details>` and `<summary>`
 
-```html {monaco-run}{maxHeight: '430px'}
+```html {monaco-run}{height: '430px'}
 <style>
   body {
     margin: 0;
