@@ -841,7 +841,7 @@ create a folder and add an `index.html` file either using your vs code or termin
 Always open your vscode on the right folder your created for your project not on the root folder of your computer or desktop or documents or downloads.
 </Tips>
 
-```html {monaco-run}
+```html {monaco-run}{height: '280px'}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1103,7 +1103,7 @@ hideInToc: true
 
 # Code Example on Self-Closing Tags
 
-```html {monaco-run}
+```html {monaco-run}{height: '430px'}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1150,7 +1150,7 @@ hideInToc: true
 
 # Code Example on Block and Inline Elements
 
-```html {monaco-run}
+```html {monaco-run}{height: '360px'}
 <main>
     <h2 class="bg-gray-600">Block and Inline Element Example</h2>
     <hr class="hr" />
@@ -1398,7 +1398,7 @@ hideInToc: true
 
 # Let's put some of the tags in usage
 
-```html {monaco-run}
+```html {monaco-run}{height: '300px'}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1774,7 +1774,7 @@ hideInToc: true
 name: More on Text
 ---
 
-````md magic-move {maxHeight:'500px'}
+````md magic-move {height: '500px'}
 ```html
 <section class="feedback" id="feedback">
   <h2>What it's like to learn good and do other stuff good too</h2>
@@ -1912,7 +1912,7 @@ name: Examples Working With Tables
 
 
 
-```html {monaco-run}
+```html {monaco-run}{height: '430px'}
 <table class="border">
   <caption>Student Grades</caption>
   <thead>
@@ -1972,7 +1972,7 @@ hideInToc: true
 name: More on Tables
 ---
 
-```html {monaco-run}{maxHeight:'440px'}
+```html {monaco-run}{height:'440px'}
 <table class="border">
   <caption>Alt Alumni</caption>
   <thead class="border">
@@ -2079,7 +2079,7 @@ hideInToc: true
 name: Form Examples
 ---
 
-```html {monaco-run}
+```html {monaco-run}{height: '500px'}
 <form onsubmit="submitForm(event)">
   <fieldset class="border rounded">
     <label>
@@ -2230,7 +2230,7 @@ hideInToc: true
 
 <div>
 
-```html {monaco-run}{maxHeight: '430px'}
+```html {monaco-run}{height: '430px'}
 <dialog open aria-labelledby="dialogid">
   <form action="thankyou.html">
     <button type="submit" aria-label="close"
@@ -2276,7 +2276,7 @@ transition: 'fade-out'
 name: 'Form Example'
 ---
 
-```html {monaco-run}
+```html {monaco-run}{height: '430px'}
 <div class="form-group">
     <!--think in terms of accessibility labelling, 
     state management (required, aria-invalid), 
@@ -2524,7 +2524,7 @@ class: 'text-sm'
 
 Resize the browser window and run the example again to see the browser choose the most suitable image.
 
-```html {monaco-run}{maxHeight: '430px'}
+```html {monaco-run}{height: '430px'}
 <style>
   body { margin: 0; font-family: system-ui; background: #0f172a; color: white; }
   figure { margin: 0; padding: 12px; }
@@ -2853,7 +2853,7 @@ hideInToc: true
 
 <div></div>
 
-```html {monaco-run}
+```html {monaco-run}{height: '300px'}
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <p>Click in any input, then hit the tab key.</p>
 <ol class="pl-2 grid grid-cols-4 gap-4">
@@ -3005,7 +3005,7 @@ hideInToc: true
 
 # Creating an accordion with just HTML
 
-```html {monaco-run}
+```html {monaco-run}{height: '360px'}
 <aside>
     <h3>Workshop reviews:</h3>
     <details>
@@ -3041,7 +3041,7 @@ name: Accordion
 
 This can be achieved by grouping the `<details>` elements with a `name` attribute. This way, only one `<details>` element can be open at a time.
 
-```html {monaco-run}
+```html {monaco-run}{height: '380px'}
 
 <aside>
   <h3>Workshop reviews:</h3>
@@ -3204,7 +3204,7 @@ An **invoker** is an interactive element that asks another element—the **targe
 
 `button` → `show-modal` → `dialog`
 
-```html {monaco-run}{maxHeight: '390px'}
+```html {monaco-run}{height: '390px'}
 <main>
   <h2>Declarative dialog</h2>
   <p>The button invokes a command on the dialog—no JavaScript required.</p>
@@ -3260,7 +3260,7 @@ hideInToc: true
 
 ### Let's see how our `<popover>` works following the previous algorithm.
 
-```html {monaco-run}
+```html {monaco-run}{height: '320px'}
 <main class="bg-gray-100 px-20 py-20 text grid place-content-center">
   <button
     popovertarget="my-popover"
@@ -3326,7 +3326,7 @@ hideInToc: true
 
 ### Let's see how our `<popover>` works following the previous algorithm.
 
-```html {monaco-run}
+```html {monaco-run}{height: '400px'}
 <main class="bg-gray-100 px-20 py-20 text grid place-content-center">
 <section class="px-20 py-20 text-center">
   <button
@@ -3519,7 +3519,7 @@ customElements.define('custom-card', CustomCard);
 hideInToc: true
 ---
 
-```html {monaco-run}
+```html {monaco-run}{height: '500px'}
 <script>
 class CustomCard extends HTMLElement {
   constructor() {
