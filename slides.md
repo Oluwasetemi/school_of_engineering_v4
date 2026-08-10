@@ -3362,7 +3362,46 @@ hideInToc: true
 name: More on popovers
 ---
 
-<MixedPopOverDialog />
+```html {monaco-run}{height: '500px'}
+<main>
+  <h2>Declarative Popover and Dialog</h2>
+  <p>Both controls use the button command API, with no JavaScript required.</p>
+
+  <div class="actions">
+    <button commandfor="help-popover" command="show-popover">
+      Show popover
+    </button>
+    <button class="primary" commandfor="confirm-dialog" command="show-modal">
+      Show modal dialog
+    </button>
+  </div>
+
+  <div id="help-popover" popover="auto">
+    <h3>Popover</h3>
+    <p>This is lightweight, non-modal supplementary content.</p>
+    <button commandfor="help-popover" command="hide-popover">Close</button>
+  </div>
+
+  <dialog id="confirm-dialog" closedby="any">
+    <h3>Modal dialog</h3>
+    <p>This dialog blocks interaction with the page until it closes.</p>
+    <button commandfor="confirm-dialog" command="close">Close</button>
+  </dialog>
+</main>
+
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem; font: 16px/1.5 system-ui, sans-serif; color: #172033; }
+  main { max-width: 38rem; margin: auto; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  button { border: 1px solid #94a3b8; border-radius: .5rem; padding: .65rem 1rem; background: white; color: #172033; cursor: pointer; }
+  .primary { border-color: #2563eb; background: #2563eb; color: white; }
+  [popover] { width: min(22rem, calc(100% - 2rem)); border: 1px solid #cbd5e1; border-radius: .75rem; padding: 1rem; box-shadow: 0 1rem 3rem #0f172a33; }
+  [popover]::backdrop { background: #0f172a22; }
+  dialog { width: min(26rem, calc(100% - 2rem)); border: 0; border-radius: .75rem; padding: 1.5rem; box-shadow: 0 1rem 3rem #0f172a55; }
+  dialog::backdrop { background: #0f172a99; backdrop-filter: blur(2px); }
+</style>
+```
 
 
 ---
@@ -3425,7 +3464,61 @@ hideInToc: true
 name: Custom Element
 ---
 
-<custom-element />
+```html {monaco-run}{height: '500px'}
+<template id="star-rating-template">
+  <style>
+    :host { font-family: system-ui, sans-serif; }
+    rating { display: inline-flex; }
+    input[type="radio"] {
+      appearance: none;
+      margin: 0;
+      cursor: pointer;
+    }
+    input[type="radio"]::after {
+      content: "\2605";
+      color: #e71414;
+      font-size: 3rem;
+    }
+    rating:hover input[type="radio"]::after,
+    rating:focus-within input[type="radio"]::after {
+      color: #888;
+    }
+    rating:hover input[type="radio"]:hover ~ input[type="radio"]::after,
+    input[type="radio"]:focus ~ input[type="radio"]::after,
+    input[type="radio"]:checked ~ input[type="radio"]::after {
+      color: #ddd;
+    }
+    input[type="radio"]:checked::after { color: orange; }
+    button { margin-top: 1rem; padding: .4rem .8rem; }
+  </style>
+  <form>
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <rating>
+        <input type="radio" name="rating" value="1" aria-label="1 star" required />
+        <input type="radio" name="rating" value="2" aria-label="2 stars" />
+        <input type="radio" name="rating" value="3" aria-label="3 stars" />
+        <input type="radio" name="rating" value="4" aria-label="4 stars" />
+        <input type="radio" name="rating" value="5" aria-label="5 stars" />
+      </rating>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+
+<star-rating></star-rating>
+
+<script>
+  customElements.define('star-rating', class extends HTMLElement {
+    constructor() {
+      super()
+      const template = document.getElementById('star-rating-template')
+      this.attachShadow({ mode: 'open' }).append(template.content.cloneNode(true))
+    }
+  })
+</script>
+```
 
 ---
 hideInToc: true
