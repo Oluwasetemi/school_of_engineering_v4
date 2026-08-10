@@ -841,7 +841,7 @@ create a folder and add an `index.html` file either using your vs code or termin
 Always open your vscode on the right folder your created for your project not on the root folder of your computer or desktop or documents or downloads.
 </Tips>
 
-```html {monaco-run}
+```html {monaco-run}{height: '280px'}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1103,7 +1103,7 @@ hideInToc: true
 
 # Code Example on Self-Closing Tags
 
-```html {monaco-run}
+```html {monaco-run}{height: '430px'}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1150,7 +1150,7 @@ hideInToc: true
 
 # Code Example on Block and Inline Elements
 
-```html {monaco-run}
+```html {monaco-run}{height: '360px'}
 <main>
     <h2 class="bg-gray-600">Block and Inline Element Example</h2>
     <hr class="hr" />
@@ -1398,7 +1398,7 @@ hideInToc: true
 
 # Let's put some of the tags in usage
 
-```html {monaco-run}
+```html {monaco-run}{height: '300px'}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1774,7 +1774,7 @@ hideInToc: true
 name: More on Text
 ---
 
-````md magic-move {maxHeight:'500px'}
+````md magic-move {height: '500px'}
 ```html
 <section class="feedback" id="feedback">
   <h2>What it's like to learn good and do other stuff good too</h2>
@@ -1912,7 +1912,7 @@ name: Examples Working With Tables
 
 
 
-```html {monaco-run}
+```html {monaco-run}{height: '430px'}
 <table class="border">
   <caption>Student Grades</caption>
   <thead>
@@ -1972,7 +1972,7 @@ hideInToc: true
 name: More on Tables
 ---
 
-```html {monaco-run}{maxHeight:'440px'}
+```html {monaco-run}{height:'440px'}
 <table class="border">
   <caption>Alt Alumni</caption>
   <thead class="border">
@@ -2079,7 +2079,7 @@ hideInToc: true
 name: Form Examples
 ---
 
-```html {monaco-run}
+```html {monaco-run}{height: '500px'}
 <form onsubmit="submitForm(event)">
   <fieldset class="border rounded">
     <label>
@@ -2230,7 +2230,7 @@ hideInToc: true
 
 <div>
 
-```html {monaco-run}{maxHeight: '430px'}
+```html {monaco-run}{height: '430px'}
 <dialog open aria-labelledby="dialogid">
   <form action="thankyou.html">
     <button type="submit" aria-label="close"
@@ -2276,7 +2276,7 @@ transition: 'fade-out'
 name: 'Form Example'
 ---
 
-```html {monaco-run}
+```html {monaco-run}{height: '430px'}
 <div class="form-group">
     <!--think in terms of accessibility labelling, 
     state management (required, aria-invalid), 
@@ -2524,7 +2524,7 @@ class: 'text-sm'
 
 Resize the browser window and run the example again to see the browser choose the most suitable image.
 
-```html {monaco-run}{maxHeight: '430px'}
+```html {monaco-run}{height: '430px'}
 <style>
   body { margin: 0; font-family: system-ui; background: #0f172a; color: white; }
   figure { margin: 0; padding: 12px; }
@@ -2853,7 +2853,7 @@ hideInToc: true
 
 <div></div>
 
-```html {monaco-run}
+```html {monaco-run}{height: '300px'}
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <p>Click in any input, then hit the tab key.</p>
 <ol class="pl-2 grid grid-cols-4 gap-4">
@@ -3005,7 +3005,7 @@ hideInToc: true
 
 # Creating an accordion with just HTML
 
-```html {monaco-run}
+```html {monaco-run}{height: '360px'}
 <aside>
     <h3>Workshop reviews:</h3>
     <details>
@@ -3041,7 +3041,7 @@ name: Accordion
 
 This can be achieved by grouping the `<details>` elements with a `name` attribute. This way, only one `<details>` element can be open at a time.
 
-```html {monaco-run}
+```html {monaco-run}{height: '380px'}
 
 <aside>
   <h3>Workshop reviews:</h3>
@@ -3095,7 +3095,7 @@ hideInToc: true
 
 # Various styling options of `<details>` and `<summary>`
 
-```html {monaco-run}{maxHeight: '430px'}
+```html {monaco-run}{height: '430px'}
 <style>
   body {
     margin: 0;
@@ -3204,7 +3204,7 @@ An **invoker** is an interactive element that asks another element—the **targe
 
 `button` → `show-modal` → `dialog`
 
-```html {monaco-run}{maxHeight: '390px'}
+```html {monaco-run}{height: '390px'}
 <main>
   <h2>Declarative dialog</h2>
   <p>The button invokes a command on the dialog—no JavaScript required.</p>
@@ -3260,7 +3260,7 @@ hideInToc: true
 
 ### Let's see how our `<popover>` works following the previous algorithm.
 
-```html {monaco-run}
+```html {monaco-run}{height: '320px'}
 <main class="bg-gray-100 px-20 py-20 text grid place-content-center">
   <button
     popovertarget="my-popover"
@@ -3326,7 +3326,7 @@ hideInToc: true
 
 ### Let's see how our `<popover>` works following the previous algorithm.
 
-```html {monaco-run}
+```html {monaco-run}{height: '400px'}
 <main class="bg-gray-100 px-20 py-20 text grid place-content-center">
 <section class="px-20 py-20 text-center">
   <button
@@ -3362,7 +3362,46 @@ hideInToc: true
 name: More on popovers
 ---
 
-<MixedPopOverDialog />
+```html {monaco-run}{height: '500px'}
+<main>
+  <h2>Declarative Popover and Dialog</h2>
+  <p>Both controls use the button command API, with no JavaScript required.</p>
+
+  <div class="actions">
+    <button commandfor="help-popover" command="show-popover">
+      Show popover
+    </button>
+    <button class="primary" commandfor="confirm-dialog" command="show-modal">
+      Show modal dialog
+    </button>
+  </div>
+
+  <div id="help-popover" popover="auto">
+    <h3>Popover</h3>
+    <p>This is lightweight, non-modal supplementary content.</p>
+    <button commandfor="help-popover" command="hide-popover">Close</button>
+  </div>
+
+  <dialog id="confirm-dialog" closedby="any">
+    <h3>Modal dialog</h3>
+    <p>This dialog blocks interaction with the page until it closes.</p>
+    <button commandfor="confirm-dialog" command="close">Close</button>
+  </dialog>
+</main>
+
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem; font: 16px/1.5 system-ui, sans-serif; color: #172033; }
+  main { max-width: 38rem; margin: auto; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  button { border: 1px solid #94a3b8; border-radius: .5rem; padding: .65rem 1rem; background: white; color: #172033; cursor: pointer; }
+  .primary { border-color: #2563eb; background: #2563eb; color: white; }
+  [popover] { width: min(22rem, calc(100% - 2rem)); border: 1px solid #cbd5e1; border-radius: .75rem; padding: 1rem; box-shadow: 0 1rem 3rem #0f172a33; }
+  [popover]::backdrop { background: #0f172a22; }
+  dialog { width: min(26rem, calc(100% - 2rem)); border: 0; border-radius: .75rem; padding: 1.5rem; box-shadow: 0 1rem 3rem #0f172a55; }
+  dialog::backdrop { background: #0f172a99; backdrop-filter: blur(2px); }
+</style>
+```
 
 
 ---
@@ -3425,7 +3464,61 @@ hideInToc: true
 name: Custom Element
 ---
 
-<custom-element />
+```html {monaco-run}{height: '500px'}
+<template id="star-rating-template">
+  <style>
+    :host { font-family: system-ui, sans-serif; }
+    rating { display: inline-flex; }
+    input[type="radio"] {
+      appearance: none;
+      margin: 0;
+      cursor: pointer;
+    }
+    input[type="radio"]::after {
+      content: "\2605";
+      color: #e71414;
+      font-size: 3rem;
+    }
+    rating:hover input[type="radio"]::after,
+    rating:focus-within input[type="radio"]::after {
+      color: #888;
+    }
+    rating:hover input[type="radio"]:hover ~ input[type="radio"]::after,
+    input[type="radio"]:focus ~ input[type="radio"]::after,
+    input[type="radio"]:checked ~ input[type="radio"]::after {
+      color: #ddd;
+    }
+    input[type="radio"]:checked::after { color: orange; }
+    button { margin-top: 1rem; padding: .4rem .8rem; }
+  </style>
+  <form>
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <rating>
+        <input type="radio" name="rating" value="1" aria-label="1 star" required />
+        <input type="radio" name="rating" value="2" aria-label="2 stars" />
+        <input type="radio" name="rating" value="3" aria-label="3 stars" />
+        <input type="radio" name="rating" value="4" aria-label="4 stars" />
+        <input type="radio" name="rating" value="5" aria-label="5 stars" />
+      </rating>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+
+<star-rating></star-rating>
+
+<script>
+  customElements.define('star-rating', class extends HTMLElement {
+    constructor() {
+      super()
+      const template = document.getElementById('star-rating-template')
+      this.attachShadow({ mode: 'open' }).append(template.content.cloneNode(true))
+    }
+  })
+</script>
+```
 
 ---
 hideInToc: true
@@ -3519,7 +3612,7 @@ customElements.define('custom-card', CustomCard);
 hideInToc: true
 ---
 
-```html {monaco-run}
+```html {monaco-run}{height: '500px'}
 <script>
 class CustomCard extends HTMLElement {
   constructor() {

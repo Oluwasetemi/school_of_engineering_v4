@@ -6,6 +6,8 @@ const codeContainer = ref(null)
 const canScrollUp = ref(false)
 const canScrollDown = ref(false)
 const ready = ref(false)
+const formattedCode = ref('')
+const copied = ref(false)
 
 const examples = [
   {
@@ -216,6 +218,7 @@ const checkScroll = () => {
 // Watch for changes and check scroll
 watch(currentIndex, async () => {
   await formatCode()
+  copied.value = false
 
   if (codeContainer.value) {
     codeContainer.value.scrollTop = 0
@@ -249,21 +252,25 @@ async function formatCode() {
     printWidth: 80,
   }
 
-  const formattedCode = await prettier.format(code, {
+  const formatted = await prettier.format(code, {
     parser: currentIndex.value === 0 ? 'html' : 'css',
     plugins: currentIndex.value === 0 ? [prettierPluginHtml]: [prettierPluginCss],
     ...options,
   })
 
-  examples[currentIndex.value].code = formattedCode
-
   // highlight code
   const { codeToHtml } = await import('https://esm.sh/shiki@1.0.0')
 
-  examples[currentIndex.value].code = await codeToHtml(formattedCode, {
+  formattedCode.value = await codeToHtml(formatted, {
     lang: currentIndex.value === 0 ? 'html' : 'css',
     theme: 'vitesse-dark',
   })
+}
+
+async function copyCurrentCode() {
+  await navigator.clipboard.writeText(examples[currentIndex.value].code)
+  copied.value = true
+  setTimeout(() => { copied.value = false }, 1500)
 }
 </script>
 <template>
@@ -328,8 +335,15 @@ async function formatCode() {
           <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div class="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <div class="text-gray-400 text-sm">
-          Example {{ currentIndex + 1 }} of {{ examples.length }}
+        <div class="flex items-center gap-3 text-gray-400 text-sm">
+          <span>Example {{ currentIndex + 1 }} of {{ examples.length }}</span>
+          <button
+            class="rounded border border-gray-600 px-2 py-1 text-xs text-gray-200 transition-colors hover:bg-gray-700"
+            :aria-label="`Copy ${examples[currentIndex].title}`"
+            @click="copyCurrentCode"
+          >
+            {{ copied ? 'Copied' : 'Copy' }}
+          </button>
         </div>
       </div>
 
@@ -338,7 +352,7 @@ async function formatCode() {
         <div
           ref="codeContainer"
           v-if="ready"
-          v-html="examples[currentIndex]?.code"
+          v-html="formattedCode"
           class="max-h-[300px] overflow-y-auto p-6 text-sm font-mono leading-relaxed text-gray-100 whitespace-pre-wrap break-words scrollbar-custom"
         ></div>
 
