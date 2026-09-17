@@ -1185,10 +1185,10 @@ HTML documents include a document type declaration and the `<html>` root element
 - `<DOCTYPE html>`
 - `<html>`
 - `<head>`
-- `<head/>`
+- `</head>`
 - `<body>`
-- `<body/>`
-- `<html/>`
+- `</body>`
+- `</html>`
 
 
 ---
@@ -1264,7 +1264,7 @@ The `<head>` which can also be referred to as document metadata header, contains
 - `<title>Learning HTML</title>`
 - `<link rel="stylesheet" href="./style.css"/>`
 
-Read more about what elements should be included in the head {@Oluwasetemi/HEAD}
+Read more about what elements should be included in the head via [HEAD](https://github.com/Oluwasetemi/HEAD) a fork of {@joshbuchea/HEAD}
 
 
 ---
