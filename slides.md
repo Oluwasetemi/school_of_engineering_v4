@@ -1342,6 +1342,7 @@ Inside the `<body>` tags of an HTML document, you can find a wide variety of ele
 ---
 hideInToc: true
 ---
+
 # Contd.
 
 ```html
@@ -1372,6 +1373,7 @@ Description List: <dl>, <dt>, <dd>
 ---
 hideInToc: true
 ---
+
 # Contd.
 
 ```html
